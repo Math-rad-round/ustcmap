@@ -1,0 +1,42 @@
+h1{
+    background-color: var(--black);
+}
+
+.app-container{
+    padding: 10px 0 0px 0;
+    width: 80%;
+    margin: 50px auto 20px auto;
+}
+
+.message-block{
+    display: block;
+    opacity: 0;
+    z-index: 5000;
+    position: fixed;
+    top: -40px;
+    padding: 0 20px 0 20px;
+    height: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 0.5s 0.2s;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px var(--shadow-color);
+}
+.message-block span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-size: 13px;
+    color: #FFFFFF;
+}
+
+.settings, .projects, .sub-page-main{
+    min-width: 650px;
+}
+
+/**********所有框加阴影************/
+.settings, .projects, .sub-page-main, .projects, .profile-sidebar > div, .app-sidebar > div{
+    box-shadow: 1px 1px 5px var(--shadow-color), -1px 1px 5px var(--shadow-color);
+}
+

@@ -1,0 +1,60 @@
+/**
+ * utilities.css
+ * 
+ */
+
+:root{
+    --white: #FFFFFF;
+    --primary-color: #FFFFFF;
+    --backgroundcolor: #EEEEEE;
+    
+    --shadow-color: #888888;
+    
+    --xs: 4px;
+    --s: 8px;
+    --m: 16px;
+    --l: 24px;
+    --xl: 36px;
+}
+
+/*
+body *{
+    overflow: hidden;
+}
+*/
+
+body{
+    margin: 0px;
+    padding: 0px;
+    font-weight: 300;
+    background-color: var(--backgroundcolor);
+}
+html, body{
+    height: 100%;
+}
+#root{
+    position: relative;
+    top: 0px;
+    right: 0px;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    align-content: space-between ;
+}
+.app-container{
+    flex: 1;
+}
+.footer{
+}
+
+.u-inlineblock{
+    display: inline-block;
+}
+.u-block{
+    display: block;
+}
+.u-flex{
+    display: flex;
+}

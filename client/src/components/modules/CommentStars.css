@@ -1,0 +1,35 @@
+.comment-stars{
+    height: 30px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: start;
+}
+
+.single-star{
+    height: 100%;
+    width: 30px;
+    margin: 0px;
+    border: 0px;
+}
+.focus-star svg,
+.new-comment .comment-stars .single-star:hover svg,
+.new-comment .comment-stars .single-star:hover + .single-star svg,
+.new-comment .comment-stars .single-star:hover + .single-star + .single-star svg,
+.new-comment .comment-stars .single-star:hover + .single-star + .single-star + .single-star svg,
+.new-comment .comment-stars .single-star:hover + .single-star + .single-star + .single-star + .single-star svg{
+    fill: #fece3c;
+}
+
+.unfocus-star svg{
+    fill: #6c6962;
+}
+
+.single-star svg{
+    width: 100%;
+    height: 100%;
+}
+.single-star svg path{
+    width: 100%;
+    height: 100%;
+}
+

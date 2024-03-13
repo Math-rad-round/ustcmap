@@ -1,0 +1,34 @@
+.aaa {
+    padding: 0 35%;
+}
+  
+.bbb {
+    /* make it responsive */
+    /* max-width: 100%;
+    width: 100%; */
+    height: auto;
+    display: block;
+    /* div height to be the same as width*/
+    padding-top: 100%;
+  
+    /* make it a circle */
+  
+    /* Centering on image`s center*/
+    background-position-y: top;
+    background-position-x: left;    
+    background-repeat: no-repeat;
+  
+    /* it makes the clue thing, takes smaller dimension to fill div */
+    background-size: 800px,600px;
+  
+    /* it is optional, for making this div centered in parent*/
+    margin: 0 auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  
+    background-image: url("./123.jpg");
+    width:600px;
+    height:800px;
+  }
