@@ -97,8 +97,12 @@ router.post("/appinfo", (req, res) => {
           res.status(403).send("user not found");
           return;
         }
-      
         const user = users[0];
+        if(user.type!="高级用户"){
+          
+          res.status(403).send("no auther");
+          return;
+        }
         let nowDate = new Date().toLocaleDateString();
       
         if(req.body._id === undefined){

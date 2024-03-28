@@ -266,85 +266,16 @@ class NewProject extends Component{
     
     const video = (
         <div className="new-app-video">
-          <h2>项目宣传视频</h2>
-          {this.state.videoname && (<p>{this.state.videoname}</p>)}
-          <input type="file" accept="video/*"
-                 style={{display:"none"}} className="file-input"
-                 onChange={this.handleVideoChange.bind(this)}
-                 encType="multipart/form-data"
-          />
-          <button className="new-app-logo-upload"
-                  onClick={this.getFile.bind(this)}
-          >
-            上传视频
-          </button>
         </div>
     );
     
     const downloads = (
         <div className="new-app-downloads">
-          <h2>管理下载项</h2>
-          <div className="new-downloads-container">
-            <div className="new-downloads-title">运行平台</div>
-            <div className="new-downloads-title">文件名</div>
-            <div className="new-downloads-title">操作</div>
-            {
-              this.state.downloads.map((item) => (
-                <>
-                  <div className="new-download-content">
-                    <select name="platform" className="new-download-select"
-                            value={item.platform} onChange={this.handleDownloadPlatformChange.bind(this, item.id)}
-                    >
-                      <option value="Windows">Windows</option>
-                      <option value="MacOS">MacOS</option>
-                      <option value="Linux">Linux</option>
-                    </select>
-                  </div>
-                  <div className="new-download-content">
-                    <span style={{fontSize: "16px"}}>{item.filename}</span>
-                  </div>
-                  <div className="new-download-content">
-                    <button value="Delete" className="new-download-action"
-                            onClick={this.handleDownloadDelete.bind(this, item.id)}
-                    >
-                      删除
-                    </button>
-                    <input type="file" accept="application/*"
-                           style={{display:"none"}} className="file-input"
-                           onChange={this.handleDownloadFileChange.bind(this, item.id)}
-                           encType="multipart/form-data"
-                    />
-                    <button value="ChangeFile" className="new-download-action"
-                            onClick={this.getFile.bind(this)}
-                    >
-                      选择文件
-                    </button>
-                    <button value="Submit" className="new-download-action"
-                            onClick={this.handleDownloadSubmit.bind(this, item.id)}
-                    >
-                      确认更改
-                    </button>
-                  </div>
-                </>
-              ))
-            } 
-            <button className="new-download-button"
-                    onClick={this.handleNewDownload.bind(this)}
-            >
-              添加下载项
-            </button>
-          </div>
         </div>
     );
     
     const web = (
       <div classname="new-app-web">
-        <h2>项目 Web 端地址</h2>
-        <p>不支持 Web 端则留空</p>
-        <input type="text" placeholder="web url"
-               value={this.state.web} onChange={this.handleWebChange.bind(this)}
-               className="new-app-web-input new-post-input-input"
-        />
       </div>
     );
     
@@ -448,7 +379,7 @@ class NewProject extends Component{
                </h1>
              ) : (
                <h1 className="page-title">
-                 {"创建新项目"}
+                 {"创建新项目（普通用户不能创造）"}
                </h1>
              )}
            
@@ -458,9 +389,6 @@ class NewProject extends Component{
                {this.props.appId ? (
                  <>
                    {logo}
-                   {video}
-                   {downloads}
-                   {web}
                  </>
                ): null}
              
@@ -469,7 +397,6 @@ class NewProject extends Component{
                {this.props.appId ? (
                  <>
                    {selections}
-                   {links}
                  </>
                ) : null}
              
