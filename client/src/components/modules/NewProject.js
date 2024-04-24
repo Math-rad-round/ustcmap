@@ -2,8 +2,9 @@ import React, { Component } from "react";
 
 import { post,get } from "../../utilities.js";
 import { Consumer } from "../pages/Root.js";
-
+import Load from "../newmod/Load.js"
 import "./Settings.css";
+import Delphoto from "../newmod/Delphoto.js";
 
 class NewProject extends Component{
   constructor(props){
@@ -11,6 +12,7 @@ class NewProject extends Component{
     this.state = {
       _id: undefined,
       name: "",
+      realname:"",
       description: "",
       tags: [],
       selectedTags: [],
@@ -40,6 +42,7 @@ class NewProject extends Component{
       console.log(info);
       this.setState({
         name: info.name,
+        realname:info.realname,
         description: info.describe,
         tags: [],
         selectedTags: info.tags.map((tag) => tag._id),
@@ -59,6 +62,11 @@ class NewProject extends Component{
   handleNameChange(event){
     this.setState({
       name: event.target.value,
+    });
+  }
+  handlerealNameChange(event){
+    this.setState({
+      realname: event.target.value,
     });
   }
   handleDescriptionChange(event){
@@ -217,6 +225,7 @@ class NewProject extends Component{
     post("/api/appinfo", {
       _id: this.props.appId,
       name: this.state.name,
+      realname: this.state.realname,
       description: this.state.description,
       tags: this.state.selectedTags,
       platforms: this.state.selectedPlatforms,
@@ -238,14 +247,23 @@ class NewProject extends Component{
   render(){
     const name = (
         <div className="new-app-name">
-          <h2>项目名</h2>
+          <h2>路线名</h2>
           <input type="text" placeholder="your app name"
                  value={this.state.name} onChange={this.handleNameChange.bind(this)}
                  className="new-app-name-input new-post-input-input"
           />
         </div>
     );
-    
+    const name2 = (
+      <div className="new-app-name">
+        <h2>内置路线名</h2>
+        <input type="text" placeholder="your app name"
+               value={this.state.name} onChange={this.handlerealNameChange.bind(this)}
+               className="new-app-name-input new-post-input-input"
+        />
+      </div>
+  );
+  
     const logo = (
         <div className="new-app-logo">
           <div className="current-logo">
@@ -266,7 +284,7 @@ class NewProject extends Component{
     
     const video = (
         <div className="new-app-video">
-          <h2>项目宣传视频</h2>
+          <h2>路线宣传视频</h2>
           {this.state.videoname && (<p>{this.state.videoname}</p>)}
           <input type="file" accept="video/*"
                  style={{display:"none"}} className="file-input"
@@ -339,7 +357,7 @@ class NewProject extends Component{
     
     const web = (
       <div classname="new-app-web">
-        <h2>项目 Web 端地址</h2>
+        <h2>路线 Web 端地址</h2>
         <p>不支持 Web 端则留空</p>
         <input type="text" placeholder="web url"
                value={this.state.web} onChange={this.handleWebChange.bind(this)}
@@ -350,7 +368,7 @@ class NewProject extends Component{
     
     const describe = (
         <div className="new-app-description">
-          <h2>项目描述</h2>
+          <h2>路线描述</h2>
           <p>支持 markdown</p>
           <textarea type="text" placeholder="describe your app"
                     value={this.state.description} onChange={this.handleDescriptionChange.bind(this)}
@@ -362,7 +380,7 @@ class NewProject extends Component{
     const selections = (
       <>
         <div className="new-app-platforms">
-          <h2>选择支持的平台</h2>
+          <h2>选择相关地点</h2>
           {
             this.state.platforms.map((pl) => (
               <div className="select-box">
@@ -436,6 +454,7 @@ class NewProject extends Component{
     );
     
     return (
+      <div>
       <Consumer>
        {(value) => {
          this.showMessage = value;
@@ -444,23 +463,19 @@ class NewProject extends Component{
              
              {this.props.appId ? (
                <h1 className="page-title">
-                 {"管理项目 "+this.state.name}
+                 {"管理路线 "+this.state.name}
                </h1>
              ) : (
                <h1 className="page-title">
-                 {"创建新项目"}
+                 {"创建新路线"}
                </h1>
              )}
            
              <div className="settings">
                {this.props.appId ? null : name}
-             
+               {this.props.appId ? null : name2}
                {this.props.appId ? (
                  <>
-                   {logo}
-                   {video}
-                   {downloads}
-                   {web}
                  </>
                ): null}
              
@@ -472,7 +487,6 @@ class NewProject extends Component{
                    {links}
                  </>
                ) : null}
-             
                <div className="new-app-submit">
                  <button type="submit" value="Submit"
                          className="new-post-input-button new-app-submit-button"
@@ -485,7 +499,13 @@ class NewProject extends Component{
            </div>
          )
        }}
+       
+       
       </Consumer>
+      
+      <Load content="添加路径图" _id={this.props.appId}/>
+      <Delphoto content="删除路径图" _id={this.props.appId}/>
+      </div>
     );
   }
 }

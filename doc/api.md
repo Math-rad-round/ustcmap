@@ -125,7 +125,7 @@ returns
 
 | 名称 | 解释 | 示例 |
 | ---- | ---- | ---- |
-| projects | 用户项目 id 列表 | `["123"]` |  
+| projects | 用户路线 id 列表 | `["123"]` |  
 
 ## GET /api/tags  
 
@@ -152,7 +152,7 @@ returns
 
 | 名称 | 解释 | 示例 |
 | ---- | ---- | ---- |
-| projects | 搜索结果项目 id 列表 | `["123"]` |  
+| projects | 搜索结果路线 id 列表 | `["123"]` |  
 
 ## POST /api/appinfo  
 
@@ -160,9 +160,9 @@ params
 
 | 名称 | 解释 | 示例 |
 | ---- | ---- | ---- |
-| \_id（可选） | 项目 id，留空为新建 | `123` |
-| name | 项目名称 | `"app name"` |
-| tags | 项目标签的 id 的列表 | `[2, 4]` |
+| \_id（可选） | 路线 id，留空为新建 | `123` |
+| name | 路线名称 | `"app name"` |
+| tags | 路线标签的 id 的列表 | `[2, 4]` |
 | paltform | 运行平台列表 | `["Windows", "Web"]` |
 | links | 相关链接列表 | `[{webname: "url name", url: "www.xxx.yyy"}]` |
 | describe | 描述 | `"hello world"` |
@@ -171,7 +171,7 @@ returns
 
 | 名称 | 解释 | 示例 |
 | ---- | ---- | ---- |
-| \_id | 项目 id | `123` |  
+| \_id | 路线 id | `123` |  
 
 ## POST /api/userinfo
 

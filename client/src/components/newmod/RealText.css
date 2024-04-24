@@ -1,0 +1,13 @@
+
+.fix {
+    position: fixed;
+    left:1000px;
+    top:130px;
+    width: 320px;
+    height: 400px;
+    border: 3px solid #73AD21;
+    color:orange;
+    opacity: 0.5;
+    background-color: aqua;
+    font-size: 25px;
+}
