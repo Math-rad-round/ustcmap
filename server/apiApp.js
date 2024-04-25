@@ -244,7 +244,7 @@ router.post("/appdelete",(req,res)=>{
 });
 router.post("/deletephoto",(req,res)=>{
   checker.checkAuthorityApp(req.body.Authorization,req.body._id).then((rest)=>{
-    Photo.deleteOne({_id:req.body._id}).then(res.status(200).send({ans:"完成"})).catch(()=>console.log("error"));
+    Photo.deleteOne({parent:req.body._id}).then(res.status(200).send({ans:"完成"})).catch(()=>console.log("error"));
   }).catch((error)=>res.status(422).send(error));
 });
 router.post("/loadphoto",(req,res)=>{
