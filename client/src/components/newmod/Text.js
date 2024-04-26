@@ -43,9 +43,9 @@ class Text extends Component{
     return (
       <div>
         <div class="five" onMouseOut={this.goout} onMouseEnter={this.goin} 
-        style={{ bottom: bottom, left: left, width: width, height: height }}>
-          <button>asd</button>
-          {this.state.on ? <div class="contain">{this.props.contain}</div> : <div />}
+        style={{ bottom: bottom, left: left, width: width, height: height ,opacity: this.state.on?0.5:0}}>
+
+          {this.state.on ? this.props.contain:""}
         </div>
         <div>
           {this.state.cl ? <RealText contain={this.props.rcon} /> : <div />}
