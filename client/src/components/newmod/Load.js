@@ -7,7 +7,8 @@ class load extends Component{
       }
       handleFiles = (files) => {
         let e=files.base64;
-        console.log(e);   
+        console.log("posting");   
+        console.log("gointo"+( this.props.appId?this.props.appId:"65f158381a957e154d6cd112"));
         post("/api/loadphoto", {
           content: e,
           _id: this.props.appId?this.props.appId:"65f158381a957e154d6cd112"

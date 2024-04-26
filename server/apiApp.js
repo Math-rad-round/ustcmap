@@ -221,7 +221,7 @@ router.post("/appinfo/logo", logoUpload.single("file"), (req, res) => {
 });
 
 router.get("/search2", (req, res) => {
-  App.findOne({realname:req.query.realname}). then((app)=>res.send({projects:app})).catch((err)=>res.status(422).send("nofile"+error));});
+  App.findOne({realname:req.query.realname}). then((app)=>res.send({project:app})).catch((err)=>res.status(422).send("nofile"+error));});
 
 router.get("/search", (req, res) => {
     let option={};

@@ -1,8 +1,6 @@
-.five {
+.five2 {
     position: fixed;
-}
-.contain{
+    border: 3px solid #73AD21;
     font-size: 20px;
     background-color: greenyellow;
-    opacity: 0.5;
-}
+ }

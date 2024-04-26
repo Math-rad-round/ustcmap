@@ -257,8 +257,8 @@ class NewProject extends Component{
     const name2 = (
       <div className="new-app-name">
         <h2>内置路线名</h2>
-        <input type="text" placeholder="your app name"
-               value={this.state.name} onChange={this.handlerealNameChange.bind(this)}
+        <input type="text" placeholder="内部搜索名称"
+               value={this.state.realname} onChange={this.handlerealNameChange.bind(this)}
                className="new-app-name-input new-post-input-input"
         />
       </div>
@@ -503,8 +503,8 @@ class NewProject extends Component{
        
       </Consumer>
       
-      <Load content="添加路径图" _id={this.props.appId}/>
-      <Delphoto content="删除路径图" _id={this.props.appId}/>
+      <Load content="添加路径图" appId={this.props.appId}/>
+      <Delphoto content="删除路径图" appId={this.props.appId}/>
       </div>
     );
   }

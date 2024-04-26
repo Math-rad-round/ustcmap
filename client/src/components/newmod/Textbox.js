@@ -9,7 +9,10 @@ class Textbox extends Component{
   constructor(props){
     super(props);
   }
-  
+  usepass=()=>{
+    console.log("clickingme");
+    if(this.props.pass!=undefined)this.props.pass();
+  }
   render(){
     let bottom=this.props.posy+'px';
     let left=this.props.posx+'px';
@@ -17,9 +20,9 @@ class Textbox extends Component{
     let height=this.props.height+'px';
     return (
       <div >
-          <div class="five" 
-          style={{bottom,left,width,height}} >
-          {this.state.on?(<div class="contain">{this.props.contain}</div>):""}</div>
+          <div class="five2"
+        style={{ bottom: bottom, left: left, width: width, height: height}} onClick={()=>this.usepass()}>
+          {this.props.contain}</div>
       </div>
     );
   }
