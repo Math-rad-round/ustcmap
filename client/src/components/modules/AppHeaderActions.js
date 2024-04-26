@@ -30,6 +30,12 @@ class AppHeaderActions extends Component{
           ) :
           null
         }
+        {
+            <Link to={"/app/"+this.props._id+"/path"}>
+              <button>路径</button>
+            </Link>
+          
+        }
       </div>
     );
   }

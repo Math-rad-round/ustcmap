@@ -8,7 +8,7 @@ const express = require("express");
 const checker = require('./jwtThings.js');
 const User = require("./models/User.js");
 const App = require("./models/App.js");
-
+const Photo = require("./models/Photo.js");
 const Tags = require("./models/Tags.js");
 const router = express.Router();
 const fs = require("fs");
@@ -109,6 +109,7 @@ router.post("/appinfo", (req, res) => {
             getTagsByTagIds(req.body.tags)
             .then((tags) => new App({
                 name: req.body.name,
+                realname: req.body.realname,
 //                authors: [{name: "qwerty", _id: 123}],//TODO: 
                 authors: [{name: user.name, _id: user._id}],
                 describe: req.body.description,
@@ -222,90 +223,9 @@ router.post("/appinfo/logo", logoUpload.single("file"), (req, res) => {
     }).catch((error) => {res.status(422).send(error);});
   }
 });
-router.post("/appinfo/video", videoUpload.single("file"), (req, res) => {
-  let { size, mimetype } = req.file;
-  const allowType = ["ts", "mp4"];
-  const yourType = mimetype.split('/')[1];
-  
-  if(size > 1024*1024*100){
-    return res.status(500).send("size too large");
-  }
-  else if(allowType.indexOf(yourType) === -1){
-    return res.status(500).send("wrong photo format");
-  }
-  else{
-    //TODO: check Authorization
-    //done
-    checker.checkAuthorityApp(req.body.Authorization,req.body._id).then(()=>{
-      const videoDir = path.join(__dirname, "upload", "appvideo", req.file.filename+"ts");
-      fs.mkdirSync(videoDir);
-      fs.renameSync(path.join(__dirname, "upload", "appvideo", req.file.filename),
-                    path.join(videoDir, req.file.filename+"."+yourType));
-      makeM3u8(path.join(videoDir, req.file.filename+"."+yourType),
-               path.join(videoDir, req.file.filename+".m3u8"));
-      App.findOne({_id: req.body._id})
-      .then((app) => (App.findOneAndUpdate({_id: req.body._id}, {
-        video: "upload/appvideo/"+req.file.filename+"ts/"+req.file.filename+".m3u8",
-        videoname: req.file.originalname,
-      }, {new: true})))
-      .then((video) => {
-        res.send(video);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-    }).catch((error) => {res.status(422).send(error);});
-  }
-});
-router.post("/appinfo/download", downloadUpload.single("file"), (req, res) => {
-  let { size } = req.file;
-  if(size > 1024*1024*100){
-    return res.status(500).send("size too large");
-  }
-  else{
-    //TODO: check Authorization
-    checker.checkAuthorityApp(req.body.Authorization,req.body._id).then(()=>{
-      const newDownload = {
-        filename: req.file.originalname,
-        id: req.body.id,
-        path: "upload/appdownload/"+req.file.filename,
-        platform: req.body.platform,
-        uploaddate: new Date().toLocaleDateString(),
-      };
-      App.findOne({_id: req.body._id})
-      .then((app) => (App.findOneAndUpdate({_id: req.body._id}, {
-        downloads: app.downloads.filter((item) => (item.id === req.body.id)).length ? 
-                   (app.downloads.map((item) => (item.id === req.body.id ? newDownload : item))) :
-                   ([...app.downloads, newDownload]),
-        }, {new: true})))
-      .then((app) => {
-        res.send(app);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-    }).catch((error) => {res.status(422).send(error);});
-  }
-});
 
-router.post("/appinfo/deletedownload", (req, res) => {
-  //TODO: check Authorization
-  checker.checkAuthorityApp(req.body.Authorization,req.body._id).then(()=>{
-     App.findOne({_id: req.body._id})
-    .then((app) => {
-      App.findOneAndUpdate({_id: req.body._id}, {
-        downloads: app.downloads.filter((item) => (item.id !== req.body.id)),
-      }, {new: true})
-      .then((app) => {
-        res.send(app);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-    })
-  }).catch((error) => {res.status(422).send(error);});
-  
-})
+router.get("/search2", (req, res) => {
+  App.findOne({realname:req.query.realname}). then((app)=>res.send({project:app})).catch((err)=>res.status(422).send("nofile"+error));});
 
 router.get("/search", (req, res) => {
     let option={};
@@ -313,13 +233,6 @@ router.get("/search", (req, res) => {
     if(req.query.platform!="all")option["platforms"]=req.query.platform;
     if(req.query.tag!="all")option["tags"]={$elemMatch:{name:req.query.tag}}
     App.find(option). then((app)=>res.send({projects:app})).catch((err)=>res.status(422).send("nofile"+error));
-  //   if(req.query.platforms!="all"){
-  //     App.find({tags: {$elemMatch:{name:req.query.tag}},"platforms":req.query.platforms,                                                          name:{$regex:searchName}}).
-  //       then((app)=>res.send({projects:app}));
-  //     }else{
-  //      App.find({tags: {$elemMatch:{name:req.query.tag}},name:{$regex:searchName}}).
-  //       then((app)=>res.send({projects:app}));
-  //  }
 });
 //neraefads  
 router.get("/applist",(req,res)=>{
@@ -329,8 +242,48 @@ router.get("/applist",(req,res)=>{
 router.post("/appdelete",(req,res)=>{
   // console.log(req.body);
   // console.log(req.query);
-  checker.checkAuthorityApp(req.query.Authorization,req.query._id).then((result)=>{
-    App.deleteOne({_id:req.query._id}).then(res.status(200).send("完成"+result)).catch(()=>console.log("error"));
+  checker.checkAuthorityApp(req.body.Authorization,req.body._id).then((result)=>{
+    App.deleteOne({_id:req.body._id}).then(res.status(200).send({ans:"完成"})).catch(()=>console.log("error"));
+  }).catch((error)=>res.status(422).send(error));
+});
+router.post("/deletephoto",(req,res)=>{
+  checker.checkAuthorityApp(req.body.Authorization,req.body._id).then((rest)=>{
+    Photo.deleteOne({parent:req.body._id}).then(res.status(200).send({ans:"完成"})).catch(()=>console.log("error"));
+  }).catch((error)=>res.status(422).send(error));
+});
+router.post("/loadphoto",(req,res)=>{
+  // console.log(req.body);
+  // console.log(req.query);
+  checker.checkAuthorityApp(req.body.Authorization,req.body._id).then((rest)=>{
+    Photo.findOne({parent:req.body._id}).then((result)=>{
+      console.log("upping");
+      if(result!=null){
+        console.log("begina-----------------");
+        console.log(result.content.length);
+        result.content.push(req.body.content[0]);
+          console.log(result.content.length);
+        Photo.findOneAndUpdate({parent:req.body._id},{$set:{content:result.content}}).then(res.status(200).send({ans:"完成"}));
+      }else{
+        const newphoto = new Photo({
+          parent:req.body._id,
+          content:req.body.content
+        });
+        newphoto.save()
+        .then((news) => res.status(200).send("ok"))
+          .catch((error) => {
+            console.log(error);
+            res.status(500).send(error);});
+        }
+      console.log("ok");
+    });
+
+  }).catch((error)=>res.status(422).send(error));
+});
+router.get("/getphoto",(req,res)=>{
+  Photo.findOne({parent:req.query._id}).then((tmp)=>{
+    let e=tmp.content.length;
+    let k=Math.floor((Math.random()*e)); 
+    res.send({str:tmp.content[k]});
   }).catch((error)=>res.status(422).send(error));
 });
 module.exports = router;

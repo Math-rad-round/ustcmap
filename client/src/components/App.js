@@ -14,7 +14,8 @@ import SignUpPage from "./pages/SignUpPage.js";
 import AppSettings from "./pages/AppSettings.js";
 import ProfileSettingsPage from "./pages/ProfileSettingsPage.js";
 import NotFound from "./pages/NotFound.js";
-import Map from "./newmod/Map.js";
+import Map from "./newpage/Map.js";
+import Path from "./newpage/Path.js";
 import { post } from "../utilities.js";
 
 import Footer from "./modules/Footer.js";
@@ -96,6 +97,7 @@ class App extends Component{
                               errorElement={<NotFound />}
               >
                 <Route path="/" element={<Search />} />
+                <Route path="/app/:appId/path" element={<PathParamsHOC component={Path}/>} />
                 <Route path="/map" element={<Map />} />
                 <Route path="/app/:appId/settings" element={<PathParamsHOC component={AppSettings} />} />
                 <Route path="/app/:appId" element={<PathParamsHOC component={AppPage} />} />

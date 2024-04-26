@@ -8,7 +8,7 @@ class ProjectsOverview extends Component{
   render(){
     return (
       <div className="projects-overview">
-        <span>{"共 "+this.props.projects_num+" 个项目"}</span>
+        <span>{"共 "+this.props.projects_num+" 个路线"}</span>
       </div>
     )
   }

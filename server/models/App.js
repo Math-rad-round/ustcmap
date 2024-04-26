@@ -2,6 +2,7 @@ const mongoose = require("mongoose");
 
 const AppSchema = new mongoose.Schema({
     name:String,
+    realname:String,
     authors:Array,
     createdate:String,
     updatedate:String,
