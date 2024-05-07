@@ -17,12 +17,19 @@ class Map extends Component{
     this.handle= this.handle.bind(this);
     this.jump= this.jump.bind(this);
     this.search= this.search.bind(this);
+    this.flymap= this.flymap.bind(this);
   };
   jump=()=>{
     console.log("jump,ye!!");
     let e=window.location.href;
     e=e.slice(0,-3);
     e+="app/"+this.state.result+"/path";
+    window.location.href=e;
+  }
+  flymap=(text)=>{
+    console.log("fly,ye!!"+text);
+    let e=window.location.href;
+    e+="/bus";
     window.location.href=e;
   }
   handle=(text)=>{
@@ -50,15 +57,17 @@ class Map extends Component{
     return (
       <div>
         
-        <div >
+        <div className="link">
              <img width={800} src={east} />
-          <Text posx={540} posy={955} width={120} height={50} contain={"五教的说明"} name={"五教"} pass={this.handle}
+          <Text posx={250} posy={825} width={60} height={80} contain={"巴士站牌"} name={"站台"} pass={this.flymap}
+              rcon={"巴士站牌的详细的说明"}/>
+          <Text posx={540} posy={1035} width={120} height={50} contain={"第五教学楼"} name={"五教"} pass={this.handle}
               rcon={"五教的详细的说明"}/>
-          <Text posx={330} posy={845} width={110} height={70} contain={"一教的说明"} name={"一教"} pass={this.handle}
+          <Text posx={330} posy={925} width={110} height={70} contain={"第一教学楼"} name={"一教"} pass={this.handle}
           rcon={"1教的详细的说明"}/>
-          <Text posx={450} posy={735} width={90} height={70} contain={"食堂的说明"} name={"食堂"} pass={this.handle}
+          <Text posx={450} posy={815} width={90} height={70} contain={"食堂"} name={"食堂"} pass={this.handle}
           rcon={"非常详细的说明"}/>
-          <Text posx={130} posy={945} width={110} height={40} contain={"隧道的说明"} name={"隧道"} pass={this.handle}
+          <Text posx={130} posy={1025} width={110} height={40} contain={"隧道"} name={"隧道"} pass={this.handle}
           rcon={"隧道的非常非常非常详细的说明"}/>
         {this.state.begin!=null?(<Textbox posx={1000} posy={50} width={90} height={70} contain={"起点 "+this.state.begin}/>):<div/>}
           {this.state.end!=null?(<Textbox posx={1120} posy={50} width={90} height={70} contain={"终点 "+this.state.end}/>):<div/>}
