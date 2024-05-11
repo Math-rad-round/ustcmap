@@ -4,6 +4,17 @@
 .link{
     position:relative;
 }  
+.douba{
+    position:absolute;
+    left:10px;
+    z-index:1;
+}  
+.doubb{
+    position:absolute;
+    left:10px;
+    opacity: 0.3;
+    z-index:2;
+}  
 .bbb {
     /* make it responsive */
     /* max-width: 100%;

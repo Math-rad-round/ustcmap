@@ -1,6 +1,7 @@
 import React , { Component }from "react";
 import Textbox from "../newmod/Textbox.js";
 import "./Map.css";
+import east from "./123.jpg";
 import { post,get } from "../../utilities.js";
 class Path extends Component{
   constructor(props){
@@ -27,8 +28,12 @@ class Path extends Component{
     console.log("kkkk3");
     return (
       <div>
-        {this.state.base?(
-             <img width={800} src={this.state.base} alt=""/>):(<div>正在搜索</div>)}
+        {this.state.base?
+              (<div>
+             <img className="doubb" width={800} src={this.state.base} alt=""/>
+             <img className="douba" width={800} src={east} />
+             </div>)
+             :(<div>正在搜索</div>)}
              {this.state.base?<Textbox posx={1000} posy={200} width={100} height={50} pass={this.jump} contain={"返回路线界面"}/>:<div/>}
     </div>
     );
