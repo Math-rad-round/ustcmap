@@ -6,7 +6,7 @@ import VideoPlayer from "../modules/VideoPlayer.js";
 import AppTabs from "../modules/AppTabs.js";
 import { AppSideBar } from "../modules/SideBar.js";
 import AppHomePage from "../modules/AppHomePage.js";
-import AppDownloadPage from "../modules/AppDownloadPage.js";
+import Eattime from "../newpage/Eattime.js";
 import AppCommentsPage from "../modules/AppCommentsPage.js";
 
 import NotFound from "../pages/NotFound.js";
@@ -31,6 +31,7 @@ class AppPage extends Component{
       logo: "",
       authors: [],
       name: "",
+      realname:"",
       describe: "",
       downloads: [],
       createdate: "",
@@ -84,7 +85,7 @@ class AppPage extends Component{
       subPage = (<AppHomePage describe={this.state.describe} />);
     }
     else if(this.state.page === SubPages.DownloadPage){
-      subPage = (<AppDownloadPage downloadList={this.state.downloads} />);
+      subPage = (<Eattime downloadList={this.state.downloads} />);
     }
     else if(this.state.page === SubPages.CommentsPage){
       subPage = (<AppCommentsPage appId={this.props.appId} />);
@@ -98,7 +99,7 @@ class AppPage extends Component{
         />
         <VideoPlayer videoSrc={"/"+this.state.video}/>
         <div className="sub-page">
-          <AppTabs _onClick={this.changeHash} focus={this.state.page} appId={this.props.appId}/>
+          <AppTabs _onClick={this.changeHash} focus={this.state.page} appId={this.props.appId} appName={this.state.realname}/>
           {subPage}
           <AppSideBar links={this.state.links} createdate={this.state.createdate}
                       updatedate={this.state.updatedate} platforms={this.state.platforms}
