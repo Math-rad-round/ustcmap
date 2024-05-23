@@ -1,6 +1,9 @@
-# ustc-app-store
+# ustcmap
+Adapt from https://github.com/suxxsfe/ustc-app-store
 
-Authors:  
+Author:  
+- [Math-rad-round](https://github.com/Math-rad-round)
+Pre-Authors:
 
 - [Math-rad-round](https://github.com/Math-rad-round)
 - [suxxsfe](https://github.com/suxxsfe)  
@@ -8,8 +11,8 @@ Authors:
 build:  
 
 ```  
-git clone https://github.com/suxxsfe/ustc-app-store
-cd ustc-app-store
+git clone https://github.com/Math-rad-round/ustcmap
+cd ustcmap
 npm install
 npm run build
 npm run start
