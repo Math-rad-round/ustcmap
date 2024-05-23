@@ -252,24 +252,27 @@ router.post("/deletephoto",(req,res)=>{
   }).catch((error)=>res.status(422).send(error));
 });
 router.post("/loadphoto",(req,res)=>{
-  // console.log(req.body);
+  console.log("alerting");
+   console.log(req.body.type);
   // console.log(req.query);
   checker.checkAuthorityApp(req.body.Authorization,req.body._id).then((rest)=>{
-    Photo.findOne({parent:req.body._id}).then((result)=>{
+    Photo.findOne({parent:req.body._id,type:req.body.type}).then((result)=>{
       console.log("upping");
       if(result!=null){
         console.log("begina-----------------");
         console.log(result.content.length);
         result.content.push(req.body.content[0]);
           console.log(result.content.length);
-        Photo.findOneAndUpdate({parent:req.body._id},{$set:{content:result.content}}).then(res.status(200).send({ans:"完成"}));
+        Photo.findOneAndUpdate({parent:req.body._id,type:req.body.type},{$set:{content:result.content}}).then(res.status(200).send({ans:"完成"}));
       }else{
         const newphoto = new Photo({
           parent:req.body._id,
+          type:req.body.type,
           content:req.body.content
         });
+        console.log(newphoto.type);
         newphoto.save()
-        .then((news) => res.status(200).send("ok"))
+        .then((news) => res.status(200).send({ans:"完成"}))
           .catch((error) => {
             console.log(error);
             res.status(500).send(error);});
@@ -280,7 +283,7 @@ router.post("/loadphoto",(req,res)=>{
   }).catch((error)=>res.status(422).send(error));
 });
 router.get("/getphoto",(req,res)=>{
-  Photo.findOne({parent:req.query._id}).then((tmp)=>{
+  Photo.findOne({parent:req.query._id,type:req.query.type}).then((tmp)=>{
     let e=tmp.content.length;
     let k=Math.floor((Math.random()*e)); 
     res.send({str:tmp.content[k]});

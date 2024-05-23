@@ -82,7 +82,7 @@ class AppPage extends Component{
     
     let subPage = null;
     if(this.state.page === SubPages.HomePage || this.state.page === ""){
-      subPage = (<AppHomePage describe={this.state.describe} />);
+      subPage = (<AppHomePage appId={this.props.appId} describe={this.state.describe} />);
     }
     else if(this.state.page === SubPages.DownloadPage){
       subPage = (<Eattime downloadList={this.state.downloads} />);

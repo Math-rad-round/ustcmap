@@ -451,7 +451,8 @@ class NewProject extends Component{
        
       </Consumer>
       
-      <Load content="添加路径图" appId={this.props.appId}/>
+      <Load content="添加路径图" type={0} appId={this.props.appId}/>
+      <Load content="添加描述图" type={1} appId={this.props.appId}/>
       <Delphoto content="删除路径图" appId={this.props.appId}/>
       </div>
     );

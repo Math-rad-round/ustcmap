@@ -28,7 +28,7 @@ class Eattime extends Component{
     return (
       <div>
         <a href="https://welcome.ustc.edu.cn/yinshi/statistics" target="_blank">食堂实时就餐人数</a>
-        <table>
+        <table border="1">
           <thead>
             <tr>
               <th>本食堂就餐时间</th>
@@ -47,11 +47,11 @@ class Eattime extends Component{
               <th>拌饭</th>
             </tr>
             <tr>
-              <td>{table[o][0]+"分钟"}</td>
-              <td>{table[o][1]+"分钟"}</td>
-              <td>{table[o][2]+"分钟"}</td>
-              <td>{table[o][3]+"分钟"}</td>
-              <td>{table[o][4]+"分钟"}</td>
+              <td>{table[o][0]}</td>
+              <td>{table[o][1]}</td>
+              <td>{table[o][2]}</td>
+              <td>{table[o][3]}</td>
+              <td>{table[o][4]}</td>
             </tr>
           </tbody>
         </table>

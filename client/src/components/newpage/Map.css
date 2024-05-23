@@ -15,6 +15,10 @@
     opacity: 0.3;
     z-index:2;
 }  
+.doubc{
+    position:absolute;
+    left:900px;
+}  
 .bbb {
     /* make it responsive */
     /* max-width: 100%;
