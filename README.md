@@ -3,8 +3,8 @@ Adapt from https://github.com/suxxsfe/ustc-app-store
 
 Author:  
 - [Math-rad-round](https://github.com/Math-rad-round)
-Pre-Authors:
-
+- 
+The Pre-project Authors:
 - [Math-rad-round](https://github.com/Math-rad-round)
 - [suxxsfe](https://github.com/suxxsfe)  
 
