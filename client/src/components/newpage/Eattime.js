@@ -1,8 +1,11 @@
 import React, { Component } from "react";
 let table=[
-  ["1-2","1-2","1-3","1-4","4-6"],
-  ["1-3","1-4","1-5","2-6","3-7"],
-  ["3-5","4-4","1-5","2-3","3-7"],
+  ["2分21秒","<1分钟","2分20秒","1分55秒","1分23秒"],
+  ["5分01秒","<1分钟","4分14秒","4分55秒","8分31秒"],
+  ["<1分钟","<1分钟","-----","2分","<1分钟"],
+  ["1分32秒","<1分钟","1分30秒","2分05秒","-----"],
+  ["3分35秒","<1分钟","5分","3分40秒","7分35秒"],
+  ["<1分钟","<1分钟","-----","2分","-----"]
 ];
 class Eattime extends Component{
   constructor(props){
@@ -16,11 +19,15 @@ class Eattime extends Component{
     var x = day.getSeconds();
     let k=s*60+f;
     let o=0;
-    if(k<=690)o=0;
-    else if(k<=800)o=1;
-    else o=2;
+    if(k<=700)o=0;
+    else if(k<=750)o=1;
+    else if(k<=840)o=2;
+    else if(k<=1070)o=3;
+    else if(k<=1120)o=4;
+    else o=5;
     return (
       <div>
+        <a href="https://welcome.ustc.edu.cn/yinshi/statistics" target="_blank">食堂实时就餐人数</a>
         <table>
           <thead>
             <tr>
@@ -33,11 +40,11 @@ class Eattime extends Component{
           </thead>
           <tbody>
             <tr>
-              <th>第一种食物</th>
-              <th>第二种食物</th>
-              <th>第三种食物</th>
-              <th>第四种食物</th>
-              <th>第五种食物</th>
+              <th>汤面</th>
+              <th>称重荤素*2</th>
+              <th>小碗菜*2</th>
+              <th>常规菜品*4</th>
+              <th>拌饭</th>
             </tr>
             <tr>
               <td>{table[o][0]+"分钟"}</td>
