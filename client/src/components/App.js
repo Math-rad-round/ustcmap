@@ -6,6 +6,7 @@ import PathParamsHOC from "./PathParamsHOC.js";
 import Root from "./pages/Root.js";
 import VRroute from "./pano/VRroute.js";
 
+import VRgame from "./pano/VRgame.js";
 import AppPage from "./pages/AppPage.js";
 import Profile from "./pages/Profile.js";
 import Search from "./pages/Search.js";
@@ -110,6 +111,7 @@ class App extends Component{
                 <Route path="/signin/" element={<SignInPage updateWhoami={this.updateWhoami.bind(this)} />} />
                 <Route path="/signup/" element={<SignUpPage />} />
                 <Route path="/vr" element={<VRroute />} />
+                <Route path="/game" element={<VRgame />} />
            {//     <Route path="*" element={<NotFound />} />
            }
               </Route>
