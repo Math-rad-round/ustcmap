@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 
 import PathParamsHOC from "./PathParamsHOC.js";
 import Root from "./pages/Root.js";
+import VRroute from "./pano/VRroute.js";
 
 import AppPage from "./pages/AppPage.js";
 import Profile from "./pages/Profile.js";
@@ -108,7 +109,9 @@ class App extends Component{
                 <Route path="/new/" element={<NewProjectPage />} />
                 <Route path="/signin/" element={<SignInPage updateWhoami={this.updateWhoami.bind(this)} />} />
                 <Route path="/signup/" element={<SignUpPage />} />
-                <Route path="*" element={<NotFound />} />
+                <Route path="/vr" element={<VRroute />} />
+           {//     <Route path="*" element={<NotFound />} />
+           }
               </Route>
             </Routes>
           </BrowserRouter>
