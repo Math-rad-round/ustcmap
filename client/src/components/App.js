@@ -4,7 +4,9 @@ import PropTypes from "prop-types";
 
 import PathParamsHOC from "./PathParamsHOC.js";
 import Root from "./pages/Root.js";
+import VRroute from "./pano/VRroute.js";
 
+import VRgame from "./pano/VRgame.js";
 import AppPage from "./pages/AppPage.js";
 import Profile from "./pages/Profile.js";
 import Search from "./pages/Search.js";
@@ -18,7 +20,7 @@ import Map from "./newpage/Map.js";
 import Room from "./newpage/Room.js";
 import Path from "./newpage/Path.js";
 import { post } from "../utilities.js";
-
+import Busmap from "./newpage/Busmap.js";
 import Footer from "./modules/Footer.js";
 import NavBar from "./modules/NavBar.js";
 
@@ -100,6 +102,7 @@ class App extends Component{
                 <Route path="/" element={<Search />} />
                 <Route path="/app/:appId/path" element={<PathParamsHOC component={Path}/>} />
                 <Route path="/map" element={<Map />} />
+                <Route path="/map/bus" element={<Busmap />} />
                 <Route path="/room" element={<Room />} />
                 <Route path="/app/:appId/settings" element={<PathParamsHOC component={AppSettings} />} />
                 <Route path="/app/:appId" element={<PathParamsHOC component={AppPage} />} />
@@ -109,7 +112,10 @@ class App extends Component{
                 <Route path="/new/" element={<NewProjectPage />} />
                 <Route path="/signin/" element={<SignInPage updateWhoami={this.updateWhoami.bind(this)} />} />
                 <Route path="/signup/" element={<SignUpPage />} />
-                <Route path="*" element={<NotFound />} />
+                <Route path="/vr" element={<VRroute />} />
+                <Route path="/game" element={<VRgame />} />
+           {//     <Route path="*" element={<NotFound />} />
+           }
               </Route>
             </Routes>
           </BrowserRouter>

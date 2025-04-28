@@ -34,6 +34,10 @@ const resourcePath = path.join(__dirname, "upload");
 app.use(express.static(resourcePath));
 
 const reactPath = path.resolve(__dirname, "..", "client", "dist");
+
+const publicPath = path.resolve(__dirname, "..", "public");
+
+const panoPath = path.resolve(__dirname, "..", "public","pano");
 app.use(express.static(reactPath));
 
 // connect user-defined routes
@@ -66,8 +70,77 @@ app.get('/upload/:dir1/:dir2/:name', (req, res) => {
     }
   });
 });
+app.get('/undefined/:dir1/:name', (req, res) => {
+  res.sendFile(path.join(publicPath, req.params.dir1, req.params.name), options, (err) => {
+    if(err){
+      console.log("fuck"+err);
+      res.status(err.status).end();
+    }
+    else{
+      console.log('Sent:', req.params.name);
+    }
+  });
+});
+//http://localhost:3000/undefined/pano/webxr/webxr-polyfill.min.js
+app.get('/undefined/:dir1/:dir2/:name', (req, res) => {
+  res.sendFile(path.join(publicPath, req.params.dir1, req.params.dir2, req.params.name), options, (err) => {
+    if(err){
+      console.log("fuck"+err);
+      res.status(err.status).end();
+    }
+    else{
+      console.log('Sent:', req.params.name);
+    }
+  });
+});
+app.get('/undefined/:dir1/:dir2/:dir3/:name', (req, res) => {
+  res.sendFile(path.join(publicPath, req.params.dir1, req.params.dir2, req.params.dir3,req.params.name), options, (err) => {
+    if(err){
+      console.log("fuck"+err);
+      res.status(err.status).end();
+    }
+    else{
+      console.log('Sent:', req.params.name);
+    }
+  });
+});
+app.get('/undefined/:dir1/:dir2/:dir3/:dir4/:name', (req, res) => {
+  res.sendFile(path.join(publicPath, req.params.dir1, req.params.dir2, req.params.dir3,req.params.dir4,req.params.name), options, (err) => {
+    if(err){
+      console.log("fuck"+err);
+      res.status(err.status).end();
+    }
+    else{
+      console.log('Sent:', req.params.name);
+    }
+  });
+});
 
+app.get('/undefined/:dir1/:dir2/:dir3/:dir4/:dir5/:name', (req, res) => {
+  res.sendFile(path.join(publicPath, req.params.dir1, req.params.dir2, req.params.dir3,req.params.dir4,req.params.dir5,req.params.name), options, (err) => {
+    if(err){
+      console.log("fuck"+err);
+      res.status(err.status).end();
+    }
+    else{
+      console.log('Sent:', req.params.name);
+    }
+  });
+});
+app.get('/undefined/:dir1/:dir2/:dir3/:dir4/:dir5/:dir6/:name', (req, res) => {
+  res.sendFile(path.join(publicPath, req.params.dir1, req.params.dir2, req.params.dir3,req.params.dir4,req.params.dir5,req.params.dir6,req.params.name), options, (err) => {
+    if(err){
+      console.log("fuck"+err);
+      res.status(err.status).end();
+    }
+    else{
+      console.log('Sent:', req.params.name);
+    }
+  });
+});
 // for all other routes, render index.html and let react router handle it
+
+
 app.get("*", (req, res) => {
   res.sendFile(path.join(reactPath, "index.html"));
 });

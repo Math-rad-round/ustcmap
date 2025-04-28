@@ -3,10 +3,21 @@
 }
 .link{
     position:relative;
-    bottom: 30px;
+}  
+.douba{
+    position:absolute;
+    left:10px;
+    z-index:1;
+}  
+.doubb{
+    position:absolute;
+    left:10px;
+    opacity: 0.3;
+    z-index:2;
+}  
+.doubc{
+    position:absolute;
     left:900px;
-    width:100px;
-    height:20px;
 }  
 .bbb {
     /* make it responsive */

@@ -1,13 +1,14 @@
-# ustcmap
 Adapt from https://github.com/suxxsfe/ustc-app-store
 
-Author:  
+VRMapAuthor:
+- [Math-rad-round](https://github.com/Math-rad-round)
+
+2DMapAuthor:  
 - [Math-rad-round](https://github.com/Math-rad-round)
 
 The Pre-project Authors:
 - [Math-rad-round](https://github.com/Math-rad-round)
 - [suxxsfe](https://github.com/suxxsfe)  
-
 build:  
 
 ```  

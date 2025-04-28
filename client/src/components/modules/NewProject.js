@@ -301,57 +301,6 @@ class NewProject extends Component{
     
     const downloads = (
         <div className="new-app-downloads">
-          <h2>管理下载项</h2>
-          <div className="new-downloads-container">
-            <div className="new-downloads-title">运行平台</div>
-            <div className="new-downloads-title">文件名</div>
-            <div className="new-downloads-title">操作</div>
-            {
-              this.state.downloads.map((item) => (
-                <>
-                  <div className="new-download-content">
-                    <select name="platform" className="new-download-select"
-                            value={item.platform} onChange={this.handleDownloadPlatformChange.bind(this, item.id)}
-                    >
-                      <option value="Windows">Windows</option>
-                      <option value="MacOS">MacOS</option>
-                      <option value="Linux">Linux</option>
-                    </select>
-                  </div>
-                  <div className="new-download-content">
-                    <span style={{fontSize: "16px"}}>{item.filename}</span>
-                  </div>
-                  <div className="new-download-content">
-                    <button value="Delete" className="new-download-action"
-                            onClick={this.handleDownloadDelete.bind(this, item.id)}
-                    >
-                      删除
-                    </button>
-                    <input type="file" accept="application/*"
-                           style={{display:"none"}} className="file-input"
-                           onChange={this.handleDownloadFileChange.bind(this, item.id)}
-                           encType="multipart/form-data"
-                    />
-                    <button value="ChangeFile" className="new-download-action"
-                            onClick={this.getFile.bind(this)}
-                    >
-                      选择文件
-                    </button>
-                    <button value="Submit" className="new-download-action"
-                            onClick={this.handleDownloadSubmit.bind(this, item.id)}
-                    >
-                      确认更改
-                    </button>
-                  </div>
-                </>
-              ))
-            } 
-            <button className="new-download-button"
-                    onClick={this.handleNewDownload.bind(this)}
-            >
-              添加下载项
-            </button>
-          </div>
         </div>
     );
     
@@ -484,7 +433,6 @@ class NewProject extends Component{
                {this.props.appId ? (
                  <>
                    {selections}
-                   {links}
                  </>
                ) : null}
                <div className="new-app-submit">
@@ -503,7 +451,8 @@ class NewProject extends Component{
        
       </Consumer>
       
-      <Load content="添加路径图" appId={this.props.appId}/>
+      <Load content="添加路径图" type={0} appId={this.props.appId}/>
+      <Load content="添加描述图" type={1} appId={this.props.appId}/>
       <Delphoto content="删除路径图" appId={this.props.appId}/>
       </div>
     );

@@ -1,0 +1,1555 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tour appversion="6.1.8" start="node28" apprev="17956">
+  <panorama id="node1">
+    <input levelbias="0.400" height="1728" width="1728" overlap="1" levelingpitch="0" levelingroll="0" levelbiashidpi="1.000" leveltilesize="510" leveltileurl="tiles/node1/cf_%c/l_%l/c_%x/tile_%y.jpg">
+      <level height="1728" width="1728" preload="0" predecode="0"/>
+      <level height="864" width="864" preload="0" predecode="0"/>
+      <level height="432" width="432" preload="1" predecode="1"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view fovmode="0" pannorth="0">
+      <start fov="70" tilt="0" projection="4" pan="0"/>
+      <flyin fov="170" tilt="-90" projection="9" pan="0"/>
+      <min tilt="-90" fovpixel="2" pan="0"/>
+      <max fov="120" fovfisheye="360" scaletofit="1" fovstereographic="270" tilt="90" pan="360"/>
+    </view>
+    <userdata title="E1buildingSE" description="" info="" tags="panodel" latitude="" copyright="" nodeid="node1" source="" datetime="" comment="" author="" heading="0" longitude="" customnodeid=""/>
+    <hotspots height="20" width="180" wordwrap="1">
+      <label backgroundalpha="1" height="20" width="180" borderalpha="1" textalpha="1" border="1" wordwrap="1" background="1" borderradius="1" enabled="1" textcolor="0x000000" backgroundcolor="0xffffff" bordercolor="0x000000"/>
+      <polystyle backgroundalpha="0.25098" borderalpha="1" handcursor="1" mode="0" backgroundcolor="0x0000ff" bordercolor="0x0000ff"/>
+      <hotspot title="这是哪？" description="？怎么突然到了东区？&#xa;你感到非常神奇，不过还是直接去考试吧" url="" skinid="ht_info" id="Point10" target="" tilt="37.26" pan="-353.54"/>
+      <polyhotspot title="" description="" url="{node4}" id="Poly01" target="">
+        <polystring>-61.98/5.58|-60.65/-0.82|-72.08/-0.92|-68.59/5.67</polystring>
+      </polyhotspot>
+      <polyhotspot title="" description="" url="{node46}" id="Poly02" target="">
+        <polystring>-243.12/1.43|-241.59/-4.98|-256.28/-5.19|-252.68/1.32|-251.27/1.33</polystring>
+      </polyhotspot>
+      <polyhotspot title="" description="" url="{node30}" id="Poly03" target="">
+        <polystring>-150.71/8.55|-154.45/-1.36|-175.55/-3.47|-175.57/7.07</polystring>
+      </polyhotspot>
+      <polyhotspot title="" description="" url="{node4}" id="Poly04" target="">
+        <polystring>-325.17/2.64|-301.95/-14.29|-334.38/-17.26|-335.99/2.14</polystring>
+      </polyhotspot>
+    </hotspots>
+    <media/>
+    <transition blendtime="1" zoomspeed="2" type="crossdissolve" blendcolor="0x000000" zoomout="0" enabled="1" zoomfov="20" zoomin="0" softedge="0" zoomoutpause="1"/>
+    <animation useinautorotation="0" syncanimationwithvideo="0" animsequence="Animation01"/>
+    <control lockedkeyboardzoom="0" speedwheel="1" lockedkeyboard="0" contextfullscreen="1" invertcontrol="1" hideabout="0" sensitivity="8" dblclickfullscreen="0" invertwheel="0" lockedmouse="0" contextprojections="0" simulatemass="1" rubberband="0" lockedwheel="0"/>
+  </panorama>
+  <panorama id="node2">
+    <input levelbias="0.400" height="1728" width="1728" overlap="1" levelingpitch="0" levelingroll="0" levelbiashidpi="1.000" leveltilesize="510" leveltileurl="tiles/node2/cf_%c/l_%l/c_%x/tile_%y.jpg">
+      <level height="1728" width="1728" preload="0" predecode="0"/>
+      <level height="864" width="864" preload="0" predecode="0"/>
+      <level height="432" width="432" preload="1" predecode="1"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view fovmode="0" pannorth="0">
+      <start fov="70" tilt="0" projection="4" pan="0"/>
+      <flyin fov="170" tilt="-90" projection="9" pan="0"/>
+      <min tilt="-90" fovpixel="2" pan="0"/>
+      <max fov="120" fovfisheye="360" scaletofit="1" fovstereographic="270" tilt="90" pan="360"/>
+    </view>
+    <userdata title="" description="" info="" tags="panodel" latitude="" copyright="" nodeid="node2" source="" datetime="" comment="" author="" heading="0" longitude="" customnodeid=""/>
+    <hotspots height="20" width="180" wordwrap="1">
+      <label backgroundalpha="1" height="20" width="180" borderalpha="1" textalpha="1" border="1" wordwrap="1" background="1" borderradius="1" enabled="1" textcolor="0x000000" backgroundcolor="0xffffff" bordercolor="0x000000"/>
+      <polystyle backgroundalpha="0.25098" borderalpha="1" handcursor="1" mode="0" backgroundcolor="0x0000ff" bordercolor="0x0000ff"/>
+      <polyhotspot title="" description="" url="{node3}" id="Poly01" target="">
+        <polystring>-258.5/13|-254.15/-17.12|-41.23/-14.72|-37.85/14.88|-326.73/43.79|-262.08/20.19</polystring>
+      </polyhotspot>
+      <polyhotspot title="" description="" url="{node7}" id="Poly02" target="">
+        <polystring>-144.76/10.55|-142.42/-24.98|-198.29/-27.76|-196.94/9.86</polystring>
+      </polyhotspot>
+      <polyhotspot title="" description="" url="" id="Poly03" target="">
+        <polystring>-61.92/30.14|-57.57/-14.01|-134.85/-17.81|-133.6/19.01</polystring>
+      </polyhotspot>
+      <polyhotspot title="" description="" url="{node45}" id="Poly04" target="">
+        <polystring>-207.14/18.14|-205.99/-36.82|-249.27/-19.86|-257.21/23.7</polystring>
+      </polyhotspot>
+    </hotspots>
+    <media/>
+    <transition blendtime="1" zoomspeed="2" type="crossdissolve" blendcolor="0x000000" zoomout="0" enabled="1" zoomfov="20" zoomin="0" softedge="0" zoomoutpause="1"/>
+    <animation useinautorotation="0" syncanimationwithvideo="0" animsequence="Animation01"/>
+    <control lockedkeyboardzoom="0" speedwheel="1" lockedkeyboard="0" contextfullscreen="1" invertcontrol="1" hideabout="0" sensitivity="8" dblclickfullscreen="0" invertwheel="0" lockedmouse="0" contextprojections="0" simulatemass="1" rubberband="0" lockedwheel="0"/>
+  </panorama>
+  <panorama id="node3">
+    <input levelbias="0.400" height="1728" width="1728" overlap="1" levelingpitch="0" levelingroll="0" levelbiashidpi="1.000" leveltilesize="510" leveltileurl="tiles/node3/cf_%c/l_%l/c_%x/tile_%y.jpg">
+      <level height="1728" width="1728" preload="0" predecode="0"/>
+      <level height="864" width="864" preload="0" predecode="0"/>
+      <level height="432" width="432" preload="1" predecode="1"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view fovmode="0" pannorth="0">
+      <start fov="70" tilt="0" projection="4" pan="0"/>
+      <flyin fov="170" tilt="-90" projection="9" pan="0"/>
+      <min tilt="-90" fovpixel="2" pan="0"/>
+      <max fov="120" fovfisheye="360" scaletofit="1" fovstereographic="270" tilt="90" pan="360"/>
+    </view>
+    <userdata title="" description="" info="" tags="panodel" latitude="" copyright="" nodeid="node3" source="" datetime="" comment="" author="" heading="0" longitude="" customnodeid=""/>
+    <hotspots height="20" width="180" wordwrap="1">
+      <label backgroundalpha="1" height="20" width="180" borderalpha="1" textalpha="1" border="1" wordwrap="1" background="1" borderradius="1" enabled="1" textcolor="0x000000" backgroundcolor="0xffffff" bordercolor="0x000000"/>
+      <polystyle backgroundalpha="0.25098" borderalpha="1" handcursor="1" mode="0" backgroundcolor="0x0000ff" bordercolor="0x0000ff"/>
+      <hotspot title="" description="你发现这里是一教大门口，樱花路下！&#xa;你感到十分惊奇，不过由于这里的重力加速度极不稳定，&#xa;你决定还是赶紧离开，赶去考试" url="" skinid="ht_info" id="Point01" target="" tilt="21.38" pan="-113.95"/>
+      <polyhotspot title="" description="" url="{node37}" id="Poly01" target="">
+        <polystring>-85.28/8.84|-87.95/-7.01|-113.56/-1.06|-101.75/9.15</polystring>
+      </polyhotspot>
+      <polyhotspot title="" description="" url="{node12}" id="Poly02" target="">
+        <polystring>-335.21/11.54|-344.8/-32.52|-40.52/-8.81|-28.77/9.75</polystring>
+      </polyhotspot>
+      <polyhotspot title="" description="" url="{node19}" id="Poly03" target="">
+        <polystring>-192.73/15.82|-165.46/-0.76|-166.84/-6.6|-189.65/-21.34|-212.11/12.98</polystring>
+      </polyhotspot>
+    </hotspots>
+    <media/>
+    <transition blendtime="1" zoomspeed="2" type="crossdissolve" blendcolor="0x000000" zoomout="0" enabled="1" zoomfov="20" zoomin="0" softedge="0" zoomoutpause="1"/>
+    <animation useinautorotation="0" syncanimationwithvideo="0" animsequence="Animation01"/>
+    <control lockedkeyboardzoom="0" speedwheel="1" lockedkeyboard="0" contextfullscreen="1" invertcontrol="1" hideabout="0" sensitivity="8" dblclickfullscreen="0" invertwheel="0" lockedmouse="0" contextprojections="0" simulatemass="1" rubberband="0" lockedwheel="0"/>
+  </panorama>
+  <panorama id="node4">
+    <input levelbias="0.400" height="1728" width="1728" overlap="1" levelingpitch="0" levelingroll="0" levelbiashidpi="1.000" leveltilesize="510" leveltileurl="tiles/node4/cf_%c/l_%l/c_%x/tile_%y.jpg">
+      <level height="1728" width="1728" preload="0" predecode="0"/>
+      <level height="864" width="864" preload="0" predecode="0"/>
+      <level height="432" width="432" preload="1" predecode="1"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view fovmode="0" pannorth="0">
+      <start fov="70" tilt="0" projection="4" pan="0"/>
+      <flyin fov="170" tilt="-90" projection="9" pan="0"/>
+      <min tilt="-90" fovpixel="2" pan="0"/>
+      <max fov="120" fovfisheye="360" scaletofit="1" fovstereographic="270" tilt="90" pan="360"/>
+    </view>
+    <userdata title="" description="" info="" tags="panodel" latitude="" copyright="" nodeid="node4" source="" datetime="" comment="" author="" heading="0" longitude="" customnodeid=""/>
+    <hotspots height="20" width="180" wordwrap="1">
+      <label backgroundalpha="1" height="20" width="180" borderalpha="1" textalpha="1" border="1" wordwrap="1" background="1" borderradius="1" enabled="1" textcolor="0x000000" backgroundcolor="0xffffff" bordercolor="0x000000"/>
+      <polystyle backgroundalpha="0.25098" borderalpha="1" handcursor="1" mode="0" backgroundcolor="0x0000ff" bordercolor="0x0000ff"/>
+      <hotspot title="导览" description="太神奇了！你只是想象着走向那个窗户，你就来到了教学楼前，你也不管是哪个教学楼了！可当你正想走向考场的时候，突然发现已经八个小时没吃东西了！没办法，只好先去食堂二楼买点东西吃了！" url="" skinid="ht_info" id="Point01" target="" tilt="3.78" pan="-319.06"/>
+      <polyhotspot title="" description="" url="{node11}" id="Poly01" target="">
+        <polystring>-327.68/11.65|-326.99/-3.86|-349.67/-3.64|-346.94/13.08|-342.6/12.63</polystring>
+      </polyhotspot>
+      <polyhotspot title="" description="" url="{node45}" id="Poly02" target="">
+        <polystring>-72.96/15.49|-63.9/-7.99|-99.59/-11.28|-89.13/17.42</polystring>
+      </polyhotspot>
+      <polyhotspot title="" description="" url="{node46}" id="Poly03" target="">
+        <polystring>-242.53/9.71|-235.84/-5.33|-263.57/-7.05|-253.72/12.27</polystring>
+      </polyhotspot>
+    </hotspots>
+    <media/>
+    <transition blendtime="1" zoomspeed="2" type="crossdissolve" blendcolor="0x000000" zoomout="0" enabled="1" zoomfov="20" zoomin="0" softedge="0" zoomoutpause="1"/>
+    <animation useinautorotation="0" syncanimationwithvideo="0" animsequence="Animation01"/>
+    <control lockedkeyboardzoom="0" speedwheel="1" lockedkeyboard="0" contextfullscreen="1" invertcontrol="1" hideabout="0" sensitivity="8" dblclickfullscreen="0" invertwheel="0" lockedmouse="0" contextprojections="0" simulatemass="1" rubberband="0" lockedwheel="0"/>
+  </panorama>
+  <panorama id="node5">
+    <input levelbias="0.400" height="1728" width="1728" overlap="1" levelingpitch="0" levelingroll="0" levelbiashidpi="1.000" leveltilesize="510" leveltileurl="tiles/node5/cf_%c/l_%l/c_%x/tile_%y.jpg">
+      <level height="1728" width="1728" preload="0" predecode="0"/>
+      <level height="864" width="864" preload="0" predecode="0"/>
+      <level height="432" width="432" preload="1" predecode="1"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view fovmode="0" pannorth="0">
+      <start fov="70" tilt="0" projection="4" pan="0"/>
+      <flyin fov="170" tilt="-90" projection="9" pan="0"/>
+      <min tilt="-90" fovpixel="2" pan="0"/>
+      <max fov="120" fovfisheye="360" scaletofit="1" fovstereographic="270" tilt="90" pan="360"/>
+    </view>
+    <userdata title="" description="" info="" tags="panodel" latitude="" copyright="" nodeid="node5" source="" datetime="" comment="" author="" heading="0" longitude="" customnodeid=""/>
+    <hotspots height="20" width="180" wordwrap="1">
+      <label backgroundalpha="1" height="20" width="180" borderalpha="1" textalpha="1" border="1" wordwrap="1" background="1" borderradius="1" enabled="1" textcolor="0x000000" backgroundcolor="0xffffff" bordercolor="0x000000"/>
+      <polystyle backgroundalpha="0.25098" borderalpha="1" handcursor="1" mode="0" backgroundcolor="0x0000ff" bordercolor="0x0000ff"/>
+      <hotspot title="第五教学楼" description="恭喜！&#xa;你来到了考场，准时考试，目标4.3！&#xa;但是，你总觉得哪里不对……&#xa;或许应该先请教下科大中的前辈老科学家们？&#xa;{开局走到郭永怀像处，点击}&#xa;【结局——成功考试？】" url="" skinid="ht_url" id="Point04" target="_blank" tilt="38.75" pan="-345.08"/>
+      <hotspot title="返回分歧点" description="" url="{node6}" skinid="back" id="Point05" target="" tilt="5.98" pan="-302.42"/>
+      <hotspot title="返回起点" description="" url="{node28}" skinid="skip" id="Point06" target="" tilt="14.59" pan="-41.01"/>
+    </hotspots>
+    <media/>
+    <transition blendtime="1" zoomspeed="2" type="crossdissolve" blendcolor="0x000000" zoomout="0" enabled="1" zoomfov="20" zoomin="0" softedge="0" zoomoutpause="1"/>
+    <animation useinautorotation="0" syncanimationwithvideo="0" animsequence="Animation01"/>
+    <control lockedkeyboardzoom="0" speedwheel="1" lockedkeyboard="0" contextfullscreen="1" invertcontrol="1" hideabout="0" sensitivity="8" dblclickfullscreen="0" invertwheel="0" lockedmouse="0" contextprojections="0" simulatemass="1" rubberband="0" lockedwheel="0"/>
+  </panorama>
+  <panorama id="node6">
+    <input levelbias="0.400" height="1728" width="1728" overlap="1" levelingpitch="0" levelingroll="0" levelbiashidpi="1.000" leveltilesize="510" leveltileurl="tiles/node6/cf_%c/l_%l/c_%x/tile_%y.jpg">
+      <level height="1728" width="1728" preload="0" predecode="0"/>
+      <level height="864" width="864" preload="0" predecode="0"/>
+      <level height="432" width="432" preload="1" predecode="1"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view fovmode="0" pannorth="0">
+      <start fov="70" tilt="0" projection="4" pan="0"/>
+      <flyin fov="170" tilt="-90" projection="9" pan="0"/>
+      <min tilt="-90" fovpixel="2" pan="0"/>
+      <max fov="120" fovfisheye="360" scaletofit="1" fovstereographic="270" tilt="90" pan="360"/>
+    </view>
+    <userdata title="" description="" info="" tags="panodel" latitude="" copyright="" nodeid="node6" source="" datetime="" comment="" author="" heading="0" longitude="" customnodeid=""/>
+    <hotspots height="20" width="180" wordwrap="1">
+      <label backgroundalpha="1" height="20" width="180" borderalpha="1" textalpha="1" border="1" wordwrap="1" background="1" borderradius="1" enabled="1" textcolor="0x000000" backgroundcolor="0xffffff" bordercolor="0x000000"/>
+      <polystyle backgroundalpha="0.25098" borderalpha="1" handcursor="1" mode="0" backgroundcolor="0x0000ff" bordercolor="0x0000ff"/>
+      <hotspot title="吃完饭" description="太好了！吃饱饭了！&#xa;你心满意足的打开手机，突然刷到了老师说的考场变更到5107的消息！你猛地一惊，意识到还有考试！赶紧冲！" url="" skinid="ht_url" id="Point06" target="_blank" tilt="9.85" pan="-351.63"/>
+      <polyhotspot title="" description="" url="{node17}" id="Poly01" target="">
+        <polystring>-122.47/28.29|-90.83/-7.31|-159.13/-3.28|-223.01/-17.58|-220.22/18.15|-175.48/36.11</polystring>
+      </polyhotspot>
+      <polyhotspot title="" description="" url="{node5}" id="Poly02" target="">
+        <polystring>-306.97/5.87|-309.62/-10.31|-333.65/-8.31|-330.08/7.63</polystring>
+      </polyhotspot>
+    </hotspots>
+    <media/>
+    <transition blendtime="1" zoomspeed="2" type="crossdissolve" blendcolor="0x000000" zoomout="0" enabled="1" zoomfov="20" zoomin="0" softedge="0" zoomoutpause="1"/>
+    <animation useinautorotation="0" syncanimationwithvideo="0" animsequence="Animation01"/>
+    <control lockedkeyboardzoom="0" speedwheel="1" lockedkeyboard="0" contextfullscreen="1" invertcontrol="1" hideabout="0" sensitivity="8" dblclickfullscreen="0" invertwheel="0" lockedmouse="0" contextprojections="0" simulatemass="1" rubberband="0" lockedwheel="0"/>
+  </panorama>
+  <panorama id="node7">
+    <input levelbias="0.400" height="1728" width="1728" overlap="1" levelingpitch="0" levelingroll="0" levelbiashidpi="1.000" leveltilesize="510" leveltileurl="tiles/node7/cf_%c/l_%l/c_%x/tile_%y.jpg">
+      <level height="1728" width="1728" preload="0" predecode="0"/>
+      <level height="864" width="864" preload="0" predecode="0"/>
+      <level height="432" width="432" preload="1" predecode="1"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view fovmode="0" pannorth="0">
+      <start fov="70" tilt="0" projection="4" pan="0"/>
+      <flyin fov="170" tilt="-90" projection="9" pan="0"/>
+      <min tilt="-90" fovpixel="2" pan="0"/>
+      <max fov="120" fovfisheye="360" scaletofit="1" fovstereographic="270" tilt="90" pan="360"/>
+    </view>
+    <userdata title="" description="" info="" tags="panodel" latitude="" copyright="" nodeid="node7" source="" datetime="" comment="" author="" heading="0" longitude="" customnodeid=""/>
+    <hotspots height="20" width="180" wordwrap="1">
+      <label backgroundalpha="1" height="20" width="180" borderalpha="1" textalpha="1" border="1" wordwrap="1" background="1" borderradius="1" enabled="1" textcolor="0x000000" backgroundcolor="0xffffff" bordercolor="0x000000"/>
+      <polystyle backgroundalpha="0.25098" borderalpha="1" handcursor="1" mode="0" backgroundcolor="0x0000ff" bordercolor="0x0000ff"/>
+      <hotspot title="晕了！" description="你似乎忘了自己想去哪了，好好想想&#xa;迈出下一步！" url="" skinid="ht_info" id="Point05" target="" tilt="18.45" pan="-346.48"/>
+      <hotspot title="之后前去打开的门&#xa;意志要坚定！" description="之后前去打开的门&#xa;意志要坚定！" url="" skinid="skip2" id="Point01" target="" tilt="1.95" pan="-9.44"/>
+      <polyhotspot title="" description="" url="{node37}" id="Poly01" target="">
+        <polystring>-298.8/7.89|-302.66/-9.77|-339.97/-8.93|-338.49/11.01</polystring>
+      </polyhotspot>
+      <polyhotspot title="" description="" url="{node13}" id="Poly02" target="">
+        <polystring>-113.28/21|-110.56/-2.71|-167.8/-6.9|-170.71/30.29</polystring>
+      </polyhotspot>
+      <polyhotspot title="" description="" url="{node16}" id="Poly03" target="">
+        <polystring>-14.64/21.1|-16.54/-6.27|-88.36/-3.8|-83.49/20.39</polystring>
+      </polyhotspot>
+    </hotspots>
+    <media/>
+    <transition blendtime="1" zoomspeed="2" type="crossdissolve" blendcolor="0x000000" zoomout="0" enabled="1" zoomfov="20" zoomin="0" softedge="0" zoomoutpause="1"/>
+    <animation useinautorotation="0" syncanimationwithvideo="0" animsequence="Animation01"/>
+    <control lockedkeyboardzoom="0" speedwheel="1" lockedkeyboard="0" contextfullscreen="1" invertcontrol="1" hideabout="0" sensitivity="8" dblclickfullscreen="0" invertwheel="0" lockedmouse="0" contextprojections="0" simulatemass="1" rubberband="0" lockedwheel="0"/>
+  </panorama>
+  <panorama id="node8">
+    <input levelbias="0.400" height="1728" width="1728" overlap="1" levelingpitch="0" levelingroll="0" levelbiashidpi="1.000" leveltilesize="510" leveltileurl="tiles/node8/cf_%c/l_%l/c_%x/tile_%y.jpg">
+      <level height="1728" width="1728" preload="0" predecode="0"/>
+      <level height="864" width="864" preload="0" predecode="0"/>
+      <level height="432" width="432" preload="1" predecode="1"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view fovmode="0" pannorth="0">
+      <start fov="70" tilt="0" projection="4" pan="0"/>
+      <flyin fov="170" tilt="-90" projection="9" pan="0"/>
+      <min tilt="-90" fovpixel="2" pan="0"/>
+      <max fov="120" fovfisheye="360" scaletofit="1" fovstereographic="270" tilt="90" pan="360"/>
+    </view>
+    <userdata title="" description="" info="" tags="panodel" latitude="" copyright="" nodeid="node8" source="" datetime="" comment="" author="" heading="0" longitude="" customnodeid=""/>
+    <hotspots height="20" width="180" wordwrap="1">
+      <label backgroundalpha="1" height="20" width="180" borderalpha="1" textalpha="1" border="1" wordwrap="1" background="1" borderradius="1" enabled="1" textcolor="0x000000" backgroundcolor="0xffffff" bordercolor="0x000000"/>
+      <polystyle backgroundalpha="0.25098" borderalpha="1" handcursor="1" mode="0" backgroundcolor="0x0000ff" bordercolor="0x0000ff"/>
+      <hotspot title="" description="你走到了东区学生活动中心&#xa;这可不是食堂！&#xa;你看着北边的食堂，突然有种可望而不可及的感觉……&#xa;似乎先回去图书馆比较好？" url="" skinid="ht_info" id="Point01" target="" tilt="12.82" pan="-175.93"/>
+      <polyhotspot title="" description="" url="{node45}" id="Poly01" target="">
+        <polystring>-93.11/13.04|-90.3/0.64|-116.93/-1.8|-115.07/10.15</polystring>
+      </polyhotspot>
+      <polyhotspot title="" description="" url="{node42}" id="Poly02" target="">
+        <polystring>-71.23/12.64|-79.57/1.3|-58.29/-12.46|-55.54/11.25</polystring>
+      </polyhotspot>
+      <polyhotspot title="" description="" url="{node14}" id="Poly03" target="">
+        <polystring>-243.3/10.22|-236.29/-3.86|-266.72/-4.58|-264.23/9.81</polystring>
+      </polyhotspot>
+    </hotspots>
+    <media/>
+    <transition blendtime="1" zoomspeed="2" type="crossdissolve" blendcolor="0x000000" zoomout="0" enabled="1" zoomfov="20" zoomin="0" softedge="0" zoomoutpause="1"/>
+    <animation useinautorotation="0" syncanimationwithvideo="0" animsequence="Animation01"/>
+    <control lockedkeyboardzoom="0" speedwheel="1" lockedkeyboard="0" contextfullscreen="1" invertcontrol="1" hideabout="0" sensitivity="8" dblclickfullscreen="0" invertwheel="0" lockedmouse="0" contextprojections="0" simulatemass="1" rubberband="0" lockedwheel="0"/>
+  </panorama>
+  <panorama id="node9">
+    <input levelbias="0.400" height="1728" width="1728" overlap="1" levelingpitch="0" levelingroll="0" levelbiashidpi="1.000" leveltilesize="510" leveltileurl="tiles/node9/cf_%c/l_%l/c_%x/tile_%y.jpg">
+      <level height="1728" width="1728" preload="0" predecode="0"/>
+      <level height="864" width="864" preload="0" predecode="0"/>
+      <level height="432" width="432" preload="1" predecode="1"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view fovmode="0" pannorth="0">
+      <start fov="70" tilt="0" projection="4" pan="0"/>
+      <flyin fov="170" tilt="-90" projection="9" pan="0"/>
+      <min tilt="-90" fovpixel="2" pan="0"/>
+      <max fov="120" fovfisheye="360" scaletofit="1" fovstereographic="270" tilt="90" pan="360"/>
+    </view>
+    <userdata title="" description="" info="" tags="panodel" latitude="" copyright="" nodeid="node9" source="" datetime="" comment="" author="" heading="0" longitude="" customnodeid=""/>
+    <hotspots height="20" width="180" wordwrap="1">
+      <label backgroundalpha="1" height="20" width="180" borderalpha="1" textalpha="1" border="1" wordwrap="1" background="1" borderradius="1" enabled="1" textcolor="0x000000" backgroundcolor="0xffffff" bordercolor="0x000000"/>
+      <polystyle backgroundalpha="0.25098" borderalpha="1" handcursor="1" mode="0" backgroundcolor="0x0000ff" bordercolor="0x0000ff"/>
+      <hotspot title="东区路口" description="终于到了你要去的餐厅了！你拍拍脑袋，决定按照原计划——" url="" skinid="ht_info" id="Point03" target="" tilt="10.83" pan="-340.73"/>
+      <polyhotspot title="" description="" url="{node37}" id="Poly01" target="">
+        <polystring>-154.06/0.71|-153.3/-8.67|-165.52/-6.43|-164.77/1.43|-160.04/2.2</polystring>
+      </polyhotspot>
+      <polyhotspot title="" description="" url="{node37}" id="Poly02" target="">
+        <polystring>-192.12/9.53|-192.66/2.87|-207.96/0.96|-208.5/6.9|-201.93/9.92</polystring>
+      </polyhotspot>
+      <polyhotspot title="" description="" url="{node6}" id="Poly03" target="">
+        <polystring>-126.63/14.1|-122.5/-1.6|-145.19/4.63|-144.71/14.88|-139.24/15.69</polystring>
+      </polyhotspot>
+      <polyhotspot title="" description="" url="{node22}" id="Poly04" target="">
+        <polystring>-101.57/15.09|-100.31/-1.39|-116.73/-3.59|-119.07/15.29|-110.73/20.61</polystring>
+      </polyhotspot>
+      <polyhotspot title="" description="" url="{node11}" id="Poly05" target="">
+        <polystring>-349.46/7.45|-340.83/-10.94|-4.27/-8.18|-16.14/-6.29|-8.49/7.34</polystring>
+      </polyhotspot>
+      <polyhotspot title="" description="" url="{node45}" id="Poly06" target="">
+        <polystring>-57.56/8.69|-41.6/-9.25|-63.04/-15.53|-72.18/10.44</polystring>
+      </polyhotspot>
+    </hotspots>
+    <media/>
+    <transition blendtime="1" zoomspeed="2" type="crossdissolve" blendcolor="0x000000" zoomout="0" enabled="1" zoomfov="20" zoomin="0" softedge="0" zoomoutpause="1"/>
+    <animation useinautorotation="0" syncanimationwithvideo="0" animsequence="Animation01"/>
+    <control lockedkeyboardzoom="0" speedwheel="1" lockedkeyboard="0" contextfullscreen="1" invertcontrol="1" hideabout="0" sensitivity="8" dblclickfullscreen="0" invertwheel="0" lockedmouse="0" contextprojections="0" simulatemass="1" rubberband="0" lockedwheel="0"/>
+  </panorama>
+  <panorama id="node10">
+    <input levelbias="0.400" height="1728" width="1728" overlap="1" levelingpitch="0" levelingroll="0" levelbiashidpi="1.000" leveltilesize="510" leveltileurl="tiles/node10/cf_%c/l_%l/c_%x/tile_%y.jpg">
+      <level height="1728" width="1728" preload="0" predecode="0"/>
+      <level height="864" width="864" preload="0" predecode="0"/>
+      <level height="432" width="432" preload="1" predecode="1"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view fovmode="0" pannorth="0">
+      <start fov="70" tilt="0" projection="4" pan="0"/>
+      <flyin fov="170" tilt="-90" projection="9" pan="0"/>
+      <min tilt="-90" fovpixel="2" pan="0"/>
+      <max fov="120" fovfisheye="360" scaletofit="1" fovstereographic="270" tilt="90" pan="360"/>
+    </view>
+    <userdata title="" description="" info="" tags="panodel" latitude="" copyright="" nodeid="node10" source="" datetime="" comment="" author="" heading="0" longitude="" customnodeid=""/>
+    <hotspots height="20" width="180" wordwrap="1">
+      <label backgroundalpha="1" height="20" width="180" borderalpha="1" textalpha="1" border="1" wordwrap="1" background="1" borderradius="1" enabled="1" textcolor="0x000000" backgroundcolor="0xffffff" bordercolor="0x000000"/>
+      <polystyle backgroundalpha="0.25098" borderalpha="1" handcursor="1" mode="0" backgroundcolor="0x0000ff" bordercolor="0x0000ff"/>
+      <polyhotspot title="" description="" url="{node28}" id="Poly01" target="">
+        <polystring>-345.93/13.13|-343.81/-8.17|-9.4/-4.7|-2.84/11.14</polystring>
+      </polyhotspot>
+      <polyhotspot title="" description="" url="" id="Poly02" target="">
+        <polystring>-25.23/16.71|-15.11/-4.36|-51.34/-11.38|-74.8/-8.69|-76.29/12.94|-53.43/14.91</polystring>
+      </polyhotspot>
+      <polyhotspot title="" description="" url="{node14}" id="Poly03" target="">
+        <polystring>-143.78/31.69|-93.5/-8.18|-154.82/-46.59|-182.61/25.66</polystring>
+      </polyhotspot>
+      <polyhotspot title="" description="" url="{node45}" id="Poly04" target="">
+        <polystring>-306.59/16.78|-314.6/-14.08|-218.53/-53.08|-284.69/24.73</polystring>
+      </polyhotspot>
+      <hotspot title="大礼堂" description="东区礼堂会举办很多学术报告以及思想教育活动&#xa;我们应当多去了解科大的老科学家前辈们&#xa;可以瞻仰他们的雕像&#xa;&#xa;总之，似乎你迷路了" url="" skinid="ht_info" id="Point01" target="" tilt="19.37" pan="-326.96"/>
+    </hotspots>
+    <media/>
+    <transition blendtime="1" zoomspeed="2" type="crossdissolve" blendcolor="0x000000" zoomout="0" enabled="1" zoomfov="20" zoomin="0" softedge="0" zoomoutpause="1"/>
+    <animation useinautorotation="0" syncanimationwithvideo="0" animsequence="Animation01"/>
+    <control lockedkeyboardzoom="0" speedwheel="1" lockedkeyboard="0" contextfullscreen="1" invertcontrol="1" hideabout="0" sensitivity="8" dblclickfullscreen="0" invertwheel="0" lockedmouse="0" contextprojections="0" simulatemass="1" rubberband="0" lockedwheel="0"/>
+  </panorama>
+  <panorama id="node11">
+    <input levelbias="0.400" height="1728" width="1728" overlap="1" levelingpitch="0" levelingroll="0" levelbiashidpi="1.000" leveltilesize="510" leveltileurl="tiles/node11/cf_%c/l_%l/c_%x/tile_%y.jpg">
+      <level height="1728" width="1728" preload="0" predecode="0"/>
+      <level height="864" width="864" preload="0" predecode="0"/>
+      <level height="432" width="432" preload="1" predecode="1"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view fovmode="0" pannorth="0">
+      <start fov="70" tilt="0" projection="4" pan="0"/>
+      <flyin fov="170" tilt="-90" projection="9" pan="0"/>
+      <min tilt="-90" fovpixel="2" pan="0"/>
+      <max fov="120" fovfisheye="360" scaletofit="1" fovstereographic="270" tilt="90" pan="360"/>
+    </view>
+    <userdata title="" description="" info="" tags="panodel" latitude="" copyright="" nodeid="node11" source="" datetime="" comment="" author="" heading="0" longitude="" customnodeid=""/>
+    <hotspots height="20" width="180" wordwrap="1">
+      <label backgroundalpha="1" height="20" width="180" borderalpha="1" textalpha="1" border="1" wordwrap="1" background="1" borderradius="1" enabled="1" textcolor="0x000000" backgroundcolor="0xffffff" bordercolor="0x000000"/>
+      <polystyle backgroundalpha="0.25098" borderalpha="1" handcursor="1" mode="0" backgroundcolor="0x0000ff" bordercolor="0x0000ff"/>
+      <hotspot title="" description="怎么回事？你怎么来到了图书馆前？&#xa;书籍是人类进步的阶梯，书中自有黄金屋，可书不能饱肚，你还是决定“物质”一些……&#xa;{转身，走去物质楼的路}" url="" skinid="ht_url" id="Point06" target="_blank" tilt="0" pan="-344.47"/>
+      <polyhotspot title="" description="" url="{node14}" id="Poly01" target="">
+        <polystring>-182.03/5.51|-181.16/-7.98|-201.93/-10.16|-195.99/15.87|-182.73/14.97</polystring>
+      </polyhotspot>
+      <polyhotspot title="" description="" url="{node10}" id="Poly02" target="">
+        <polystring>-277.37/6.1|-274.74/-21.69|-325.16/-11.64|-312.36/7.44</polystring>
+      </polyhotspot>
+      <polyhotspot title="" description="" url="{node8}" id="Poly03" target="">
+        <polystring>-74.78/17.38|-51.52/-11.21|-89.96/-20.19|-102.29/17.23</polystring>
+      </polyhotspot>
+    </hotspots>
+    <media/>
+    <transition blendtime="1" zoomspeed="2" type="crossdissolve" blendcolor="0x000000" zoomout="0" enabled="1" zoomfov="20" zoomin="0" softedge="0" zoomoutpause="1"/>
+    <animation useinautorotation="0" syncanimationwithvideo="0" animsequence="Animation01"/>
+    <control lockedkeyboardzoom="0" speedwheel="1" lockedkeyboard="0" contextfullscreen="1" invertcontrol="1" hideabout="0" sensitivity="8" dblclickfullscreen="0" invertwheel="0" lockedmouse="0" contextprojections="0" simulatemass="1" rubberband="0" lockedwheel="0"/>
+  </panorama>
+  <panorama id="node12">
+    <input levelbias="0.400" height="1728" width="1728" overlap="1" levelingpitch="0" levelingroll="0" levelbiashidpi="1.000" leveltilesize="510" leveltileurl="tiles/node12/cf_%c/l_%l/c_%x/tile_%y.jpg">
+      <level height="1728" width="1728" preload="0" predecode="0"/>
+      <level height="864" width="864" preload="0" predecode="0"/>
+      <level height="432" width="432" preload="1" predecode="1"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view fovmode="0" pannorth="0">
+      <start fov="70" tilt="0" projection="4" pan="0"/>
+      <flyin fov="170" tilt="-90" projection="9" pan="0"/>
+      <min tilt="-90" fovpixel="2" pan="0"/>
+      <max fov="120" fovfisheye="360" scaletofit="1" fovstereographic="270" tilt="90" pan="360"/>
+    </view>
+    <userdata title="" description="" info="" tags="panodel" latitude="" copyright="" nodeid="node12" source="" datetime="" comment="" author="" heading="0" longitude="" customnodeid=""/>
+    <hotspots height="20" width="180" wordwrap="1">
+      <label backgroundalpha="1" height="20" width="180" borderalpha="1" textalpha="1" border="1" wordwrap="1" background="1" borderradius="1" enabled="1" textcolor="0x000000" backgroundcolor="0xffffff" bordercolor="0x000000"/>
+      <polystyle backgroundalpha="0.25098" borderalpha="1" handcursor="1" mode="0" backgroundcolor="0x0000ff" bordercolor="0x0000ff"/>
+      <hotspot title="" description="你来到了东区的北门，不知为何，&#xa;这里的空间似乎相当不可控，你绕来绕去彻底晕了……&#xa;下次多仔细看看校园景色名胜吧。&#xa;【结局——迷途之地】" url="" skinid="ht_info" id="Point01" target="" tilt="33.4" pan="0.9"/>
+      <hotspot title="返回上一节点" description="" url="{node3}" skinid="back" id="Point02" target="" tilt="17.16" pan="-327.74"/>
+      <hotspot title="返回起点" description="" url="{node28}" skinid="skip" id="Point03" target="" tilt="17.65" pan="-29.96"/>
+    </hotspots>
+    <media/>
+    <transition blendtime="1" zoomspeed="2" type="crossdissolve" blendcolor="0x000000" zoomout="0" enabled="1" zoomfov="20" zoomin="0" softedge="0" zoomoutpause="1"/>
+    <animation useinautorotation="0" syncanimationwithvideo="0" animsequence="Animation01"/>
+    <control lockedkeyboardzoom="0" speedwheel="1" lockedkeyboard="0" contextfullscreen="1" invertcontrol="1" hideabout="0" sensitivity="8" dblclickfullscreen="0" invertwheel="0" lockedmouse="0" contextprojections="0" simulatemass="1" rubberband="0" lockedwheel="0"/>
+  </panorama>
+  <panorama id="node13">
+    <input levelbias="0.400" height="1728" width="1728" overlap="1" levelingpitch="0" levelingroll="0" levelbiashidpi="1.000" leveltilesize="510" leveltileurl="tiles/node13/cf_%c/l_%l/c_%x/tile_%y.jpg">
+      <level height="1728" width="1728" preload="0" predecode="0"/>
+      <level height="864" width="864" preload="0" predecode="0"/>
+      <level height="432" width="432" preload="1" predecode="1"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view fovmode="0" pannorth="0">
+      <start fov="70" tilt="0" projection="4" pan="0"/>
+      <flyin fov="170" tilt="-90" projection="9" pan="0"/>
+      <min tilt="-90" fovpixel="2" pan="0"/>
+      <max fov="120" fovfisheye="360" scaletofit="1" fovstereographic="270" tilt="90" pan="360"/>
+    </view>
+    <userdata title="" description="" info="" tags="panodel" latitude="" copyright="" nodeid="node13" source="" datetime="" comment="" author="" heading="0" longitude="" customnodeid=""/>
+    <hotspots height="20" width="180" wordwrap="1">
+      <label backgroundalpha="1" height="20" width="180" borderalpha="1" textalpha="1" border="1" wordwrap="1" background="1" borderradius="1" enabled="1" textcolor="0x000000" backgroundcolor="0xffffff" bordercolor="0x000000"/>
+      <polystyle backgroundalpha="0.25098" borderalpha="1" handcursor="1" mode="0" backgroundcolor="0x0000ff" bordercolor="0x0000ff"/>
+      <hotspot title="这是一辆客车" description="这是一辆客车&#xa;总之，路不对啊，路不对啊！&#xa;回起点吧！！！！！！" url="" skinid="ht_info" id="Point01" target="" tilt="30.32" pan="-303.61"/>
+      <polyhotspot title="" description="回起点" url="{node27}" id="Poly01" target="">
+        <polystring>-266.77/14.99|-258.1/-14.94|-2.57/-11.98|-3.13/13.13</polystring>
+      </polyhotspot>
+      <polyhotspot title="" description="" url="{node47}" id="Poly02" target="">
+        <polystring>-137.15/25.5|-126.99/-15.08|-197.85/-18.82|-198.66/-8.39|-190.12/25.94</polystring>
+      </polyhotspot>
+      <polyhotspot title="" description="" url="{node4}" id="Poly03" target="">
+        <polystring>-25.02/10.08|-21.28/-6.31|-51.62/-11.2|-46.59/8.21</polystring>
+      </polyhotspot>
+    </hotspots>
+    <media/>
+    <transition blendtime="1" zoomspeed="2" type="crossdissolve" blendcolor="0x000000" zoomout="0" enabled="1" zoomfov="20" zoomin="0" softedge="0" zoomoutpause="1"/>
+    <animation useinautorotation="0" syncanimationwithvideo="0" animsequence="Animation01"/>
+    <control lockedkeyboardzoom="0" speedwheel="1" lockedkeyboard="0" contextfullscreen="1" invertcontrol="1" hideabout="0" sensitivity="8" dblclickfullscreen="0" invertwheel="0" lockedmouse="0" contextprojections="0" simulatemass="1" rubberband="0" lockedwheel="0"/>
+  </panorama>
+  <panorama id="node14">
+    <input levelbias="0.400" height="1728" width="1728" overlap="1" levelingpitch="0" levelingroll="0" levelbiashidpi="1.000" leveltilesize="510" leveltileurl="tiles/node14/cf_%c/l_%l/c_%x/tile_%y.jpg">
+      <level height="1728" width="1728" preload="0" predecode="0"/>
+      <level height="864" width="864" preload="0" predecode="0"/>
+      <level height="432" width="432" preload="1" predecode="1"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view fovmode="0" pannorth="0">
+      <start fov="70" tilt="0" projection="4" pan="0"/>
+      <flyin fov="170" tilt="-90" projection="9" pan="0"/>
+      <min tilt="-90" fovpixel="2" pan="0"/>
+      <max fov="120" fovfisheye="360" scaletofit="1" fovstereographic="270" tilt="90" pan="360"/>
+    </view>
+    <userdata title="" description="" info="" tags="panodel" latitude="" copyright="" nodeid="node14" source="" datetime="" comment="" author="" heading="0" longitude="" customnodeid=""/>
+    <hotspots height="20" width="180" wordwrap="1">
+      <label backgroundalpha="1" height="20" width="180" borderalpha="1" textalpha="1" border="1" wordwrap="1" background="1" borderradius="1" enabled="1" textcolor="0x000000" backgroundcolor="0xffffff" bordercolor="0x000000"/>
+      <polystyle backgroundalpha="0.25098" borderalpha="1" handcursor="1" mode="0" backgroundcolor="0x0000ff" bordercolor="0x0000ff"/>
+      <hotspot title="东图书馆" description="啊可不是来这里！你失望至极，决定原路返回图书馆。" url="" skinid="ht_info" id="Point02" target="" tilt="1.89" pan="-3.89"/>
+      <polyhotspot title="" description="" url="{node42}" id="Poly01" target="">
+        <polystring>-11.69/6.81|-12.47/-6.03|-36.4/-4.86|-38.68/-3.27|-30.76/8.83</polystring>
+      </polyhotspot>
+      <polyhotspot title="" description="" url="{node15}" id="Poly02" target="">
+        <polystring>-163.55/19.59|-158.44/8.94|-150.07/-10.99|-193.67/-8.38|-187.11/19.67</polystring>
+      </polyhotspot>
+      <polyhotspot title="" description="" url="{node10}" id="Poly03" target="">
+        <polystring>-280.56/12.03|-270.47/-24.41|-327.79/-9.53|-341.62/-9.66|-329.48/14.68|-316.89/12.36</polystring>
+      </polyhotspot>
+      <polyhotspot title="" description="" url="{node8}" id="Poly04" target="">
+        <polystring>-88.14/7.48|-64.43/-4.53|-69.79/-5.33|-103.26/-7.33|-101.41/6.72</polystring>
+      </polyhotspot>
+    </hotspots>
+    <media/>
+    <transition blendtime="1" zoomspeed="2" type="crossdissolve" blendcolor="0x000000" zoomout="0" enabled="1" zoomfov="20" zoomin="0" softedge="0" zoomoutpause="1"/>
+    <animation useinautorotation="0" syncanimationwithvideo="0" animsequence="Animation01"/>
+    <control lockedkeyboardzoom="0" speedwheel="1" lockedkeyboard="0" contextfullscreen="1" invertcontrol="1" hideabout="0" sensitivity="8" dblclickfullscreen="0" invertwheel="0" lockedmouse="0" contextprojections="0" simulatemass="1" rubberband="0" lockedwheel="0"/>
+  </panorama>
+  <panorama id="node15">
+    <input levelbias="0.400" height="1728" width="1728" overlap="1" levelingpitch="0" levelingroll="0" levelbiashidpi="1.000" leveltilesize="510" leveltileurl="tiles/node15/cf_%c/l_%l/c_%x/tile_%y.jpg">
+      <level height="1728" width="1728" preload="0" predecode="0"/>
+      <level height="864" width="864" preload="0" predecode="0"/>
+      <level height="432" width="432" preload="1" predecode="1"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view fovmode="0" pannorth="0">
+      <start fov="70" tilt="0" projection="4" pan="0"/>
+      <flyin fov="170" tilt="-90" projection="9" pan="0"/>
+      <min tilt="-90" fovpixel="2" pan="0"/>
+      <max fov="120" fovfisheye="360" scaletofit="1" fovstereographic="270" tilt="90" pan="360"/>
+    </view>
+    <userdata title="" description="" info="" tags="panodel" latitude="" copyright="" nodeid="node15" source="" datetime="" comment="" author="" heading="0" longitude="" customnodeid=""/>
+    <hotspots height="20" width="180" wordwrap="1">
+      <label backgroundalpha="1" height="20" width="180" borderalpha="1" textalpha="1" border="1" wordwrap="1" background="1" borderradius="1" enabled="1" textcolor="0x000000" backgroundcolor="0xffffff" bordercolor="0x000000"/>
+      <polystyle backgroundalpha="0.25098" borderalpha="1" handcursor="1" mode="0" backgroundcolor="0x0000ff" bordercolor="0x0000ff"/>
+      <hotspot title="离开物质楼" description="" url="{node14}" skinid="ht_node" id="Point01" target="" tilt="-4.96" pan="-285.01"/>
+      <hotspot title="物质！" description="你饿坏了，不在乎是什么“物质了”，决定赶紧吃吃吃！&#xa;显然，大楼是不能吃的……&#xa;【结局——饥不择食】" url="" skinid="ht_info" id="Point02" target="" tilt="27.53" pan="-62.74"/>
+      <hotspot title="返回前一节点" description="" url="{node14}" skinid="back" id="Point03" target="" tilt="15.7" pan="-42.95"/>
+      <hotspot title="返回起点" description="" url="{node28}" skinid="skip" id="Point04" target="" tilt="15.73" pan="-80.42"/>
+    </hotspots>
+    <media/>
+    <transition blendtime="1" zoomspeed="2" type="crossdissolve" blendcolor="0x000000" zoomout="0" enabled="1" zoomfov="20" zoomin="0" softedge="0" zoomoutpause="1"/>
+    <animation useinautorotation="0" syncanimationwithvideo="0" animsequence="Animation01"/>
+    <control lockedkeyboardzoom="0" speedwheel="1" lockedkeyboard="0" contextfullscreen="1" invertcontrol="1" hideabout="0" sensitivity="8" dblclickfullscreen="0" invertwheel="0" lockedmouse="0" contextprojections="0" simulatemass="1" rubberband="0" lockedwheel="0"/>
+  </panorama>
+  <panorama id="node16">
+    <input levelbias="0.400" height="1728" width="1728" overlap="1" levelingpitch="0" levelingroll="0" levelbiashidpi="1.000" leveltilesize="510" leveltileurl="tiles/node16/cf_%c/l_%l/c_%x/tile_%y.jpg">
+      <level height="1728" width="1728" preload="0" predecode="0"/>
+      <level height="864" width="864" preload="0" predecode="0"/>
+      <level height="432" width="432" preload="1" predecode="1"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view fovmode="0" pannorth="0">
+      <start fov="70" tilt="0" projection="4" pan="0"/>
+      <flyin fov="170" tilt="-90" projection="9" pan="0"/>
+      <min tilt="-90" fovpixel="2" pan="0"/>
+      <max fov="120" fovfisheye="360" scaletofit="1" fovstereographic="270" tilt="90" pan="360"/>
+    </view>
+    <userdata title="" description="" info="" tags="panodel" latitude="" copyright="" nodeid="node16" source="" datetime="" comment="" author="" heading="0" longitude="" customnodeid=""/>
+    <hotspots height="20" width="180" wordwrap="1">
+      <label backgroundalpha="1" height="20" width="180" borderalpha="1" textalpha="1" border="1" wordwrap="1" background="1" borderradius="1" enabled="1" textcolor="0x000000" backgroundcolor="0xffffff" bordercolor="0x000000"/>
+      <polystyle backgroundalpha="0.25098" borderalpha="1" handcursor="1" mode="0" backgroundcolor="0x0000ff" bordercolor="0x0000ff"/>
+      <hotspot title="少年班学院" description="这里是少年班学院的楼&#xa;内部有少年班学院的介绍以及教室&#xa;以及……" url="" skinid="ht_info" id="Point05" target="" tilt="12.25" pan="-15.14"/>
+      <polyhotspot title="" description="" url="https://sgy.ustc.edu.cn/" id="Poly01" target="_blank">
+        <polystring>-351.92/13.58|-349.89/-5.28|-5.4/-5.05|-6.25/13.16</polystring>
+      </polyhotspot>
+      <polyhotspot title="" description="" url="{node11}" id="Poly02" target="">
+        <polystring>-91.59/9.77|-87.75/-1.35|-103.97/-4.09|-104.68/10.15</polystring>
+      </polyhotspot>
+      <polyhotspot title="" description="" url="{node46}" id="Poly03" target="">
+        <polystring>-125.45/21.1|-110.94/-8.74|-181.61/-30.64|-252.28/-25.69|-245.52/11.49|-200.19/28.03</polystring>
+      </polyhotspot>
+      <polyhotspot title="" description="" url="{node43}" id="Poly04" target="">
+        <polystring>-273.08/13.56|-276.17/-16.67|-316.4/-13.29|-314.61/7.27</polystring>
+      </polyhotspot>
+    </hotspots>
+    <media/>
+    <transition blendtime="1" zoomspeed="2" type="crossdissolve" blendcolor="0x000000" zoomout="0" enabled="1" zoomfov="20" zoomin="0" softedge="0" zoomoutpause="1"/>
+    <animation useinautorotation="0" syncanimationwithvideo="0" animsequence="Animation01"/>
+    <control lockedkeyboardzoom="0" speedwheel="1" lockedkeyboard="0" contextfullscreen="1" invertcontrol="1" hideabout="0" sensitivity="8" dblclickfullscreen="0" invertwheel="0" lockedmouse="0" contextprojections="0" simulatemass="1" rubberband="0" lockedwheel="0"/>
+  </panorama>
+  <panorama id="node17">
+    <input levelbias="0.400" height="1728" width="1728" overlap="1" levelingpitch="0" levelingroll="0" levelbiashidpi="1.000" leveltilesize="510" leveltileurl="tiles/node17/cf_%c/l_%l/c_%x/tile_%y.jpg">
+      <level height="1728" width="1728" preload="0" predecode="0"/>
+      <level height="864" width="864" preload="0" predecode="0"/>
+      <level height="432" width="432" preload="1" predecode="1"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view fovmode="0" pannorth="0">
+      <start fov="70" tilt="0" projection="4" pan="0"/>
+      <flyin fov="170" tilt="-90" projection="9" pan="0"/>
+      <min tilt="-90" fovpixel="2" pan="0"/>
+      <max fov="120" fovfisheye="360" scaletofit="1" fovstereographic="270" tilt="90" pan="360"/>
+    </view>
+    <userdata title="" description="" info="" tags="panodel" latitude="" copyright="" nodeid="node17" source="" datetime="" comment="" author="" heading="0" longitude="" customnodeid=""/>
+    <hotspots height="20" width="180" wordwrap="1">
+      <label backgroundalpha="1" height="20" width="180" borderalpha="1" textalpha="1" border="1" wordwrap="1" background="1" borderradius="1" enabled="1" textcolor="0x000000" backgroundcolor="0xffffff" bordercolor="0x000000"/>
+      <polystyle backgroundalpha="0.25098" borderalpha="1" handcursor="1" mode="0" backgroundcolor="0x0000ff" bordercolor="0x0000ff"/>
+      <hotspot title="操场" description="只顾得看到考试，没看到改考场了！你一下子被抓到运动场上当体侧志愿者了，这下考试可完了……&#xa;【结局——看好消息】" url="" skinid="ht_info" id="Point02" target="" tilt="28.22" pan="-170.47"/>
+      <hotspot title="返回分歧点" description="" url="{node6}" skinid="ht_node" id="Point01" target="" tilt="9.98" pan="-122.8"/>
+      <hotspot title="返回起点" description="" url="{node28}" skinid="ht_node" id="Point03" target="" tilt="3.96" pan="-219.71"/>
+    </hotspots>
+    <media/>
+    <transition blendtime="1" zoomspeed="2" type="crossdissolve" blendcolor="0x000000" zoomout="0" enabled="1" zoomfov="20" zoomin="0" softedge="0" zoomoutpause="1"/>
+    <animation useinautorotation="0" syncanimationwithvideo="0" animsequence="Animation01"/>
+    <control lockedkeyboardzoom="0" speedwheel="1" lockedkeyboard="0" contextfullscreen="1" invertcontrol="1" hideabout="0" sensitivity="8" dblclickfullscreen="0" invertwheel="0" lockedmouse="0" contextprojections="0" simulatemass="1" rubberband="0" lockedwheel="0"/>
+  </panorama>
+  <panorama id="node18">
+    <input levelbias="0.400" height="1728" width="1728" overlap="1" levelingpitch="0" levelingroll="0" levelbiashidpi="1.000" leveltilesize="510" leveltileurl="tiles/node18/cf_%c/l_%l/c_%x/tile_%y.jpg">
+      <level height="1728" width="1728" preload="0" predecode="0"/>
+      <level height="864" width="864" preload="0" predecode="0"/>
+      <level height="432" width="432" preload="1" predecode="1"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view fovmode="0" pannorth="0">
+      <start fov="70" tilt="0" projection="4" pan="0"/>
+      <flyin fov="170" tilt="-90" projection="9" pan="0"/>
+      <min tilt="-90" fovpixel="2" pan="0"/>
+      <max fov="120" fovfisheye="360" scaletofit="1" fovstereographic="270" tilt="90" pan="360"/>
+    </view>
+    <userdata title="" description="" info="" tags="panodel" latitude="" copyright="" nodeid="node18" source="" datetime="" comment="" author="" heading="0" longitude="" customnodeid=""/>
+    <hotspots height="20" width="180" wordwrap="1">
+      <label backgroundalpha="1" height="20" width="180" borderalpha="1" textalpha="1" border="1" wordwrap="1" background="1" borderradius="1" enabled="1" textcolor="0x000000" backgroundcolor="0xffffff" bordercolor="0x000000"/>
+      <polystyle backgroundalpha="0.25098" borderalpha="1" handcursor="1" mode="0" backgroundcolor="0x0000ff" bordercolor="0x0000ff"/>
+      <hotspot title="好神奇" description="好神奇！你来到了运动场外面！&#xa;你要去运动场吗？" url="" skinid="ht_info" id="Point01" target="" tilt="16.13" pan="-141.49"/>
+      <polyhotspot title="" description="" url="{node50}" id="Poly01" target="">
+        <polystring>-151.28/15.62|-142.17/-2.53|-172.53/-4.43|-163.56/17.55</polystring>
+      </polyhotspot>
+      <polyhotspot title="" description="" url="{node19}" id="Poly02" target="">
+        <polystring>-227.88/12.7|-206.99/-9.26|-243.67/-21.25|-245.75/10.38</polystring>
+      </polyhotspot>
+      <polyhotspot title="" description="" url="{node10}" id="Poly03" target="">
+        <polystring>-63.19/11.26|-63.5/-4.3|-84.75/-2.99|-78.01/13.66</polystring>
+      </polyhotspot>
+    </hotspots>
+    <media/>
+    <transition blendtime="1" zoomspeed="2" type="crossdissolve" blendcolor="0x000000" zoomout="0" enabled="1" zoomfov="20" zoomin="0" softedge="0" zoomoutpause="1"/>
+    <animation useinautorotation="0" syncanimationwithvideo="0" animsequence="Animation01"/>
+    <control lockedkeyboardzoom="0" speedwheel="1" lockedkeyboard="0" contextfullscreen="1" invertcontrol="1" hideabout="0" sensitivity="8" dblclickfullscreen="0" invertwheel="0" lockedmouse="0" contextprojections="0" simulatemass="1" rubberband="0" lockedwheel="0"/>
+  </panorama>
+  <panorama id="node19">
+    <input levelbias="0.400" height="1728" width="1728" overlap="1" levelingpitch="0" levelingroll="0" levelbiashidpi="1.000" leveltilesize="510" leveltileurl="tiles/node19/cf_%c/l_%l/c_%x/tile_%y.jpg">
+      <level height="1728" width="1728" preload="0" predecode="0"/>
+      <level height="864" width="864" preload="0" predecode="0"/>
+      <level height="432" width="432" preload="1" predecode="1"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view fovmode="0" pannorth="0">
+      <start fov="70" tilt="0" projection="4" pan="0"/>
+      <flyin fov="170" tilt="-90" projection="9" pan="0"/>
+      <min tilt="-90" fovpixel="2" pan="0"/>
+      <max fov="120" fovfisheye="360" scaletofit="1" fovstereographic="270" tilt="90" pan="360"/>
+    </view>
+    <userdata title="" description="" info="" tags="panodel" latitude="" copyright="" nodeid="node19" source="" datetime="" comment="" author="" heading="0" longitude="" customnodeid=""/>
+    <hotspots height="20" width="180" wordwrap="1">
+      <label backgroundalpha="1" height="20" width="180" borderalpha="1" textalpha="1" border="1" wordwrap="1" background="1" borderradius="1" enabled="1" textcolor="0x000000" backgroundcolor="0xffffff" bordercolor="0x000000"/>
+      <polystyle backgroundalpha="0.25098" borderalpha="1" handcursor="1" mode="0" backgroundcolor="0x0000ff" bordercolor="0x0000ff"/>
+      <hotspot title="这里是东区" description="东区隧道就在这里，可是你迷路了啊！你要去吃饭啊。" url="" skinid="ht_info" id="Point01" target="" tilt="51.23" pan="-293.34"/>
+      <polyhotspot title="" description="" url="{node28}" id="Poly01" target="">
+        <polystring>-299.02/15.02|-306.4/-12.07|-323.51/-11.55|-340.94/-5.88|-353.66/-10.97|-34.93/-6.41|-49.77/14.73|-7.33/23.18|-310.36/22.53</polystring>
+      </polyhotspot>
+      <polyhotspot title="" description="" url="{node37}" id="Poly02" target="">
+        <polystring>-107.31/16.43|-86.7/-7.67|-145.14/-10.66|-135.98/23.25</polystring>
+      </polyhotspot>
+      <polyhotspot title="" description="" url="{node20}" id="Poly03" target="">
+        <polystring>-252.48/15.25|-241.32/-0.98|-269.98/-10.84|-277.74/15.45</polystring>
+      </polyhotspot>
+      <polyhotspot title="" description="" url="{node18}" id="Poly04" target="">
+        <polystring>-214.64/19.32|-213.06/-7.21|-239.74/-5.88|-236.37/19.8</polystring>
+      </polyhotspot>
+    </hotspots>
+    <media/>
+    <transition blendtime="1" zoomspeed="2" type="crossdissolve" blendcolor="0x000000" zoomout="0" enabled="1" zoomfov="20" zoomin="0" softedge="0" zoomoutpause="1"/>
+    <animation useinautorotation="0" syncanimationwithvideo="0" animsequence="Animation01"/>
+    <control lockedkeyboardzoom="0" speedwheel="1" lockedkeyboard="0" contextfullscreen="1" invertcontrol="1" hideabout="0" sensitivity="8" dblclickfullscreen="0" invertwheel="0" lockedmouse="0" contextprojections="0" simulatemass="1" rubberband="0" lockedwheel="0"/>
+  </panorama>
+  <panorama id="node20">
+    <input levelbias="0.400" height="1728" width="1728" overlap="1" levelingpitch="0" levelingroll="0" levelbiashidpi="1.000" leveltilesize="510" leveltileurl="tiles/node20/cf_%c/l_%l/c_%x/tile_%y.jpg">
+      <level height="1728" width="1728" preload="0" predecode="0"/>
+      <level height="864" width="864" preload="0" predecode="0"/>
+      <level height="432" width="432" preload="1" predecode="1"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view fovmode="0" pannorth="0">
+      <start fov="70" tilt="0" projection="4" pan="0"/>
+      <flyin fov="170" tilt="-90" projection="9" pan="0"/>
+      <min tilt="-90" fovpixel="2" pan="0"/>
+      <max fov="120" fovfisheye="360" scaletofit="1" fovstereographic="270" tilt="90" pan="360"/>
+    </view>
+    <userdata title="" description="" info="" tags="panodel" latitude="" copyright="" nodeid="node20" source="" datetime="" comment="" author="" heading="0" longitude="" customnodeid=""/>
+    <hotspots height="20" width="180" wordwrap="1">
+      <label backgroundalpha="1" height="20" width="180" borderalpha="1" textalpha="1" border="1" wordwrap="1" background="1" borderradius="1" enabled="1" textcolor="0x000000" backgroundcolor="0xffffff" bordercolor="0x000000"/>
+      <polystyle backgroundalpha="0.25098" borderalpha="1" handcursor="1" mode="0" backgroundcolor="0x0000ff" bordercolor="0x0000ff"/>
+      <hotspot title="出去玩了！" description="你不知不觉走出了科大，决定在合肥玩一玩&#xa;啊？合肥有景点吗？当然了！你决定都游览一遍……&#xa;【结局——错过考试】" url="{node19}" skinid="ht_node" id="Point01" target="" tilt="37.8" pan="-177.43"/>
+      <hotspot title="返回分歧点" description="" url="{node19}" skinid="back" id="Point03" target="" tilt="19.5" pan="-140.54"/>
+      <hotspot title="返回起点" description="" url="{node28}" skinid="skip" id="Point04" target="" tilt="23.97" pan="-225.76"/>
+    </hotspots>
+    <media/>
+    <transition blendtime="1" zoomspeed="2" type="crossdissolve" blendcolor="0x000000" zoomout="0" enabled="1" zoomfov="20" zoomin="0" softedge="0" zoomoutpause="1"/>
+    <animation useinautorotation="0" syncanimationwithvideo="0" animsequence="Animation01"/>
+    <control lockedkeyboardzoom="0" speedwheel="1" lockedkeyboard="0" contextfullscreen="1" invertcontrol="1" hideabout="0" sensitivity="8" dblclickfullscreen="0" invertwheel="0" lockedmouse="0" contextprojections="0" simulatemass="1" rubberband="0" lockedwheel="0"/>
+  </panorama>
+  <panorama id="node21">
+    <input levelbias="0.400" height="1728" width="1728" overlap="1" levelingpitch="0" levelingroll="0" levelbiashidpi="1.000" leveltilesize="510" leveltileurl="tiles/node21/cf_%c/l_%l/c_%x/tile_%y.jpg">
+      <level height="1728" width="1728" preload="0" predecode="0"/>
+      <level height="864" width="864" preload="0" predecode="0"/>
+      <level height="432" width="432" preload="1" predecode="1"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view fovmode="0" pannorth="0">
+      <start fov="70" tilt="0" projection="4" pan="0"/>
+      <flyin fov="170" tilt="-90" projection="9" pan="0"/>
+      <min tilt="-90" fovpixel="2" pan="0"/>
+      <max fov="120" fovfisheye="360" scaletofit="1" fovstereographic="270" tilt="90" pan="360"/>
+    </view>
+    <userdata title="" description="" info="" tags="panodel" latitude="" copyright="" nodeid="node21" source="" datetime="" comment="" author="" heading="0" longitude="" customnodeid=""/>
+    <hotspots height="20" width="180" wordwrap="1">
+      <label backgroundalpha="1" height="20" width="180" borderalpha="1" textalpha="1" border="1" wordwrap="1" background="1" borderradius="1" enabled="1" textcolor="0x000000" backgroundcolor="0xffffff" bordercolor="0x000000"/>
+      <polystyle backgroundalpha="0.25098" borderalpha="1" handcursor="1" mode="0" backgroundcolor="0x0000ff" bordercolor="0x0000ff"/>
+      <hotspot title="先吃饭吧" description="是的，还没吃早饭呢！&#xa;一日之计在于晨，不吃饭去考试肯定会饿坏的&#xa;因此你走向了食堂。" url="" skinid="ht_info" id="Point01" target="" tilt="10.62" pan="355.86"/>
+      <polyhotspot title="" description="" url="{node11}" id="Poly01" target="">
+        <polystring>-333.87/9.33|-335.59/-6.72|-356.85/-5.54|-356.32/11.83</polystring>
+      </polyhotspot>
+      <polyhotspot title="" description="" url="{node28}" id="Poly02" target="">
+        <polystring>-244.71/5.11|-245.88/-4.9|-260.41/-3.75|-257.62/4.91</polystring>
+      </polyhotspot>
+      <polyhotspot title="" description="" url="{node33}" id="Poly03" target="">
+        <polystring>-56.49/5.81|-55.47/-0.05|-65.09/-0.11|-65.23/5.75</polystring>
+      </polyhotspot>
+      <polyhotspot title="" description="" url="{node45}" id="Poly04" target="">
+        <polystring>-186.17/17.67|-157.22/-9.61|-196.87/-18.59|-208.06/4.94</polystring>
+      </polyhotspot>
+    </hotspots>
+    <media/>
+    <transition blendtime="1" zoomspeed="2" type="crossdissolve" blendcolor="0x000000" zoomout="0" enabled="1" zoomfov="20" zoomin="0" softedge="0" zoomoutpause="1"/>
+    <animation useinautorotation="0" syncanimationwithvideo="0" animsequence="Animation01"/>
+    <control lockedkeyboardzoom="0" speedwheel="1" lockedkeyboard="0" contextfullscreen="1" invertcontrol="1" hideabout="0" sensitivity="8" dblclickfullscreen="0" invertwheel="0" lockedmouse="0" contextprojections="0" simulatemass="1" rubberband="0" lockedwheel="0"/>
+  </panorama>
+  <panorama id="node22">
+    <input levelbias="0.400" height="1728" width="1728" overlap="1" levelingpitch="0" levelingroll="0" levelbiashidpi="1.000" leveltilesize="510" leveltileurl="tiles/node22/cf_%c/l_%l/c_%x/tile_%y.jpg">
+      <level height="1728" width="1728" preload="0" predecode="0"/>
+      <level height="864" width="864" preload="0" predecode="0"/>
+      <level height="432" width="432" preload="1" predecode="1"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view fovmode="0" pannorth="0">
+      <start fov="70" tilt="0" projection="4" pan="0"/>
+      <flyin fov="170" tilt="-90" projection="9" pan="0"/>
+      <min tilt="-90" fovpixel="2" pan="0"/>
+      <max fov="120" fovfisheye="360" scaletofit="1" fovstereographic="270" tilt="90" pan="360"/>
+    </view>
+    <userdata title="" description="" info="" tags="panodel" latitude="" copyright="" nodeid="node22" source="" datetime="" comment="" author="" heading="0" longitude="" customnodeid=""/>
+    <hotspots height="20" width="180" wordwrap="1">
+      <label backgroundalpha="1" height="20" width="180" borderalpha="1" textalpha="1" border="1" wordwrap="1" background="1" borderradius="1" enabled="1" textcolor="0x000000" backgroundcolor="0xffffff" bordercolor="0x000000"/>
+      <polystyle backgroundalpha="0.25098" borderalpha="1" handcursor="1" mode="0" backgroundcolor="0x0000ff" bordercolor="0x0000ff"/>
+      <hotspot title="考试" description="啊对！你是来考试的！你天才的大脑想到了出行的目的，于是赶紧启程。&#xa;可是，饿着肚子的你似乎感觉考场如隧道一般，永无尽头……&#xa;【结局——身体要紧】" url="" skinid="ht_info" id="Point01" target="" tilt="11.35" pan="-51.11"/>
+      <hotspot title="回到分歧点" description="" url="{node9}" skinid="ht_node" id="Point02" target="" tilt="0" pan="-203.34"/>
+      <hotspot title="回到起点" description="" url="{node28}" skinid="ht_node" id="Point03" target="" tilt="3.46" pan="-212.33"/>
+    </hotspots>
+    <media/>
+    <transition blendtime="1" zoomspeed="2" type="crossdissolve" blendcolor="0x000000" zoomout="0" enabled="1" zoomfov="20" zoomin="0" softedge="0" zoomoutpause="1"/>
+    <animation useinautorotation="0" syncanimationwithvideo="0" animsequence="Animation01"/>
+    <control lockedkeyboardzoom="0" speedwheel="1" lockedkeyboard="0" contextfullscreen="1" invertcontrol="1" hideabout="0" sensitivity="8" dblclickfullscreen="0" invertwheel="0" lockedmouse="0" contextprojections="0" simulatemass="1" rubberband="0" lockedwheel="0"/>
+  </panorama>
+  <panorama id="node23">
+    <input levelbias="0.400" height="1728" width="1728" overlap="1" levelingpitch="0" levelingroll="0" levelbiashidpi="1.000" leveltilesize="510" leveltileurl="tiles/node23/cf_%c/l_%l/c_%x/tile_%y.jpg">
+      <level height="1728" width="1728" preload="0" predecode="0"/>
+      <level height="864" width="864" preload="0" predecode="0"/>
+      <level height="432" width="432" preload="1" predecode="1"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view fovmode="0" pannorth="0">
+      <start fov="70" tilt="0" projection="4" pan="0"/>
+      <flyin fov="170" tilt="-90" projection="9" pan="0"/>
+      <min tilt="-90" fovpixel="2" pan="0"/>
+      <max fov="120" fovfisheye="360" scaletofit="1" fovstereographic="270" tilt="90" pan="360"/>
+    </view>
+    <userdata title="" description="" info="" tags="panodel" latitude="" copyright="" nodeid="node23" source="" datetime="" comment="" author="" heading="0" longitude="" customnodeid=""/>
+    <hotspots height="20" width="180" wordwrap="1">
+      <label backgroundalpha="1" height="20" width="180" borderalpha="1" textalpha="1" border="1" wordwrap="1" background="1" borderradius="1" enabled="1" textcolor="0x000000" backgroundcolor="0xffffff" bordercolor="0x000000"/>
+      <polystyle backgroundalpha="0.25098" borderalpha="1" handcursor="1" mode="0" backgroundcolor="0x0000ff" bordercolor="0x0000ff"/>
+      <hotspot title="糟糕！" description="好奇怪啊！&#xa;你好像无论如何也走不出这片空间了！&#xa;你想了想，能怎么去教学楼呢？——" url="{node19}" skinid="ht_node" id="Point01" target="" tilt="57.01" pan="-343.61"/>
+      <polyhotspot title="" description="" url="{node4}" id="Poly01" target="">
+        <polystring>-121.11/60.09|-139.42/-1.83|-193.3/-10.52|-207.95/18.5|-211.55/46.21</polystring>
+      </polyhotspot>
+    </hotspots>
+    <media/>
+    <transition blendtime="1" zoomspeed="2" type="crossdissolve" blendcolor="0x000000" zoomout="0" enabled="1" zoomfov="20" zoomin="0" softedge="0" zoomoutpause="1"/>
+    <animation useinautorotation="0" syncanimationwithvideo="0" animsequence="Animation01"/>
+    <control lockedkeyboardzoom="0" speedwheel="1" lockedkeyboard="0" contextfullscreen="1" invertcontrol="1" hideabout="0" sensitivity="8" dblclickfullscreen="0" invertwheel="0" lockedmouse="0" contextprojections="0" simulatemass="1" rubberband="0" lockedwheel="0"/>
+  </panorama>
+  <panorama id="node24">
+    <input levelbias="0.400" height="1728" width="1728" overlap="1" levelingpitch="0" levelingroll="0" levelbiashidpi="1.000" leveltilesize="510" leveltileurl="tiles/node24/cf_%c/l_%l/c_%x/tile_%y.jpg">
+      <level height="1728" width="1728" preload="0" predecode="0"/>
+      <level height="864" width="864" preload="0" predecode="0"/>
+      <level height="432" width="432" preload="1" predecode="1"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view fovmode="0" pannorth="0">
+      <start fov="70" tilt="0" projection="4" pan="0"/>
+      <flyin fov="170" tilt="-90" projection="9" pan="0"/>
+      <min tilt="-90" fovpixel="2" pan="0"/>
+      <max fov="120" fovfisheye="360" scaletofit="1" fovstereographic="270" tilt="90" pan="360"/>
+    </view>
+    <userdata title="" description="" info="" tags="panodel" latitude="" copyright="" nodeid="node24" source="" datetime="" comment="" author="" heading="0" longitude="" customnodeid=""/>
+    <hotspots height="20" width="180" wordwrap="1">
+      <label backgroundalpha="1" height="20" width="180" borderalpha="1" textalpha="1" border="1" wordwrap="1" background="1" borderradius="1" enabled="1" textcolor="0x000000" backgroundcolor="0xffffff" bordercolor="0x000000"/>
+      <polystyle backgroundalpha="0.25098" borderalpha="1" handcursor="1" mode="0" backgroundcolor="0x0000ff" bordercolor="0x0000ff"/>
+      <hotspot title="现在可不是乱逛的时候!" description="现在可不是乱逛的时候!&#xa;快去考试吧！" url="" skinid="ht_info" id="Point03" target="" tilt="40.83" pan="-189.76"/>
+      <hotspot title="从起点一路向西！" description="从起点一路向西！" url="" skinid="skip2" id="Point01" target="_self" tilt="-0.36" pan="-25.43"/>
+      <hotspot title="郭永怀像" description="" url="" skinid="ht_info" id="Point02" target="_self" tilt="4.02" pan="-39.89"/>
+      <polyhotspot title="" description="" url="{node28}" id="Poly01" target="">
+        <polystring>-203.44/34.99|-194.52/-8.36|-244.44/-12.6|-237.59/30.26</polystring>
+      </polyhotspot>
+      <polyhotspot title="" description="" url="{node45}" id="Poly02" target="">
+        <polystring>-47.18/14.52|-45.91/-5.98|-72.61/-4.85|-59.79/13.94</polystring>
+      </polyhotspot>
+      <polyhotspot title="" description="" url="{node26}" id="Poly03" target="">
+        <polystring>-314.3/12.3|-311.37/-14.46|-354.57/-12.1|-333.66/12.75</polystring>
+      </polyhotspot>
+      <polyhotspot title="" description="" url="{node23}" id="Poly04" target="">
+        <polystring>-113.46/28.95|-109.51/0.27|-153.67/-2.93|-150.25/29.33</polystring>
+      </polyhotspot>
+    </hotspots>
+    <media/>
+    <transition blendtime="1" zoomspeed="2" type="crossdissolve" blendcolor="0x000000" zoomout="0" enabled="1" zoomfov="20" zoomin="0" softedge="0" zoomoutpause="1"/>
+    <animation useinautorotation="0" syncanimationwithvideo="0" animsequence="Animation01"/>
+    <control lockedkeyboardzoom="0" speedwheel="1" lockedkeyboard="0" contextfullscreen="1" invertcontrol="1" hideabout="0" sensitivity="8" dblclickfullscreen="0" invertwheel="0" lockedmouse="0" contextprojections="0" simulatemass="1" rubberband="0" lockedwheel="0"/>
+  </panorama>
+  <panorama id="node25">
+    <input levelbias="0.400" height="1728" width="1728" overlap="1" levelingpitch="0" levelingroll="0" levelbiashidpi="1.000" leveltilesize="510" leveltileurl="tiles/node25/cf_%c/l_%l/c_%x/tile_%y.jpg">
+      <level height="1728" width="1728" preload="0" predecode="0"/>
+      <level height="864" width="864" preload="0" predecode="0"/>
+      <level height="432" width="432" preload="1" predecode="1"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view fovmode="0" pannorth="0">
+      <start fov="70" tilt="0" projection="4" pan="0"/>
+      <flyin fov="170" tilt="-90" projection="9" pan="0"/>
+      <min tilt="-90" fovpixel="2" pan="0"/>
+      <max fov="120" fovfisheye="360" scaletofit="1" fovstereographic="270" tilt="90" pan="360"/>
+    </view>
+    <userdata title="Mtunnel" description="" info="" tags="panodel" latitude="" copyright="" nodeid="node25" source="" datetime="" comment="" author="" heading="0" longitude="" customnodeid=""/>
+    <hotspots height="20" width="180" wordwrap="1">
+      <label backgroundalpha="1" height="20" width="180" borderalpha="1" textalpha="1" border="1" wordwrap="1" background="1" borderradius="1" enabled="1" textcolor="0x000000" backgroundcolor="0xffffff" bordercolor="0x000000"/>
+      <polystyle backgroundalpha="0.25098" borderalpha="1" handcursor="1" mode="0" backgroundcolor="0x0000ff" bordercolor="0x0000ff"/>
+    </hotspots>
+    <media/>
+    <transition blendtime="1" zoomspeed="2" type="crossdissolve" blendcolor="0x000000" zoomout="0" enabled="1" zoomfov="20" zoomin="0" softedge="0" zoomoutpause="1"/>
+    <animation useinautorotation="0" syncanimationwithvideo="0" animsequence="Animation01"/>
+    <control lockedkeyboardzoom="0" speedwheel="1" lockedkeyboard="0" contextfullscreen="1" invertcontrol="1" hideabout="0" sensitivity="8" dblclickfullscreen="0" invertwheel="0" lockedmouse="0" contextprojections="0" simulatemass="1" rubberband="0" lockedwheel="0"/>
+  </panorama>
+  <panorama id="node26">
+    <input levelbias="0.400" height="1728" width="1728" overlap="1" levelingpitch="0" levelingroll="0" levelbiashidpi="1.000" leveltilesize="510" leveltileurl="tiles/node26/cf_%c/l_%l/c_%x/tile_%y.jpg">
+      <level height="1728" width="1728" preload="0" predecode="0"/>
+      <level height="864" width="864" preload="0" predecode="0"/>
+      <level height="432" width="432" preload="1" predecode="1"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view fovmode="0" pannorth="0">
+      <start fov="70" tilt="0" projection="4" pan="0"/>
+      <flyin fov="170" tilt="-90" projection="9" pan="0"/>
+      <min tilt="-90" fovpixel="2" pan="0"/>
+      <max fov="120" fovfisheye="360" scaletofit="1" fovstereographic="270" tilt="90" pan="360"/>
+    </view>
+    <userdata title="" description="" info="" tags="panodel" latitude="" copyright="" nodeid="node26" source="" datetime="" comment="" author="" heading="0" longitude="" customnodeid=""/>
+    <hotspots height="20" width="180" wordwrap="1">
+      <label backgroundalpha="1" height="20" width="180" borderalpha="1" textalpha="1" border="1" wordwrap="1" background="1" borderradius="1" enabled="1" textcolor="0x000000" backgroundcolor="0xffffff" bordercolor="0x000000"/>
+      <polystyle backgroundalpha="0.25098" borderalpha="1" handcursor="1" mode="0" backgroundcolor="0x0000ff" bordercolor="0x0000ff"/>
+      <polyhotspot title="" description="" url="{node28}" id="Poly01" target="">
+        <polystring>-85.03/16.1|-80.94/-4.43|-127.7/-4.56|-119.34/17.85</polystring>
+      </polyhotspot>
+      <polyhotspot title="" description="" url="{node27}" id="Poly02" target="">
+        <polystring>-165.1/18.82|-153.03/-7.08|-193.32/-9.71|-185.57/20.92</polystring>
+      </polyhotspot>
+      <polyhotspot title="" description="" url="{node24}" id="Poly03" target="">
+        <polystring>-349.53/30.23|-357.06/-4.87|-19.57/-25.17|-64.05/-9.84|-37.97/-2.96|-20.47/-4.8|-16.76/31.75</polystring>
+      </polyhotspot>
+      <polyhotspot title="" description="" url="" id="Poly04" target="_blank">
+        <polystring>-15.83/43.92|-21.65/-2.86|-38.29/1.17|-76.77/-1.39|-71.86/26.17|-33.8/52.62</polystring>
+      </polyhotspot>
+      <hotspot title="" description="这里是宿舍楼西南侧&#xa;总之，似乎不能去到教学楼" url="" skinid="ht_info" id="Point01" target="" tilt="8.57" pan="-214.43"/>
+    </hotspots>
+    <media/>
+    <transition blendtime="1" zoomspeed="2" type="crossdissolve" blendcolor="0x000000" zoomout="0" enabled="1" zoomfov="20" zoomin="0" softedge="0" zoomoutpause="1"/>
+    <animation useinautorotation="0" syncanimationwithvideo="0" animsequence="Animation01"/>
+    <control lockedkeyboardzoom="0" speedwheel="1" lockedkeyboard="0" contextfullscreen="1" invertcontrol="1" hideabout="0" sensitivity="8" dblclickfullscreen="0" invertwheel="0" lockedmouse="0" contextprojections="0" simulatemass="1" rubberband="0" lockedwheel="0"/>
+  </panorama>
+  <panorama id="node27">
+    <input levelbias="0.400" height="1728" width="1728" overlap="1" levelingpitch="0" levelingroll="0" levelbiashidpi="1.000" leveltilesize="510" leveltileurl="tiles/node27/cf_%c/l_%l/c_%x/tile_%y.jpg">
+      <level height="1728" width="1728" preload="0" predecode="0"/>
+      <level height="864" width="864" preload="0" predecode="0"/>
+      <level height="432" width="432" preload="1" predecode="1"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view fovmode="0" pannorth="0">
+      <start fov="70" tilt="0" projection="4" pan="0"/>
+      <flyin fov="170" tilt="-90" projection="9" pan="0"/>
+      <min tilt="-90" fovpixel="2" pan="0"/>
+      <max fov="120" fovfisheye="360" scaletofit="1" fovstereographic="270" tilt="90" pan="360"/>
+    </view>
+    <userdata title="" description="" info="" tags="panodel" latitude="" copyright="" nodeid="node27" source="" datetime="" comment="" author="" heading="0" longitude="" customnodeid=""/>
+    <hotspots height="20" width="180" wordwrap="1">
+      <label backgroundalpha="1" height="20" width="180" borderalpha="1" textalpha="1" border="1" wordwrap="1" background="1" borderradius="1" enabled="1" textcolor="0x000000" backgroundcolor="0xffffff" bordercolor="0x000000"/>
+      <polystyle backgroundalpha="0.25098" borderalpha="1" handcursor="1" mode="0" backgroundcolor="0x0000ff" bordercolor="0x0000ff"/>
+      <polyhotspot title="" description="" url="{node28}" id="Poly01" target="">
+        <polystring>-233.1/12.23|-227.86/-10.05|-263.9/-16.2|-259.61/8.2</polystring>
+      </polyhotspot>
+      <polyhotspot title="" description="" url="{node26}" id="Poly02" target="">
+        <polystring>-146.79/19.14|-139.51/-3.21|-172.41/-7.19|-169.28/20.15</polystring>
+      </polyhotspot>
+      <polyhotspot title="" description="" url="{node45}" id="Poly03" target="">
+        <polystring>-175.51/5.07|-176.51/-11.26|-195.75/-12.18|-186.88/2.94</polystring>
+      </polyhotspot>
+      <polyhotspot title="" description="" url="{node18}" id="Poly04" target="">
+        <polystring>-205.1/11.64|-200.2/-13.83|-217.43/-12.51|-215.53/14.73</polystring>
+      </polyhotspot>
+    </hotspots>
+    <media/>
+    <transition blendtime="1" zoomspeed="2" type="crossdissolve" blendcolor="0x000000" zoomout="0" enabled="1" zoomfov="20" zoomin="0" softedge="0" zoomoutpause="1"/>
+    <animation useinautorotation="0" syncanimationwithvideo="0" animsequence="Animation01"/>
+    <control lockedkeyboardzoom="0" speedwheel="1" lockedkeyboard="0" contextfullscreen="1" invertcontrol="1" hideabout="0" sensitivity="8" dblclickfullscreen="0" invertwheel="0" lockedmouse="0" contextprojections="0" simulatemass="1" rubberband="0" lockedwheel="0"/>
+  </panorama>
+  <panorama id="node28">
+    <input levelbias="0.400" height="1728" width="1728" overlap="1" levelingpitch="0" levelingroll="0" levelbiashidpi="1.000" leveltilesize="510" leveltileurl="tiles/node28/cf_%c/l_%l/c_%x/tile_%y.jpg">
+      <level height="1728" width="1728" preload="0" predecode="0"/>
+      <level height="864" width="864" preload="0" predecode="0"/>
+      <level height="432" width="432" preload="1" predecode="1"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view fovmode="0" pannorth="0">
+      <start fov="70" tilt="0" projection="4" pan="0"/>
+      <flyin fov="170" tilt="-90" projection="9" pan="0"/>
+      <min tilt="-90" fovpixel="2" pan="0"/>
+      <max fov="120" fovfisheye="360" scaletofit="1" fovstereographic="270" tilt="90" pan="360"/>
+    </view>
+    <userdata title="MsportNE" description="" info="" tags="panodel" latitude="" copyright="" nodeid="node28" source="" datetime="" comment="" author="" heading="0" longitude="" customnodeid=""/>
+    <hotspots height="20" width="180" wordwrap="1">
+      <label backgroundalpha="1" height="20" width="180" borderalpha="1" textalpha="1" border="1" wordwrap="1" background="1" borderradius="1" enabled="1" textcolor="0x000000" backgroundcolor="0xffffff" bordercolor="0x000000"/>
+      <polystyle backgroundalpha="0.25098" borderalpha="1" handcursor="1" mode="0" backgroundcolor="0x0000ff" bordercolor="0x0000ff"/>
+      <hotspot title="" description="欢迎来到科大迷宫！&#xa;叮铃铃！你一早起床下楼,发现马上就要考试了！你正欲骑车赶位于往教学楼八楼的考场，突然发现科大的空间已经被莫名修改了！似乎只有通过宿舍楼才能到达相同楼号的教学楼！&#xa;才能到达？&#xa;（主教学楼只有一栋足够高）" url="" skinid="hs1" id="Point02" target="" tilt="21.98" pan="-341.03"/>
+      <polyhotspot title="" description="" url="{node4}" id="Poly01" target="">
+        <polystring>-143.24/55.16|-159.08/43.24|-158.06/21.45|-154.12/-1.21|-140.55/-3.38|-132.93/-5.92|-128.78/-5.07|-122.04/-9.98|-96.6/-4.19|-93.86/3.9|-87.92/15.6</polystring>
+      </polyhotspot>
+      <polyhotspot title="" description="" url="{node45}" id="Poly02" target="">
+        <polystring>-264.3/-1.2|-263.55/-6.5|-272.64/-6.06|-271.32/0.02</polystring>
+      </polyhotspot>
+      <polyhotspot title="" description="" url="{node21}" id="Poly03" target="">
+        <polystring>-80.33/5.87|-79.91/0.63|-88.11/0.52|-87.13/5.5</polystring>
+      </polyhotspot>
+      <polyhotspot title="" description="" url="{node27}" id="Poly04" target="">
+        <polystring>-310.54/17.27|-300.31/-5.08|-332.41/-10.24|-331.44/18</polystring>
+      </polyhotspot>
+      <polyhotspot title="" description="" url="{node24}" id="Poly05" target="">
+        <polystring>-168.36/16.15|-154.03/-7.75|-195.22/-8.28|-188.12/16.76</polystring>
+      </polyhotspot>
+    </hotspots>
+    <media/>
+    <transition blendtime="1" zoomspeed="2" type="crossdissolve" blendcolor="0x000000" zoomout="0" enabled="1" zoomfov="20" zoomin="0" softedge="0" zoomoutpause="1"/>
+    <animation useinautorotation="0" syncanimationwithvideo="0" animsequence="Animation01"/>
+    <control lockedkeyboardzoom="0" speedwheel="1" lockedkeyboard="0" contextfullscreen="1" invertcontrol="1" hideabout="0" sensitivity="8" dblclickfullscreen="0" invertwheel="0" lockedmouse="0" contextprojections="0" simulatemass="1" rubberband="0" lockedwheel="0"/>
+  </panorama>
+  <panorama id="node29">
+    <input levelbias="0.400" height="1728" width="1728" overlap="1" levelingpitch="0" levelingroll="0" levelbiashidpi="1.000" leveltilesize="510" leveltileurl="tiles/node29/cf_%c/l_%l/c_%x/tile_%y.jpg">
+      <level height="1728" width="1728" preload="0" predecode="0"/>
+      <level height="864" width="864" preload="0" predecode="0"/>
+      <level height="432" width="432" preload="1" predecode="1"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view fovmode="0" pannorth="0">
+      <start fov="70" tilt="0" projection="4" pan="0"/>
+      <flyin fov="170" tilt="-90" projection="9" pan="0"/>
+      <min tilt="-90" fovpixel="2" pan="0"/>
+      <max fov="120" fovfisheye="360" scaletofit="1" fovstereographic="270" tilt="90" pan="360"/>
+    </view>
+    <userdata title="" description="" info="" tags="panodel" latitude="" copyright="" nodeid="node29" source="" datetime="" comment="" author="" heading="0" longitude="" customnodeid=""/>
+    <hotspots height="20" width="180" wordwrap="1">
+      <label backgroundalpha="1" height="20" width="180" borderalpha="1" textalpha="1" border="1" wordwrap="1" background="1" borderradius="1" enabled="1" textcolor="0x000000" backgroundcolor="0xffffff" bordercolor="0x000000"/>
+      <polystyle backgroundalpha="0.25098" borderalpha="1" handcursor="1" mode="0" backgroundcolor="0x0000ff" bordercolor="0x0000ff"/>
+      <hotspot title="恭喜！" description="当看到你自己时&#xa;你终于意识到了，你在测验最新的VR科大！&#xa;于是你看表，赶紧下楼来到真正的考场考试&#xa;恭喜取得4.3！&#xa;【真结局——成功考试】&#xa;(共有九个结局，欢迎收集！)" url="" skinid="ht_url" id="Point02" target="_blank" tilt="23.27" pan="-50.64"/>
+      <hotspot title="返回上一节点" description="" url="{node1}" skinid="back" id="Point01" target="" tilt="-0.79" pan="-355.55"/>
+      <hotspot title="返回起点" description="" url="{node28}" skinid="skip" id="Point03" target="" tilt="-4.52" pan="-89.63"/>
+    </hotspots>
+    <media/>
+    <transition blendtime="1" zoomspeed="2" type="crossdissolve" blendcolor="0x000000" zoomout="0" enabled="1" zoomfov="20" zoomin="0" softedge="0" zoomoutpause="1"/>
+    <animation useinautorotation="0" syncanimationwithvideo="0" animsequence="Animation01"/>
+    <control lockedkeyboardzoom="0" speedwheel="1" lockedkeyboard="0" contextfullscreen="1" invertcontrol="1" hideabout="0" sensitivity="8" dblclickfullscreen="0" invertwheel="0" lockedmouse="0" contextprojections="0" simulatemass="1" rubberband="0" lockedwheel="0"/>
+  </panorama>
+  <panorama id="node30">
+    <input levelbias="0.400" height="1728" width="1728" overlap="1" levelingpitch="180" levelingroll="180" levelbiashidpi="1.000" leveltilesize="510" leveltileurl="tiles/node30/cf_%c/l_%l/c_%x/tile_%y.jpg">
+      <level height="1728" width="1728" preload="0" predecode="0"/>
+      <level height="864" width="864" preload="0" predecode="0"/>
+      <level height="432" width="432" preload="1" predecode="1"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view fovmode="0" pannorth="0">
+      <start fov="70" tilt="0" projection="4" pan="0"/>
+      <flyin fov="170" tilt="-90" projection="9" pan="0"/>
+      <min tilt="-90" fovpixel="2" pan="0"/>
+      <max fov="120" fovfisheye="360" scaletofit="1" fovstereographic="270" tilt="90" pan="360"/>
+    </view>
+    <userdata title="" description="" info="" tags="panodel" latitude="" copyright="" nodeid="node30" source="" datetime="" comment="" author="" heading="0" longitude="" customnodeid=""/>
+    <hotspots height="20" width="180" wordwrap="1">
+      <label backgroundalpha="1" height="20" width="180" borderalpha="1" textalpha="1" border="1" wordwrap="1" background="1" borderradius="1" enabled="1" textcolor="0x000000" backgroundcolor="0xffffff" bordercolor="0x000000"/>
+      <polystyle backgroundalpha="0.25098" borderalpha="1" handcursor="1" mode="0" backgroundcolor="0x0000ff" bordercolor="0x0000ff"/>
+      <hotspot title="这是哪？" description="这是哪来着？你觉得你迷路了&#xa;回去吃饭吧" url="" skinid="ht_info" id="Point01" target="" tilt="14.71" pan="-194.65"/>
+      <polyhotspot title="" description="" url="{node44}" id="Poly01" target="">
+        <polystring>-24.25/26.62|-19.73/-4.27|-121.84/-7.3|-116.87/13.93|-118.4/23.8</polystring>
+      </polyhotspot>
+      <polyhotspot title="" description="" url="{node35}" id="Poly02" target="">
+        <polystring>-141.8/12.17|-140.29/-4.65|-155.42/-4.86|-156.97/12.1</polystring>
+      </polyhotspot>
+      <polyhotspot title="" description="" url="{node42}" id="Poly03" target="">
+        <polystring>-241.6/14.41|-243.82/-6.6|-284.63/-8.39|-272.9/15.3</polystring>
+      </polyhotspot>
+      <polyhotspot title="" description="" url="{node4}" id="Poly04" target="">
+        <polystring>-332.13/13.86|-331.81/-6.32|-8.45/-8.88|-14.3/-2.36|-356.38/14.29</polystring>
+      </polyhotspot>
+      <polyhotspot title="" description="" url="{node46}" id="Poly05" target="">
+        <polystring>-202.98/6.76|-203.04/-3.43|-216.79/-2.54|-216.56/8.5</polystring>
+      </polyhotspot>
+    </hotspots>
+    <media/>
+    <transition blendtime="1" zoomspeed="2" type="crossdissolve" blendcolor="0x000000" zoomout="0" enabled="1" zoomfov="20" zoomin="0" softedge="0" zoomoutpause="1"/>
+    <animation useinautorotation="0" syncanimationwithvideo="0" animsequence="Animation01"/>
+    <control lockedkeyboardzoom="0" speedwheel="1" lockedkeyboard="0" contextfullscreen="1" invertcontrol="1" hideabout="0" sensitivity="8" dblclickfullscreen="0" invertwheel="0" lockedmouse="0" contextprojections="0" simulatemass="1" rubberband="0" lockedwheel="0"/>
+  </panorama>
+  <panorama id="node31">
+    <input levelbias="0.400" height="1728" width="1728" overlap="1" levelingpitch="0" levelingroll="0" levelbiashidpi="1.000" leveltilesize="510" leveltileurl="tiles/node31/cf_%c/l_%l/c_%x/tile_%y.jpg">
+      <level height="1728" width="1728" preload="0" predecode="0"/>
+      <level height="864" width="864" preload="0" predecode="0"/>
+      <level height="432" width="432" preload="1" predecode="1"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view fovmode="0" pannorth="0">
+      <start fov="70" tilt="0" projection="4" pan="0"/>
+      <flyin fov="170" tilt="-90" projection="9" pan="0"/>
+      <min tilt="-90" fovpixel="2" pan="0"/>
+      <max fov="120" fovfisheye="360" scaletofit="1" fovstereographic="270" tilt="90" pan="360"/>
+    </view>
+    <userdata title="" description="" info="" tags="panodel" latitude="" copyright="" nodeid="node31" source="" datetime="" comment="" author="" heading="0" longitude="" customnodeid=""/>
+    <hotspots height="20" width="180" wordwrap="1">
+      <label backgroundalpha="1" height="20" width="180" borderalpha="1" textalpha="1" border="1" wordwrap="1" background="1" borderradius="1" enabled="1" textcolor="0x000000" backgroundcolor="0xffffff" bordercolor="0x000000"/>
+      <polystyle backgroundalpha="0.25098" borderalpha="1" handcursor="1" mode="0" backgroundcolor="0x0000ff" bordercolor="0x0000ff"/>
+      <hotspot title="桥" description="好像因为空间扰动，这不是那家餐厅——不过不多想了！你已经饿坏了！看看这有什么东西！" url="" skinid="ht_info" id="Point03" target="" tilt="6.69" pan="-358.55"/>
+      <polyhotspot title="" description="" url="{node35}" id="Poly01" target="">
+        <polystring>-22.53/-25.5|-26.43/-26.83|-28.52/-24.76|-27.13/-21.03|-24.58/-21.09|-24.1/-21.76|-23.35/-18.56|-22.22/-19.39|-22.81/-21.4|-23.43/-21.23|-22.9/-21.89</polystring>
+      </polyhotspot>
+      <polyhotspot title="" description="" url="{node42}" id="Poly02" target="">
+        <polystring>-64.9/39.57|-63.79/2.61|-88.87/-0.07|-89.58/33.53</polystring>
+      </polyhotspot>
+    </hotspots>
+    <media/>
+    <transition blendtime="1" zoomspeed="2" type="crossdissolve" blendcolor="0x000000" zoomout="0" enabled="1" zoomfov="20" zoomin="0" softedge="0" zoomoutpause="1"/>
+    <animation useinautorotation="0" syncanimationwithvideo="0" animsequence="Animation01"/>
+    <control lockedkeyboardzoom="0" speedwheel="1" lockedkeyboard="0" contextfullscreen="1" invertcontrol="1" hideabout="0" sensitivity="8" dblclickfullscreen="0" invertwheel="0" lockedmouse="0" contextprojections="0" simulatemass="1" rubberband="0" lockedwheel="0"/>
+  </panorama>
+  <panorama id="node32">
+    <input levelbias="0.400" height="1728" width="1728" overlap="1" levelingpitch="0" levelingroll="0" levelbiashidpi="1.000" leveltilesize="510" leveltileurl="tiles/node32/cf_%c/l_%l/c_%x/tile_%y.jpg">
+      <level height="1728" width="1728" preload="0" predecode="0"/>
+      <level height="864" width="864" preload="0" predecode="0"/>
+      <level height="432" width="432" preload="1" predecode="1"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view fovmode="0" pannorth="0">
+      <start fov="70" tilt="0" projection="4" pan="0"/>
+      <flyin fov="170" tilt="-90" projection="9" pan="0"/>
+      <min tilt="-90" fovpixel="2" pan="0"/>
+      <max fov="120" fovfisheye="360" scaletofit="1" fovstereographic="270" tilt="90" pan="360"/>
+    </view>
+    <userdata title="" description="" info="" tags="panodel" latitude="" copyright="" nodeid="node32" source="" datetime="" comment="" author="" heading="0" longitude="" customnodeid=""/>
+    <hotspots height="20" width="180" wordwrap="1">
+      <label backgroundalpha="1" height="20" width="180" borderalpha="1" textalpha="1" border="1" wordwrap="1" background="1" borderradius="1" enabled="1" textcolor="0x000000" backgroundcolor="0xffffff" bordercolor="0x000000"/>
+      <polystyle backgroundalpha="0.25098" borderalpha="1" handcursor="1" mode="0" backgroundcolor="0x0000ff" bordercolor="0x0000ff"/>
+      <hotspot title="这里是电三楼" description="这里是电三楼&#xa;去吃饭吧&#xa;去考试吧&#xa;这里是电三楼这里是电三楼&#xa;这里是电三电三电三喽楼娄&#xa;#=&amp;.=.=.1.%.===*.23==#=.@===24.3=.=.=" url="" skinid="ht_info" id="Point02" target="" tilt="16.79" pan="-9.01"/>
+      <polyhotspot title="" description="" url="{node11}" id="Poly01" target="">
+        <polystring>-51/9.73|-50.49/-4.25|-68.59/-4.21|-67.03/8.65</polystring>
+      </polyhotspot>
+      <polyhotspot title="" description="" url="{node32}" id="Poly02" target="">
+        <polystring>-113.35/35.62|-118.09/-6.7|-209.23/-12.6|-208.51/24.02</polystring>
+      </polyhotspot>
+      <polyhotspot title="" description="" url="{node44}" id="Poly03" target="">
+        <polystring>-232.49/8.62|-229.6/-5.63|-254.12/-11.06|-252.12/4.14</polystring>
+      </polyhotspot>
+      <polyhotspot title="" description="" url="{node43}" id="Poly04" target="">
+        <polystring>-316.53/13.19|-311.65/-19.14|-340.23/-17.68|-328.5/16.03</polystring>
+      </polyhotspot>
+    </hotspots>
+    <media/>
+    <transition blendtime="1" zoomspeed="2" type="crossdissolve" blendcolor="0x000000" zoomout="0" enabled="1" zoomfov="20" zoomin="0" softedge="0" zoomoutpause="1"/>
+    <animation useinautorotation="0" syncanimationwithvideo="0" animsequence="Animation01"/>
+    <control lockedkeyboardzoom="0" speedwheel="1" lockedkeyboard="0" contextfullscreen="1" invertcontrol="1" hideabout="0" sensitivity="8" dblclickfullscreen="0" invertwheel="0" lockedmouse="0" contextprojections="0" simulatemass="1" rubberband="0" lockedwheel="0"/>
+  </panorama>
+  <panorama id="node33">
+    <input levelbias="0.400" height="1728" width="1728" overlap="1" levelingpitch="0" levelingroll="0" levelbiashidpi="1.000" leveltilesize="510" leveltileurl="tiles/node33/cf_%c/l_%l/c_%x/tile_%y.jpg">
+      <level height="1728" width="1728" preload="0" predecode="0"/>
+      <level height="864" width="864" preload="0" predecode="0"/>
+      <level height="432" width="432" preload="1" predecode="1"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view fovmode="0" pannorth="0">
+      <start fov="70" tilt="0" projection="4" pan="0"/>
+      <flyin fov="170" tilt="-90" projection="9" pan="0"/>
+      <min tilt="-90" fovpixel="2" pan="0"/>
+      <max fov="120" fovfisheye="360" scaletofit="1" fovstereographic="270" tilt="90" pan="360"/>
+    </view>
+    <userdata title="" description="" info="" tags="panodel" latitude="" copyright="" nodeid="node33" source="" datetime="" comment="" author="" heading="0" longitude="" customnodeid=""/>
+    <hotspots height="20" width="180" wordwrap="1">
+      <label backgroundalpha="1" height="20" width="180" borderalpha="1" textalpha="1" border="1" wordwrap="1" background="1" borderradius="1" enabled="1" textcolor="0x000000" backgroundcolor="0xffffff" bordercolor="0x000000"/>
+      <polystyle backgroundalpha="0.25098" borderalpha="1" handcursor="1" mode="0" backgroundcolor="0x0000ff" bordercolor="0x0000ff"/>
+      <hotspot title="走错路了！" description="不对啊！你是要去考试的啊！&#xa;考试在东区啊！&#xa;食堂也不应该走这条路啊！&#xa;快回去吧！" url="" skinid="ht_info" id="Point03" target="" tilt="28.47" pan="-345.29"/>
+      <polyhotspot title="" description="" url="{node21}" id="Poly01" target="">
+        <polystring>-64.19/14.75|-61.47/0.23|-83.24/-3.36|-87.68/15.97</polystring>
+      </polyhotspot>
+      <polyhotspot title="" description="" url="{node11}" id="Poly02" target="">
+        <polystring>-173.5/7.3|-172.7/-3.37|-193.24/-3.45|-191.14/7.37</polystring>
+      </polyhotspot>
+      <polyhotspot title="" description="" url="{node46}" id="Poly03" target="">
+        <polystring>-352.75/2.15|-353.15/-2.89|-5.55/-2.73|-4.25/2.68</polystring>
+      </polyhotspot>
+      <polyhotspot title="" description="" url="{node1}" id="Poly04" target="">
+        <polystring>-288.01/3.84|-292.57/-12.31|-320.48/-7.47|-315.26/5.25</polystring>
+      </polyhotspot>
+    </hotspots>
+    <media/>
+    <transition blendtime="1" zoomspeed="2" type="crossdissolve" blendcolor="0x000000" zoomout="0" enabled="1" zoomfov="20" zoomin="0" softedge="0" zoomoutpause="1"/>
+    <animation useinautorotation="0" syncanimationwithvideo="0" animsequence="Animation01"/>
+    <control lockedkeyboardzoom="0" speedwheel="1" lockedkeyboard="0" contextfullscreen="1" invertcontrol="1" hideabout="0" sensitivity="8" dblclickfullscreen="0" invertwheel="0" lockedmouse="0" contextprojections="0" simulatemass="1" rubberband="0" lockedwheel="0"/>
+  </panorama>
+  <panorama id="node34">
+    <input levelbias="0.400" height="1728" width="1728" overlap="1" levelingpitch="0" levelingroll="0" levelbiashidpi="1.000" leveltilesize="510" leveltileurl="tiles/node34/cf_%c/l_%l/c_%x/tile_%y.jpg">
+      <level height="1728" width="1728" preload="0" predecode="0"/>
+      <level height="864" width="864" preload="0" predecode="0"/>
+      <level height="432" width="432" preload="1" predecode="1"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view fovmode="0" pannorth="0">
+      <start fov="70" tilt="0" projection="4" pan="0"/>
+      <flyin fov="170" tilt="-90" projection="9" pan="0"/>
+      <min tilt="-90" fovpixel="2" pan="0"/>
+      <max fov="120" fovfisheye="360" scaletofit="1" fovstereographic="270" tilt="90" pan="360"/>
+    </view>
+    <userdata title="" description="" info="" tags="panodel" latitude="" copyright="" nodeid="node34" source="" datetime="" comment="" author="" heading="0" longitude="" customnodeid=""/>
+    <hotspots height="20" width="180" wordwrap="1">
+      <label backgroundalpha="1" height="20" width="180" borderalpha="1" textalpha="1" border="1" wordwrap="1" background="1" borderradius="1" enabled="1" textcolor="0x000000" backgroundcolor="0xffffff" bordercolor="0x000000"/>
+      <polystyle backgroundalpha="0.25098" borderalpha="1" handcursor="1" mode="0" backgroundcolor="0x0000ff" bordercolor="0x0000ff"/>
+      <hotspot title="西区西餐厅" description="似乎你来到了另一个食堂？&#xa;你回想了一下，你最初是打算去几楼食堂来着？" url="" skinid="ht_info" id="Point05" target="" tilt="9.75" pan="-357.58"/>
+      <polyhotspot title="" description="" url="{node37}" id="Poly01" target="">
+        <polystring>-305.49/-0.58|-307.51/-8.55|-319.52/-7.13|-318.53/-1.07|-311.65/0.66</polystring>
+      </polyhotspot>
+      <polyhotspot title="" description="" url="{node9}" id="Poly02" target="">
+        <polystring>-324.24/18|-324.37/1.05|-353.81/2.49|-353.73/19.33|-339.55/21.78</polystring>
+      </polyhotspot>
+      <polyhotspot title="" description="" url="{node45}" id="Poly03" target="">
+        <polystring>-53.33/16.09|-27.17/-3.44|-50.15/-13.46|-72.65/14.2</polystring>
+      </polyhotspot>
+      <polyhotspot title="" description="" url="{node33}" id="Poly04" target="">
+        <polystring>-195/14.19|-193.78/-12.51|-230.08/-10.22|-221.37/17.59</polystring>
+      </polyhotspot>
+    </hotspots>
+    <media/>
+    <transition blendtime="1" zoomspeed="2" type="crossdissolve" blendcolor="0x000000" zoomout="0" enabled="1" zoomfov="20" zoomin="0" softedge="0" zoomoutpause="1"/>
+    <animation useinautorotation="0" syncanimationwithvideo="0" animsequence="Animation01"/>
+    <control lockedkeyboardzoom="0" speedwheel="1" lockedkeyboard="0" contextfullscreen="1" invertcontrol="1" hideabout="0" sensitivity="8" dblclickfullscreen="0" invertwheel="0" lockedmouse="0" contextprojections="0" simulatemass="1" rubberband="0" lockedwheel="0"/>
+  </panorama>
+  <panorama id="node35">
+    <input levelbias="0.400" height="1728" width="1728" overlap="1" levelingpitch="0" levelingroll="0" levelbiashidpi="1.000" leveltilesize="510" leveltileurl="tiles/node35/cf_%c/l_%l/c_%x/tile_%y.jpg">
+      <level height="1728" width="1728" preload="0" predecode="0"/>
+      <level height="864" width="864" preload="0" predecode="0"/>
+      <level height="432" width="432" preload="1" predecode="1"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view fovmode="0" pannorth="0">
+      <start fov="70" tilt="0" projection="4" pan="0"/>
+      <flyin fov="170" tilt="-90" projection="9" pan="0"/>
+      <min tilt="-90" fovpixel="2" pan="0"/>
+      <max fov="120" fovfisheye="360" scaletofit="1" fovstereographic="270" tilt="90" pan="360"/>
+    </view>
+    <userdata title="" description="" info="" tags="panodel" latitude="" copyright="" nodeid="node35" source="" datetime="" comment="" author="" heading="0" longitude="" customnodeid=""/>
+    <hotspots height="20" width="180" wordwrap="1">
+      <label backgroundalpha="1" height="20" width="180" borderalpha="1" textalpha="1" border="1" wordwrap="1" background="1" borderradius="1" enabled="1" textcolor="0x000000" backgroundcolor="0xffffff" bordercolor="0x000000"/>
+      <polystyle backgroundalpha="0.25098" borderalpha="1" handcursor="1" mode="0" backgroundcolor="0x0000ff" bordercolor="0x0000ff"/>
+      <hotspot title="西区学生活动中心" description="好吧，你一个扑空掉进水了，结果一抬头却来到了活动中心，你可不想参加活动，你决定去最近的食堂。" url="" skinid="ht_info" id="Point02" target="" tilt="0.66" pan="-1.15"/>
+      <polyhotspot title="" description="" url="{node41}" id="Poly01" target="">
+        <polystring>-52.9/6.34|-51.54/3.65|-52.2/0.29|-59.91/0.18|-59.09/6.23</polystring>
+      </polyhotspot>
+      <polyhotspot title="" description="" url="{node46}" id="Poly02" target="">
+        <polystring>-168.47/15.35|-169.12/-12.16|-191.45/-13.87|-188.09/15.09</polystring>
+      </polyhotspot>
+      <polyhotspot title="" description="" url="{node45}" id="Poly03" target="">
+        <polystring>-205.91/14.31|-197.93/-9.83|-224.95/-17.19|-230.95/15.09</polystring>
+      </polyhotspot>
+    </hotspots>
+    <media/>
+    <transition blendtime="1" zoomspeed="2" type="crossdissolve" blendcolor="0x000000" zoomout="0" enabled="1" zoomfov="20" zoomin="0" softedge="0" zoomoutpause="1"/>
+    <animation useinautorotation="0" syncanimationwithvideo="0" animsequence="Animation01"/>
+    <control lockedkeyboardzoom="0" speedwheel="1" lockedkeyboard="0" contextfullscreen="1" invertcontrol="1" hideabout="0" sensitivity="8" dblclickfullscreen="0" invertwheel="0" lockedmouse="0" contextprojections="0" simulatemass="1" rubberband="0" lockedwheel="0"/>
+  </panorama>
+  <panorama id="node36">
+    <input levelbias="0.400" height="1728" width="1728" overlap="1" levelingpitch="0" levelingroll="0" levelbiashidpi="1.000" leveltilesize="510" leveltileurl="tiles/node36/cf_%c/l_%l/c_%x/tile_%y.jpg">
+      <level height="1728" width="1728" preload="0" predecode="0"/>
+      <level height="864" width="864" preload="0" predecode="0"/>
+      <level height="432" width="432" preload="1" predecode="1"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view fovmode="0" pannorth="0">
+      <start fov="70" tilt="0" projection="4" pan="0"/>
+      <flyin fov="170" tilt="-90" projection="9" pan="0"/>
+      <min tilt="-90" fovpixel="2" pan="0"/>
+      <max fov="120" fovfisheye="360" scaletofit="1" fovstereographic="270" tilt="90" pan="360"/>
+    </view>
+    <userdata title="" description="" info="" tags="panodel" latitude="" copyright="" nodeid="node36" source="" datetime="" comment="" author="" heading="0" longitude="" customnodeid=""/>
+    <hotspots height="20" width="180" wordwrap="1">
+      <label backgroundalpha="1" height="20" width="180" borderalpha="1" textalpha="1" border="1" wordwrap="1" background="1" borderradius="1" enabled="1" textcolor="0x000000" backgroundcolor="0xffffff" bordercolor="0x000000"/>
+      <polystyle backgroundalpha="0.25098" borderalpha="1" handcursor="1" mode="0" backgroundcolor="0x0000ff" bordercolor="0x0000ff"/>
+    </hotspots>
+    <media/>
+    <transition blendtime="1" zoomspeed="2" type="crossdissolve" blendcolor="0x000000" zoomout="0" enabled="1" zoomfov="20" zoomin="0" softedge="0" zoomoutpause="1"/>
+    <animation useinautorotation="0" syncanimationwithvideo="0" animsequence="Animation01"/>
+    <control lockedkeyboardzoom="0" speedwheel="1" lockedkeyboard="0" contextfullscreen="1" invertcontrol="1" hideabout="0" sensitivity="8" dblclickfullscreen="0" invertwheel="0" lockedmouse="0" contextprojections="0" simulatemass="1" rubberband="0" lockedwheel="0"/>
+  </panorama>
+  <panorama id="node37">
+    <input levelbias="0.400" height="1728" width="1728" overlap="1" levelingpitch="0" levelingroll="0" levelbiashidpi="1.000" leveltilesize="510" leveltileurl="tiles/node37/cf_%c/l_%l/c_%x/tile_%y.jpg">
+      <level height="1728" width="1728" preload="0" predecode="0"/>
+      <level height="864" width="864" preload="0" predecode="0"/>
+      <level height="432" width="432" preload="1" predecode="1"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view fovmode="0" pannorth="0">
+      <start fov="70" tilt="0" projection="4" pan="0"/>
+      <flyin fov="170" tilt="-90" projection="9" pan="0"/>
+      <min tilt="-90" fovpixel="2" pan="0"/>
+      <max fov="120" fovfisheye="360" scaletofit="1" fovstereographic="270" tilt="90" pan="360"/>
+    </view>
+    <userdata title="" description="" info="" tags="panodel" latitude="" copyright="" nodeid="node37" source="" datetime="" comment="" author="" heading="0" longitude="" customnodeid=""/>
+    <hotspots height="20" width="180" wordwrap="1">
+      <label backgroundalpha="1" height="20" width="180" borderalpha="1" textalpha="1" border="1" wordwrap="1" background="1" borderradius="1" enabled="1" textcolor="0x000000" backgroundcolor="0xffffff" bordercolor="0x000000"/>
+      <polystyle backgroundalpha="0.25098" borderalpha="1" handcursor="1" mode="0" backgroundcolor="0x0000ff" bordercolor="0x0000ff"/>
+      <hotspot title="USTC1958" description="反其道而行！很好，你确实来到了USTC1958！可以对着天鹅喝咖啡了！&#xa;诶，出门是要干什么来着？&#xa;【结局--咖啡万岁！】" url="" skinid="ht_info" id="Point01" target="" tilt="18.17" pan="-328.91"/>
+      <hotspot title="返回起点" description="" url="{node28}" skinid="ht_node" id="Point02" target="" tilt="16.59" pan="-11.35"/>
+      <hotspot title="返回分歧点" description="" url="{node34}" skinid="ht_node" id="Point03" target="" tilt="-9.27" pan="-34.29"/>
+    </hotspots>
+    <media/>
+    <transition blendtime="1" zoomspeed="2" type="crossdissolve" blendcolor="0x000000" zoomout="0" enabled="1" zoomfov="20" zoomin="0" softedge="0" zoomoutpause="1"/>
+    <animation useinautorotation="0" syncanimationwithvideo="0" animsequence="Animation01"/>
+    <control lockedkeyboardzoom="0" speedwheel="1" lockedkeyboard="0" contextfullscreen="1" invertcontrol="1" hideabout="0" sensitivity="8" dblclickfullscreen="0" invertwheel="0" lockedmouse="0" contextprojections="0" simulatemass="1" rubberband="0" lockedwheel="0"/>
+  </panorama>
+  <panorama id="node38">
+    <input levelbias="0.400" height="1728" width="1728" overlap="1" levelingpitch="0" levelingroll="0" levelbiashidpi="1.000" leveltilesize="510" leveltileurl="tiles/node38/cf_%c/l_%l/c_%x/tile_%y.jpg">
+      <level height="1728" width="1728" preload="0" predecode="0"/>
+      <level height="864" width="864" preload="0" predecode="0"/>
+      <level height="432" width="432" preload="1" predecode="1"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view fovmode="0" pannorth="0">
+      <start fov="70" tilt="0" projection="4" pan="0"/>
+      <flyin fov="170" tilt="-90" projection="9" pan="0"/>
+      <min tilt="-90" fovpixel="2" pan="0"/>
+      <max fov="120" fovfisheye="360" scaletofit="1" fovstereographic="270" tilt="90" pan="360"/>
+    </view>
+    <userdata title="" description="" info="" tags="panodel" latitude="" copyright="" nodeid="node38" source="" datetime="" comment="" author="" heading="0" longitude="" customnodeid=""/>
+    <hotspots height="20" width="180" wordwrap="1">
+      <label backgroundalpha="1" height="20" width="180" borderalpha="1" textalpha="1" border="1" wordwrap="1" background="1" borderradius="1" enabled="1" textcolor="0x000000" backgroundcolor="0xffffff" bordercolor="0x000000"/>
+      <polystyle backgroundalpha="0.25098" borderalpha="1" handcursor="1" mode="0" backgroundcolor="0x0000ff" bordercolor="0x0000ff"/>
+      <hotspot title="这里是科大西区北门" description="这里是科大西区北门&#xa;去参观鸭子吧！" url="" skinid="ht_info" id="Point01" target="" tilt="39.94" pan="-348.85"/>
+      <polyhotspot title="" description="" url="{node37}" id="Poly01" target="">
+        <polystring>-245.25/14.13|-245.48/-11.54|-296.06/-6.55|-289.13/25.36</polystring>
+      </polyhotspot>
+      <polyhotspot title="" description="" url="{node31}" id="Poly02" target="">
+        <polystring>-77.25/12.33|-64.24/-1.39|-113.42/-8.22|-111.21/10.7</polystring>
+      </polyhotspot>
+      <polyhotspot title="" description="" url="{node42}" id="Poly03" target="">
+        <polystring>-155.91/16.2|-140.17/-2.88|-219.45/-6.45|-205.71/13.93</polystring>
+      </polyhotspot>
+    </hotspots>
+    <media/>
+    <transition blendtime="1" zoomspeed="2" type="crossdissolve" blendcolor="0x000000" zoomout="0" enabled="1" zoomfov="20" zoomin="0" softedge="0" zoomoutpause="1"/>
+    <animation useinautorotation="0" syncanimationwithvideo="0" animsequence="Animation01"/>
+    <control lockedkeyboardzoom="0" speedwheel="1" lockedkeyboard="0" contextfullscreen="1" invertcontrol="1" hideabout="0" sensitivity="8" dblclickfullscreen="0" invertwheel="0" lockedmouse="0" contextprojections="0" simulatemass="1" rubberband="0" lockedwheel="0"/>
+  </panorama>
+  <panorama id="node41">
+    <input levelbias="0.400" height="1728" width="1728" overlap="1" levelingpitch="0" levelingroll="0" levelbiashidpi="1.000" leveltilesize="510" leveltileurl="tiles/node41/cf_%c/l_%l/c_%x/tile_%y.jpg">
+      <level height="1728" width="1728" preload="0" predecode="0"/>
+      <level height="864" width="864" preload="0" predecode="0"/>
+      <level height="432" width="432" preload="1" predecode="1"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view fovmode="0" pannorth="0">
+      <start fov="70" tilt="0" projection="4" pan="0"/>
+      <flyin fov="170" tilt="-90" projection="9" pan="0"/>
+      <min tilt="-90" fovpixel="2" pan="0"/>
+      <max fov="120" fovfisheye="360" scaletofit="1" fovstereographic="270" tilt="90" pan="360"/>
+    </view>
+    <userdata title="" description="" info="" tags="panodel" latitude="" copyright="" nodeid="node41" source="" datetime="" comment="" author="" heading="0" longitude="" customnodeid=""/>
+    <hotspots height="20" width="180" wordwrap="1">
+      <label backgroundalpha="1" height="20" width="180" borderalpha="1" textalpha="1" border="1" wordwrap="1" background="1" borderradius="1" enabled="1" textcolor="0x000000" backgroundcolor="0xffffff" bordercolor="0x000000"/>
+      <polystyle backgroundalpha="0.25098" borderalpha="1" handcursor="1" mode="0" backgroundcolor="0x0000ff" bordercolor="0x0000ff"/>
+      <hotspot title="西区西食堂" description="太感动了！你竟然真的来到了食堂！&#xa;顾不上探究为什么真的能到，你决定赶紧饱餐一顿！" url="" skinid="ht_info" id="Point01" target="" tilt="3.9" pan="-0.0200134"/>
+      <polyhotspot title="" description="" url="{node34}" id="Poly01" target="">
+        <polystring>-347.01/6.43|-346.95/-5.24|-338.42/-3.47|-339.41/6.95</polystring>
+      </polyhotspot>
+      <polyhotspot title="" description="" url="{node35}" id="Poly02" target="">
+        <polystring>-116.05/21.93|-105.14/-23.95|-181.62/-35.53|-158.53/28.71</polystring>
+      </polyhotspot>
+      <polyhotspot title="" description="" url="{node4}" id="Poly03" target="">
+        <polystring>-54.36/38.09|-54.32/-4.46|-102.9/-7.35|-108.25/43.89|-75.48/55.52</polystring>
+      </polyhotspot>
+    </hotspots>
+    <media/>
+    <transition blendtime="1" zoomspeed="2" type="crossdissolve" blendcolor="0x000000" zoomout="0" enabled="1" zoomfov="20" zoomin="0" softedge="0" zoomoutpause="1"/>
+    <animation useinautorotation="0" syncanimationwithvideo="0" animsequence="Animation01"/>
+    <control lockedkeyboardzoom="0" speedwheel="1" lockedkeyboard="0" contextfullscreen="1" invertcontrol="1" hideabout="0" sensitivity="8" dblclickfullscreen="0" invertwheel="0" lockedmouse="0" contextprojections="0" simulatemass="1" rubberband="0" lockedwheel="0"/>
+  </panorama>
+  <panorama id="node42">
+    <input levelbias="0.400" height="1728" width="1728" overlap="1" levelingpitch="0" levelingroll="0" levelbiashidpi="1.000" leveltilesize="510" leveltileurl="tiles/node42/cf_%c/l_%l/c_%x/tile_%y.jpg">
+      <level height="1728" width="1728" preload="0" predecode="0"/>
+      <level height="864" width="864" preload="0" predecode="0"/>
+      <level height="432" width="432" preload="1" predecode="1"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view fovmode="0" pannorth="0">
+      <start fov="70" tilt="0" projection="4" pan="0"/>
+      <flyin fov="170" tilt="-90" projection="9" pan="0"/>
+      <min tilt="-90" fovpixel="2" pan="0"/>
+      <max fov="120" fovfisheye="360" scaletofit="1" fovstereographic="270" tilt="90" pan="360"/>
+    </view>
+    <userdata title="" description="" info="" tags="panodel" latitude="" copyright="" nodeid="node42" source="" datetime="" comment="" author="" heading="0" longitude="" customnodeid=""/>
+    <hotspots height="20" width="180" wordwrap="1">
+      <label backgroundalpha="1" height="20" width="180" borderalpha="1" textalpha="1" border="1" wordwrap="1" background="1" borderradius="1" enabled="1" textcolor="0x000000" backgroundcolor="0xffffff" bordercolor="0x000000"/>
+      <polystyle backgroundalpha="0.25098" borderalpha="1" handcursor="1" mode="0" backgroundcolor="0x0000ff" bordercolor="0x0000ff"/>
+      <hotspot title="西区USTC1958/天鹅湖" description="这是哪？你转眼一看，确实是图书馆——西图书馆！这麻烦了，比宿舍还远了！不过你决定去往最近的餐厅——肚子要紧！&#xa;{左侧，1958}" url="{node37}" skinid="ht_node" id="Point03" target="" tilt="-4.3" pan="-34.11"/>
+      <polyhotspot title="" description="" url="{node31}" id="Poly01" target="">
+        <polystring>-1.72/7.53|-1.1/-6.29|-20.38/-8.79|-22.3/9.15|-14.71/11.68</polystring>
+      </polyhotspot>
+      <polyhotspot title="" description="" url="{node38}" id="Poly02" target="">
+        <polystring>-95.12/16.78|-89.72/-10.23|-147.83/-3.64|-138.04/13.63</polystring>
+      </polyhotspot>
+      <polyhotspot title="" description="" url="{node45}" id="Poly03" target="">
+        <polystring>-304.2/14.66|-295.06/-6.13|-347.51/-5.93|-339.96/20.23|-313.99/23.29</polystring>
+      </polyhotspot>
+    </hotspots>
+    <media/>
+    <transition blendtime="1" zoomspeed="2" type="crossdissolve" blendcolor="0x000000" zoomout="0" enabled="1" zoomfov="20" zoomin="0" softedge="0" zoomoutpause="1"/>
+    <animation useinautorotation="0" syncanimationwithvideo="0" animsequence="Animation01"/>
+    <control lockedkeyboardzoom="0" speedwheel="1" lockedkeyboard="0" contextfullscreen="1" invertcontrol="1" hideabout="0" sensitivity="8" dblclickfullscreen="0" invertwheel="0" lockedmouse="0" contextprojections="0" simulatemass="1" rubberband="0" lockedwheel="0"/>
+  </panorama>
+  <panorama id="node43">
+    <input levelbias="0.400" height="1728" width="1728" overlap="1" levelingpitch="0" levelingroll="0" levelbiashidpi="1.000" leveltilesize="510" leveltileurl="tiles/node43/cf_%c/l_%l/c_%x/tile_%y.jpg">
+      <level height="1728" width="1728" preload="0" predecode="0"/>
+      <level height="864" width="864" preload="0" predecode="0"/>
+      <level height="432" width="432" preload="1" predecode="1"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view fovmode="0" pannorth="0">
+      <start fov="70" tilt="0" projection="4" pan="0"/>
+      <flyin fov="170" tilt="-90" projection="9" pan="0"/>
+      <min tilt="-90" fovpixel="2" pan="0"/>
+      <max fov="120" fovfisheye="360" scaletofit="1" fovstereographic="270" tilt="90" pan="360"/>
+    </view>
+    <userdata title="" description="" info="" tags="panodel" latitude="" copyright="" nodeid="node43" source="" datetime="" comment="" author="" heading="0" longitude="" customnodeid=""/>
+    <hotspots height="20" width="180" wordwrap="1">
+      <label backgroundalpha="1" height="20" width="180" borderalpha="1" textalpha="1" border="1" wordwrap="1" background="1" borderradius="1" enabled="1" textcolor="0x000000" backgroundcolor="0xffffff" bordercolor="0x000000"/>
+      <polystyle backgroundalpha="0.25098" borderalpha="1" handcursor="1" mode="0" backgroundcolor="0x0000ff" bordercolor="0x0000ff"/>
+      <polyhotspot title="" description="" url="{node37}" id="Poly03" target="">
+        <polystring>-243.18/7.99|-241.98/-6.44|-256.1/-10.26|-255.77/7</polystring>
+      </polyhotspot>
+      <polyhotspot title="" description="" url="{node44}" id="Poly04" target="">
+        <polystring>-174.62/-2.2|-179.91/-9.98|-192.26/-12.3|-201.25/-8|-178.74/9.48</polystring>
+      </polyhotspot>
+      <polyhotspot title="" description="" url="{node32}" id="Poly05" target="">
+        <polystring>-125.61/6.09|-125.94/-1.1|-134.13/-2.15|-132.93/4.79|-133.8/6.28</polystring>
+      </polyhotspot>
+      <polyhotspot title="" description="" url="{node2}" id="Poly01" target="">
+        <polystring>-15.08/13.8|-12.37/-2.94|-28.89/-5.49|-29.53/13.31</polystring>
+      </polyhotspot>
+      <polyhotspot title="" description="" url="{node11}" id="Poly02" target="">
+        <polystring>-329.86/11.51|-331.99/-6.65|-351.77/-7.28|-347.94/13.66</polystring>
+      </polyhotspot>
+    </hotspots>
+    <media/>
+    <transition blendtime="1" zoomspeed="2" type="crossdissolve" blendcolor="0x000000" zoomout="0" enabled="1" zoomfov="20" zoomin="0" softedge="0" zoomoutpause="1"/>
+    <animation useinautorotation="0" syncanimationwithvideo="0" animsequence="Animation01"/>
+    <control lockedkeyboardzoom="0" speedwheel="1" lockedkeyboard="0" contextfullscreen="1" invertcontrol="1" hideabout="0" sensitivity="8" dblclickfullscreen="0" invertwheel="0" lockedmouse="0" contextprojections="0" simulatemass="1" rubberband="0" lockedwheel="0"/>
+  </panorama>
+  <panorama id="node44">
+    <input levelbias="0.400" height="1728" width="1728" overlap="1" levelingpitch="0" levelingroll="0" levelbiashidpi="1.000" leveltilesize="510" leveltileurl="tiles/node44/cf_%c/l_%l/c_%x/tile_%y.jpg">
+      <level height="1728" width="1728" preload="0" predecode="0"/>
+      <level height="864" width="864" preload="0" predecode="0"/>
+      <level height="432" width="432" preload="1" predecode="1"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view fovmode="0" pannorth="0">
+      <start fov="100" tilt="0" projection="4" pan="0"/>
+      <flyin fov="170" tilt="-90" projection="9" pan="0"/>
+      <min tilt="-90" fovpixel="2" pan="0"/>
+      <max fov="120" fovfisheye="360" scaletofit="1" fovstereographic="270" tilt="90" pan="360"/>
+    </view>
+    <userdata title="Wsquare" description="" info="" tags="panodel" latitude="" copyright="" nodeid="node44" source="" datetime="" comment="" author="" heading="0" longitude="" customnodeid=""/>
+    <hotspots height="20" width="180" wordwrap="1">
+      <label backgroundalpha="1" height="20" width="180" borderalpha="1" textalpha="1" border="1" wordwrap="1" background="1" borderradius="1" enabled="1" textcolor="0x000000" backgroundcolor="0xffffff" bordercolor="0x000000"/>
+      <polystyle backgroundalpha="0.25098" borderalpha="1" handcursor="1" mode="0" backgroundcolor="0x0000ff" bordercolor="0x0000ff"/>
+      <hotspot title="严济慈像" description="严济慈像&#xa;" url="" skinid="ht_info" id="Point01" target="" tilt="21.81" pan="-329.89"/>
+      <hotspot title="接下来远离食堂！" description="接下来远离食堂！" url="" skinid="skip2" id="Point03" target="" tilt="1.57" pan="-333.94"/>
+      <polyhotspot title="" description="" url="{node43}" id="Poly01" target="">
+        <polystring>-130.81/26.52|-126.96/-0.34|-182.09/-1.71|-243.27/-12.3|-240.91/17.66|-224.55/24.88|-212.67/30.52|-191.23/33.79</polystring>
+      </polyhotspot>
+      <polyhotspot title="" description="" url="{node30}" id="Poly02" target="">
+        <polystring>-54.87/8.83|-54.99/-1.18|-73.49/-1.89|-70.14/10.71</polystring>
+      </polyhotspot>
+      <polyhotspot title="" description="" url="{node16}" id="Poly03" target="">
+        <polystring>-13.01/10.88|-11.47/-2.33|-40.77/-3.85|-37.85/10.84</polystring>
+      </polyhotspot>
+    </hotspots>
+    <media/>
+    <transition blendtime="1" zoomspeed="2" type="crossdissolve" blendcolor="0x000000" zoomout="0" enabled="1" zoomfov="20" zoomin="0" softedge="0" zoomoutpause="1"/>
+    <animation useinautorotation="0" syncanimationwithvideo="0" animsequence="Animation01"/>
+    <control lockedkeyboardzoom="0" speedwheel="1" lockedkeyboard="0" contextfullscreen="1" invertcontrol="1" hideabout="0" sensitivity="8" dblclickfullscreen="0" invertwheel="0" lockedmouse="0" contextprojections="0" simulatemass="1" rubberband="0" lockedwheel="0"/>
+  </panorama>
+  <panorama id="node45">
+    <input levelbias="0.400" height="1728" width="1728" overlap="1" levelingpitch="0" levelingroll="0" levelbiashidpi="1.000" leveltilesize="510" leveltileurl="tiles/node45/cf_%c/l_%l/c_%x/tile_%y.jpg">
+      <level height="1728" width="1728" preload="0" predecode="0"/>
+      <level height="864" width="864" preload="0" predecode="0"/>
+      <level height="432" width="432" preload="1" predecode="1"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view fovmode="0" pannorth="0">
+      <start fov="70" tilt="0" projection="4" pan="0"/>
+      <flyin fov="170" tilt="-90" projection="9" pan="0"/>
+      <min tilt="-90" fovpixel="2" pan="0"/>
+      <max fov="120" fovfisheye="360" scaletofit="1" fovstereographic="270" tilt="90" pan="360"/>
+    </view>
+    <userdata title="" description="" info="" tags="panodel" latitude="" copyright="" nodeid="node45" source="" datetime="" comment="" author="" heading="0" longitude="" customnodeid=""/>
+    <hotspots height="20" width="180" wordwrap="1">
+      <label backgroundalpha="1" height="20" width="180" borderalpha="1" textalpha="1" border="1" wordwrap="1" background="1" borderradius="1" enabled="1" textcolor="0x000000" backgroundcolor="0xffffff" bordercolor="0x000000"/>
+      <polystyle backgroundalpha="0.25098" borderalpha="1" handcursor="1" mode="0" backgroundcolor="0x0000ff" bordercolor="0x0000ff"/>
+      <hotspot title="迷失空间" description="啊呀！想去的地方明明不远，可是似乎道路像一条无尽蔓延的隧道，一直走不完……&#xa;【结局——迷失空间】" url="" skinid="ht_info" id="Point01" target="" tilt="0.85" pan="-37.4"/>
+      <hotspot title="返回上一节点" description="" url="{node31}" skinid="back" id="Point02" target="" tilt="11.74" pan="-60.92"/>
+      <hotspot title="返回起点" description="" url="{node28}" skinid="skip" id="Point03" target="" tilt="-1.09" pan="-68.87"/>
+    </hotspots>
+    <media/>
+    <transition blendtime="1" zoomspeed="2" type="crossdissolve" blendcolor="0x000000" zoomout="0" enabled="1" zoomfov="20" zoomin="0" softedge="0" zoomoutpause="1"/>
+    <animation useinautorotation="0" syncanimationwithvideo="0" animsequence="Animation01"/>
+    <control lockedkeyboardzoom="0" speedwheel="1" lockedkeyboard="0" contextfullscreen="1" invertcontrol="1" hideabout="0" sensitivity="8" dblclickfullscreen="0" invertwheel="0" lockedmouse="0" contextprojections="0" simulatemass="1" rubberband="0" lockedwheel="0"/>
+  </panorama>
+  <panorama id="node46">
+    <input levelbias="0.400" height="1728" width="1728" overlap="1" levelingpitch="180" levelingroll="180" levelbiashidpi="1.000" leveltilesize="510" leveltileurl="tiles/node46/cf_%c/l_%l/c_%x/tile_%y.jpg">
+      <level height="1728" width="1728" preload="0" predecode="0"/>
+      <level height="864" width="864" preload="0" predecode="0"/>
+      <level height="432" width="432" preload="1" predecode="1"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view fovmode="0" pannorth="0">
+      <start fov="70" tilt="0" projection="4" pan="0"/>
+      <flyin fov="170" tilt="-90" projection="9" pan="0"/>
+      <min tilt="-90" fovpixel="2" pan="0"/>
+      <max fov="120" fovfisheye="360" scaletofit="1" fovstereographic="270" tilt="90" pan="360"/>
+    </view>
+    <userdata title="" description="" info="" tags="panodel" latitude="" copyright="" nodeid="node46" source="" datetime="" comment="" author="" heading="0" longitude="" customnodeid=""/>
+    <hotspots height="20" width="180" wordwrap="1">
+      <label backgroundalpha="1" height="20" width="180" borderalpha="1" textalpha="1" border="1" wordwrap="1" background="1" borderradius="1" enabled="1" textcolor="0x000000" backgroundcolor="0xffffff" bordercolor="0x000000"/>
+      <polystyle backgroundalpha="0.25098" borderalpha="1" handcursor="1" mode="0" backgroundcolor="0x0000ff" bordercolor="0x0000ff"/>
+      <hotspot title="诶呀！" description="" url="{node28}" skinid="ht_node" id="Point01" target="" tilt="6.88" pan="-160.83"/>
+      <hotspot title="啊呀！" description="你不知如何，迷迷糊糊到了湖边，掉到湖里了！&#xa;恭喜你，变成了无忧无虑的天鹅！&#xa;【结局——曲项向天歌】" url="" skinid="ht_info" id="Point02" target="" tilt="37.65" pan="-214.38"/>
+      <polyhotspot title="" description="返回起点" url="{node28}" id="Poly01" target="">
+        <polystring>-185.66/20.04|-185.76/-12.41|-288.65/-12.92|-281.66/24.37</polystring>
+      </polyhotspot>
+    </hotspots>
+    <media/>
+    <transition blendtime="1" zoomspeed="2" type="crossdissolve" blendcolor="0x000000" zoomout="0" enabled="1" zoomfov="20" zoomin="0" softedge="0" zoomoutpause="1"/>
+    <animation useinautorotation="0" syncanimationwithvideo="0" animsequence="Animation01"/>
+    <control lockedkeyboardzoom="0" speedwheel="1" lockedkeyboard="0" contextfullscreen="1" invertcontrol="1" hideabout="0" sensitivity="8" dblclickfullscreen="0" invertwheel="0" lockedmouse="0" contextprojections="0" simulatemass="1" rubberband="0" lockedwheel="0"/>
+  </panorama>
+  <panorama id="node47">
+    <input levelbias="0.400" height="1728" width="1728" overlap="1" levelingpitch="0" levelingroll="0" levelbiashidpi="1.000" leveltilesize="510" leveltileurl="tiles/node47/cf_%c/l_%l/c_%x/tile_%y.jpg">
+      <level height="1728" width="1728" preload="0" predecode="0"/>
+      <level height="864" width="864" preload="0" predecode="0"/>
+      <level height="432" width="432" preload="1" predecode="1"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view fovmode="0" pannorth="0">
+      <start fov="70" tilt="0" projection="4" pan="0"/>
+      <flyin fov="170" tilt="-90" projection="9" pan="0"/>
+      <min tilt="-90" fovpixel="2" pan="0"/>
+      <max fov="120" fovfisheye="360" scaletofit="1" fovstereographic="270" tilt="90" pan="360"/>
+    </view>
+    <userdata title="" description="" info="" tags="panodel" latitude="" copyright="" nodeid="node47" source="" datetime="" comment="" author="" heading="0" longitude="" customnodeid=""/>
+    <hotspots height="20" width="180" wordwrap="1">
+      <label backgroundalpha="1" height="20" width="180" borderalpha="1" textalpha="1" border="1" wordwrap="1" background="1" borderradius="1" enabled="1" textcolor="0x000000" backgroundcolor="0xffffff" bordercolor="0x000000"/>
+      <polystyle backgroundalpha="0.25098" borderalpha="1" handcursor="1" mode="0" backgroundcolor="0x0000ff" bordercolor="0x0000ff"/>
+      <hotspot title="" description="这是一辆客车&#xa;总之，路不对啊，路不对啊！&#xa;回起点吧！！！！！！" url="" skinid="ht_info" id="Point01" target="" tilt="29.69" pan="-317.84"/>
+      <polyhotspot title="回起点" description="" url="{node28}" id="Poly01" target="">
+        <polystring>-266.36/12.26|-266.44/-9.33|-4.73/-14.08|-3.49/14.26</polystring>
+      </polyhotspot>
+      <polyhotspot title="" description="" url="{node48}" id="Poly02" target="">
+        <polystring>-143.3/28.27|-133.54/-9.95|-188.15/-10.33|-183.33/21.7</polystring>
+      </polyhotspot>
+      <polyhotspot title="" description="" url="{node12}" id="Poly03" target="">
+        <polystring>-16.96/12.54|-13.87/-8.88|-55.04/-11.63|-49.08/6.56</polystring>
+      </polyhotspot>
+    </hotspots>
+    <media/>
+    <transition blendtime="1" zoomspeed="2" type="crossdissolve" blendcolor="0x000000" zoomout="0" enabled="1" zoomfov="20" zoomin="0" softedge="0" zoomoutpause="1"/>
+    <animation useinautorotation="0" syncanimationwithvideo="0" animsequence="Animation01"/>
+    <control lockedkeyboardzoom="0" speedwheel="1" lockedkeyboard="0" contextfullscreen="1" invertcontrol="1" hideabout="0" sensitivity="8" dblclickfullscreen="0" invertwheel="0" lockedmouse="0" contextprojections="0" simulatemass="1" rubberband="0" lockedwheel="0"/>
+  </panorama>
+  <panorama id="node48">
+    <input levelbias="0.400" height="1728" width="1728" overlap="1" levelingpitch="0" levelingroll="0" levelbiashidpi="1.000" leveltilesize="510" leveltileurl="tiles/node48/cf_%c/l_%l/c_%x/tile_%y.jpg">
+      <level height="1728" width="1728" preload="0" predecode="0"/>
+      <level height="864" width="864" preload="0" predecode="0"/>
+      <level height="432" width="432" preload="1" predecode="1"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view fovmode="0" pannorth="0">
+      <start fov="70" tilt="0" projection="4" pan="0"/>
+      <flyin fov="170" tilt="-90" projection="9" pan="0"/>
+      <min tilt="-90" fovpixel="2" pan="0"/>
+      <max fov="120" fovfisheye="360" scaletofit="1" fovstereographic="270" tilt="90" pan="360"/>
+    </view>
+    <userdata title="" description="" info="" tags="panodel" latitude="" copyright="" nodeid="node48" source="" datetime="" comment="" author="" heading="0" longitude="" customnodeid=""/>
+    <hotspots height="20" width="180" wordwrap="1">
+      <label backgroundalpha="1" height="20" width="180" borderalpha="1" textalpha="1" border="1" wordwrap="1" background="1" borderradius="1" enabled="1" textcolor="0x000000" backgroundcolor="0xffffff" bordercolor="0x000000"/>
+      <polystyle backgroundalpha="0.25098" borderalpha="1" handcursor="1" mode="0" backgroundcolor="0x0000ff" bordercolor="0x0000ff"/>
+      <polyhotspot title="" description="这是一辆客车&#xa;总之，路不对啊，路不对啊！&#xa;回起点吧！！！！！！！" url="" id="Poly01" target="_blank">
+        <polystring>-267.54/12.95|-265.56/-10.85|-304.66/-19.69|-356.78/-11.71|-358.82/13.83|-327.04/29.41</polystring>
+      </polyhotspot>
+      <polyhotspot title="" description="" url="{node49}" id="Poly02" target="">
+        <polystring>-129.91/31.78|-135.29/-19.21|-199.2/-14.51|-192.09/25.74</polystring>
+      </polyhotspot>
+      <polyhotspot title="" description="" url="{node4}" id="Poly03" target="">
+        <polystring>-18.67/14.18|-15.77/-5.16|-61.32/-13.92|-48.22/6.13</polystring>
+      </polyhotspot>
+      <hotspot title="回起点" description="回起点" url="" skinid="ht_info" id="Point01" target="" tilt="39.87" pan="-331.93"/>
+    </hotspots>
+    <media/>
+    <transition blendtime="1" zoomspeed="2" type="crossdissolve" blendcolor="0x000000" zoomout="0" enabled="1" zoomfov="20" zoomin="0" softedge="0" zoomoutpause="1"/>
+    <animation useinautorotation="0" syncanimationwithvideo="0" animsequence="Animation01"/>
+    <control lockedkeyboardzoom="0" speedwheel="1" lockedkeyboard="0" contextfullscreen="1" invertcontrol="1" hideabout="0" sensitivity="8" dblclickfullscreen="0" invertwheel="0" lockedmouse="0" contextprojections="0" simulatemass="1" rubberband="0" lockedwheel="0"/>
+  </panorama>
+  <panorama id="node49">
+    <input levelbias="0.400" height="1728" width="1728" overlap="1" levelingpitch="0" levelingroll="0" levelbiashidpi="1.000" leveltilesize="510" leveltileurl="tiles/node49/cf_%c/l_%l/c_%x/tile_%y.jpg">
+      <level height="1728" width="1728" preload="0" predecode="0"/>
+      <level height="864" width="864" preload="0" predecode="0"/>
+      <level height="432" width="432" preload="1" predecode="1"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view fovmode="0" pannorth="0">
+      <start fov="70" tilt="0" projection="4" pan="0"/>
+      <flyin fov="170" tilt="-90" projection="9" pan="0"/>
+      <min tilt="-90" fovpixel="2" pan="0"/>
+      <max fov="120" fovfisheye="360" scaletofit="1" fovstereographic="270" tilt="90" pan="360"/>
+    </view>
+    <userdata title="" description="" info="" tags="panodel" latitude="" copyright="" nodeid="node49" source="" datetime="" comment="" author="" heading="0" longitude="" customnodeid=""/>
+    <hotspots height="20" width="180" wordwrap="1">
+      <label backgroundalpha="1" height="20" width="180" borderalpha="1" textalpha="1" border="1" wordwrap="1" background="1" borderradius="1" enabled="1" textcolor="0x000000" backgroundcolor="0xffffff" bordercolor="0x000000"/>
+      <polystyle backgroundalpha="0.25098" borderalpha="1" handcursor="1" mode="0" backgroundcolor="0x0000ff" bordercolor="0x0000ff"/>
+      <hotspot title="" description="向左走" url="" skinid="ht_info" id="Point01" target="" tilt="16.74" pan="-72.33"/>
+      <hotspot title="" description="下楼吧" url="" skinid="skip2" id="Point02" target="" tilt="-1.75" pan="-46.93"/>
+      <polyhotspot title="" description="" url="{node35}" id="Poly01" target="">
+        <polystring>-272.2/8.1|-272.62/-16.73|-303.51/-14.31|-298.29/8.44</polystring>
+      </polyhotspot>
+      <polyhotspot title="" description="" url="{node45}" id="Poly02" target="">
+        <polystring>-323.18/16.76|-321.05/-17.89|-28.79/-16.88|-24.04/17.51</polystring>
+      </polyhotspot>
+      <polyhotspot title="" description="" url="{node29}" id="Poly03" target="">
+        <polystring>-153.25/23.08|-149.88/-21.39|-201.19/-27.68|-196.99/22.28</polystring>
+      </polyhotspot>
+      <polyhotspot title="" description="" url="" id="Poly04" target="_blank">
+        <polystring>-105.31/11.92|-104.57/-12.42|-117.32/-13.43|-114.09/11.09</polystring>
+      </polyhotspot>
+    </hotspots>
+    <media/>
+    <transition blendtime="1" zoomspeed="2" type="crossdissolve" blendcolor="0x000000" zoomout="0" enabled="1" zoomfov="20" zoomin="0" softedge="0" zoomoutpause="1"/>
+    <animation useinautorotation="0" syncanimationwithvideo="0" animsequence="Animation01"/>
+    <control lockedkeyboardzoom="0" speedwheel="1" lockedkeyboard="0" contextfullscreen="1" invertcontrol="1" hideabout="0" sensitivity="8" dblclickfullscreen="0" invertwheel="0" lockedmouse="0" contextprojections="0" simulatemass="1" rubberband="0" lockedwheel="0"/>
+  </panorama>
+  <panorama id="node50">
+    <input levelbias="0.400" height="1728" width="1728" overlap="1" levelingpitch="0" levelingroll="0" levelbiashidpi="1.000" leveltilesize="510" leveltileurl="tiles/node50/cf_%c/l_%l/c_%x/tile_%y.jpg">
+      <level height="1728" width="1728" preload="0" predecode="0"/>
+      <level height="864" width="864" preload="0" predecode="0"/>
+      <level height="432" width="432" preload="1" predecode="1"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view fovmode="0" pannorth="0">
+      <start fov="70" tilt="0" projection="4" pan="0"/>
+      <flyin fov="170" tilt="-90" projection="9" pan="0"/>
+      <min tilt="-90" fovpixel="2" pan="0"/>
+      <max fov="120" fovfisheye="360" scaletofit="1" fovstereographic="270" tilt="90" pan="360"/>
+    </view>
+    <userdata title="" description="" info="" tags="panodel" latitude="" copyright="" nodeid="node50" source="" datetime="" comment="" author="" heading="0" longitude="" customnodeid=""/>
+    <hotspots height="20" width="180" wordwrap="1">
+      <label backgroundalpha="1" height="20" width="180" borderalpha="1" textalpha="1" border="1" wordwrap="1" background="1" borderradius="1" enabled="1" textcolor="0x000000" backgroundcolor="0xffffff" bordercolor="0x000000"/>
+      <polystyle backgroundalpha="0.25098" borderalpha="1" handcursor="1" mode="0" backgroundcolor="0x0000ff" bordercolor="0x0000ff"/>
+      <hotspot title="累倒了！" description="你一下子被抓到运动场上当体测志愿者了，可是你还没吃饭啊！……太阳好大啊……&#xa;【结局——多吃早饭】" url="" skinid="ht_info" id="Point01" target="" tilt="37.27" pan="-22.01"/>
+      <hotspot title="返回分歧点" description="" url="{node18}" skinid="back" id="Point03" target="" tilt="22.47" pan="-325.35"/>
+      <hotspot title="返回起点" description="" url="{node28}" skinid="ht_node" id="Point04" target="" tilt="12.05" pan="-37.26"/>
+    </hotspots>
+    <media/>
+    <transition blendtime="1" zoomspeed="2" type="crossdissolve" blendcolor="0x000000" zoomout="0" enabled="1" zoomfov="20" zoomin="0" softedge="0" zoomoutpause="1"/>
+    <animation useinautorotation="0" syncanimationwithvideo="0" animsequence="Animation01"/>
+    <control lockedkeyboardzoom="0" speedwheel="1" lockedkeyboard="0" contextfullscreen="1" invertcontrol="1" hideabout="0" sensitivity="8" dblclickfullscreen="0" invertwheel="0" lockedmouse="0" contextprojections="0" simulatemass="1" rubberband="0" lockedwheel="0"/>
+  </panorama>
+  <masternode>
+    <userdata title="" description="" info="" tags="" latitude="" copyright="" nodeid="master" source="" datetime="" comment="" author="" heading="0" longitude="" customnodeid=""/>
+  </masternode>
+</tour>
