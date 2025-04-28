@@ -28,6 +28,16 @@ module.exports = {
           "url-loader",
         ],
       },
+      {
+        test: /\.(mp3|wav|m4a|ogg)$/,
+        use: {
+          loader: 'file-loader',
+          options: {
+            name: '[name].[hash].[ext]',
+            outputPath: 'assets/audio/'
+          }
+        }
+      },
     ],
   },
   

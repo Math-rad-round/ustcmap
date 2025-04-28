@@ -29,6 +29,7 @@ class NavBar extends Component{
           <Link className="navbar-link" to="/new">New</Link>
           <Link className="navbar-link" to="/signin" state={{from: this.props.whereAmI}}>LogIn</Link>
           <Link className="navbar-link" to="/signup" state={{from: this.props.whereAmI}}>SignUp</Link>
+          <Link className="navbar-link" to="/room">Room</Link>
           <p className="navbar-link" onClick={this.handleLogout.bind(this)}>Logout</p>
         </div>
       </nav>

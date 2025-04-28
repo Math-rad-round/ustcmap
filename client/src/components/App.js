@@ -15,6 +15,7 @@ import AppSettings from "./pages/AppSettings.js";
 import ProfileSettingsPage from "./pages/ProfileSettingsPage.js";
 import NotFound from "./pages/NotFound.js";
 import Map from "./newpage/Map.js";
+import Room from "./newpage/Room.js";
 import Path from "./newpage/Path.js";
 import { post } from "../utilities.js";
 
@@ -99,6 +100,7 @@ class App extends Component{
                 <Route path="/" element={<Search />} />
                 <Route path="/app/:appId/path" element={<PathParamsHOC component={Path}/>} />
                 <Route path="/map" element={<Map />} />
+                <Route path="/room" element={<Room />} />
                 <Route path="/app/:appId/settings" element={<PathParamsHOC component={AppSettings} />} />
                 <Route path="/app/:appId" element={<PathParamsHOC component={AppPage} />} />
                 <Route path="/user/:userId" element={<PathParamsHOC component={Profile} />} />
