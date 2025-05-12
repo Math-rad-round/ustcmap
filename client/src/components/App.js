@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import PropTypes from "prop-types";
-
 import PathParamsHOC from "./PathParamsHOC.js";
 import Root from "./pages/Root.js";
 import VRroute from "./pano/VRroute.js";
@@ -17,8 +16,10 @@ import AppSettings from "./pages/AppSettings.js";
 import ProfileSettingsPage from "./pages/ProfileSettingsPage.js";
 import NotFound from "./pages/NotFound.js";
 import Map from "./newpage/Map.js";
-import Room from "./newpage/Room.js";
+import Room from "./unipage/Room.js";
 import Path from "./newpage/Path.js";
+import Addguess from "./unipage/Addguess.js";
+import Guess from "./unipage/guess.js";
 import { post } from "../utilities.js";
 import Busmap from "./newpage/Busmap.js";
 import Footer from "./modules/Footer.js";
@@ -103,13 +104,17 @@ class App extends Component{
                 <Route path="/app/:appId/path" element={<PathParamsHOC component={Path}/>} />
                 <Route path="/map" element={<Map />} />
                 <Route path="/map/bus" element={<Busmap />} />
-                <Route path="/room" element={<Room />} />
+                <Route path="/room/:pos" element={<PathParamsHOC component={Room}/>}/>
+                <Route path="/vr/:pos" element={<PathParamsHOC component={Room}/>}/>
+                <Route path="/game/:pos" element={<PathParamsHOC component={Room}/>} />
                 <Route path="/app/:appId/settings" element={<PathParamsHOC component={AppSettings} />} />
                 <Route path="/app/:appId" element={<PathParamsHOC component={AppPage} />} />
                 <Route path="/user/:userId" element={<PathParamsHOC component={Profile} />} />
                 <Route path="/user/:userId/settings" element={<PathParamsHOC component={ProfileSettingsPage} />} />
                 <Route path="/search/" element={<Search />} />
                 <Route path="/new/" element={<NewProjectPage />} />
+                <Route path="/addguess/" element={<Addguess />} />
+                <Route path="/guess" element={<Guess />} />
                 <Route path="/signin/" element={<SignInPage updateWhoami={this.updateWhoami.bind(this)} />} />
                 <Route path="/signup/" element={<SignUpPage />} />
                 <Route path="/vr" element={<VRroute />} />

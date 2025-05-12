@@ -1,0 +1,17 @@
+.red {
+    right:4px;
+    bottom: 4px;
+    width: 8px;
+    height: 8px;
+    background-color: red;
+    border-radius: '50%';
+}
+
+.green {
+    right: 4px;
+    bottom: 4px;
+    width: 8px;
+    height: 8px;
+    background-color: green;
+    border-radius: '50%';
+}

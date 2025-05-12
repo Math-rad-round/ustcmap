@@ -16,7 +16,7 @@ class Text extends Component{
   }
   
   usepass=()=>{
-    this.props.pass(this.props.name);
+    this.props.pass();
   }
   componentDidMount() {
     document.addEventListener('mousedown', this.handleClick, false);

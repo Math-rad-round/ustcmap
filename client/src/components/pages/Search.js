@@ -33,7 +33,7 @@ class Search extends Component{
                 {
                   this.state.projects.map((obj) => {
                     return (
-                      <SingleProject project={obj} />
+                      <SingleProject key={obj} project={obj} />
                     );
                   }) 
                 }

@@ -14,7 +14,6 @@ router.get("/comments", (req, res) => {
 
 
 router.post("/comment", (req, res) => {
- console.log(req);
   if(!req.body.Authorization || req.body.Authorization == ""){
     res.status(403).send("please login first");
     return;

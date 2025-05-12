@@ -109,7 +109,6 @@ class NewComment extends Component{
       this.showMessage("fail", "请给出分数", 1000);
       return;
     }
-    
     post("/api/comment", {
       content: value,
       parent: this.props.app_id,
@@ -149,7 +148,68 @@ class NewComment extends Component{
     );
   }
 }
-
+class NewTalk extends Component{
+  constructor(props){
+    super(props);
+    
+    this.state = {
+      popupSignIn: false,
+    };
+  }
+  
+  postNewComment(value){
+    if(!getLoggedInfo()){
+      this.showMessage("fail", "请先登陆", 1000);
+      this.setState({
+        popupSignIn: true,
+      });
+      return;
+    }
+    if(!value || value == ""){
+      this.showMessage("fail", "内容不能为空", 1000);
+      return;
+    }
+    post("/api/talk", {
+      content: value,
+      parent: this.props.roomId,
+      sequence: this.props.idcnt,
+      date: new Date(),
+    })
+    .then((res) => {
+      console.log("res: "+res);
+      //this.showMessage("success", "评论成功！", 1000);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+  }
+  
+  handleClosePopUp(){
+    this.setState({
+      popupSignIn: false,
+    });
+  }
+  
+  render(){
+    return (
+      <Consumer>
+        {(value) => {
+          this.showMessage = value;
+          return (
+            <>
+              <PopUpSignIn showPopUpSignIn={this.state.popupSignIn}
+                           handleClosePopUp={this.handleClosePopUp.bind(this)}
+              />
+              <NewPostInput default_text="也来说几句！" button_text="提交"
+                            on_submit={this.postNewComment.bind(this)} use_textarea={true}
+              />
+            </>
+          );
+        }}
+      </Consumer>
+    );
+  }
+}
 class NewReply extends Component{
   constructor(props){
     super(props);
@@ -214,5 +274,5 @@ class NewReply extends Component{
 
 
 export default NewPostInput;
-export { SearchPostInput, NewComment, NewReply };
+export { SearchPostInput, NewComment, NewReply,NewTalk};
 
