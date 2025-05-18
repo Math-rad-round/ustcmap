@@ -2,7 +2,6 @@
 const express = require("express"); 
 const mongoose = require("mongoose");
 const path = require("path"); 
-
 const api_app = require("./apiApp");
 const api_comment = require("./apiComment");
 const api_reply = require("./apiReply");
@@ -84,80 +83,10 @@ app.get('/upload/:dir1/:dir2/:name', (req, res) => {
     }
   });
 });
-// app.get('/askvr/:dir1/:name', (req, res) => {
-//   res.sendFile(path.join(publicPath, req.params.dir1, req.params.name), options, (err) => {
-//     if(err){
-//       console.log("fuck"+err);
-//       res.status(err.status).end();
-//     }
-//     else{
-//       console.log('Sent:', req.params.name);
-//     }
-//   });
-// });
-// app.get('/askvr/:dir1/:dir2/:name', (req, res) => {
-//   res.sendFile(path.join(publicPath, req.params.dir1, req.params.dir2, req.params.name), options, (err) => {
-//     if(err){
-//       console.log("fuck"+err);
-//       res.status(err.status).end();
-//     }
-//     else{
-//       console.log('Sent:', req.params.name);
-//     }
-//   });
-// });
-// app.get('/askvr/:dir1/:dir2/:dir3/:name', (req, res) => {
-//   res.sendFile(path.join(publicPath, req.params.dir1, req.params.dir2, req.params.dir3,req.params.name), options, (err) => {
-//     if(err){
-//       console.log("fuck"+err);
-//       res.status(err.status).end();
-//     }
-//     else{
-//       console.log('Sent:', req.params.name);
-//     }
-//   });
-// });
-// app.get('/askvr/:dir1/:dir2/:dir3/:dir4/:name', (req, res) => {
-//   res.sendFile(path.join(publicPath, req.params.dir1, req.params.dir2, req.params.dir3,req.params.dir4,req.params.name), options, (err) => {
-//     if(err){
-//       console.log("fuck"+err);
-//       res.status(err.status).end();
-//     }
-//     else{
-//       console.log('Sent:', req.params.name);
-//     }
-//   });
-// });
-
-// app.get('/askvr/:dir1/:dir2/:dir3/:dir4/:dir5/:name', (req, res) => {
-//   res.sendFile(path.join(publicPath, req.params.dir1, req.params.dir2, req.params.dir3,req.params.dir4,req.params.dir5,req.params.name), options, (err) => {
-//     if(err){
-//       console.log("fuck"+err);
-//       res.status(err.status).end();
-//     }
-//     else{
-//       console.log('Sent:', req.params.name);
-//     }
-//   });
-// });
-// app.get('/askvr/:dir1/:dir2/:dir3/:dir4/:dir5/:dir6/:name', (req, res) => {
-//   res.sendFile(path.join(publicPath, req.params.dir1, req.params.dir2, req.params.dir3,req.params.dir4,req.params.dir5,req.params.dir6,req.params.name), options, (err) => {
-//     if(err){
-//       console.log("fuck"+err);
-//       res.status(err.status).end();
-//     }
-//     else{
-//       console.log('Sent:', req.params.name);
-//     }
-//   });
-// });
-// for all other routes, render index.html and let react router handle it
-
 
 app.get("*", (req, res) => {
   res.sendFile(path.join(reactPath, "index.html"));
 });
-
 //any server errors cause this function to run
 app.use((err, req, res, next) => {
   const status = err.status || 500;
@@ -166,7 +95,6 @@ app.use((err, req, res, next) => {
     console.log("The server uyyutcessing a request!");
     console.log(err);
   }
-
   res.status(status);
   res.send({
     status: status,

@@ -176,7 +176,7 @@ class NewTalk extends Component{
       date: new Date(),
     })
     .then((res) => {
-      console.log("res: "+res);
+      console.log("res: "+res);this.props.pass();
       //this.showMessage("success", "评论成功！", 1000);
     })
     .catch((error) => {

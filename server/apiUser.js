@@ -24,7 +24,6 @@ router.post("/whoami", (req, res) => {
     }
   
     let nowDate = new Date().toLocaleDateString();
-  console.log(nowDate);
     User.findOneAndUpdate({_id: userId}, {visdate: nowDate}, {new: true})
         .then((user) => res.send({_id: userId, name: user.name, type: user.type, }))
         .catch((error) => {
@@ -57,7 +56,7 @@ router.get("/userinfo", (req, res) => {
 });
 router.get("/userprojects", (req, res) => {
 
-  console.log(User);  console.log(req.query);
+ // console.log(User);  console.log(req.query);
 
   if(!req.query._id || !isVaild(req.query._id)){
     console.log("fuck you, wrong id");

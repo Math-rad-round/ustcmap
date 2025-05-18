@@ -17,7 +17,6 @@ router.post("/add", (req, res) => {
     meetnum: 0,
     tag:null,
   });
-  console.log(newGuess);
   newGuess.save().then((tmp)=>res.send(tmp)).catch((error) => {
    console.log(error);
    res.status(500).send(error);
@@ -32,7 +31,6 @@ router.get("/gen",  (req, res) => {
 
 router.post("/pass", (req, res) => {
   console.log("pass guess");
-  console.log(req.body);
   Guess.findOneAndUpdate(
     { nodeId: req.body.nodeId },
     { $inc: {div:  req.body.div,meetnum:1}},

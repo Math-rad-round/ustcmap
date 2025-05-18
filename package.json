@@ -54,6 +54,7 @@
     "react-file-reader": "^1.1.4",
     "react-router-dom": "^6.18.0",
     "ustc-app-store": "file:",
+    "util": "^0.12.5",
     "webpack": "^5.89.0",
     "webpack-dev-server": "^4.15.1"
   }

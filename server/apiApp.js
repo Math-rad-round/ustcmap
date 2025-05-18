@@ -24,13 +24,6 @@ const isValid = (id) => {
     }
     return false;
 }
-// router.get("/test",(req, res)=>{
-//   console.log(req.query);
-//   let e=checkAuthorityApp(req.query.token,req.query._id);
-//   console.log(e);
-//   res.send(e);
-// });
-
 router.get("/tags", (req, res) => {
   Tags.find({}).then((tags) => res.send(tags))
                .catch((error) => res.status(500).send(error));
@@ -234,14 +227,10 @@ router.get("/search", (req, res) => {
     if(req.query.tag!="all")option["tags"]={$elemMatch:{name:req.query.tag}}
     App.find(option). then((app)=>res.send({projects:app})).catch((err)=>res.status(422).send("nofile"+error));
 });
-//neraefads  
 router.get("/applist",(req,res)=>{
- // console.log(App.find({}).sort({createdate:1,name:1}));
   App.find({}).sort({createdate:1,name:1}).then((app)=>{res.send(app)});
 })
 router.post("/appdelete",(req,res)=>{
-  // console.log(req.body);
-  // console.log(req.query);
   checker.checkAuthorityApp(req.body.Authorization,req.body._id).then((result)=>{
     App.deleteOne({_id:req.body._id}).then(res.status(200).send({ans:"完成"})).catch(()=>console.log("error"));
   }).catch((error)=>res.status(422).send(error));
@@ -252,17 +241,11 @@ router.post("/deletephoto",(req,res)=>{
   }).catch((error)=>res.status(422).send(error));
 });
 router.post("/loadphoto",(req,res)=>{
-  console.log("alerting");
    console.log(req.body.type);
-  // console.log(req.query);
   checker.checkAuthorityApp(req.body.Authorization,req.body._id).then((rest)=>{
     Photo.findOne({parent:req.body._id,type:req.body.type}).then((result)=>{
-      console.log("upping");
       if(result!=null){
-        console.log("begina-----------------");
-        console.log(result.content.length);
         result.content.push(req.body.content[0]);
-          console.log(result.content.length);
         Photo.findOneAndUpdate({parent:req.body._id,type:req.body.type},{$set:{content:result.content}}).then(res.status(200).send({ans:"完成"}));
       }else{
         const newphoto = new Photo({

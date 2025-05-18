@@ -1,17 +1,17 @@
 .red {
-    right:4px;
-    bottom: 4px;
-    width: 8px;
-    height: 8px;
+    right: 6px;
+    bottom: 6px;
+    width: 12px;
+    height: 12px;
     background-color: red;
     border-radius: '50%';
 }
 
 .green {
-    right: 4px;
-    bottom: 4px;
-    width: 8px;
-    height: 8px;
-    background-color: green;
+    right: 6px;
+    bottom: 6px;
+    width: 12px;
+    height: 12px;
+    background-color: rgb(21, 242, 21);
     border-radius: '50%';
 }

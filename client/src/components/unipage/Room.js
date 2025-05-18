@@ -1,6 +1,7 @@
 import React , { Component }from "react";
 import hello from "./hello.mp3";
 import heart from "./heart.ogg";
+
 import env from "./env.png";
 import process from "process";
 import env2 from "./env2.png";
@@ -9,6 +10,7 @@ import "./Room.css";
 import music from "./music.png";
 import music2 from "./music2.png";
 import Chatmod from "../unimod/Chatmod";
+import { get ,post} from "../../utilities.js";
 const config1='100px 1fr 100px';
 const config2='10% 40% 50%';
 class Room extends Component{
@@ -20,9 +22,13 @@ class Room extends Component{
         isplayenv : true,
         isplaymusic : false,
         screen: true,
+        pos:null,
+        id: Math.floor(Math.random()*1000000000),
+        nodeId:null,
       };
   };
   componentDidMount(){
+   // post("/askvr/del",{});
     console.log("start audio componentDidMount");
     this.audioenv.current.play();
   }
@@ -48,13 +54,24 @@ class Room extends Component{
   }
   sw_chat=()=>{
     console.log("sw_chat");
-    this.setState({screen:!this.state.screen});
+    if(this.state.screen){
+      get("/askvr/pos", {id: this.state.id}).then((res) => {
+        this.setState({
+          nodeId: res.content,
+          screen:false,
+        });
+      });
+    }else{
+        this.setState({screen:true});
+      }
+  }
+  close=()=>{
+    console.log("close");
+    this.setState({screen:true,nodeId:null});
   }
   render(){
-    const roomId = this.props.pos;
-    console.log(this.props.pos);
-    console.log(process.env.PUBLIC_URL +this.props.pos+"/index.html");
-    console.log(process.env.PUBLIC_URL);
+    const roomId =this.props.place!=undefined?this.props.place:this.props.pos;
+    const dealplace=this.props.place!=undefined?("#"+this.props.place):"";
     return (
       <div style={{
           display: 'grid',
@@ -73,11 +90,11 @@ class Room extends Component{
           
           <img src={chat} width={100} height={100} onClick={this.sw_chat}/>
         </div>
-        <div>
-        <iframe type="text/babel" src={"/askvr/"+this.props.pos+"/index.html"} width="100%" height="550" allow="fullscreen"/>
+        <div onClick={this.close}>
+        <iframe type="text/babel" src={"/askvr/"+String(this.state.id)+'/'+this.props.pos+"/index.html"+dealplace}  width="100%" height="550" allow="fullscreen" onClick={this.close}/>
         </div>
         <div>
-            {this.state.screen?<div/>:<Chatmod roomId={roomId} number={5}/>}
+            {this.state.screen?<div/>:<Chatmod roomId={"r_"+roomId+"_"+this.state.nodeId} title={roomId+(this.props.place!=undefined?"":this.state.nodeId)+"留言交流板"}number={5}/>}
             </div>
        </div>
       

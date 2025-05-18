@@ -18,6 +18,13 @@ class Chatmod extends Component{
   }
   
   componentDidMount(){
+    this.fetch();
+    window.addEventListener('wheel', this.handleWheel, { passive: false });
+  }
+  componentWillUnmount(){
+    window.removeEventListener('wheel', this.handleWheel, { passive: false });
+  }
+  fetch=()=>{
     get("/api/talks", {_id: this.props.roomId}).then((comments) => {
       this.setState({
         comments: comments,
@@ -25,10 +32,6 @@ class Chatmod extends Component{
         all: comments.length,
       });
     });
-    window.addEventListener('wheel', this.handleWheel, { passive: false });
-  }
-  componentWillUnmount(){
-    window.removeEventListener('wheel', this.handleWheel, { passive: false });
   }
   handleWheel = (e) => {
       e.preventDefault();
@@ -39,19 +42,19 @@ class Chatmod extends Component{
       }else if(e.deltaY<0&&this.state.last>this.props.number){
         this.setState({last:this.state.last-1});
       }
-      console.log('滚动方向:', e.deltaY > 0 ? '向下' : '向上');
+      // console.log('滚动方向:', e.deltaY > 0 ? '向下' : '向上');
       
-      // 检查滚动边界
-      const { scrollTop, scrollHeight, clientHeight } = this.scrollref.current;
-      const isAtTop = scrollTop === 0;
-      const isAtBottom = scrollTop + clientHeight >= scrollHeight;
+      // // 检查滚动边界
+      // const { scrollTop, scrollHeight, clientHeight } = this.scrollref.current;
+      // const isAtTop = scrollTop === 0;
+      // const isAtBottom = scrollTop + clientHeight >= scrollHeight;
       
-      // 自定义滚动行为
-      if (isAtTop && e.deltaY < 0) {
-        console.log('已到达顶部');
-      } else if (isAtBottom && e.deltaY > 0) {
-        console.log('已到达底部');
-      }
+      // // 自定义滚动行为
+      // if (isAtTop && e.deltaY < 0) {
+      //   console.log('已到达顶部');
+      // } else if (isAtBottom && e.deltaY > 0) {
+      //   console.log('已到达底部');
+      // }
     };
   render(){
     const num=this.props.number;
@@ -73,8 +76,8 @@ class Chatmod extends Component{
               })
             }</div>
         <div className="new-comment">
-          <span className="new-comment-title">发表评论</span>
-          <NewTalk roomId={this.props.roomId} idcnt={cnt+1}/>
+          <span className="new-comment-title">{this.props.title}</span>
+          <NewTalk roomId={this.props.roomId} idcnt={cnt+1} pass={this.fetch}/>
         </div>
       </div>
     );

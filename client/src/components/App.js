@@ -104,7 +104,7 @@ class App extends Component{
                 <Route path="/app/:appId/path" element={<PathParamsHOC component={Path}/>} />
                 <Route path="/map" element={<Map />} />
                 <Route path="/map/bus" element={<Busmap />} />
-                <Route path="/room/:pos" element={<PathParamsHOC component={Room}/>}/>
+                <Route path="/room/:pos/:place" element={<PathParamsHOC component={Room}/>}/>
                 <Route path="/vr/:pos" element={<PathParamsHOC component={Room}/>}/>
                 <Route path="/game/:pos" element={<PathParamsHOC component={Room}/>} />
                 <Route path="/app/:appId/settings" element={<PathParamsHOC component={AppSettings} />} />

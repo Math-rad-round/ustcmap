@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { post } from '../../utilities.js';
+import Setxy from '../unimod/Setxy.js';
 class NodeForm extends Component {
   constructor(props) {
     super(props);
@@ -7,7 +8,8 @@ class NodeForm extends Component {
       nodeId: '',
       nodeName: '',
       posx: '',
-      posy: ''
+      posy: '',
+      process:false,
     };
   }
 
@@ -18,17 +20,22 @@ class NodeForm extends Component {
     });
   };
   handleSubmit = () => {
+
     console.log("submit");
     console.log(this.state.nodeId);
     console.log(this.state.nodeName);
-    console.log(this.state.posx);
-    console.log(this.state.posy);
-     post("/guess/add",{nodeId:this.state.nodeId,nodename:this.state.nodeName,posx:this.state.posx,posy:this.state.posy})
-     .then((res) =>{console.log(res);alert("提交成功");})
+    this.setState({process:true});
   };
+  back=(nodename,x,y)=>{
+     post("/guess/add",{nodeId:this.state.nodeId,nodename:nodename,posx:x,posy:y})
+     .then((res) =>{console.log(res);alert("提交成功");})
+    this.setState({process:false});
+  }
   render() {
-    const { nodeId, nodeName, posx, posy } = this.state;
-
+    const { nodeId} = this.state;
+    if(this.state.process){
+      return <Setxy nodeId={this.state.nodeId} pass={this.back}/>;
+    }else
     return (
       <div style={{ 
         maxWidth: '500px', 
@@ -50,43 +57,6 @@ class NodeForm extends Component {
               style={{ width: '100%', padding: '8px', marginTop: '5px' }}
             />
           </div>
-
-          <div style={{ marginBottom: '15px' }}>
-            <label>节点名称:</label>
-            <input
-              type="text"
-              name="nodeName"
-              value={nodeName}
-              onChange={this.handleInputChange}
-              required
-              style={{ width: '100%', padding: '8px', marginTop: '5px' }}
-            />
-          </div>
-
-          <div style={{ marginBottom: '15px' }}>
-            <label>X坐标:</label>
-            <input
-              type="number"
-              name="posx"
-              value={posx}
-              onChange={this.handleInputChange}
-              required
-              style={{ width: '100%', padding: '8px', marginTop: '5px' }}
-            />
-          </div>
-
-          <div style={{ marginBottom: '20px' }}>
-            <label>Y坐标:</label>
-            <input
-              type="number"
-              name="posy"
-              value={posy}
-              onChange={this.handleInputChange}
-              required
-              style={{ width: '100%', padding: '8px', marginTop: '5px' }}
-            />
-          </div>
-
           <button 
             onClick={this.handleSubmit}
             style={{

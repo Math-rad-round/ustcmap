@@ -7,7 +7,7 @@ const router = express.Router();
 const checker = require('./jwtThings.js');
 router.get("/comments", (req, res) => {
     Comment.find({parent: req.query._id}).then((tmp)=>{res.send(tmp)}).catch((error) => {
-      console.log("data base not found: \n"+error);
+      console.log("get.comments \n"+error);
       res.status(404).send({});
     });
 });
