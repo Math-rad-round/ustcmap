@@ -11,7 +11,7 @@ class load extends Component{
         console.log("gointo"+( this.props.appId?this.props.appId:"65f158381a957e154d6cd112"));
         post("/api/loadphoto", {
           content: e,
-          type:this.props.type,
+          type:this.props.type===undefined?0:this.props.type,
           _id: this.props.appId?this.props.appId:"65f158381a957e154d6cd112"
         }).then(() => {alert("上传成功！");});
     }

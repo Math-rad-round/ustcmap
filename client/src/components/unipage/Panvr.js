@@ -3,7 +3,7 @@ import hello from "./hello.mp3";
 import heart from "./heart.ogg";
 
 import env from "./env.png";
-import "./choose.css";
+import "./Choose.css";
 import process from "process";
 import env2 from "./env2.png";
 import chat from "./chat.png";

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "./Talk.css";
-
+import Getimg from "../newmod/Getimg.js";
 class SingleComment extends Component{
   constructor(props){
     super(props);
@@ -21,7 +21,7 @@ class SingleComment extends Component{
     return (
       <div className="above">
         <div className="people">
-          <img className="img" src={"/upload/userlogo/"+this.props.author._id} />
+          <Getimg width="40px" height="40px" parent={"userlogo_"+this.props.author._id}/>
           <Link className="name" to={"/user/"+this.props.author._id}>
             {this.props.author.name}
           </Link>

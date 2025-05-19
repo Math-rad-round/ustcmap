@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-
+import Getimg from "../newmod/Getimg.js";
+import Load from "../newmod/Load.js";
 import { get, post } from "../../utilities.js";
 import { Consumer } from "../pages/Root.js";
 
@@ -113,19 +114,9 @@ class ProfileSetting extends Component{
           return (
             <div className="user-settings">
               <div className="user-logo">
-                <div className="current-logo">
-                  <img src={"/"+this.state.logo} />
-                </div>
-                <input type="file" accept="image/*"
-                       style={{display:"none"}} className="file-input"
-                       onChange={this.handleLogoChange.bind(this)}
-                       encType="multipart/form-data"
-                />
-                <button className="user-logo-upload"
-                        onClick={this.getFile.bind(this)}
-                >
+                <Getimg width={"100px"} height={"100px"} parent={"userlogo_"+this.props.userId}/>
+                <Load content="添加路径图" type={0} appId={"userlogo_"+this.props.userId}/>
                   上传头像
-                </button>
               </div>
             
               <div className="user-settings-intro">

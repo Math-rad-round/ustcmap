@@ -4,7 +4,7 @@ import chat from "./chat.png";
 import Chatmod from "../unimod/Chatmod.js";
 import map from "./map.png";
 import Clickmap from "../unimod/Clickmap";
-import "./choose.css";
+import "./Choose.css";
 class Guess extends Component{
   constructor(props){
     super(props);

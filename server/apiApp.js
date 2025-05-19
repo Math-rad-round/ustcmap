@@ -261,7 +261,7 @@ router.post("/loadphoto",(req,res)=>{
             res.status(500).send(error);});
         }
       console.log("ok");
-    });
+    }).catch((error)=>res.status(422).send(error));
 
   }).catch((error)=>res.status(422).send(error));
 });
