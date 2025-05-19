@@ -1,0 +1,23 @@
+.img{
+    width: 40px;
+    height: auto;
+}
+.above{
+    display: grid;
+    grid-template-columns: 15% 85%;
+}
+.people{
+    display: grid;
+    grid-template-columns: 100%;
+}
+.main{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 20% 80%;
+}
+.date{
+    font-size: 12px;
+}
+.content{
+    font-size: 17px;
+}

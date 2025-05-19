@@ -13,7 +13,7 @@ build:
 
 ```  
 git clone https://github.com/Math-rad-round/ustcmap
-cd ustc-app-store
+cd ustcmap
 npm install
 npm run build
 npm run start

@@ -2,11 +2,15 @@
 const express = require("express"); 
 const mongoose = require("mongoose");
 const path = require("path"); 
-
 const api_app = require("./apiApp");
 const api_comment = require("./apiComment");
 const api_reply = require("./apiReply");
 const api_user = require("./apiUser");
+const api_guess = require("./apiGuess");
+
+const api_room = require("./apiRoom");
+const api_talk = require("./apiTalk");
+const api_vr = require("./apiVr");
 const api_login = require("./apiLogin");
 const mongoConnectionURL ="mongodb+srv://mathdaren:return0@cluster0.jgao0jj.mongodb.net/";
 //process.env.databaseurl;
@@ -37,7 +41,6 @@ const reactPath = path.resolve(__dirname, "..", "client", "dist");
 
 const publicPath = path.resolve(__dirname, "..", "public");
 
-const panoPath = path.resolve(__dirname, "..", "public","pano");
 app.use(express.static(reactPath));
 
 // connect user-defined routes
@@ -45,14 +48,27 @@ app.use("/api", api_user);
 app.use("/api", api_app);
 app.use("/api",api_comment);
 app.use("/api", api_reply);
+app.use("/api",api_talk);
+app.use("/guess",api_guess);
+app.use("/askvr",api_vr);
 app.use("/api", api_login);
+app.use("/askroom", api_room);
 // // load the compiled react files, which will serve /index.html and /bundle.js
 
 app.get('/upload/:dir1/:name', (req, res) => {
   res.sendFile(path.join(resourcePath, req.params.dir1, req.params.name), options, (err) => {
     if(err){
-      console.log("fuck"+err);
-      res.status(err.status).end();
+      // console.log("fuck"+err);
+      // res.status(err.status).end();
+      res.sendFile(path.join(publicPath, "logo_default.png"), options, (err) => {
+        if(err){
+          console.log("fucker"+err);
+          res.status(err.status).end();
+        }
+        else{
+          console.log('Sent:', req.params.name);
+        }
+      });
     }
     else{
       console.log('Sent:', req.params.name);
@@ -70,81 +86,10 @@ app.get('/upload/:dir1/:dir2/:name', (req, res) => {
     }
   });
 });
-app.get('/undefined/:dir1/:name', (req, res) => {
-  res.sendFile(path.join(publicPath, req.params.dir1, req.params.name), options, (err) => {
-    if(err){
-      console.log("fuck"+err);
-      res.status(err.status).end();
-    }
-    else{
-      console.log('Sent:', req.params.name);
-    }
-  });
-});
-//http://localhost:3000/undefined/pano/webxr/webxr-polyfill.min.js
-app.get('/undefined/:dir1/:dir2/:name', (req, res) => {
-  res.sendFile(path.join(publicPath, req.params.dir1, req.params.dir2, req.params.name), options, (err) => {
-    if(err){
-      console.log("fuck"+err);
-      res.status(err.status).end();
-    }
-    else{
-      console.log('Sent:', req.params.name);
-    }
-  });
-});
-app.get('/undefined/:dir1/:dir2/:dir3/:name', (req, res) => {
-  res.sendFile(path.join(publicPath, req.params.dir1, req.params.dir2, req.params.dir3,req.params.name), options, (err) => {
-    if(err){
-      console.log("fuck"+err);
-      res.status(err.status).end();
-    }
-    else{
-      console.log('Sent:', req.params.name);
-    }
-  });
-});
-app.get('/undefined/:dir1/:dir2/:dir3/:dir4/:name', (req, res) => {
-  res.sendFile(path.join(publicPath, req.params.dir1, req.params.dir2, req.params.dir3,req.params.dir4,req.params.name), options, (err) => {
-    if(err){
-      console.log("fuck"+err);
-      res.status(err.status).end();
-    }
-    else{
-      console.log('Sent:', req.params.name);
-    }
-  });
-});
-
-app.get('/undefined/:dir1/:dir2/:dir3/:dir4/:dir5/:name', (req, res) => {
-  res.sendFile(path.join(publicPath, req.params.dir1, req.params.dir2, req.params.dir3,req.params.dir4,req.params.dir5,req.params.name), options, (err) => {
-    if(err){
-      console.log("fuck"+err);
-      res.status(err.status).end();
-    }
-    else{
-      console.log('Sent:', req.params.name);
-    }
-  });
-});
-app.get('/undefined/:dir1/:dir2/:dir3/:dir4/:dir5/:dir6/:name', (req, res) => {
-  res.sendFile(path.join(publicPath, req.params.dir1, req.params.dir2, req.params.dir3,req.params.dir4,req.params.dir5,req.params.dir6,req.params.name), options, (err) => {
-    if(err){
-      console.log("fuck"+err);
-      res.status(err.status).end();
-    }
-    else{
-      console.log('Sent:', req.params.name);
-    }
-  });
-});
-// for all other routes, render index.html and let react router handle it
-
 
 app.get("*", (req, res) => {
   res.sendFile(path.join(reactPath, "index.html"));
 });
-
 //any server errors cause this function to run
 app.use((err, req, res, next) => {
   const status = err.status || 500;
@@ -153,14 +98,12 @@ app.use((err, req, res, next) => {
     console.log("The server uyyutcessing a request!");
     console.log(err);
   }
-
   res.status(status);
   res.send({
     status: status,
     message: err.message,
   });
 });
-const asdf=123;
 // // hardcode port to 3000 for now
 const port = 3000;
 app.listen(port, () => {

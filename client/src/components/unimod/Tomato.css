@@ -1,0 +1,114 @@
+/* 基础样式 - 更紧凑 */
+.tomato-app {
+  max-width: 400px; /* 减小整体宽度 */
+  margin: 0 auto;
+  padding: 15px; /* 减小内边距 */
+}
+
+/* 计时器容器 - 更紧凑 */
+.timer-container {
+  margin-bottom: 15px;
+  border-radius: 8px;
+  padding: 15px; /* 减小内边距 */
+  transition: all 0.3s ease;
+  border-width: 2px;
+  border-style: solid;
+}
+
+/* 学习模式 */
+.study-mode {
+  background-color: rgba(231, 76, 60, 0.08); /* 更浅的背景 */
+  border-color: #e74c3c;
+}
+
+/* 休息模式 */
+.break-mode {
+  background-color: rgba(46, 204, 113, 0.08); /* 更浅的背景 */
+  border-color: #2ecc71;
+}
+
+/* 时间显示 - 更紧凑 */
+.timer-display {
+  margin: 10px 0; /* 减小外边距 */
+  font-size: 3rem; /* 减小字体大小 */
+  font-weight: bold;
+  line-height: 1; /* 紧凑行高 */
+}
+
+.study-mode .timer-display {
+  color: #e74c3c;
+}
+
+.break-mode .timer-display {
+  color: #2ecc71;
+}
+
+/* 控制按钮 - 更紧凑 */
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 8px; /* 减小按钮间距 */
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+.control-button {
+  padding: 8px 16px; /* 减小按钮内边距 */
+  font-size: 0.9rem; /* 减小字体大小 */
+  border: none;
+  border-radius: 4px;
+  background-color: #3498db;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.control-button:hover {
+  background-color: #2980b9;
+}
+
+/* 状态信息 - 更紧凑 */
+.status {
+  font-size: 0.8rem; /* 减小字体大小 */
+  color: #555;
+  line-height: 1.3; /* 紧凑行高 */
+  margin-top: 10px;
+}
+
+.status p {
+  margin: 5px 0; /* 减小段落间距 */
+}
+
+/* 设置表单 - 高度显著减小 */
+.settings-form {
+  background-color: #f8f9fa;
+  padding: 15px; /* 减小内边距 */
+  border-radius: 8px;
+  margin-top: 12px;
+}
+
+.settings-form h3 {
+  margin-top: 0;
+  margin-bottom: 9px; /* 减小标题下边距 */
+  font-size: 1.1rem; /* 减小标题大小 */
+}
+
+.form-group {
+  margin-bottom: 8px; /* 减小表单项间距 */
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 4px; /* 减小标签下边距 */
+  font-weight: bold;
+  font-size: 0.85rem; /* 减小标签字体 */
+}
+
+.form-group input {
+  width: 100%;
+  padding: 6px; /* 减小输入框内边距 */
+  border: 1px solid #ddd;
+  border-radius: 3px; /* 减小圆角 */
+  box-sizing: border-box;
+  font-size: 0.9rem; /* 减小输入文字 */
+}
