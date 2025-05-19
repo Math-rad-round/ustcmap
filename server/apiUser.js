@@ -118,7 +118,7 @@ router.post("/userinfo/logo", upload.single("file"), (req, res) => {
       res.send({status: "success"});
     }
     else{
-//      fs.unlink(path.join(__dirname, "upload", "userlogo", req.file.filename));
+      fs.unlink(path.join(__dirname, "upload", "userlogo", req.file.filename));
     }
   }
 });
@@ -129,13 +129,6 @@ router.get("/searchUser", (req, res) => {
     let option={};
     if(req.query.content!="") {option["name"]={$regex:req.query.content};}
     if(req.query.project!="all"&&req.query.project!="")option["projects"]=req.query.project;
-    User.find(option).then((user)=>res.send(user));
-  //   if(req.query.platforms!="all"){
-  //     App.find({tags: {$elemMatch:{name:req.query.tag}},"platforms":req.query.platforms,                                                          name:{$regex:searchName}}).
-  //       then((app)=>res.send({projects:app}));
-  //     }else{
-  //      App.find({tags: {$elemMatch:{name:req.query.tag}},name:{$regex:searchName}}).
-  //       then((app)=>res.send({projects:app}));
-  //  }
+    User.find(option).then((user)=>res.send(user)).catch((error)=>res.status(422).send("nofile"+error));
 });
 module.exports = router;

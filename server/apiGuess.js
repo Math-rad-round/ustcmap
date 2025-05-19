@@ -62,7 +62,7 @@ router.get('/*/:name', (req, res) => {
       console.error("bugvr", err);
       res.status(err.status || 500).end();
     } else {
-   //   console.log('Sent:', req.params.name);
+      console.log('Sent:', req.params.name);
     }
   });
 });

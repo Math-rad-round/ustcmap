@@ -1,19 +1,19 @@
 import React , { Component }from "react";
 import hello from "./hello.mp3";
 import heart from "./heart.ogg";
-import Tomato from "../unimod/Tomato.js";
+
 import env from "./env.png";
-import tomato from "./tomato.png";
+import "./choose.css";
+import process from "process";
 import env2 from "./env2.png";
 import chat from "./chat.png";
-import ustc from "./ustc.png";
 import "./Room.css";
-import "./Choose.css"
 import music from "./music.png";
 import music2 from "./music2.png";
 import Chatmod from "../unimod/Chatmod";
+import { get ,post} from "../../utilities.js";
 const config1='100px 1fr 100px';
-const config2='8% 47% 45%';
+const config2='10% 40% 50%';
 class Room extends Component{
   constructor(props){
     super(props);
@@ -22,11 +22,10 @@ class Room extends Component{
     this.state = {
         isplayenv : true,
         isplaymusic : false,
-        
+        screen: true,
         pos:null,
+        id: Math.floor(Math.random()*1000000000),
         nodeId:null,
-        chat: false,
-        tomato:false,
       };
   };
   componentDidMount(){
@@ -54,46 +53,48 @@ class Room extends Component{
     this.setState({isplaymusic:false});
   }
   sw_chat=()=>{
-    this.setState({chat:!this.state.chat,tomato:false});
+    console.log("sw_chat");
+    if(this.state.screen){
+      get("/askvr/pos", {id: this.state.id}).then((res) => {
+        this.setState({
+          nodeId: res.content, 
+          screen:false,
+        });
+      });
+    }else{
+        this.setState({screen:true});
+      }
   }
-  sw_tomato=()=>{
-    this.setState({chat:false,tomato:!this.state.tomato});
-  }
-  jumpout=(url)=>{
-    window.open(url,"blank");
+  close=()=>{
+    console.log("close");
+    this.setState({screen:true,nodeId:null});
   }
   render(){
-    const roomId =this.props.place;
+    const roomId =this.props.pos;
     return (
       <div style={{
           display: 'grid',
-          gridTemplateColumns: (this.state.chat||this.state.tomato)?config2:config1, // iframe占剩余空间，右侧固定100px
+          gridTemplateColumns: this.state.screen?config1:config2, // iframe占剩余空间，右侧固定100px
           gap: '10px',
         }}>
         <div className="rowclick">
           <audio src={hello} ref= {this.audioenv} loop/>
           <audio src={heart} ref= {this.audiomusic} loop/>
-          
           {this.state.isplayenv?
-          (<img className="clickimg" src={env}  onClick={this.env_off}/>):
-          (<img className="clickimg" src={env2} onClick={this.env_on}/>)}
+            (<img className="clickimg" src={env}  onClick={this.env_off}/>):
+            (<img className="clickimg" src={env2} onClick={this.env_on}/>)}
           {this.state.isplaymusic?
-          (<img className="clickimg" src={music} onClick={this.mus_off}/>):
-          (<img className="clickimg" src={music2} onClick={this.mus_on}/>)}
-          
+            (<img className="clickimg" src={music} onClick={this.mus_off}/>):
+            (<img className="clickimg" src={music2} onClick={this.mus_on}/>)}
+                    
           <img className="clickimg" src={chat}  onClick={this.sw_chat}/>
-          <img className="clickimg" src={tomato}  onClick={this.sw_tomato}/>
-          <a href="https://wdkd.feixu.site/" target="_blank" rel="noopener noreferrer">
-            <img className="clickimg" src={ustc}   />
-          </a>
         </div>
         <div onClick={this.close}>
-        <iframe type="text/babel" src={"/askroom/room/index.html#"+roomId}  width="100%" height="550" allow="fullchat"/>
+        <iframe type="text/babel" src={"/askvr/"+String(this.state.id)+'/'+this.props.pos+"/index.html"}  width="100%" height="550" allow="fullscreen" onClick={this.close}/>
         </div>
         <div>
-            {this.state.tomato&&<Tomato studyDuration={50} breakDuration={10} />}
-            {this.state.chat&&<Chatmod roomId={"s_"+roomId+"_"+this.state.nodeId} title={roomId+"留言交流板"}number={5}/>}
-        </div>
+            {this.state.screen?<div/>:<Chatmod roomId={"r_"+roomId+"_"+this.state.nodeId} title={roomId+this.state.nodeId+"留言交流板"}number={5}/>}
+            </div>
        </div>
       
     );

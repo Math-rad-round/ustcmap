@@ -24,7 +24,7 @@ import { post } from "../utilities.js";
 import Busmap from "./newpage/Busmap.js";
 import Footer from "./modules/Footer.js";
 import NavBar from "./modules/NavBar.js";
-
+import Panvr from "./unipage/Panvr.js";
 import "../utilities.css";
 import "./App.css";
 
@@ -104,9 +104,9 @@ class App extends Component{
                 <Route path="/app/:appId/path" element={<PathParamsHOC component={Path}/>} />
                 <Route path="/map" element={<Map />} />
                 <Route path="/map/bus" element={<Busmap />} />
-                <Route path="/room/:pos/:place" element={<PathParamsHOC component={Room}/>}/>
-                <Route path="/vr/:pos" element={<PathParamsHOC component={Room}/>}/>
-                <Route path="/game/:pos" element={<PathParamsHOC component={Room}/>} />
+                <Route path="/room/:place" element={<PathParamsHOC component={Room}/>}/>
+                <Route path="/vr/:pos" element={<PathParamsHOC component={Panvr}/>}/>
+                <Route path="/game/:pos" element={<PathParamsHOC component={Panvr}/>} />
                 <Route path="/app/:appId/settings" element={<PathParamsHOC component={AppSettings} />} />
                 <Route path="/app/:appId" element={<PathParamsHOC component={AppPage} />} />
                 <Route path="/user/:userId" element={<PathParamsHOC component={Profile} />} />

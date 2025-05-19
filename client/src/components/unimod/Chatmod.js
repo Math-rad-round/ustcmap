@@ -27,6 +27,7 @@ class Chatmod extends Component{
   fetch=()=>{
     get("/api/talks", {_id: this.props.roomId}).then((comments) => {
       this.setState({
+        last:this.state.all,
         comments: comments,
         last: comments.length,
         all: comments.length,

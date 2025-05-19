@@ -4,7 +4,7 @@ import chat from "./chat.png";
 import Chatmod from "../unimod/Chatmod.js";
 import map from "./map.png";
 import Clickmap from "../unimod/Clickmap";
-
+import "./choose.css";
 class Guess extends Component{
   constructor(props){
     super(props);
@@ -87,8 +87,8 @@ class Guess extends Component{
                 />
             </div>
             <div>
-              <img src={map} width="40px" height="40px" onClick={this.sw_mode}/>
-              {this.state.ok&&<img src={chat} width="40px" height="40px" onClick={this.sw_chat}/>}
+              <img src={map} className="clickimgs" onClick={this.sw_mode}/>
+              {this.state.ok&&<img src={chat} className="clickimgs" onClick={this.sw_chat}/>}
               <button onClick={this.fetch}>换一题</button>
               <button onClick={this.confirm}>确认</button>
               {this.state.ok&&(<div>你的误差{this.state.div}</div>)}

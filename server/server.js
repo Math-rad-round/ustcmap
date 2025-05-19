@@ -7,6 +7,8 @@ const api_comment = require("./apiComment");
 const api_reply = require("./apiReply");
 const api_user = require("./apiUser");
 const api_guess = require("./apiGuess");
+
+const api_room = require("./apiRoom");
 const api_talk = require("./apiTalk");
 const api_vr = require("./apiVr");
 const api_login = require("./apiLogin");
@@ -50,6 +52,7 @@ app.use("/api",api_talk);
 app.use("/guess",api_guess);
 app.use("/askvr",api_vr);
 app.use("/api", api_login);
+app.use("/askroom", api_room);
 // // load the compiled react files, which will serve /index.html and /bundle.js
 
 app.get('/upload/:dir1/:name', (req, res) => {
