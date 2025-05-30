@@ -1,5 +1,6 @@
 client/dist/main.js
 node_modules/
+public/guess
 .DS_Store
 报告.*
 

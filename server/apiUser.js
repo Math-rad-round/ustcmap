@@ -111,7 +111,6 @@ router.post("/userinfo/logo", upload.single("file"), (req, res) => {
     return res.status(500).send("wrong photo format");
   }
   else{
-    //TODO: check Authorization
     if(checker.checkAuthorityUser(req.body.Authorization,req.body._id)){
       fs.renameSync(path.join(__dirname, "upload", "userlogo", req.file.filename),
                     path.join(__dirname, "upload", "userlogo", req.body._id));

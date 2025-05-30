@@ -27,7 +27,7 @@ class Guess extends Component{
     this.props.pass(this.state.nodename,this.state.x,this.state.y);
   };
   render(){
-    console.log("target"+'  /guess/pano/index.html#'+this.props.nodeId);
+    console.log("target"+'  /guess/guess/index.html#'+this.props.nodeId);
     return (
       <div style={{
           display: 'grid',

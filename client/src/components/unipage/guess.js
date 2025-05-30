@@ -82,7 +82,7 @@ class Guess extends Component{
                 <iframe 
                   width="100%"
                   height="500px"
-                  src={'/guess/pano/index.html#'+this.state.target.nodeId+","+this.state.degree+',10.0,70.0,9'}
+                  src={'/guess/guess/index.html#'+this.state.target.nodeId+","+this.state.degree+',10.0,70.0,9'}
                   sandbox="allow-same-origin allow-scripts allow-popups"
                 />
             </div>

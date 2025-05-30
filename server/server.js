@@ -11,6 +11,7 @@ const api_guess = require("./apiGuess");
 const api_room = require("./apiRoom");
 const api_talk = require("./apiTalk");
 const api_vr = require("./apiVr");
+const api_qiniu = require("./apiqiniu");
 const api_login = require("./apiLogin");
 const mongoConnectionURL ="mongodb+srv://mathdaren:return0@cluster0.jgao0jj.mongodb.net/";
 //process.env.databaseurl;
@@ -52,29 +53,31 @@ app.use("/api",api_talk);
 app.use("/guess",api_guess);
 app.use("/askvr",api_vr);
 app.use("/api", api_login);
+app.use("/api", api_qiniu);
+app.use("/upload", api_qiniu);
 app.use("/askroom", api_room);
 // // load the compiled react files, which will serve /index.html and /bundle.js
 
-app.get('/upload/:dir1/:name', (req, res) => {
-  res.sendFile(path.join(resourcePath, req.params.dir1, req.params.name), options, (err) => {
-    if(err){
-      // console.log("fuck"+err);
-      // res.status(err.status).end();
-      res.sendFile(path.join(publicPath, "logo_default.png"), options, (err) => {
-        if(err){
-          console.log("fucker"+err);
-          res.status(err.status).end();
-        }
-        else{
-          console.log('Sent:', req.params.name);
-        }
-      });
-    }
-    else{
-      console.log('Sent:', req.params.name);
-    }
-  });
-});
+// app.get('/upload/:dir1/:name', (req, res) => {
+//   res.sendFile(path.join(resourcePath, req.params.dir1, req.params.name), options, (err) => {
+//     if(err){
+//       // console.log("fuck"+err);
+//       // res.status(err.status).end();
+//       res.sendFile(path.join(publicPath, "logo_default.png"), options, (err) => {
+//         if(err){
+//           console.log("fucker"+err);
+//           res.status(err.status).end();
+//         }
+//         else{
+//           console.log('Sent:', req.params.name);
+//         }
+//       });
+//     }
+//     else{
+//       console.log('Sent:', req.params.name);
+//     }
+//   });
+// });
 app.get('/upload/:dir1/:dir2/:name', (req, res) => {
   res.sendFile(path.join(resourcePath, req.params.dir1, req.params.dir2, req.params.name), options, (err) => {
     if(err){
