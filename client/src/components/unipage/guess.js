@@ -4,7 +4,7 @@ import chat from "./chat.png";
 import Chatmod from "../unimod/Chatmod.js";
 import map from "./map.png";
 import Clickmap from "../unimod/Clickmap";
-import "./choose.css";
+import "./Choose.css";
 class Guess extends Component{
   constructor(props){
     super(props);
@@ -17,11 +17,19 @@ class Guess extends Component{
         chat:false,
         ok:false,
       };
+      
+    this.clickmapRef = React.createRef();
   };
   componentDidMount(){
     this.fetch();
   }
+  reset = () => {
+    if (this.clickmapRef.current) {
+      this.clickmapRef.current.reset();
+    }
+  };
   fetch = () => {
+    this.reset();  
     get("/guess/gen").then((res) => {
       this.setState({
         x:null,
@@ -58,7 +66,7 @@ class Guess extends Component{
     const x=this.state.x;
     const y=this.state.y;
     const dx=x-this.state.target.posx,dy=y-this.state.target.posy;
-    const div=Math.sqrt(dx*dx+dy*dy);
+    const div=Math.sqrt(dx*dx+dy*dy)*1.202;//比例尺，米/像素
     post("/guess/pass",{nodeId:this.state.target.nodeId,div:div}).then((res) => 
         this.setState({target:res,ok:true,div:div})
     );
@@ -71,7 +79,7 @@ class Guess extends Component{
     return (
       <div style={{
           display: 'grid',
-          gridTemplateColumns: this.state.screen?(this.state.chat?'65% 35%':'100%'):(this.state.chat?'40% 30% 30%':'65% 35%'),
+          gridTemplateColumns: this.state.screen?(this.state.chat?'65% 35%':'100%'):(this.state.chat?'35% 35% 30%':'55% 45%'),
           gap : '15px',
         }}>
           <div style={{
@@ -82,7 +90,7 @@ class Guess extends Component{
                 <iframe 
                   width="100%"
                   height="500px"
-                  src={'/guess/pano/index.html#'+this.state.target.nodeId+","+this.state.degree+',10.0,70.0,9'}
+                  src={'/guess/guess/index.html#'+this.state.target.nodeId+","+this.state.degree+',10.0,70.0,9'}
                   sandbox="allow-same-origin allow-scripts allow-popups"
                 />
             </div>
@@ -91,14 +99,14 @@ class Guess extends Component{
               {this.state.ok&&<img src={chat} className="clickimgs" onClick={this.sw_chat}/>}
               <button onClick={this.fetch}>换一题</button>
               <button onClick={this.confirm}>确认</button>
-              {this.state.ok&&(<div>你的误差{this.state.div}</div>)}
+              {this.state.ok&&(<div>你的误差{this.state.div}米</div>)}
               {this.state.ok&&this.state.target.meetnum!=0&&(<div>平均误差{this.state.target.div/this.state.target.meetnum}</div>)}
             </div>
         </div>
-        <div>
+         <div style={{ position: 'relative', width: '100%', height: '100vh' }}>
             {!this.state.screen&&
-             <Clickmap handle={this.handle} x={this.state.x} y={this.state.y} 
-             xp={this.state.ok?this.state.target.posx:null} yp={this.state.ok?this.state.target.posy:null}/>}
+             <Clickmap handle={this.handle}  ref={this.clickmapRef}
+             initialX={this.state.ok?this.state.target.posx:undefined} initialY={this.state.ok?this.state.target.posy:undefined} />}
        </div>
        <div>
             {this.state.chat&&

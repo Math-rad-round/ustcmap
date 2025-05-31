@@ -38,8 +38,9 @@ router.post("/pass", (req, res) => {
   ).then((tmp)=>res.send(tmp))
   .catch(err => res.status(500).send(err.message));;
 });
+
 router.get('/:target/index.html', (req, res) => {
-  res.sendFile(path.join(publicPath,"pano","index.html"), options, (err) => {
+  res.sendFile(path.join(publicPath,"guess","index.html"), options, (err) => {
     if(err){
       console.log("fuck"+err);
       res.status(err.status).end();
