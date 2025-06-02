@@ -10,6 +10,9 @@ const UserSchema = new mongoose.Schema({
   links:Array,
   password: String,
   logo: String,
+  alldev: { type: Number, default: 0 },  // 默认值 0
+  times: { type: Number, default: 0 },
+  studytime: { type: Number, default: 0 }
 });
 
 // compile model from schema

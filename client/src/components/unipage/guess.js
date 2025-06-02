@@ -68,7 +68,7 @@ class Guess extends Component{
     const dx=x-this.state.target.posx,dy=y-this.state.target.posy;
     const div=Math.sqrt(dx*dx+dy*dy)*1.202;//比例尺，米/像素
     post("/guess/pass",{nodeId:this.state.target.nodeId,div:div}).then((res) => 
-        this.setState({target:res,ok:true,div:div})
+        this.setState({target:res.guess,ok:true,div:div})
     );
   };
   render(){

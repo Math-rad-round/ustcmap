@@ -495,18 +495,7 @@ class Dragmap extends Component {
             }}
           >重置</button>
           
-          {allMarkers.length > 0 && (
-            <div style={{
-              marginLeft: 'auto',
-              padding: '0 12px',
-              background: 'rgba(0, 0, 0, 0.05)',
-              borderRadius: '4px',
-              fontSize: '14px',
-              color: '#555'
-            }}>
-              标记数: {allMarkers.length}
-            </div>
-          )}
+          
         </div>
         
         <style>{`

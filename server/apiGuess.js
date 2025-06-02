@@ -4,8 +4,11 @@ const router = express.Router();
 const path = require("path");
 const databaseName = "cluster0";
 const Guess = require("./models/Guess.js");
+const User = require("./models/User.js");
 const options = { useNewUrlParser: true, useUnifiedTopology: true, dbName: databaseName};
 
+
+const checker = require('./jwtThings.js');
 const publicPath = path.resolve(__dirname, "..", "public");
 router.post("/add", (req, res) => {
   const newGuess = new Guess({
@@ -35,7 +38,18 @@ router.post("/pass", (req, res) => {
     { nodeId: req.body.nodeId },
     { $inc: {div:  req.body.div,meetnum:1}},
     {new: true},
-  ).then((tmp)=>res.send(tmp))
+  ).then((tmp)=>{
+    User.findOneAndUpdate(
+    {_id:checker.getID(req.body.Authorization)},
+      { $inc: {alldev:req.body.div,times:1}},
+      { new: true }
+    ).then((user) => {
+      res.send({guess:tmp,user:user});
+    }).catch((error) => {
+      console.log(error);
+      res.status(500).send(error);
+    });
+  })
   .catch(err => res.status(500).send(err.message));;
 });
 

@@ -35,6 +35,7 @@ class Chatmod extends Component{
     });
   }
   handleWheel = (e) => {
+    if(this.props.reverse!=undefined&&this.props.reverse)return;
       e.preventDefault();
       // 检查是否在元素内滚动
       if (!this.scrollref.current.contains(e.target)) return;
@@ -62,9 +63,24 @@ class Chatmod extends Component{
     const cnt=this.state.all;
     return (
       <div className="comments-page sub-page-main"  >
+        {(this.props.reverse!=undefined&&this.props.reverse)&&(<div className="new-comment">
+          <span className="new-comment-title">{this.props.title}</span>
+          <NewTalk roomId={this.props.roomId} idcnt={cnt+1} pass={this.fetch}/>
+        </div>)}
         <div ref={this.scrollref}> 
             {
-              this.state.comments.filter((comment)=>{
+            (this.props.reverse!=undefined&&this.props.reverse)?
+            
+                this.state.comments.reverse().map((comment) => {
+                      return (
+                        <div on>
+                    <SingleTalk _id={comment._id} date={comment.date}
+                          author={comment.author} content={comment.content} 
+                    />
+                    </div>
+                    );
+                  })
+              :this.state.comments.filter((comment)=>{
                 return comment.sequence <=this.state.last&&comment.sequence>=this.state.last-num+1;
               }).map((comment) => {
                   return (
@@ -76,10 +92,10 @@ class Chatmod extends Component{
                 );
               })
             }</div>
-        <div className="new-comment">
+        {(this.props.reverse==undefined||!this.props.reverse)&&(<div className="new-comment">
           <span className="new-comment-title">{this.props.title}</span>
           <NewTalk roomId={this.props.roomId} idcnt={cnt+1} pass={this.fetch}/>
-        </div>
+        </div>)}
       </div>
     );
   }
