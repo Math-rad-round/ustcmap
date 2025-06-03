@@ -20,7 +20,7 @@ class Profile extends Component{
       visdate: "",
       regdate: "",
       links: [],
-      type: "",
+      type: undefined,
       alldev:0,
       times: 0,
       studytime:0,
@@ -47,7 +47,9 @@ class Profile extends Component{
     if(this.state.notFound) {
       return <NotFound />;
     }
-    
+    if(this.state.type==undefined) {
+      return <div className="loading">Loading...</div>;
+    }
     return (
       <>
         <ProfileHeader 
