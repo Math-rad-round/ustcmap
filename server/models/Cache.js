@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 const CacheSchema = new mongoose.Schema({
-    Data: Date,
+    Date: Date,
     content: String,
     id: String,
 });

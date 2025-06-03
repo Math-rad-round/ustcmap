@@ -29,11 +29,12 @@ router.get('/:id/*/:name', (req, res) => {
   const dirs = req.params[0].split('/').filter(Boolean);
   const filePath = path.join(publicPath, ...dirs, req.params.name);
  // console.log("dirs", dirs);
+const nowdate= new Date();
   Cache.findOneAndUpdate(
       { id: req.params.id }, // 查询条件
       { 
         $set: { 
-          date: new Date(), // 将 date 字段设置为当前时间
+          Date: nowdate, // 将 date 字段设置为当前时间
           content: dirs[2]
         }
       },
