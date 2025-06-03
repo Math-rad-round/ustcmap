@@ -39,6 +39,10 @@ router.post("/pass", (req, res) => {
     { $inc: {div:  req.body.div,meetnum:1}},
     {new: true},
   ).then((tmp)=>{
+    if(!req.body.Authorization || req.body.Authorization == ""){
+      res.send({guess:tmp,user:null});
+      return;
+    }
     User.findOneAndUpdate(
     {_id:checker.getID(req.body.Authorization)},
       { $inc: {alldev:req.body.div,times:1}},

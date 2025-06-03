@@ -94,7 +94,7 @@ class Chatmod extends Component{
             }</div>
         {(this.props.reverse==undefined||!this.props.reverse)&&(<div className="new-comment">
           <span className="new-comment-title">{this.props.title}</span>
-          <NewTalk roomId={this.props.roomId} idcnt={cnt+1} pass={this.fetch}/>
+          {(this.props.stop==undefined||this.props.stop==false)&&<NewTalk roomId={this.props.roomId} idcnt={cnt+1} pass={this.fetch}/>}
         </div>)}
       </div>
     );

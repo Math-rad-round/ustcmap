@@ -1,6 +1,6 @@
 import React , { Component }from "react";
-import hello from "./hello.mp3";
-import heart from "./heart.ogg";
+import hello from "./wind.mp3";
+import water from "./water.mp3";
 import Tomato from "../unimod/Tomato.js";
 import env from "./env.png";
 import tomato from "./tomato.png";
@@ -23,7 +23,7 @@ class Room extends Component{
     this.audioenv= React.createRef();
     this.audiomusic = React.createRef();
     this.state = {
-        isplayenv : true,
+        isplayenv : false,
         isplaymusic : false,
         pos:null,
         nodeId:null,
@@ -36,7 +36,6 @@ class Room extends Component{
   
   componentDidMount(){
     console.log("start audio componentDidMount");
-    this.audioenv.current.play();
     
     // 新增：设置定时器每秒更新停留时间
     this.intervalId = setInterval(() => {
@@ -106,7 +105,7 @@ class Room extends Component{
         }}>
         <div className="rowclick">
           <audio src={hello} ref= {this.audioenv} loop/>
-          <audio src={heart} ref= {this.audiomusic} loop/>
+          <audio src={water} ref= {this.audiomusic} loop/>
           
           {this.state.isplayenv?
           (<img className="clickimg" src={env}  onClick={this.env_off}/>):

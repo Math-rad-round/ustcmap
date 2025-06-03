@@ -129,7 +129,7 @@ router.get("/userlist",(req,res)=>{
 router.get("/searchUser", (req, res) => {
     let option={};
     if(req.query.content!="") {option["name"]={$regex:req.query.content};}
-    if(req.query.project!="all"&&req.query.project!="")option["projects"]=req.query.project;
+    if(req.query.project!=undefined&&req.query.project!="all"&&req.query.project!="")option["projects"]=req.query.project;
     User.find(option).then((user)=>res.send(user)).catch((error)=>res.status(422).send("nofile"+error));
 });
 module.exports = router;

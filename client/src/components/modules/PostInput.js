@@ -64,11 +64,21 @@ class SearchPostInput extends Component{
   
   goSearch(value){
     this.props.giveResult(undefined);
-    get("/api/search", {content: value, tag: this.props.selected_tag, platform: this.props.selected_platform})
-    .then((res) => {
-      console.log("seach result: "+res.projects);
-      this.props.giveResult(res.projects);
-    });
+    console.log("searching: "+value);
+    console.log("selected tag: "+this.props.selected_tag);
+    if(this.props.selected_tag=="改为搜索用户"){
+      get("/api/searchUser", {content: value})
+      .then((res) => {
+        console.log("seach result: "+res);
+        this.props.giveResult(res);
+      });
+    }else{
+      get("/api/search", {content: value, tag: this.props.selected_tag, platform: this.props.selected_platform})
+      .then((res) => {
+        console.log("seach result: "+res.projects);
+        this.props.giveResult(res.projects);
+      });
+    }
   }
   
   componentDidMount(){

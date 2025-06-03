@@ -34,7 +34,7 @@ class NavBar extends Component{
          
           {
           //   <Link className="navbar-link" to="/search">Catalog</Link>
-          //(<Link className="navbar-link" to="/new">New</Link>)
+          (<Link className="navbar-link" to="/new">New</Link>)
           }
 
           <Link className="navbar-link" to="/signin" state={{from: this.props.whereAmI}}>LogIn</Link>
