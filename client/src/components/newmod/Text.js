@@ -15,8 +15,8 @@ class Text extends Component{
     };
   }
   
-  usepass=()=>{
-    this.props.pass();
+  usepass=(text)=>{
+    this.props.pass(text);
   }
   componentDidMount() {
     document.addEventListener('mousedown', this.handleClick, false);
@@ -29,7 +29,7 @@ class Text extends Component{
     else if(this.state.on==1)this.setState({cl:1});
     if(this.state.on==1){
       console.log("going");
-      this.usepass();
+      this.usepass(this.props.name);
     }console.log(this.props.name+this.state.on);
   };
   goin=()=>{

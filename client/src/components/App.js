@@ -9,6 +9,7 @@ import VRgame from "./pano/VRgame.js";
 import AppPage from "./pages/AppPage.js";
 import Profile from "./pages/Profile.js";
 import Search from "./pages/Search.js";
+//import DBGGame from "../../../archive/dbgpart/Game.js";
 import NewProjectPage from "./pages/NewProjectPage.js";
 import SignInPage from "./pages/SignInPage.js";
 import SignUpPage from "./pages/SignUpPage.js";
@@ -25,6 +26,7 @@ import Busmap from "./newpage/Busmap.js";
 import Footer from "./modules/Footer.js";
 import NavBar from "./modules/NavBar.js";
 import Panvr from "./unipage/Panvr.js";
+import PosPage from "./pos/PosPage.js";
 import "../utilities.css";
 import "./App.css";
 
@@ -112,9 +114,12 @@ class App extends Component{
                 <Route path="/user/:userId" element={<PathParamsHOC component={Profile} />} />
                 <Route path="/user/:userId/settings" element={<PathParamsHOC component={ProfileSettingsPage} />} />
                 <Route path="/search/" element={<Search />} />
+                {/* <Route path="/dbggame" element={<DBGGame />} /> */}
                 <Route path="/new/" element={<NewProjectPage />} />
                 <Route path="/addguess/" element={<Addguess />} />
                 <Route path="/guess" element={<Guess />} />
+                
+                <Route path="/getpos" element={<PosPage />} />
                 <Route path="/signin/" element={<SignInPage updateWhoami={this.updateWhoami.bind(this)} />} />
                 <Route path="/signup/" element={<SignUpPage />} />
                 <Route path="/vr" element={<VRroute />} />

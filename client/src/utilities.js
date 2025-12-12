@@ -66,6 +66,28 @@ const getLoggedInfo = () => {
   
   return token;
 }
+import seedrandom from "seedrandom";
 
+/**
+ * Fisher-Yates 洗牌算法 + seedrandom 控制随机种子
+ * @param {Array} array 要打乱的数组
+ * @param {string} seed 随机种子（相同种子返回相同结果）
+ * @returns {Array} 打乱后的新数组
+ */
+export function seededShuffle(array, seed) {
+  const rng = seedrandom(seed); // 初始化随机数生成器
+  const shuffled = [...array];   // 创建副本（避免修改原数组）
+
+  // Fisher-Yates 洗牌算法
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(rng() * (i + 1)); // 使用种子随机数
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]]; // 交换元素
+  }
+
+  return shuffled;
+}
+export function shuffleArray(array) {
+  return seededShuffle(array, seedrandom().int32().toString());
+}
 export { post, get, getLoggedInfo };
 
