@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import PathParamsHOC from "./PathParamsHOC.js";
 import Root from "./pages/Root.js";
 import VRroute from "./pano/VRroute.js";
-
+import VRguide from "./pano/VRguide.js";
 import VRgame from "./pano/VRgame.js";
 import AppPage from "./pages/AppPage.js";
 import Profile from "./pages/Profile.js";
@@ -29,6 +29,7 @@ import Panvr from "./unipage/Panvr.js";
 import PosPage from "./pos/PosPage.js";
 import "../utilities.css";
 import "./App.css";
+import Savepos from "./pos/testpage.js";
 
 class App extends Component{
   constructor(props){
@@ -107,6 +108,7 @@ class App extends Component{
                 <Route path="/map" element={<Map />} />
                 <Route path="/map/bus" element={<Busmap />} />
                 <Route path="/room/:place" element={<PathParamsHOC component={Room}/>}/>
+                <Route path="/guide/:place" element={<PathParamsHOC component={VRguide}/>}/>
                 <Route path="/vr/:pos" element={<PathParamsHOC component={Panvr}/>}/>
                 <Route path="/game/:pos" element={<PathParamsHOC component={Panvr}/>} />
                 <Route path="/app/:appId/settings" element={<PathParamsHOC component={AppSettings} />} />
@@ -118,7 +120,7 @@ class App extends Component{
                 <Route path="/new/" element={<NewProjectPage />} />
                 <Route path="/addguess/" element={<Addguess />} />
                 <Route path="/guess" element={<Guess />} />
-                
+                <Route path="/savepos" element={<Savepos />} />
                 <Route path="/getpos" element={<PosPage />} />
                 <Route path="/signin/" element={<SignInPage updateWhoami={this.updateWhoami.bind(this)} />} />
                 <Route path="/signup/" element={<SignUpPage />} />
