@@ -54,6 +54,11 @@ class NearbyPlaces extends Component {
               {places.map((place) => (
                 <li key={place._id}>
                   <strong>{place.name}</strong>
+                  <span style={{ marginLeft: '10px', color: '#666' }}>
+                    ({place.distance >= 1000 
+                      ? `${(place.distance / 1000).toFixed(1)}公里` 
+                      : `${place.distance}米`})
+                  </span>
                   <button onClick={()=>this.usepass(place.pos)}>跳转到对应位置</button>
                 </li>
               ))}
