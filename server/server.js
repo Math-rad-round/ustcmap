@@ -1,7 +1,12 @@
+const path = require("path");
+const fs = require("fs");
+
+const envPath = path.resolve(__dirname, "../.env");
+
+const result = require("dotenv").config({ path: envPath });
 
 const express = require("express"); 
 const mongoose = require("mongoose");
-const path = require("path"); 
 const api_app = require("./apiApp");
 const api_comment = require("./apiComment");
 const api_reply = require("./apiReply");
@@ -12,7 +17,9 @@ const api_room = require("./apiRoom");
 const api_talk = require("./apiTalk");
 const api_vr = require("./apiVr");
 const api_login = require("./apiLogin");
-const mongoConnectionURL ="mongodb+srv://mathdaren:return0@cluster0.jgao0jj.mongodb.net/";
+const parser = require("./AI/parser");
+// server.js 或 app.js
+const mongoConnectionURL = process.env.MONGODB_NET;
 //process.env.databaseurl;
                
 const databaseName = "cluster0";
@@ -40,9 +47,7 @@ app.use(express.static(resourcePath));
 const reactPath = path.resolve(__dirname, "..", "client", "dist");
 
 const publicPath = path.resolve(__dirname, "..", "public");
-
 app.use(express.static(reactPath));
-
 // connect user-defined routes
 app.use("/api", api_user);
 app.use("/api", api_app);
@@ -54,6 +59,7 @@ app.use("/askvr",api_vr);
 app.use("/api", api_login);
 app.use("/api",api_place);
 app.use("/askroom", api_room);
+app.use("/ai",parser);
 // // load the compiled react files, which will serve /index.html and /bundle.js
 
 app.get('/upload/:dir1/:name', (req, res) => {

@@ -1,0 +1,34 @@
+/* 默认状态：不影响原行为 */
+.route-hotspot {
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+/* 被点亮的状态 */
+.route-hotspot.active {
+  filter: drop-shadow(0 0 12px #0033d5);
+  transform: scale(1.25);
+}
+
+
+.route-point.current {
+  background: #ffcc00;
+  box-shadow: 0 0 14px rgba(255, 204, 0, 1);
+  transform: scale(1.4);
+}
+.ggdefaulthotspot.route-highlight {
+  animation: routePulse 1.5s infinite;
+  box-shadow: 0 0 0 0 rgba(0, 160, 255, 0.7);
+  border-radius: 50%;
+}
+
+@keyframes routePulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 160, 255, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 18px rgba(0, 160, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 160, 255, 0);
+  }
+}

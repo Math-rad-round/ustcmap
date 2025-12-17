@@ -7,7 +7,8 @@ class Savepos extends Component {
     this.state = {
       name: '',
       pos: '', // 新增：地点 ID 字段
-      coordinates: ''
+      coordinates: '',
+      priority: '3' // 新增：优先级，默认值设为3（中等优先级）
     };
   }
 
@@ -58,7 +59,8 @@ class Savepos extends Component {
       this.setState({
         name: '',
         pos: '',
-        coordinates: ''
+        coordinates: '',
+        priority: '3' // 重置为默认值
       });
     }).catch((err) => {
       alert("保存失败：" + err.message);
@@ -68,7 +70,7 @@ class Savepos extends Component {
   // 提交表单
   handleSubmit = (e) => {
     e.preventDefault();
-    const { name, pos, coordinates } = this.state;
+    const { name, pos, coordinates, priority } = this.state;
 
     // 输入验证
     if (!name) {
@@ -81,6 +83,13 @@ class Savepos extends Component {
       return;
     }
 
+    // 验证优先级
+    const priorityNum = parseInt(priority);
+    if (priority && (isNaN(priorityNum) || priorityNum < 1 || priorityNum > 3)) {
+      alert("优先级应为1-3之间的整数（1为最高优先级）");
+      return;
+    }
+
     try {
       const parsedCoords = this.parseCoordinates(coordinates);
       
@@ -89,9 +98,9 @@ class Savepos extends Component {
         pos: pos,
         longitude: parsedCoords.longitude,
         latitude: parsedCoords.latitude,
-        coordinatesStr: coordinates
+        coordinatesStr: coordinates,
+        priority: priorityNum // 添加优先级字段
       };
-      
       
       // 调用 save 方法
       this.save(dataToSend);
@@ -101,7 +110,7 @@ class Savepos extends Component {
   };
 
   render() {
-    const { name, pos, coordinates } = this.state;
+    const { name, pos, coordinates, priority } = this.state;
 
     return (
       <div className="save-pos-container">
@@ -139,9 +148,25 @@ class Savepos extends Component {
               required
             />
           </div>
-          <button type="submit">保存</button>
+          <div>
+            <label>优先级（1-3）：</label>
+            <select
+              name="priority"
+              value={priority}
+              onChange={this.handleChange}
+              style={{ marginLeft: '10px', padding: '5px' }}
+            >
+              <option value="1">优先级 1（最高，搜索范围最大）</option>
+              <option value="2">优先级 2（中等，搜索范围中等）</option>
+              <option value="3">优先级 3（较低，搜索范围较小）</option>
+            </select>
+            <span style={{ marginLeft: '10px', fontSize: '12px', color: '#666' }}>
+              优先级越高，在附近搜索时被找到的范围越大
+            </span>
+          </div>
+          <button type="submit" style={{ marginTop: '20px' }}>保存</button>
         </form>
-        <div style={{ marginTop: '10px', fontSize: '12px', color: '#666' }}>
+        <div style={{ marginTop: '15px', fontSize: '12px', color: '#666' }}>
           <p>坐标格式提示：</p>
           <ul>
             <li>使用东经,北纬格式</li>
@@ -153,6 +178,16 @@ class Savepos extends Component {
           <p style={{ marginTop: '10px' }}>
             地点 ID 说明：如果是更新现有地点，请输入对应的 ID；如果是新增地点，请留空
           </p>
+          <div style={{ marginTop: '15px', padding: '10px', backgroundColor: '#f5f5f5', borderRadius: '5px' }}>
+            <p><strong>优先级说明：</strong></p>
+            <ul>
+              <li><strong>优先级1（最高）</strong>：基础搜索距离的 100%（最容易被发现）</li>
+              <li><strong>优先级2（中等）</strong>：基础搜索距离的 50%</li>
+              <li><strong>优先级3（较低）</strong>：基础搜索距离的 25%</li>
+              <li><strong>未设置优先级</strong>：基础搜索距离的 12.5%</li>
+            </ul>
+            <p>例如：当基础搜索距离设置为1000米时，优先级1的地点可以在1000米内被找到，而优先级3的地点只能在250米内被找到。</p>
+          </div>
         </div>
       </div>
     );

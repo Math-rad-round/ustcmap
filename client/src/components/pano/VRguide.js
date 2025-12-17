@@ -1,22 +1,57 @@
-import React , { Component }from "react";
-import process from "process";
-class VRguide extends Component{
-  constructor(props){
+import React, { Component } from "react";
+
+class VRguide extends Component {
+  constructor(props) {
     super(props);
-    this.state={
+    this.state = {
+    };
+  }
+  componentDidMount() {
+    console.log(this.props)
+    this.bindMessage();
+  }
+
+  componentDidUpdate(prevProps) {
+    if (prevProps.route !== this.props.route) {
+      this.sendRouteToPano();
     }
-  };
+  }
+
+  bindMessage() {
+    window.addEventListener("message", (e) => {
+      if (e.data?.type === "PANO_READY") {
+        console.log("✅ React: pano ready");
+        this.sendRouteToPano();
+      }
+    });
+  }
+
+  sendRouteToPano() {
+    const iframe = document.getElementById("panoFrame");
+    if (!iframe || !this.props.route.length) return;
+
+    console.log("[React] send route:", this.props.route);
+
+    iframe.contentWindow.postMessage(
+      {
+        type: "SET_ROUTE",
+        route: this.props.route
+      },
+      "*"
+    );
+  }
+
   render() {
-    const roomId =this.props.place;
     return (
-      <div>
-        <iframe type="text/babel" src={"/askroom/pano/index.html#"+roomId}  width="100%" height="550" allow="fullscreen"/>
-      </div>
+      <iframe
+        id="panoFrame"
+        src={"/askroom/guide/index.html#"+this.props.route[0]}
+        width="100%"
+        height="550"
+        allow="fullscreen"
+      />
     );
   }
 }
 
-
-
 export default VRguide;
-

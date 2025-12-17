@@ -1,0 +1,1904 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tour start="node5" appversion="7.1.9" hassounds="0" apprev="20995">
+  <panorama id="node1">
+    <input leveltileurl="tiles/node1/cf_%c/l_%l/c_%x/tile_%y.jpg" height="1728" levelingpitch="0" width="1728" levelbias="0.400" overlap="1" leveltilesize="510" levelbiashidpi="1.000" levelingroll="0">
+      <level width="1728" preload="0" predecode="0" height="1728"/>
+      <level width="864" preload="0" predecode="0" height="864"/>
+      <level width="432" preload="1" predecode="1" height="432"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view pannorth="0" fovmode="0">
+      <start tilt="0" pan="0" fov="70" projection="4"/>
+      <flyin tilt="-90" pan="0" fov="170" projection="9"/>
+      <min tilt="-90" pan="0" fovpixel="2"/>
+      <max tilt="90" pan="360" fovstereographic="330" fov="120" fovfisheye="360" scaletofit="1"/>
+    </view>
+    <userdata description="" author="" source="" info="" heading="0" title="E1buildingSE" tags="panodel" copyright="" datetime="" latitude="" customnodeid="" nodeid="node1" comment="" longitude=""/>
+    <hotspots width="180" wordwrap="1" smoothmovement="0" height="20">
+      <label backgroundalpha="1" wordwrap="1" bordercolor="0x000000" backgroundcolor="0xffffff" borderalpha="1" enabled="1" height="20" border="1" width="180" background="1" textalpha="1" textcolor="0x000000" borderradius="1"/>
+      <polystyle backgroundalpha="0.25098" bordercolor="0x0000ff" mode="0" backgroundcolor="0x0000ff" borderalpha="1" handcursor="1"/>
+      <hotspot tilt="-4.56" description="" pan="-266.99" id="Point01" title="第五教学楼" target="-20.9/5.4/70.0" skinid="ht_node" url="{node5}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="-2.67" description="" pan="-247.64" id="Point02" title="东区北门" target="-172.3/-10.3/70.0" skinid="ht_node" url="{node12}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="0.18" description="" pan="-156.45" id="Point03" title="" target="178.3/-4.4/70.0" skinid="ht_node" url="{node49}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="0.64" description="" pan="-160.64" id="Point04" title="中区" target="-31.4/-6.5/70.0" skinid="ht_node" url="{node25}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="-6.83" description="" pan="-293.98" id="Point05" title="五教南路口" target="28.0/-2.0/70.0" skinid="ht_node" url="{node6}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="0.82" description="" pan="-57.59" id="Point06" title="少年班楼" target="-21.6/0.7/70.0" skinid="ht_node" url="{node16}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="1.61" description="" pan="-61.32" id="Point07" title="第二教学楼" target="176.6/10.8/70.0" skinid="ht_node" url="{node4}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="2.69" description="" pan="-65.45" id="Point08" title="食堂/图书馆/活动中心" target="128.1/-5.6/70.0" skinid="ht_node" url="{node9}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="4.88" description="" pan="-116.74" id="Point09" title="郭沫若广场" target="126.5/6.5/70.0" skinid="ht_node" url="{node7}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="1.81" description="" pan="-172.78" id="Point10" title="前往一教" target="167.7/12.0/70.0" skinid="ht_node" url="{node45}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+    </hotspots>
+    <media/>
+    <transition zoomout="0" zoomafteroutfov="20" zoomfov="20" blendtime="1" enabled="1" blendcolor="0x000000" type="crossdissolve" delay="none" zoomafterinfov="90" zoomspeed="2" zoomin="0" zoomoutpause="1" softedge="0"/>
+    <animation useinautorotation="0" animsequence="Animation01" clipsrandom="0" syncanimationwithvideo="0"/>
+    <control sensitivity="1" dblclickfullscreen="0" contextfullscreen="1" lockedkeyboardzoom="0" invertcontrol="1" hideabout="0" zoomcentercursor="1" invertwheel="0" speedwheel="1" rubberband="0" lockedmouse="0" contextvr="1" lockedwheel="0" simulatemass="1" lockedkeyboard="0" contextprojections="0">
+      <menulink text="" url=""/>
+    </control>
+  </panorama>
+  <panorama id="node2">
+    <input leveltileurl="tiles/node2/cf_%c/l_%l/c_%x/tile_%y.jpg" height="1728" levelingpitch="0" width="1728" levelbias="0.400" overlap="1" leveltilesize="510" levelbiashidpi="1.000" levelingroll="0">
+      <level width="1728" preload="0" predecode="0" height="1728"/>
+      <level width="864" preload="0" predecode="0" height="864"/>
+      <level width="432" preload="1" predecode="1" height="432"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view pannorth="0" fovmode="0">
+      <start tilt="0" pan="0" fov="70" projection="4"/>
+      <flyin tilt="-90" pan="0" fov="170" projection="9"/>
+      <min tilt="-90" pan="0" fovpixel="2"/>
+      <max tilt="90" pan="360" fovstereographic="330" fov="120" fovfisheye="360" scaletofit="1"/>
+    </view>
+    <userdata description="" author="" source="" info="" heading="0" title="" tags="panodel" copyright="" datetime="" latitude="" customnodeid="" nodeid="node2" comment="" longitude=""/>
+    <hotspots width="180" wordwrap="1" smoothmovement="0" height="20">
+      <label backgroundalpha="1" wordwrap="1" bordercolor="0x000000" backgroundcolor="0xffffff" borderalpha="1" enabled="1" height="20" border="1" width="180" background="1" textalpha="1" textcolor="0x000000" borderradius="1"/>
+      <polystyle backgroundalpha="0.25098" bordercolor="0x0000ff" mode="0" backgroundcolor="0x0000ff" borderalpha="1" handcursor="1"/>
+      <polyhotspot description="" id="Poly01" title="" target="" url="{node3}">
+        <polystring>-258.5/13|-254.15/-17.12|-41.23/-14.72|-37.85/14.88|-326.73/43.79|-262.08/20.19</polystring>
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </polyhotspot>
+    </hotspots>
+    <media/>
+    <transition zoomout="0" zoomafteroutfov="20" zoomfov="20" blendtime="1" enabled="1" blendcolor="0x000000" type="crossdissolve" delay="none" zoomafterinfov="90" zoomspeed="2" zoomin="0" zoomoutpause="1" softedge="0"/>
+    <animation useinautorotation="0" animsequence="Animation01" clipsrandom="0" syncanimationwithvideo="0"/>
+    <control sensitivity="1" dblclickfullscreen="0" contextfullscreen="1" lockedkeyboardzoom="0" invertcontrol="1" hideabout="0" zoomcentercursor="1" invertwheel="0" speedwheel="1" rubberband="0" lockedmouse="0" contextvr="1" lockedwheel="0" simulatemass="1" lockedkeyboard="0" contextprojections="0">
+      <menulink text="" url=""/>
+    </control>
+  </panorama>
+  <panorama id="node3">
+    <input leveltileurl="tiles/node3/cf_%c/l_%l/c_%x/tile_%y.jpg" height="1728" levelingpitch="0" width="1728" levelbias="0.400" overlap="1" leveltilesize="510" levelbiashidpi="1.000" levelingroll="0">
+      <level width="1728" preload="0" predecode="0" height="1728"/>
+      <level width="864" preload="0" predecode="0" height="864"/>
+      <level width="432" preload="1" predecode="1" height="432"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view pannorth="0" fovmode="0">
+      <start tilt="0" pan="0" fov="70" projection="4"/>
+      <flyin tilt="-90" pan="0" fov="170" projection="9"/>
+      <min tilt="-90" pan="0" fovpixel="2"/>
+      <max tilt="90" pan="360" fovstereographic="330" fov="120" fovfisheye="360" scaletofit="1"/>
+    </view>
+    <userdata description="" author="" source="" info="" heading="0" title="" tags="panodel" copyright="" datetime="" latitude="" customnodeid="" nodeid="node3" comment="" longitude=""/>
+    <hotspots width="180" wordwrap="1" smoothmovement="0" height="20">
+      <label backgroundalpha="1" wordwrap="1" bordercolor="0x000000" backgroundcolor="0xffffff" borderalpha="1" enabled="1" height="20" border="1" width="180" background="1" textalpha="1" textcolor="0x000000" borderradius="1"/>
+      <polystyle backgroundalpha="0.25098" bordercolor="0x0000ff" mode="0" backgroundcolor="0x0000ff" borderalpha="1" handcursor="1"/>
+      <polyhotspot description="" id="Poly01" title="" target="" url="{node2}">
+        <polystring>-227.68/29.57|-216.26/-30.47|-335.36/-16.24|-330.74/18.14|-300.3/35.6</polystring>
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </polyhotspot>
+      <hotspot tilt="-1.62" description="" pan="-345.95" id="Point01" title="老北门" target="-153.5/6.7/70.0" skinid="ht_node" url="{node13}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="-1.73" description="" pan="-93.74" id="Point02" title="五教南路口" target="12.6/-3.9/70.0" skinid="ht_node" url="{node6}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="-4.07" description="" pan="-190.62" id="Point03" title="东区隧道口" target="137.8/-4.4/70.0" skinid="ht_node" url="{node19}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="-0.96" description="" pan="-3.34" id="Point04" title="樱花大道介绍" target="_blank" skinid="ht_url" url="https://m.baike.ustc.edu.cn/wiki/detail?id=202">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+    </hotspots>
+    <media/>
+    <transition zoomout="0" zoomafteroutfov="20" zoomfov="20" blendtime="1" enabled="1" blendcolor="0x000000" type="crossdissolve" delay="none" zoomafterinfov="90" zoomspeed="2" zoomin="0" zoomoutpause="1" softedge="0"/>
+    <animation useinautorotation="0" animsequence="Animation01" clipsrandom="0" syncanimationwithvideo="0"/>
+    <control sensitivity="1" dblclickfullscreen="0" contextfullscreen="1" lockedkeyboardzoom="0" invertcontrol="1" hideabout="0" zoomcentercursor="1" invertwheel="0" speedwheel="1" rubberband="0" lockedmouse="0" contextvr="1" lockedwheel="0" simulatemass="1" lockedkeyboard="0" contextprojections="0">
+      <menulink text="" url=""/>
+    </control>
+  </panorama>
+  <panorama id="node4">
+    <input leveltileurl="tiles/node4/cf_%c/l_%l/c_%x/tile_%y.jpg" height="1728" levelingpitch="0" width="1728" levelbias="0.400" overlap="1" leveltilesize="510" levelbiashidpi="1.000" levelingroll="0">
+      <level width="1728" preload="0" predecode="0" height="1728"/>
+      <level width="864" preload="0" predecode="0" height="864"/>
+      <level width="432" preload="1" predecode="1" height="432"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view pannorth="0" fovmode="0">
+      <start tilt="0" pan="0" fov="70" projection="4"/>
+      <flyin tilt="-90" pan="0" fov="170" projection="9"/>
+      <min tilt="-90" pan="0" fovpixel="2"/>
+      <max tilt="90" pan="360" fovstereographic="330" fov="120" fovfisheye="360" scaletofit="1"/>
+    </view>
+    <userdata description="" author="" source="" info="" heading="0" title="" tags="panodel" copyright="" datetime="" latitude="31.84108942" customnodeid="" nodeid="node4" comment="" longitude="117.26375341"/>
+    <hotspots width="180" wordwrap="1" smoothmovement="0" height="20">
+      <label backgroundalpha="1" wordwrap="1" bordercolor="0x000000" backgroundcolor="0xffffff" borderalpha="1" enabled="1" height="20" border="1" width="180" background="1" textalpha="1" textcolor="0x000000" borderradius="1"/>
+      <polystyle backgroundalpha="0.25098" bordercolor="0x0000ff" mode="0" backgroundcolor="0x0000ff" borderalpha="1" handcursor="1"/>
+      <hotspot tilt="0.75" description="教学楼" pan="-168.23" distance="192.317" id="Point01" target="5.5/3.2/70.0" skinid="ht_node" title="第二教学楼" url="{node46}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="-4.43" description="" pan="-243.98" id="Point02" title="第五教学楼" target="-4.8/29.2/70.0" skinid="ht_node" url="{node5}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="-3.65" description="" pan="-247.48" id="Point03" title="五教南路口" target="66.7/-4.8/70.0" skinid="Hotspot 1" url="{node6}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="1.3" description="" pan="-80.91" id="Point04" title="少年班楼" target="46.8/-3.5/70.0" skinid="ht_node" url="{node16}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="0.76" description="" pan="-65.35" id="Point05" title="食堂/图书馆/活动中心" target="27.8/-2.8/70.0" skinid="ht_node" url="{node9}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+    </hotspots>
+    <media/>
+    <transition zoomout="0" zoomafteroutfov="20" zoomfov="20" blendtime="1" enabled="1" blendcolor="0x000000" type="crossdissolve" delay="none" zoomafterinfov="90" zoomspeed="2" zoomin="0" zoomoutpause="1" softedge="0"/>
+    <animation useinautorotation="0" animsequence="Animation01" clipsrandom="0" syncanimationwithvideo="0"/>
+    <control sensitivity="1" dblclickfullscreen="0" contextfullscreen="1" lockedkeyboardzoom="0" invertcontrol="1" hideabout="0" zoomcentercursor="1" invertwheel="0" speedwheel="1" rubberband="0" lockedmouse="0" contextvr="1" lockedwheel="0" simulatemass="1" lockedkeyboard="0" contextprojections="0">
+      <menulink text="" url=""/>
+    </control>
+  </panorama>
+  <panorama id="node5">
+    <input leveltileurl="tiles/node5/cf_%c/l_%l/c_%x/tile_%y.jpg" height="1728" levelingpitch="0" width="1728" levelbias="0.400" overlap="1" leveltilesize="510" levelbiashidpi="1.000" levelingroll="0">
+      <level width="1728" preload="0" predecode="0" height="1728"/>
+      <level width="864" preload="0" predecode="0" height="864"/>
+      <level width="432" preload="1" predecode="1" height="432"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view pannorth="0" fovmode="0">
+      <start tilt="0" pan="0" fov="70" projection="4"/>
+      <flyin tilt="-90" pan="0" fov="170" projection="9"/>
+      <min tilt="-90" pan="0" fovpixel="2"/>
+      <max tilt="90" pan="360" fovstereographic="330" fov="120" fovfisheye="360" scaletofit="1"/>
+    </view>
+    <userdata description="" author="" source="" info="" heading="0" title="" tags="panodel" copyright="" datetime="" latitude="" customnodeid="" nodeid="node5" comment="" longitude=""/>
+    <hotspots width="180" wordwrap="1" smoothmovement="0" height="20">
+      <label backgroundalpha="1" wordwrap="1" bordercolor="0x000000" backgroundcolor="0xffffff" borderalpha="1" enabled="1" height="20" border="1" width="180" background="1" textalpha="1" textcolor="0x000000" borderradius="1"/>
+      <polystyle backgroundalpha="0.25098" bordercolor="0x0000ff" mode="0" backgroundcolor="0x0000ff" borderalpha="1" handcursor="1"/>
+      <hotspot tilt="-1.32" description="" pan="-288.48" id="Point01" title="东区北门" target="-169.8/-2.9/70.0" skinid="Hotspot 1" url="{node12}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="-1.85" description="" pan="-156.51" id="Point02" title="五教南路口" target="-155.1/-3.1/70.0" skinid="Hotspot 1" url="{node6}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="2.03" description="" pan="-196.79" id="Point03" title="一教路口" target="-145.9/-9.7/70.0" skinid="ht_node" url="{node1}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="5.98" description="" pan="-10.86" id="Point04" title="进入自习室1" target="_blank" skinid="ht_url" url="../../../room/node13">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="8.17" description="" pan="-20.98" id="Point05" title="进入自习室2" target="_blank" skinid="ht_url" url="../../../room/node15">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+    </hotspots>
+    <media/>
+    <transition zoomout="0" zoomafteroutfov="20" zoomfov="20" blendtime="1" enabled="1" blendcolor="0x000000" type="crossdissolve" delay="none" zoomafterinfov="90" zoomspeed="2" zoomin="0" zoomoutpause="1" softedge="0"/>
+    <animation useinautorotation="0" animsequence="Animation01" clipsrandom="0" syncanimationwithvideo="0"/>
+    <control sensitivity="1" dblclickfullscreen="0" contextfullscreen="1" lockedkeyboardzoom="0" invertcontrol="1" hideabout="0" zoomcentercursor="1" invertwheel="0" speedwheel="1" rubberband="0" lockedmouse="0" contextvr="1" lockedwheel="0" simulatemass="1" lockedkeyboard="0" contextprojections="0">
+      <menulink text="" url=""/>
+    </control>
+  </panorama>
+  <panorama id="node6">
+    <input leveltileurl="tiles/node6/cf_%c/l_%l/c_%x/tile_%y.jpg" height="1728" levelingpitch="0" width="1728" levelbias="0.400" overlap="1" leveltilesize="510" levelbiashidpi="1.000" levelingroll="0">
+      <level width="1728" preload="0" predecode="0" height="1728"/>
+      <level width="864" preload="0" predecode="0" height="864"/>
+      <level width="432" preload="1" predecode="1" height="432"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view pannorth="0" fovmode="0">
+      <start tilt="0" pan="0" fov="70" projection="4"/>
+      <flyin tilt="-90" pan="0" fov="170" projection="9"/>
+      <min tilt="-90" pan="0" fovpixel="2"/>
+      <max tilt="90" pan="360" fovstereographic="330" fov="120" fovfisheye="360" scaletofit="1"/>
+    </view>
+    <userdata description="" author="" source="" info="" heading="0" title="" tags="panodel" copyright="" datetime="" latitude="" customnodeid="" nodeid="node6" comment="" longitude=""/>
+    <hotspots width="180" wordwrap="1" smoothmovement="0" height="20">
+      <label backgroundalpha="1" wordwrap="1" bordercolor="0x000000" backgroundcolor="0xffffff" borderalpha="1" enabled="1" height="20" border="1" width="180" background="1" textalpha="1" textcolor="0x000000" borderradius="1"/>
+      <polystyle backgroundalpha="0.25098" bordercolor="0x0000ff" mode="0" backgroundcolor="0x0000ff" borderalpha="1" handcursor="1"/>
+      <hotspot tilt="-4.34" description="" pan="-319.64" id="Point01" title="第五教学楼" target="-20.1/29.6/70.0" skinid="ht_node" url="{node5}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="-0.27" description="" pan="-217.99" id="Point02" title="第一教学楼" target="134.0/-1.9/70.0" skinid="ht_node" url="{node3}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="-1" description="" pan="-201.17" id="Point03" title="一教路口" target="-147.0/-7.8/70.0" skinid="ht_node" url="{node1}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="-1.11" description="" pan="-127.03" id="Point04" title="活动中心" target="" skinid="ht_node" url="{node8}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="0.19" description="" pan="-135.91" id="Point05" title="第二教学楼" target="" skinid="ht_node" url="{node4}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+    </hotspots>
+    <media/>
+    <transition zoomout="0" zoomafteroutfov="20" zoomfov="20" blendtime="1" enabled="1" blendcolor="0x000000" type="crossdissolve" delay="none" zoomafterinfov="90" zoomspeed="2" zoomin="0" zoomoutpause="1" softedge="0"/>
+    <animation useinautorotation="0" animsequence="Animation01" clipsrandom="0" syncanimationwithvideo="0"/>
+    <control sensitivity="1" dblclickfullscreen="0" contextfullscreen="1" lockedkeyboardzoom="0" invertcontrol="1" hideabout="0" zoomcentercursor="1" invertwheel="0" speedwheel="1" rubberband="0" lockedmouse="0" contextvr="1" lockedwheel="0" simulatemass="1" lockedkeyboard="0" contextprojections="0">
+      <menulink text="" url=""/>
+    </control>
+  </panorama>
+  <panorama id="node7">
+    <input leveltileurl="tiles/node7/cf_%c/l_%l/c_%x/tile_%y.jpg" height="1728" levelingpitch="0" width="1728" levelbias="0.400" overlap="1" leveltilesize="510" levelbiashidpi="1.000" levelingroll="0">
+      <level width="1728" preload="0" predecode="0" height="1728"/>
+      <level width="864" preload="0" predecode="0" height="864"/>
+      <level width="432" preload="1" predecode="1" height="432"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view pannorth="0" fovmode="0">
+      <start tilt="0" pan="0" fov="70" projection="4"/>
+      <flyin tilt="-90" pan="0" fov="170" projection="9"/>
+      <min tilt="-90" pan="0" fovpixel="2"/>
+      <max tilt="90" pan="360" fovstereographic="330" fov="120" fovfisheye="360" scaletofit="1"/>
+    </view>
+    <userdata description="" author="" source="" info="" heading="0" title="" tags="panodel" copyright="" datetime="" latitude="" customnodeid="" nodeid="node7" comment="" longitude=""/>
+    <hotspots width="180" wordwrap="1" smoothmovement="0" height="20">
+      <label backgroundalpha="1" wordwrap="1" bordercolor="0x000000" backgroundcolor="0xffffff" borderalpha="1" enabled="1" height="20" border="1" width="180" background="1" textalpha="1" textcolor="0x000000" borderradius="1"/>
+      <polystyle backgroundalpha="0.25098" bordercolor="0x0000ff" mode="0" backgroundcolor="0x0000ff" borderalpha="1" handcursor="1"/>
+      <hotspot tilt="4.3" description="" pan="-62.37" id="Point01" title="少年班楼" target="-13.9/4.9/70.0" skinid="ht_node" url="{node16}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="4.35" description="" pan="-116.04" id="Point02" title="食堂/图书馆/活动中心" target="-156.3/-0.6/70.0" skinid="ht_node" url="{node9}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="2.71" description="" pan="-82.44" id="Point03" title="第二教学楼" target="-161.1/5.2/70.0" skinid="ht_node" url="{node4}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="3.77" description="" pan="-296.62" id="Point04" title="USTC1958" target="0.0/0.0/70.0" skinid="ht_info" url="">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="1.97" description="" pan="-287.2" id="Point05" title="前往隧道口" target="177.6/-7.5/70.0" skinid="ht_node" url="{node49}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="2.03" description="" pan="-14.12" id="Point06" title="郭沫若像" target="_blank" skinid="ht_url" url="https://m.baike.ustc.edu.cn/wiki/detail?id=183&amp;keyword=%E9%83%AD%E6%B2%AB%E8%8B%A5">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+    </hotspots>
+    <media/>
+    <transition zoomout="0" zoomafteroutfov="20" zoomfov="20" blendtime="1" enabled="1" blendcolor="0x000000" type="crossdissolve" delay="none" zoomafterinfov="90" zoomspeed="2" zoomin="0" zoomoutpause="1" softedge="0"/>
+    <animation useinautorotation="0" animsequence="Animation01" clipsrandom="0" syncanimationwithvideo="0"/>
+    <control sensitivity="1" dblclickfullscreen="0" contextfullscreen="1" lockedkeyboardzoom="0" invertcontrol="1" hideabout="0" zoomcentercursor="1" invertwheel="0" speedwheel="1" rubberband="0" lockedmouse="0" contextvr="1" lockedwheel="0" simulatemass="1" lockedkeyboard="0" contextprojections="0">
+      <menulink text="" url=""/>
+    </control>
+  </panorama>
+  <panorama id="node8">
+    <input leveltileurl="tiles/node8/cf_%c/l_%l/c_%x/tile_%y.jpg" height="1728" levelingpitch="0" width="1728" levelbias="0.400" overlap="1" leveltilesize="510" levelbiashidpi="1.000" levelingroll="0">
+      <level width="1728" preload="0" predecode="0" height="1728"/>
+      <level width="864" preload="0" predecode="0" height="864"/>
+      <level width="432" preload="1" predecode="1" height="432"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view pannorth="0" fovmode="0">
+      <start tilt="0" pan="0" fov="70" projection="4"/>
+      <flyin tilt="-90" pan="0" fov="170" projection="9"/>
+      <min tilt="-90" pan="0" fovpixel="2"/>
+      <max tilt="90" pan="360" fovstereographic="330" fov="120" fovfisheye="360" scaletofit="1"/>
+    </view>
+    <userdata description="" author="" source="" info="" heading="0" title="" tags="panodel" copyright="" datetime="" latitude="" customnodeid="" nodeid="node8" comment="" longitude=""/>
+    <hotspots width="180" wordwrap="1" smoothmovement="0" height="20">
+      <label backgroundalpha="1" wordwrap="1" bordercolor="0x000000" backgroundcolor="0xffffff" borderalpha="1" enabled="1" height="20" border="1" width="180" background="1" textalpha="1" textcolor="0x000000" borderradius="1"/>
+      <polystyle backgroundalpha="0.25098" bordercolor="0x0000ff" mode="0" backgroundcolor="0x0000ff" borderalpha="1" handcursor="1"/>
+      <hotspot tilt="1.18" description="活动中心有各类设施" pan="-202.79" id="Point01" title="活动中心" target="" skinid="ht_info" url="">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="1.2" description="" pan="-84.06" id="Point02" title="食堂/图书馆/活动中心" target="" skinid="ht_node" url="{node9}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="-3.04" description="" pan="-256.4" id="Point03" title="物质楼" target="" skinid="ht_node" url="{node14}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="1.96" description="可以充值、补卡" pan="-179.16" id="Point04" title="一卡通中心" target="_blank" skinid="ht_url" url="">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="9.4" description="" pan="-201.16" id="Point05" title="美食广场" target="" skinid="ht_info" url="">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="3.82" description="" pan="-105.81" id="Point06" title="查看食堂" target="_blank" skinid="ht_url" url="../../../app/65f158381a957e154d6cd112#DownloadPage">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+    </hotspots>
+    <media/>
+    <transition zoomout="0" zoomafteroutfov="20" zoomfov="20" blendtime="1" enabled="1" blendcolor="0x000000" type="crossdissolve" delay="none" zoomafterinfov="90" zoomspeed="2" zoomin="0" zoomoutpause="1" softedge="0"/>
+    <animation useinautorotation="0" animsequence="Animation01" clipsrandom="0" syncanimationwithvideo="0"/>
+    <control sensitivity="1" dblclickfullscreen="0" contextfullscreen="1" lockedkeyboardzoom="0" invertcontrol="1" hideabout="0" zoomcentercursor="1" invertwheel="0" speedwheel="1" rubberband="0" lockedmouse="0" contextvr="1" lockedwheel="0" simulatemass="1" lockedkeyboard="0" contextprojections="0">
+      <menulink text="" url=""/>
+    </control>
+  </panorama>
+  <panorama id="node9">
+    <input leveltileurl="tiles/node9/cf_%c/l_%l/c_%x/tile_%y.jpg" height="1728" levelingpitch="0" width="1728" levelbias="0.400" overlap="1" leveltilesize="510" levelbiashidpi="1.000" levelingroll="0">
+      <level width="1728" preload="0" predecode="0" height="1728"/>
+      <level width="864" preload="0" predecode="0" height="864"/>
+      <level width="432" preload="1" predecode="1" height="432"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view pannorth="0" fovmode="0">
+      <start tilt="0" pan="0" fov="70" projection="4"/>
+      <flyin tilt="-90" pan="0" fov="170" projection="9"/>
+      <min tilt="-90" pan="0" fovpixel="2"/>
+      <max tilt="90" pan="360" fovstereographic="330" fov="120" fovfisheye="360" scaletofit="1"/>
+    </view>
+    <userdata description="" author="" source="" info="" heading="0" title="" tags="panodel" copyright="" datetime="" latitude="" customnodeid="" nodeid="node9" comment="" longitude=""/>
+    <hotspots width="180" wordwrap="1" smoothmovement="0" height="20">
+      <label backgroundalpha="1" wordwrap="1" bordercolor="0x000000" backgroundcolor="0xffffff" borderalpha="1" enabled="1" height="20" border="1" width="180" background="1" textalpha="1" textcolor="0x000000" borderradius="1"/>
+      <polystyle backgroundalpha="0.25098" bordercolor="0x0000ff" mode="0" backgroundcolor="0x0000ff" borderalpha="1" handcursor="1"/>
+      <hotspot tilt="1.56" description="" pan="-148.25" id="Point01" title="食堂" target="_blank" skinid="ht_url" url="../../../app/65f158381a957e154d6cd112#DownloadPage">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="-3.98" description="" pan="-199.83" id="Point02" title="活动中心/美食广场" target="152.8/23.6/70.0" skinid="ht_node" url="{node8}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="1.8" description="" pan="-345.7" id="Point03" title="东图书馆" target="48.8/-5.4/70.0" skinid="ht_node" url="{node11}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="1.15" description="" pan="-117.72" id="Point04" title="第二教学楼" target="179.0/-4.5/70.0" skinid="ht_node" url="{node4}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="-1.09" description="" pan="-80.22" id="Point05" title="一教路口" target="" skinid="ht_node" url="{node1}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+    </hotspots>
+    <media/>
+    <transition zoomout="0" zoomafteroutfov="20" zoomfov="20" blendtime="1" enabled="1" blendcolor="0x000000" type="crossdissolve" delay="none" zoomafterinfov="90" zoomspeed="2" zoomin="0" zoomoutpause="1" softedge="0"/>
+    <animation useinautorotation="0" animsequence="Animation01" clipsrandom="0" syncanimationwithvideo="0"/>
+    <control sensitivity="1" dblclickfullscreen="0" contextfullscreen="1" lockedkeyboardzoom="0" invertcontrol="1" hideabout="0" zoomcentercursor="1" invertwheel="0" speedwheel="1" rubberband="0" lockedmouse="0" contextvr="1" lockedwheel="0" simulatemass="1" lockedkeyboard="0" contextprojections="0">
+      <menulink text="" url=""/>
+    </control>
+  </panorama>
+  <panorama id="node10">
+    <input leveltileurl="tiles/node10/cf_%c/l_%l/c_%x/tile_%y.jpg" height="1728" levelingpitch="0" width="1728" levelbias="0.400" overlap="1" leveltilesize="510" levelbiashidpi="1.000" levelingroll="0">
+      <level width="1728" preload="0" predecode="0" height="1728"/>
+      <level width="864" preload="0" predecode="0" height="864"/>
+      <level width="432" preload="1" predecode="1" height="432"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view pannorth="0" fovmode="0">
+      <start tilt="0" pan="0" fov="70" projection="4"/>
+      <flyin tilt="-90" pan="0" fov="170" projection="9"/>
+      <min tilt="-90" pan="0" fovpixel="2"/>
+      <max tilt="90" pan="360" fovstereographic="330" fov="120" fovfisheye="360" scaletofit="1"/>
+    </view>
+    <userdata description="" author="" source="" info="" heading="0" title="" tags="panodel" copyright="" datetime="" latitude="" customnodeid="" nodeid="node10" comment="" longitude=""/>
+    <hotspots width="180" wordwrap="1" smoothmovement="0" height="20">
+      <label backgroundalpha="1" wordwrap="1" bordercolor="0x000000" backgroundcolor="0xffffff" borderalpha="1" enabled="1" height="20" border="1" width="180" background="1" textalpha="1" textcolor="0x000000" borderradius="1"/>
+      <polystyle backgroundalpha="0.25098" bordercolor="0x0000ff" mode="0" backgroundcolor="0x0000ff" borderalpha="1" handcursor="1"/>
+      <hotspot tilt="2.88" description="举办各类大型活动" pan="-293.17" id="Point01" title="东区大礼堂" target="" skinid="ht_info" url="">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="-0.21" description="" pan="-62.19" id="Point02" title="体育场路口" target="-19.2/-6.2/70.0" skinid="ht_node" url="{node19}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="-2.98" description="" pan="-169.6" id="Point03" title="物质楼" target="" skinid="ht_node" url="{node14}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="9.65" description="" pan="-38.52" id="Point04" title="马克思主义学院" target="_blank" skinid="ht_url" url="https://marx.ustc.edu.cn/main.htm">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+    </hotspots>
+    <media/>
+    <transition zoomout="0" zoomafteroutfov="20" zoomfov="20" blendtime="1" enabled="1" blendcolor="0x000000" type="crossdissolve" delay="none" zoomafterinfov="90" zoomspeed="2" zoomin="0" zoomoutpause="1" softedge="0"/>
+    <animation useinautorotation="0" animsequence="Animation01" clipsrandom="0" syncanimationwithvideo="0"/>
+    <control sensitivity="1" dblclickfullscreen="0" contextfullscreen="1" lockedkeyboardzoom="0" invertcontrol="1" hideabout="0" zoomcentercursor="1" invertwheel="0" speedwheel="1" rubberband="0" lockedmouse="0" contextvr="1" lockedwheel="0" simulatemass="1" lockedkeyboard="0" contextprojections="0">
+      <menulink text="" url=""/>
+    </control>
+  </panorama>
+  <panorama id="node11">
+    <input leveltileurl="tiles/node11/cf_%c/l_%l/c_%x/tile_%y.jpg" height="1728" levelingpitch="0" width="1728" levelbias="0.400" overlap="1" leveltilesize="510" levelbiashidpi="1.000" levelingroll="0">
+      <level width="1728" preload="0" predecode="0" height="1728"/>
+      <level width="864" preload="0" predecode="0" height="864"/>
+      <level width="432" preload="1" predecode="1" height="432"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view pannorth="0" fovmode="0">
+      <start tilt="0" pan="0" fov="70" projection="4"/>
+      <flyin tilt="-90" pan="0" fov="170" projection="9"/>
+      <min tilt="-90" pan="0" fovpixel="2"/>
+      <max tilt="90" pan="360" fovstereographic="330" fov="120" fovfisheye="360" scaletofit="1"/>
+    </view>
+    <userdata description="" author="" source="" info="" heading="0" title="" tags="panodel" copyright="" datetime="" latitude="" customnodeid="" nodeid="node11" comment="" longitude=""/>
+    <hotspots width="180" wordwrap="1" smoothmovement="0" height="20">
+      <label backgroundalpha="1" wordwrap="1" bordercolor="0x000000" backgroundcolor="0xffffff" borderalpha="1" enabled="1" height="20" border="1" width="180" background="1" textalpha="1" textcolor="0x000000" borderradius="1"/>
+      <polystyle backgroundalpha="0.25098" bordercolor="0x0000ff" mode="0" backgroundcolor="0x0000ff" borderalpha="1" handcursor="1"/>
+      <hotspot tilt="-1.49" description="" pan="-215.21" id="Point01" title="大礼堂" target="68.6/-4.9/70.0" skinid="ht_node" url="{node10}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="-1.48" description="" pan="-257.74" id="Point02" title="东运动场" target="-124.7/2.5/70.0" skinid="ht_node" url="{node18}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="-1.34" description="" pan="-292.66" id="Point03" title="东区大门/隧道" target="" skinid="ht_node" url="{node19}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="3.38" description="" pan="-91.79" id="Point04" title="食堂/活动中心/教学楼" target="" skinid="ht_node" url="{node9}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="-1.86" description="" pan="-187.9" id="Point05" title="物质楼路口" target="-166.8/12.8/70.0" skinid="ht_node" url="{node14}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="9.3" description="" pan="-356.22" id="Point06" title="" target="_blank" skinid="ht_url" url="">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="11.73" description="" pan="-0.68" id="Point07" title="进入图书馆官网" target="_blank" skinid="ht_url" url="https://lib.ustc.edu.cn/">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="14.21" description="" pan="-8.06" id="Point08" title="介绍" target="_blank" skinid="ht_url" url="https://m.baike.ustc.edu.cn/wiki/detail?id=231">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+    </hotspots>
+    <media/>
+    <transition zoomout="0" zoomafteroutfov="20" zoomfov="20" blendtime="1" enabled="1" blendcolor="0x000000" type="crossdissolve" delay="none" zoomafterinfov="90" zoomspeed="2" zoomin="0" zoomoutpause="1" softedge="0"/>
+    <animation useinautorotation="0" animsequence="Animation01" clipsrandom="0" syncanimationwithvideo="0"/>
+    <control sensitivity="1" dblclickfullscreen="0" contextfullscreen="1" lockedkeyboardzoom="0" invertcontrol="1" hideabout="0" zoomcentercursor="1" invertwheel="0" speedwheel="1" rubberband="0" lockedmouse="0" contextvr="1" lockedwheel="0" simulatemass="1" lockedkeyboard="0" contextprojections="0">
+      <menulink text="" url=""/>
+    </control>
+  </panorama>
+  <panorama id="node12">
+    <input leveltileurl="tiles/node12/cf_%c/l_%l/c_%x/tile_%y.jpg" height="1728" levelingpitch="0" width="1728" levelbias="0.400" overlap="1" leveltilesize="510" levelbiashidpi="1.000" levelingroll="0">
+      <level width="1728" preload="0" predecode="0" height="1728"/>
+      <level width="864" preload="0" predecode="0" height="864"/>
+      <level width="432" preload="1" predecode="1" height="432"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view pannorth="0" fovmode="0">
+      <start tilt="0" pan="0" fov="70" projection="4"/>
+      <flyin tilt="-90" pan="0" fov="170" projection="9"/>
+      <min tilt="-90" pan="0" fovpixel="2"/>
+      <max tilt="90" pan="360" fovstereographic="330" fov="120" fovfisheye="360" scaletofit="1"/>
+    </view>
+    <userdata description="" author="" source="" info="" heading="0" title="" tags="panodel" copyright="" datetime="" latitude="" customnodeid="" nodeid="node12" comment="" longitude=""/>
+    <hotspots width="180" wordwrap="1" smoothmovement="0" height="20">
+      <label backgroundalpha="1" wordwrap="1" bordercolor="0x000000" backgroundcolor="0xffffff" borderalpha="1" enabled="1" height="20" border="1" width="180" background="1" textalpha="1" textcolor="0x000000" borderradius="1"/>
+      <polystyle backgroundalpha="0.25098" bordercolor="0x0000ff" mode="0" backgroundcolor="0x0000ff" borderalpha="1" handcursor="1"/>
+      <hotspot tilt="-7.1" description="" pan="-252.36" id="Point01" title="第五教学楼" target="-9.5/23.7/70.0" skinid="ht_node" url="{node5}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="2.72" description="" pan="-63.3" id="Point02" title="老北门" target="-162.3/5.3/70.0" skinid="ht_node" url="{node13}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="-2.13" description="" pan="-352.97" id="Point03" title="一教路口" target="" skinid="ht_node" url="{node1}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="8.81" description="东侧有地铁站" pan="-163.78" id="Point04" title="东区北门" target="" skinid="ht_info" url="">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+    </hotspots>
+    <media/>
+    <transition zoomout="0" zoomafteroutfov="20" zoomfov="20" blendtime="1" enabled="1" blendcolor="0x000000" type="crossdissolve" delay="none" zoomafterinfov="90" zoomspeed="2" zoomin="0" zoomoutpause="1" softedge="0"/>
+    <animation useinautorotation="0" animsequence="Animation01" clipsrandom="0" syncanimationwithvideo="0"/>
+    <control sensitivity="1" dblclickfullscreen="0" contextfullscreen="1" lockedkeyboardzoom="0" invertcontrol="1" hideabout="0" zoomcentercursor="1" invertwheel="0" speedwheel="1" rubberband="0" lockedmouse="0" contextvr="1" lockedwheel="0" simulatemass="1" lockedkeyboard="0" contextprojections="0">
+      <menulink text="" url=""/>
+    </control>
+  </panorama>
+  <panorama id="node13">
+    <input leveltileurl="tiles/node13/cf_%c/l_%l/c_%x/tile_%y.jpg" height="1728" levelingpitch="0" width="1728" levelbias="0.400" overlap="1" leveltilesize="510" levelbiashidpi="1.000" levelingroll="0">
+      <level width="1728" preload="0" predecode="0" height="1728"/>
+      <level width="864" preload="0" predecode="0" height="864"/>
+      <level width="432" preload="1" predecode="1" height="432"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view pannorth="0" fovmode="0">
+      <start tilt="0" pan="0" fov="70" projection="4"/>
+      <flyin tilt="-90" pan="0" fov="170" projection="9"/>
+      <min tilt="-90" pan="0" fovpixel="2"/>
+      <max tilt="90" pan="360" fovstereographic="330" fov="120" fovfisheye="360" scaletofit="1"/>
+    </view>
+    <userdata description="" author="" source="" info="" heading="0" title="" tags="panodel" copyright="" datetime="" latitude="" customnodeid="" nodeid="node13" comment="" longitude=""/>
+    <hotspots width="180" wordwrap="1" smoothmovement="0" height="20">
+      <label backgroundalpha="1" wordwrap="1" bordercolor="0x000000" backgroundcolor="0xffffff" borderalpha="1" enabled="1" height="20" border="1" width="180" background="1" textalpha="1" textcolor="0x000000" borderradius="1"/>
+      <polystyle backgroundalpha="0.25098" bordercolor="0x0000ff" mode="0" backgroundcolor="0x0000ff" borderalpha="1" handcursor="1"/>
+      <hotspot tilt="-3.58" description="" pan="-30.15" distance="34" id="Point01" target="175.7/3.5/70.0" skinid="ht_node" title="东区北门" url="{node12}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="3.42" description="" pan="-153.16" distance="1234" id="Point02" target="-156.4/2.9/70.0" skinid="ht_node" title="第一教学楼/樱花大道" url="{node3}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="20.05" description="" pan="-166.86" id="Point03" title="老北门介绍" target="_blank" skinid="ht_url" url="https://m.baike.ustc.edu.cn/wiki/detail?id=230">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+    </hotspots>
+    <media/>
+    <transition zoomout="0" zoomafteroutfov="20" zoomfov="20" blendtime="1" enabled="1" blendcolor="0x000000" type="crossdissolve" delay="none" zoomafterinfov="90" zoomspeed="2" zoomin="0" zoomoutpause="1" softedge="0"/>
+    <animation useinautorotation="0" animsequence="Animation01" clipsrandom="0" syncanimationwithvideo="0"/>
+    <control sensitivity="1" dblclickfullscreen="0" contextfullscreen="1" lockedkeyboardzoom="0" invertcontrol="1" hideabout="0" zoomcentercursor="1" invertwheel="0" speedwheel="1" rubberband="0" lockedmouse="0" contextvr="1" lockedwheel="0" simulatemass="1" lockedkeyboard="0" contextprojections="0">
+      <menulink text="" url=""/>
+    </control>
+  </panorama>
+  <panorama id="node14">
+    <input leveltileurl="tiles/node14/cf_%c/l_%l/c_%x/tile_%y.jpg" height="1728" levelingpitch="0" width="1728" levelbias="0.400" overlap="1" leveltilesize="510" levelbiashidpi="1.000" levelingroll="0">
+      <level width="1728" preload="0" predecode="0" height="1728"/>
+      <level width="864" preload="0" predecode="0" height="864"/>
+      <level width="432" preload="1" predecode="1" height="432"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view pannorth="0" fovmode="0">
+      <start tilt="0" pan="0" fov="70" projection="4"/>
+      <flyin tilt="-90" pan="0" fov="170" projection="9"/>
+      <min tilt="-90" pan="0" fovpixel="2"/>
+      <max tilt="90" pan="360" fovstereographic="330" fov="120" fovfisheye="360" scaletofit="1"/>
+    </view>
+    <userdata description="" author="" source="" info="" heading="0" title="" tags="panodel" copyright="" datetime="" latitude="" customnodeid="" nodeid="node14" comment="" longitude=""/>
+    <hotspots width="180" wordwrap="1" smoothmovement="0" height="20">
+      <label backgroundalpha="1" wordwrap="1" bordercolor="0x000000" backgroundcolor="0xffffff" borderalpha="1" enabled="1" height="20" border="1" width="180" background="1" textalpha="1" textcolor="0x000000" borderradius="1"/>
+      <polystyle backgroundalpha="0.25098" bordercolor="0x0000ff" mode="0" backgroundcolor="0x0000ff" borderalpha="1" handcursor="1"/>
+      <hotspot tilt="-4.45" description="" pan="-290.76" id="Point01" title="大礼堂" target="35.1/4.2/70.0" skinid="ht_node" url="{node10}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="-1.14" description="" pan="-13.98" id="Point02" title="东图书馆" target="0.8/20.3/70.0" skinid="ht_node" url="{node11}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="1.18" description="" pan="-90.12" id="Point03" title="东活动中心" target="161.7/-5.2/70.0" skinid="ht_node" url="{node8}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="-2.32" description="" pan="-171.72" id="Point04" title="物质楼" target="-144.3/-11.3/70.0" skinid="ht_node" url="{node15}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+    </hotspots>
+    <media/>
+    <transition zoomout="0" zoomafteroutfov="20" zoomfov="20" blendtime="1" enabled="1" blendcolor="0x000000" type="crossdissolve" delay="none" zoomafterinfov="90" zoomspeed="2" zoomin="0" zoomoutpause="1" softedge="0"/>
+    <animation useinautorotation="0" animsequence="Animation01" clipsrandom="0" syncanimationwithvideo="0"/>
+    <control sensitivity="1" dblclickfullscreen="0" contextfullscreen="1" lockedkeyboardzoom="0" invertcontrol="1" hideabout="0" zoomcentercursor="1" invertwheel="0" speedwheel="1" rubberband="0" lockedmouse="0" contextvr="1" lockedwheel="0" simulatemass="1" lockedkeyboard="0" contextprojections="0">
+      <menulink text="" url=""/>
+    </control>
+  </panorama>
+  <panorama id="node15">
+    <input leveltileurl="tiles/node15/cf_%c/l_%l/c_%x/tile_%y.jpg" height="1728" levelingpitch="0" width="1728" levelbias="0.400" overlap="1" leveltilesize="510" levelbiashidpi="1.000" levelingroll="0">
+      <level width="1728" preload="0" predecode="0" height="1728"/>
+      <level width="864" preload="0" predecode="0" height="864"/>
+      <level width="432" preload="1" predecode="1" height="432"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view pannorth="0" fovmode="0">
+      <start tilt="0" pan="0" fov="70" projection="4"/>
+      <flyin tilt="-90" pan="0" fov="170" projection="9"/>
+      <min tilt="-90" pan="0" fovpixel="2"/>
+      <max tilt="90" pan="360" fovstereographic="330" fov="120" fovfisheye="360" scaletofit="1"/>
+    </view>
+    <userdata description="" author="" source="" info="" heading="0" title="" tags="panodel" copyright="" datetime="" latitude="" customnodeid="" nodeid="node15" comment="" longitude=""/>
+    <hotspots width="180" wordwrap="1" smoothmovement="0" height="20">
+      <label backgroundalpha="1" wordwrap="1" bordercolor="0x000000" backgroundcolor="0xffffff" borderalpha="1" enabled="1" height="20" border="1" width="180" background="1" textalpha="1" textcolor="0x000000" borderradius="1"/>
+      <polystyle backgroundalpha="0.25098" bordercolor="0x0000ff" mode="0" backgroundcolor="0x0000ff" borderalpha="1" handcursor="1"/>
+      <hotspot tilt="-4.96" description="" pan="-285.01" id="Point01" title="离开物质楼" target="-17.6/2.5/70.0" skinid="ht_node" url="{node14}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+    </hotspots>
+    <media/>
+    <transition zoomout="0" zoomafteroutfov="20" zoomfov="20" blendtime="1" enabled="1" blendcolor="0x000000" type="crossdissolve" delay="none" zoomafterinfov="90" zoomspeed="2" zoomin="0" zoomoutpause="1" softedge="0"/>
+    <animation useinautorotation="0" animsequence="Animation01" clipsrandom="0" syncanimationwithvideo="0"/>
+    <control sensitivity="1" dblclickfullscreen="0" contextfullscreen="1" lockedkeyboardzoom="0" invertcontrol="1" hideabout="0" zoomcentercursor="1" invertwheel="0" speedwheel="1" rubberband="0" lockedmouse="0" contextvr="1" lockedwheel="0" simulatemass="1" lockedkeyboard="0" contextprojections="0">
+      <menulink text="" url=""/>
+    </control>
+  </panorama>
+  <panorama id="node16">
+    <input leveltileurl="tiles/node16/cf_%c/l_%l/c_%x/tile_%y.jpg" height="1728" levelingpitch="0" width="1728" levelbias="0.400" overlap="1" leveltilesize="510" levelbiashidpi="1.000" levelingroll="0">
+      <level width="1728" preload="0" predecode="0" height="1728"/>
+      <level width="864" preload="0" predecode="0" height="864"/>
+      <level width="432" preload="1" predecode="1" height="432"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view pannorth="0" fovmode="0">
+      <start tilt="0" pan="0" fov="70" projection="4"/>
+      <flyin tilt="-90" pan="0" fov="170" projection="9"/>
+      <min tilt="-90" pan="0" fovpixel="2"/>
+      <max tilt="90" pan="360" fovstereographic="330" fov="120" fovfisheye="360" scaletofit="1"/>
+    </view>
+    <userdata description="" author="" source="" info="" heading="0" title="" tags="panodel" copyright="" datetime="" latitude="" customnodeid="" nodeid="node16" comment="" longitude=""/>
+    <hotspots width="180" wordwrap="1" smoothmovement="0" height="20">
+      <label backgroundalpha="1" wordwrap="1" bordercolor="0x000000" backgroundcolor="0xffffff" borderalpha="1" enabled="1" height="20" border="1" width="180" background="1" textalpha="1" textcolor="0x000000" borderradius="1"/>
+      <polystyle backgroundalpha="0.25098" bordercolor="0x0000ff" mode="0" backgroundcolor="0x0000ff" borderalpha="1" handcursor="1"/>
+      <hotspot tilt="-6.16" description="" pan="-292.14" id="Point01" title="一教路口" target="144.8/-1.2/70.0" skinid="ht_node" url="{node1}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="-3.76" description="" pan="-181.29" id="Point02" title="郭沫若广场" target="129.3/-13.3/70.0" skinid="ht_node" url="{node7}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="4.8" description="" pan="-64.15" id="Point03" title="第二教学楼" target="19.1/0.1/70.0" skinid="ht_node" url="{node4}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="3.53" description="" pan="-97.62" id="Point04" title="食堂/图书馆/活动中心" target="153.6/-8.0/70.0" skinid="ht_node" url="{node9}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="5.64" description="" pan="-0.99" id="Point05" title="少年班学院介绍" target="_blank" skinid="ht_url" url="https://sgy.ustc.edu.cn/main.htm">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+    </hotspots>
+    <media/>
+    <transition zoomout="0" zoomafteroutfov="20" zoomfov="20" blendtime="1" enabled="1" blendcolor="0x000000" type="crossdissolve" delay="none" zoomafterinfov="90" zoomspeed="2" zoomin="0" zoomoutpause="1" softedge="0"/>
+    <animation useinautorotation="0" animsequence="Animation01" clipsrandom="0" syncanimationwithvideo="0"/>
+    <control sensitivity="1" dblclickfullscreen="0" contextfullscreen="1" lockedkeyboardzoom="0" invertcontrol="1" hideabout="0" zoomcentercursor="1" invertwheel="0" speedwheel="1" rubberband="0" lockedmouse="0" contextvr="1" lockedwheel="0" simulatemass="1" lockedkeyboard="0" contextprojections="0">
+      <menulink text="" url=""/>
+    </control>
+  </panorama>
+  <panorama id="node17">
+    <input leveltileurl="tiles/node17/cf_%c/l_%l/c_%x/tile_%y.jpg" height="1728" levelingpitch="0" width="1728" levelbias="0.400" overlap="1" leveltilesize="510" levelbiashidpi="1.000" levelingroll="0">
+      <level width="1728" preload="0" predecode="0" height="1728"/>
+      <level width="864" preload="0" predecode="0" height="864"/>
+      <level width="432" preload="1" predecode="1" height="432"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view pannorth="0" fovmode="0">
+      <start tilt="0" pan="0" fov="70" projection="4"/>
+      <flyin tilt="-90" pan="0" fov="170" projection="9"/>
+      <min tilt="-90" pan="0" fovpixel="2"/>
+      <max tilt="90" pan="360" fovstereographic="330" fov="120" fovfisheye="360" scaletofit="1"/>
+    </view>
+    <userdata description="" author="" source="" info="" heading="0" title="" tags="panodel" copyright="" datetime="" latitude="" customnodeid="" nodeid="node17" comment="" longitude=""/>
+    <hotspots width="180" wordwrap="1" smoothmovement="0" height="20">
+      <label backgroundalpha="1" wordwrap="1" bordercolor="0x000000" backgroundcolor="0xffffff" borderalpha="1" enabled="1" height="20" border="1" width="180" background="1" textalpha="1" textcolor="0x000000" borderradius="1"/>
+      <polystyle backgroundalpha="0.25098" bordercolor="0x0000ff" mode="0" backgroundcolor="0x0000ff" borderalpha="1" handcursor="1"/>
+      <hotspot tilt="-1.07" description="" pan="-345.05" id="Point01" title="离开田径场" target="100.5/-11.6/70.0" skinid="ht_node" url="{node18}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+    </hotspots>
+    <media/>
+    <transition zoomout="0" zoomafteroutfov="20" zoomfov="20" blendtime="1" enabled="1" blendcolor="0x000000" type="crossdissolve" delay="none" zoomafterinfov="90" zoomspeed="2" zoomin="0" zoomoutpause="1" softedge="0"/>
+    <animation useinautorotation="0" animsequence="Animation01" clipsrandom="0" syncanimationwithvideo="0"/>
+    <control sensitivity="1" dblclickfullscreen="0" contextfullscreen="1" lockedkeyboardzoom="0" invertcontrol="1" hideabout="0" zoomcentercursor="1" invertwheel="0" speedwheel="1" rubberband="0" lockedmouse="0" contextvr="1" lockedwheel="0" simulatemass="1" lockedkeyboard="0" contextprojections="0">
+      <menulink text="" url=""/>
+    </control>
+  </panorama>
+  <panorama id="node18">
+    <input leveltileurl="tiles/node18/cf_%c/l_%l/c_%x/tile_%y.jpg" height="1728" levelingpitch="0" width="1728" levelbias="0.400" overlap="1" leveltilesize="510" levelbiashidpi="1.000" levelingroll="0">
+      <level width="1728" preload="0" predecode="0" height="1728"/>
+      <level width="864" preload="0" predecode="0" height="864"/>
+      <level width="432" preload="1" predecode="1" height="432"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view pannorth="0" fovmode="0">
+      <start tilt="0" pan="0" fov="70" projection="4"/>
+      <flyin tilt="-90" pan="0" fov="170" projection="9"/>
+      <min tilt="-90" pan="0" fovpixel="2"/>
+      <max tilt="90" pan="360" fovstereographic="330" fov="120" fovfisheye="360" scaletofit="1"/>
+    </view>
+    <userdata description="" author="" source="" info="" heading="0" title="" tags="panodel" copyright="" datetime="" latitude="" customnodeid="" nodeid="node18" comment="" longitude=""/>
+    <hotspots width="180" wordwrap="1" smoothmovement="0" height="20">
+      <label backgroundalpha="1" wordwrap="1" bordercolor="0x000000" backgroundcolor="0xffffff" borderalpha="1" enabled="1" height="20" border="1" width="180" background="1" textalpha="1" textcolor="0x000000" borderradius="1"/>
+      <polystyle backgroundalpha="0.25098" bordercolor="0x0000ff" mode="0" backgroundcolor="0x0000ff" borderalpha="1" handcursor="1"/>
+      <hotspot tilt="1.29" description="" pan="-156.87" id="Point01" title="东田径场" target="" skinid="ht_node" url="{node17}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="-0.07" description="" pan="-72.73" id="Point02" title="大礼堂" target="98.6/-4.2/70.0" skinid="ht_node" url="{node10}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="-0.56" description="" pan="-239.23" id="Point03" title="东区隧道口/大门" target="-35.1/-7.6/70.0" skinid="ht_node" url="{node19}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="-1.71" description="" pan="-286.35" id="Point04" title="东图书馆" target="-91.1/0.6/70.0" skinid="ht_node" url="{node11}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+    </hotspots>
+    <media/>
+    <transition zoomout="0" zoomafteroutfov="20" zoomfov="20" blendtime="1" enabled="1" blendcolor="0x000000" type="crossdissolve" delay="none" zoomafterinfov="90" zoomspeed="2" zoomin="0" zoomoutpause="1" softedge="0"/>
+    <animation useinautorotation="0" animsequence="Animation01" clipsrandom="0" syncanimationwithvideo="0"/>
+    <control sensitivity="1" dblclickfullscreen="0" contextfullscreen="1" lockedkeyboardzoom="0" invertcontrol="1" hideabout="0" zoomcentercursor="1" invertwheel="0" speedwheel="1" rubberband="0" lockedmouse="0" contextvr="1" lockedwheel="0" simulatemass="1" lockedkeyboard="0" contextprojections="0">
+      <menulink text="" url=""/>
+    </control>
+  </panorama>
+  <panorama id="node19">
+    <input leveltileurl="tiles/node19/cf_%c/l_%l/c_%x/tile_%y.jpg" height="1728" levelingpitch="0" width="1728" levelbias="0.400" overlap="1" leveltilesize="510" levelbiashidpi="1.000" levelingroll="0">
+      <level width="1728" preload="0" predecode="0" height="1728"/>
+      <level width="864" preload="0" predecode="0" height="864"/>
+      <level width="432" preload="1" predecode="1" height="432"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view pannorth="0" fovmode="0">
+      <start tilt="0" pan="0" fov="70" projection="4"/>
+      <flyin tilt="-90" pan="0" fov="170" projection="9"/>
+      <min tilt="-90" pan="0" fovpixel="2"/>
+      <max tilt="90" pan="360" fovstereographic="330" fov="120" fovfisheye="360" scaletofit="1"/>
+    </view>
+    <userdata description="" author="" source="" info="" heading="0" title="" tags="panodel" copyright="" datetime="" latitude="" customnodeid="" nodeid="node19" comment="" longitude=""/>
+    <hotspots width="180" wordwrap="1" smoothmovement="0" height="20">
+      <label backgroundalpha="1" wordwrap="1" bordercolor="0x000000" backgroundcolor="0xffffff" borderalpha="1" enabled="1" height="20" border="1" width="180" background="1" textalpha="1" textcolor="0x000000" borderradius="1"/>
+      <polystyle backgroundalpha="0.25098" bordercolor="0x0000ff" mode="0" backgroundcolor="0x0000ff" borderalpha="1" handcursor="1"/>
+      <hotspot tilt="-1.2" description="" pan="-235.82" id="Point01" title="东区西门" target="116.6/-2.2/70.0" skinid="ht_node" url="{node48}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="-1.45" description="" pan="-20.69" id="Point04" title="隧道口" target="80.5/2.0/70.0" skinid="ht_node" url="{node49}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="1.88" description="" pan="-118.42" id="Point02" title="郭沫若广场" target="" skinid="ht_node" url="{node7}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+    </hotspots>
+    <media/>
+    <transition zoomout="0" zoomafteroutfov="20" zoomfov="20" blendtime="1" enabled="1" blendcolor="0x000000" type="crossdissolve" delay="none" zoomafterinfov="90" zoomspeed="2" zoomin="0" zoomoutpause="1" softedge="0"/>
+    <animation useinautorotation="0" animsequence="Animation01" clipsrandom="0" syncanimationwithvideo="0"/>
+    <control sensitivity="1" dblclickfullscreen="0" contextfullscreen="1" lockedkeyboardzoom="0" invertcontrol="1" hideabout="0" zoomcentercursor="1" invertwheel="0" speedwheel="1" rubberband="0" lockedmouse="0" contextvr="1" lockedwheel="0" simulatemass="1" lockedkeyboard="0" contextprojections="0">
+      <menulink text="" url=""/>
+    </control>
+  </panorama>
+  <panorama id="node20">
+    <input leveltileurl="tiles/node20/cf_%c/l_%l/c_%x/tile_%y.jpg" height="1728" levelingpitch="0" width="1728" levelbias="0.400" overlap="1" leveltilesize="510" levelbiashidpi="1.000" levelingroll="0">
+      <level width="1728" preload="0" predecode="0" height="1728"/>
+      <level width="864" preload="0" predecode="0" height="864"/>
+      <level width="432" preload="1" predecode="1" height="432"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view pannorth="0" fovmode="0">
+      <start tilt="0" pan="0" fov="70" projection="4"/>
+      <flyin tilt="-90" pan="0" fov="170" projection="9"/>
+      <min tilt="-90" pan="0" fovpixel="2"/>
+      <max tilt="90" pan="360" fovstereographic="330" fov="120" fovfisheye="360" scaletofit="1"/>
+    </view>
+    <userdata description="" author="" source="" info="" heading="0" title="" tags="panodel" copyright="" datetime="" latitude="" customnodeid="" nodeid="node20" comment="" longitude=""/>
+    <hotspots width="180" wordwrap="1" smoothmovement="0" height="20">
+      <label backgroundalpha="1" wordwrap="1" bordercolor="0x000000" backgroundcolor="0xffffff" borderalpha="1" enabled="1" height="20" border="1" width="180" background="1" textalpha="1" textcolor="0x000000" borderradius="1"/>
+      <polystyle backgroundalpha="0.25098" bordercolor="0x0000ff" mode="0" backgroundcolor="0x0000ff" borderalpha="1" handcursor="1"/>
+      <hotspot tilt="0.49" description="" pan="-169.3" id="Point01" title="进入学校" target="-127.2/23.7/70.0" skinid="ht_node" url="{node19}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="2.74" description="" pan="-24.72" id="Point02" title="KFC" target="" skinid="ht_info" url="">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="2.53" description="非常棒的西餐厅！" pan="-115.35" id="Point03" title="FABIO餐厅" target="" skinid="ht_info" url="">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+    </hotspots>
+    <media/>
+    <transition zoomout="0" zoomafteroutfov="20" zoomfov="20" blendtime="1" enabled="1" blendcolor="0x000000" type="crossdissolve" delay="none" zoomafterinfov="90" zoomspeed="2" zoomin="0" zoomoutpause="1" softedge="0"/>
+    <animation useinautorotation="0" animsequence="Animation01" clipsrandom="0" syncanimationwithvideo="0"/>
+    <control sensitivity="1" dblclickfullscreen="0" contextfullscreen="1" lockedkeyboardzoom="0" invertcontrol="1" hideabout="0" zoomcentercursor="1" invertwheel="0" speedwheel="1" rubberband="0" lockedmouse="0" contextvr="1" lockedwheel="0" simulatemass="1" lockedkeyboard="0" contextprojections="0">
+      <menulink text="" url=""/>
+    </control>
+  </panorama>
+  <panorama id="node21">
+    <input leveltileurl="tiles/node21/cf_%c/l_%l/c_%x/tile_%y.jpg" height="1728" levelingpitch="0" width="1728" levelbias="0.400" overlap="1" leveltilesize="510" levelbiashidpi="1.000" levelingroll="0">
+      <level width="1728" preload="0" predecode="0" height="1728"/>
+      <level width="864" preload="0" predecode="0" height="864"/>
+      <level width="432" preload="1" predecode="1" height="432"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view pannorth="0" fovmode="0">
+      <start tilt="0" pan="0" fov="70" projection="4"/>
+      <flyin tilt="-90" pan="0" fov="170" projection="9"/>
+      <min tilt="-90" pan="0" fovpixel="2"/>
+      <max tilt="90" pan="360" fovstereographic="330" fov="120" fovfisheye="360" scaletofit="1"/>
+    </view>
+    <userdata description="" author="" source="" info="" heading="0" title="" tags="panodel" copyright="" datetime="" latitude="" customnodeid="" nodeid="node21" comment="" longitude=""/>
+    <hotspots width="180" wordwrap="1" smoothmovement="0" height="20">
+      <label backgroundalpha="1" wordwrap="1" bordercolor="0x000000" backgroundcolor="0xffffff" borderalpha="1" enabled="1" height="20" border="1" width="180" background="1" textalpha="1" textcolor="0x000000" borderradius="1"/>
+      <polystyle backgroundalpha="0.25098" bordercolor="0x0000ff" mode="0" backgroundcolor="0x0000ff" borderalpha="1" handcursor="1"/>
+      <hotspot tilt="8.29" description="" pan="-2.55" id="Point01" title="桃李苑食堂" target="" skinid="ht_info" url="">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="4.69" description="" pan="-316.89" id="Point02" title="夜餐部" target="" skinid="ht_info" url="">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="0.16" description="" pan="-19.01" id="Point03" title="科大糕点店" target="" skinid="ht_info" url="">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="1.48" description="" pan="-55.31" id="Point04" title="进入西区" target="88.5/4.3/70.0" skinid="ht_node" url="{node33}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="4.35" description="" pan="-45.47" id="Point05" title="艺术教学中心" target="" skinid="ht_info" url="">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="-1.07" description="" pan="-186.11" id="Point06" title="医学楼" target="_blank" skinid="ht_url" url="">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="-4.44" description="" pan="-253.04" id="Point07" title="运动场/宿舍" target="-111.8/-2.2/70.0" skinid="ht_node" url="{node26}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+    </hotspots>
+    <media/>
+    <transition zoomout="0" zoomafteroutfov="20" zoomfov="20" blendtime="1" enabled="1" blendcolor="0x000000" type="crossdissolve" delay="none" zoomafterinfov="90" zoomspeed="2" zoomin="0" zoomoutpause="1" softedge="0"/>
+    <animation useinautorotation="0" animsequence="Animation01" clipsrandom="0" syncanimationwithvideo="0"/>
+    <control sensitivity="1" dblclickfullscreen="0" contextfullscreen="1" lockedkeyboardzoom="0" invertcontrol="1" hideabout="0" zoomcentercursor="1" invertwheel="0" speedwheel="1" rubberband="0" lockedmouse="0" contextvr="1" lockedwheel="0" simulatemass="1" lockedkeyboard="0" contextprojections="0">
+      <menulink text="" url=""/>
+    </control>
+  </panorama>
+  <panorama id="node22">
+    <input leveltileurl="tiles/node22/cf_%c/l_%l/c_%x/tile_%y.jpg" height="1728" levelingpitch="0" width="1728" levelbias="0.400" overlap="1" leveltilesize="510" levelbiashidpi="1.000" levelingroll="0">
+      <level width="1728" preload="0" predecode="0" height="1728"/>
+      <level width="864" preload="0" predecode="0" height="864"/>
+      <level width="432" preload="1" predecode="1" height="432"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view pannorth="0" fovmode="0">
+      <start tilt="0" pan="0" fov="70" projection="4"/>
+      <flyin tilt="-90" pan="0" fov="170" projection="9"/>
+      <min tilt="-90" pan="0" fovpixel="2"/>
+      <max tilt="90" pan="360" fovstereographic="330" fov="120" fovfisheye="360" scaletofit="1"/>
+    </view>
+    <userdata description="" author="" source="" info="" heading="0" title="" tags="panodel" copyright="" datetime="" latitude="" customnodeid="" nodeid="node22" comment="" longitude=""/>
+    <hotspots width="180" wordwrap="1" smoothmovement="0" height="20">
+      <label backgroundalpha="1" wordwrap="1" bordercolor="0x000000" backgroundcolor="0xffffff" borderalpha="1" enabled="1" height="20" border="1" width="180" background="1" textalpha="1" textcolor="0x000000" borderradius="1"/>
+      <polystyle backgroundalpha="0.25098" bordercolor="0x0000ff" mode="0" backgroundcolor="0x0000ff" borderalpha="1" handcursor="1"/>
+      <hotspot tilt="2.12" description="" pan="-26.98" id="Point01" title="前往中区" target="-22.1/-8.9/70.0" skinid="ht_node" url="{node25}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="-0.01" description="" pan="-204.35" id="Point02" title="前往东区" target="-86.5/-3.2/70.0" skinid="ht_node" url="{node19}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+    </hotspots>
+    <media/>
+    <transition zoomout="0" zoomafteroutfov="20" zoomfov="20" blendtime="1" enabled="1" blendcolor="0x000000" type="crossdissolve" delay="none" zoomafterinfov="90" zoomspeed="2" zoomin="0" zoomoutpause="1" softedge="0"/>
+    <animation useinautorotation="0" animsequence="Animation01" clipsrandom="0" syncanimationwithvideo="0"/>
+    <control sensitivity="1" dblclickfullscreen="0" contextfullscreen="1" lockedkeyboardzoom="0" invertcontrol="1" hideabout="0" zoomcentercursor="1" invertwheel="0" speedwheel="1" rubberband="0" lockedmouse="0" contextvr="1" lockedwheel="0" simulatemass="1" lockedkeyboard="0" contextprojections="0">
+      <menulink text="" url=""/>
+    </control>
+  </panorama>
+  <panorama id="node23">
+    <input leveltileurl="tiles/node23/cf_%c/l_%l/c_%x/tile_%y.jpg" height="1728" levelingpitch="0" width="1728" levelbias="0.400" overlap="1" leveltilesize="510" levelbiashidpi="1.000" levelingroll="0">
+      <level width="1728" preload="0" predecode="0" height="1728"/>
+      <level width="864" preload="0" predecode="0" height="864"/>
+      <level width="432" preload="1" predecode="1" height="432"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view pannorth="0" fovmode="0">
+      <start tilt="0" pan="0" fov="70" projection="4"/>
+      <flyin tilt="-90" pan="0" fov="170" projection="9"/>
+      <min tilt="-90" pan="0" fovpixel="2"/>
+      <max tilt="90" pan="360" fovstereographic="330" fov="120" fovfisheye="360" scaletofit="1"/>
+    </view>
+    <userdata description="" author="" source="" info="" heading="0" title="" tags="panodel" copyright="" datetime="" latitude="" customnodeid="" nodeid="node23" comment="" longitude=""/>
+    <hotspots width="180" wordwrap="1" smoothmovement="0" height="20">
+      <label backgroundalpha="1" wordwrap="1" bordercolor="0x000000" backgroundcolor="0xffffff" borderalpha="1" enabled="1" height="20" border="1" width="180" background="1" textalpha="1" textcolor="0x000000" borderradius="1"/>
+      <polystyle backgroundalpha="0.25098" bordercolor="0x0000ff" mode="0" backgroundcolor="0x0000ff" borderalpha="1" handcursor="1"/>
+      <hotspot tilt="-0.71" description="取件" pan="-356.19" id="Point01" title="近邻宝" target="" skinid="ht_node" url="{node19}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="-0.56" description="取件" pan="-164.27" id="Point02" title="近邻宝快递柜" target="_blank" skinid="ht_url" url="">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="1.34" description="" pan="-269.48" id="Point03" title="中区北门" target="-44.4/2.7/70.0" skinid="ht_node" url="{node24}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="1.83" description="" pan="-73.54" id="Point04" title="中区隧道口" target="" skinid="ht_node" url="{node28}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="26.35" description="5号楼" pan="-156.29" id="Point05" title="5号宿舍楼" target="" skinid="ht_info" url="">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="45.44" description="" pan="-288.74" id="Point06" title="6号宿舍楼" target="" skinid="ht_info" url="">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+    </hotspots>
+    <media/>
+    <transition zoomout="0" zoomafteroutfov="20" zoomfov="20" blendtime="1" enabled="1" blendcolor="0x000000" type="crossdissolve" delay="none" zoomafterinfov="90" zoomspeed="2" zoomin="0" zoomoutpause="1" softedge="0"/>
+    <animation useinautorotation="0" animsequence="Animation01" clipsrandom="0" syncanimationwithvideo="0"/>
+    <control sensitivity="1" dblclickfullscreen="0" contextfullscreen="1" lockedkeyboardzoom="0" invertcontrol="1" hideabout="0" zoomcentercursor="1" invertwheel="0" speedwheel="1" rubberband="0" lockedmouse="0" contextvr="1" lockedwheel="0" simulatemass="1" lockedkeyboard="0" contextprojections="0">
+      <menulink text="" url=""/>
+    </control>
+  </panorama>
+  <panorama id="node24">
+    <input leveltileurl="tiles/node24/cf_%c/l_%l/c_%x/tile_%y.jpg" height="1728" levelingpitch="0" width="1728" levelbias="0.400" overlap="1" leveltilesize="510" levelbiashidpi="1.000" levelingroll="0">
+      <level width="1728" preload="0" predecode="0" height="1728"/>
+      <level width="864" preload="0" predecode="0" height="864"/>
+      <level width="432" preload="1" predecode="1" height="432"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view pannorth="0" fovmode="0">
+      <start tilt="0" pan="0" fov="70" projection="4"/>
+      <flyin tilt="-90" pan="0" fov="170" projection="9"/>
+      <min tilt="-90" pan="0" fovpixel="2"/>
+      <max tilt="90" pan="360" fovstereographic="330" fov="120" fovfisheye="360" scaletofit="1"/>
+    </view>
+    <userdata description="" author="" source="" info="" heading="0" title="" tags="panodel" copyright="" datetime="" latitude="" customnodeid="" nodeid="node24" comment="" longitude=""/>
+    <hotspots width="180" wordwrap="1" smoothmovement="0" height="20">
+      <label backgroundalpha="1" wordwrap="1" bordercolor="0x000000" backgroundcolor="0xffffff" borderalpha="1" enabled="1" height="20" border="1" width="180" background="1" textalpha="1" textcolor="0x000000" borderradius="1"/>
+      <polystyle backgroundalpha="0.25098" bordercolor="0x0000ff" mode="0" backgroundcolor="0x0000ff" borderalpha="1" handcursor="1"/>
+      <hotspot tilt="0.63" description="" pan="-132.88" id="Point01" title="近邻宝" target="20.9/-2.7/70.0" skinid="ht_node" url="{node23}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="-3.26" description="" pan="-317.93" id="Point02" title="食堂" target="6.6/-0.8/70.0" skinid="ht_node" url="{node21}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="-0.01" description="" pan="-225.17" id="Point03" title="体育馆路口" target="7.9/-2.0/70.0" skinid="ht_node" url="{node28}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="5.03" description="" pan="-205.52" id="Point04" title="1号宿舍楼" target="" skinid="ht_info" url="">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="9.71" description="" pan="-237.75" id="Point05" title="2号宿舍楼" target="" skinid="ht_info" url="">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="23.01" description="" pan="-277.38" id="Point06" title="4号宿舍楼" target="" skinid="ht_info" url="">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="19.25" description="" pan="-101.23" id="Point07" title="6号宿舍楼" target="" skinid="ht_info" url="">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="19.92" description="" pan="-160.85" id="Point08" title="5号宿舍楼" target="" skinid="ht_info" url="">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="-0.72" description="" pan="-50.04" id="Point09" title="郭永怀像" target="-177.1/-4.2/70.0" skinid="ht_node" url="{node50}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+    </hotspots>
+    <media/>
+    <transition zoomout="0" zoomafteroutfov="20" zoomfov="20" blendtime="1" enabled="1" blendcolor="0x000000" type="crossdissolve" delay="none" zoomafterinfov="90" zoomspeed="2" zoomin="0" zoomoutpause="1" softedge="0"/>
+    <animation useinautorotation="0" animsequence="Animation01" clipsrandom="0" syncanimationwithvideo="0"/>
+    <control sensitivity="1" dblclickfullscreen="0" contextfullscreen="1" lockedkeyboardzoom="0" invertcontrol="1" hideabout="0" zoomcentercursor="1" invertwheel="0" speedwheel="1" rubberband="0" lockedmouse="0" contextvr="1" lockedwheel="0" simulatemass="1" lockedkeyboard="0" contextprojections="0">
+      <menulink text="" url=""/>
+    </control>
+  </panorama>
+  <panorama id="node25">
+    <input leveltileurl="tiles/node25/cf_%c/l_%l/c_%x/tile_%y.jpg" height="1728" levelingpitch="0" width="1728" levelbias="0.400" overlap="1" leveltilesize="510" levelbiashidpi="1.000" levelingroll="0">
+      <level width="1728" preload="0" predecode="0" height="1728"/>
+      <level width="864" preload="0" predecode="0" height="864"/>
+      <level width="432" preload="1" predecode="1" height="432"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view pannorth="0" fovmode="0">
+      <start tilt="0" pan="0" fov="70" projection="4"/>
+      <flyin tilt="-90" pan="0" fov="170" projection="9"/>
+      <min tilt="-90" pan="0" fovpixel="2"/>
+      <max tilt="90" pan="360" fovstereographic="330" fov="120" fovfisheye="360" scaletofit="1"/>
+    </view>
+    <userdata description="" author="" source="" info="" heading="0" title="Mtunnel" tags="panodel" copyright="" datetime="" latitude="" customnodeid="" nodeid="node25" comment="" longitude=""/>
+    <hotspots width="180" wordwrap="1" smoothmovement="0" height="20">
+      <label backgroundalpha="1" wordwrap="1" bordercolor="0x000000" backgroundcolor="0xffffff" borderalpha="1" enabled="1" height="20" border="1" width="180" background="1" textalpha="1" textcolor="0x000000" borderradius="1"/>
+      <polystyle backgroundalpha="0.25098" bordercolor="0x0000ff" mode="0" backgroundcolor="0x0000ff" borderalpha="1" handcursor="1"/>
+      <hotspot tilt="-2.12" description="" pan="-209.69" id="Point01" title="进入隧道" target="139.7/0.3/70.0" skinid="ht_node" url="{node22}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="-1.05" description="" pan="-220.47" id="Point02" title="穿过隧道" target="-50.4/2.2/70.0" skinid="ht_node" url="{node49}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="5.97" description="" pan="-206.67" id="Point03" title="前往五教" target="-21.6/30.3/70.0" skinid="ht_node" url="{node5}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="4.53" description="" pan="-213.33" id="Point04" title="前往二教" target="-159.7/11.2/70.0" skinid="ht_node" url="{node4}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="-0.19" description="" pan="-115.2" id="Point05" title="近邻宝" target="" skinid="ht_node" url="{node23}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="3.36" description="咖啡馆，也可以举办活动" pan="-64.32" id="Point06" title="青年之家" target="" skinid="ht_info" url="">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="0.16" description="" pan="-19.69" id="Point07" title="体育馆路口" target="" skinid="ht_node" url="{node28}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+    </hotspots>
+    <media/>
+    <transition zoomout="0" zoomafteroutfov="20" zoomfov="20" blendtime="1" enabled="1" blendcolor="0x000000" type="crossdissolve" delay="none" zoomafterinfov="90" zoomspeed="2" zoomin="0" zoomoutpause="1" softedge="0"/>
+    <animation useinautorotation="0" animsequence="Animation01" clipsrandom="0" syncanimationwithvideo="0"/>
+    <control sensitivity="1" dblclickfullscreen="0" contextfullscreen="1" lockedkeyboardzoom="0" invertcontrol="1" hideabout="0" zoomcentercursor="1" invertwheel="0" speedwheel="1" rubberband="0" lockedmouse="0" contextvr="1" lockedwheel="0" simulatemass="1" lockedkeyboard="0" contextprojections="0">
+      <menulink text="" url=""/>
+    </control>
+  </panorama>
+  <panorama id="node26">
+    <input leveltileurl="tiles/node26/cf_%c/l_%l/c_%x/tile_%y.jpg" height="1728" levelingpitch="0" width="1728" levelbias="0.400" overlap="1" leveltilesize="510" levelbiashidpi="1.000" levelingroll="0">
+      <level width="1728" preload="0" predecode="0" height="1728"/>
+      <level width="864" preload="0" predecode="0" height="864"/>
+      <level width="432" preload="1" predecode="1" height="432"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view pannorth="0" fovmode="0">
+      <start tilt="0" pan="0" fov="70" projection="4"/>
+      <flyin tilt="-90" pan="0" fov="170" projection="9"/>
+      <min tilt="-90" pan="0" fovpixel="2"/>
+      <max tilt="90" pan="360" fovstereographic="330" fov="120" fovfisheye="360" scaletofit="1"/>
+    </view>
+    <userdata description="" author="" source="" info="" heading="0" title="" tags="panodel" copyright="" datetime="" latitude="" customnodeid="" nodeid="node26" comment="" longitude=""/>
+    <hotspots width="180" wordwrap="1" smoothmovement="0" height="20">
+      <label backgroundalpha="1" wordwrap="1" bordercolor="0x000000" backgroundcolor="0xffffff" borderalpha="1" enabled="1" height="20" border="1" width="180" background="1" textalpha="1" textcolor="0x000000" borderradius="1"/>
+      <polystyle backgroundalpha="0.25098" bordercolor="0x0000ff" mode="0" backgroundcolor="0x0000ff" borderalpha="1" handcursor="1"/>
+      <hotspot tilt="15.92" description="女生宿舍" pan="-321.08" id="Point01" title="3号宿舍楼" target="" skinid="ht_info" url="">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="13.94" description="" pan="-37.84" id="Point02" title="2号宿舍楼" target="" skinid="ht_info" url="">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="17.51" description="" pan="-12.53" id="Point03" title="1号宿舍楼" target="" skinid="ht_info" url="">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="1.17" description="" pan="-90.16" id="Point04" title="前进" target="108.1/-15.0/70.0" skinid="ht_node" url="{node28}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="-3.77" description="" pan="-260.49" id="Point05" title="食堂/艺术教学中心" target="-41.9/0.3/70.0" skinid="ht_node" url="{node21}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+    </hotspots>
+    <media/>
+    <transition zoomout="0" zoomafteroutfov="20" zoomfov="20" blendtime="1" enabled="1" blendcolor="0x000000" type="crossdissolve" delay="none" zoomafterinfov="90" zoomspeed="2" zoomin="0" zoomoutpause="1" softedge="0"/>
+    <animation useinautorotation="0" animsequence="Animation01" clipsrandom="0" syncanimationwithvideo="0"/>
+    <control sensitivity="1" dblclickfullscreen="0" contextfullscreen="1" lockedkeyboardzoom="0" invertcontrol="1" hideabout="0" zoomcentercursor="1" invertwheel="0" speedwheel="1" rubberband="0" lockedmouse="0" contextvr="1" lockedwheel="0" simulatemass="1" lockedkeyboard="0" contextprojections="0">
+      <menulink text="" url=""/>
+    </control>
+  </panorama>
+  <panorama id="node27">
+    <input leveltileurl="tiles/node27/cf_%c/l_%l/c_%x/tile_%y.jpg" height="1728" levelingpitch="0" width="1728" levelbias="0.400" overlap="1" leveltilesize="510" levelbiashidpi="1.000" levelingroll="0">
+      <level width="1728" preload="0" predecode="0" height="1728"/>
+      <level width="864" preload="0" predecode="0" height="864"/>
+      <level width="432" preload="1" predecode="1" height="432"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view pannorth="0" fovmode="0">
+      <start tilt="0" pan="0" fov="70" projection="4"/>
+      <flyin tilt="-90" pan="0" fov="170" projection="9"/>
+      <min tilt="-90" pan="0" fovpixel="2"/>
+      <max tilt="90" pan="360" fovstereographic="330" fov="120" fovfisheye="360" scaletofit="1"/>
+    </view>
+    <userdata description="" author="" source="" info="" heading="0" title="" tags="panodel" copyright="" datetime="" latitude="" customnodeid="" nodeid="node27" comment="" longitude=""/>
+    <hotspots width="180" wordwrap="1" smoothmovement="0" height="20">
+      <label backgroundalpha="1" wordwrap="1" bordercolor="0x000000" backgroundcolor="0xffffff" borderalpha="1" enabled="1" height="20" border="1" width="180" background="1" textalpha="1" textcolor="0x000000" borderradius="1"/>
+      <polystyle backgroundalpha="0.25098" bordercolor="0x0000ff" mode="0" backgroundcolor="0x0000ff" borderalpha="1" handcursor="1"/>
+      <hotspot tilt="-2.78" description="" pan="-250.76" id="Point01" title="体育馆路口" target="-159.0/1.6/70.0" skinid="ht_node" url="{node28}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+    </hotspots>
+    <media/>
+    <transition zoomout="0" zoomafteroutfov="20" zoomfov="20" blendtime="1" enabled="1" blendcolor="0x000000" type="crossdissolve" delay="none" zoomafterinfov="90" zoomspeed="2" zoomin="0" zoomoutpause="1" softedge="0"/>
+    <animation useinautorotation="0" animsequence="Animation01" clipsrandom="0" syncanimationwithvideo="0"/>
+    <control sensitivity="1" dblclickfullscreen="0" contextfullscreen="1" lockedkeyboardzoom="0" invertcontrol="1" hideabout="0" zoomcentercursor="1" invertwheel="0" speedwheel="1" rubberband="0" lockedmouse="0" contextvr="1" lockedwheel="0" simulatemass="1" lockedkeyboard="0" contextprojections="0">
+      <menulink text="" url=""/>
+    </control>
+  </panorama>
+  <panorama id="node28">
+    <input leveltileurl="tiles/node28/cf_%c/l_%l/c_%x/tile_%y.jpg" height="1728" levelingpitch="0" width="1728" levelbias="0.400" overlap="1" leveltilesize="510" levelbiashidpi="1.000" levelingroll="0">
+      <level width="1728" preload="0" predecode="0" height="1728"/>
+      <level width="864" preload="0" predecode="0" height="864"/>
+      <level width="432" preload="1" predecode="1" height="432"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view pannorth="0" fovmode="0">
+      <start tilt="0" pan="0" fov="70" projection="4"/>
+      <flyin tilt="-90" pan="0" fov="170" projection="9"/>
+      <min tilt="-90" pan="0" fovpixel="2"/>
+      <max tilt="90" pan="360" fovstereographic="330" fov="120" fovfisheye="360" scaletofit="1"/>
+    </view>
+    <userdata description="" author="" source="" info="" heading="0" title="MsportNE" tags="panodel" copyright="" datetime="" latitude="" customnodeid="" nodeid="node28" comment="" longitude=""/>
+    <hotspots width="180" wordwrap="1" smoothmovement="0" height="20">
+      <label backgroundalpha="1" wordwrap="1" bordercolor="0x000000" backgroundcolor="0xffffff" borderalpha="1" enabled="1" height="20" border="1" width="180" background="1" textalpha="1" textcolor="0x000000" borderradius="1"/>
+      <polystyle backgroundalpha="0.25098" bordercolor="0x0000ff" mode="0" backgroundcolor="0x0000ff" borderalpha="1" handcursor="1"/>
+      <hotspot tilt="2.78" description="" pan="-324.36" id="Point01" title="向南" target="-129.7/0.3/70.0" skinid="ht_node" url="{node27}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="16.21" description="" pan="-347.04" id="Point02" title="游泳馆" target="" skinid="ht_info" url="">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="0.73" description="" pan="-78.63" id="Point03" title="活动场" target="112.5/-3.0/70.0" skinid="ht_node" url="{node26}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="7.67" description="" pan="-86.07" id="Point04" title="直奔西区" target="85.8/-5.3/70.0" skinid="ht_node" url="{node33}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="2.72" description="" pan="-82.41" id="Point05" title="食堂" target="0.0/0.0/70.0" skinid="ht_node" url="{node21}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="-4.3" description="" pan="-269.27" id="Point06" title="前往隧道口" target="" skinid="ht_node1" url="{node25}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="2.43" description="" pan="-269.11" id="Point07" title="直达东区一教路口" target="" skinid="ht_node1" url="{node1}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="1.8" description="" pan="-174.54" id="Point08" title="中区北门" target="-46.0/2.2/70.0" skinid="ht_node" url="{node24}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="-23.34" description="" pan="-270.55" id="Point09" title="test" target="" skinid="ht_node1" url="">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+    </hotspots>
+    <media/>
+    <transition zoomout="0" zoomafteroutfov="20" zoomfov="20" blendtime="1" enabled="1" blendcolor="0x000000" type="crossdissolve" delay="none" zoomafterinfov="90" zoomspeed="2" zoomin="0" zoomoutpause="1" softedge="0"/>
+    <animation useinautorotation="0" animsequence="Animation01" clipsrandom="0" syncanimationwithvideo="0"/>
+    <control sensitivity="1" dblclickfullscreen="0" contextfullscreen="1" lockedkeyboardzoom="0" invertcontrol="1" hideabout="0" zoomcentercursor="1" invertwheel="0" speedwheel="1" rubberband="0" lockedmouse="0" contextvr="1" lockedwheel="0" simulatemass="1" lockedkeyboard="0" contextprojections="0">
+      <menulink text="" url=""/>
+    </control>
+  </panorama>
+  <panorama id="node29">
+    <input leveltileurl="tiles/node29/cf_%c/l_%l/c_%x/tile_%y.jpg" height="1728" levelingpitch="0" width="1728" levelbias="0.400" overlap="1" leveltilesize="510" levelbiashidpi="1.000" levelingroll="0">
+      <level width="1728" preload="0" predecode="0" height="1728"/>
+      <level width="864" preload="0" predecode="0" height="864"/>
+      <level width="432" preload="1" predecode="1" height="432"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view pannorth="0" fovmode="0">
+      <start tilt="0" pan="0" fov="70" projection="4"/>
+      <flyin tilt="-90" pan="0" fov="170" projection="9"/>
+      <min tilt="-90" pan="0" fovpixel="2"/>
+      <max tilt="90" pan="360" fovstereographic="330" fov="120" fovfisheye="360" scaletofit="1"/>
+    </view>
+    <userdata description="" author="" source="" info="" heading="0" title="" tags="panodel" copyright="" datetime="" latitude="" customnodeid="" nodeid="node29" comment="" longitude=""/>
+    <hotspots width="180" wordwrap="1" smoothmovement="0" height="20">
+      <label backgroundalpha="1" wordwrap="1" bordercolor="0x000000" backgroundcolor="0xffffff" borderalpha="1" enabled="1" height="20" border="1" width="180" background="1" textalpha="1" textcolor="0x000000" borderradius="1"/>
+      <polystyle backgroundalpha="0.25098" bordercolor="0x0000ff" mode="0" backgroundcolor="0x0000ff" borderalpha="1" handcursor="1"/>
+      <hotspot tilt="8.45" description="" pan="-132.12" id="Point01" title="第三教学楼" target="" skinid="ht_info" url="">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="1.76" description="" pan="-56.22" id="Point03" title="三教北侧" target="56.9/5.3/70.0" skinid="ht_node" url="{node30}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="1.69" description="" pan="-203.6" id="Point02" title="三教广场" target="58.4/-5.9/100.0" skinid="ht_node" url="{node44}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+    </hotspots>
+    <media/>
+    <transition zoomout="0" zoomafteroutfov="20" zoomfov="20" blendtime="1" enabled="1" blendcolor="0x000000" type="crossdissolve" delay="none" zoomafterinfov="90" zoomspeed="2" zoomin="0" zoomoutpause="1" softedge="0"/>
+    <animation useinautorotation="0" animsequence="Animation01" clipsrandom="0" syncanimationwithvideo="0"/>
+    <control sensitivity="1" dblclickfullscreen="0" contextfullscreen="1" lockedkeyboardzoom="0" invertcontrol="1" hideabout="0" zoomcentercursor="1" invertwheel="0" speedwheel="1" rubberband="0" lockedmouse="0" contextvr="1" lockedwheel="0" simulatemass="1" lockedkeyboard="0" contextprojections="0">
+      <menulink text="" url=""/>
+    </control>
+  </panorama>
+  <panorama id="node30">
+    <input leveltileurl="tiles/node30/cf_%c/l_%l/c_%x/tile_%y.jpg" height="1728" levelingpitch="0" width="1728" levelbias="0.400" overlap="1" leveltilesize="510" levelbiashidpi="1.000" levelingroll="0">
+      <level width="1728" preload="0" predecode="0" height="1728"/>
+      <level width="864" preload="0" predecode="0" height="864"/>
+      <level width="432" preload="1" predecode="1" height="432"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view pannorth="0" fovmode="0">
+      <start tilt="0" pan="0" fov="70" projection="4"/>
+      <flyin tilt="-90" pan="0" fov="170" projection="9"/>
+      <min tilt="-90" pan="0" fovpixel="2"/>
+      <max tilt="90" pan="360" fovstereographic="330" fov="120" fovfisheye="360" scaletofit="1"/>
+    </view>
+    <userdata description="" author="" source="" info="" heading="0" title="" tags="panodel" copyright="" datetime="" latitude="" customnodeid="" nodeid="node30" comment="" longitude=""/>
+    <hotspots width="180" wordwrap="1" smoothmovement="0" height="20">
+      <label backgroundalpha="1" wordwrap="1" bordercolor="0x000000" backgroundcolor="0xffffff" borderalpha="1" enabled="1" height="20" border="1" width="180" background="1" textalpha="1" textcolor="0x000000" borderradius="1"/>
+      <polystyle backgroundalpha="0.25098" bordercolor="0x0000ff" mode="0" backgroundcolor="0x0000ff" borderalpha="1" handcursor="1"/>
+      <hotspot tilt="4" description="" pan="-194.98" id="Point01" title="三教C栋" target="-158.6/-0.0/70.0" skinid="ht_node" url="{node29}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="-0.89" description="" pan="-320.05" id="Point03" title="西活动中心" target="-33.9/15.9/70.0" skinid="ht_node" url="{node35}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="4.45" description="" pan="-74.12" id="Point02" title="回大路口" target="-150.5/14.8/70.0" skinid="ht_node" url="{node42}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+    </hotspots>
+    <media/>
+    <transition zoomout="0" zoomafteroutfov="20" zoomfov="20" blendtime="1" enabled="1" blendcolor="0x000000" type="crossdissolve" delay="none" zoomafterinfov="90" zoomspeed="2" zoomin="0" zoomoutpause="1" softedge="0"/>
+    <animation useinautorotation="0" animsequence="Animation01" clipsrandom="0" syncanimationwithvideo="0"/>
+    <control sensitivity="1" dblclickfullscreen="0" contextfullscreen="1" lockedkeyboardzoom="0" invertcontrol="1" hideabout="0" zoomcentercursor="1" invertwheel="0" speedwheel="1" rubberband="0" lockedmouse="0" contextvr="1" lockedwheel="0" simulatemass="1" lockedkeyboard="0" contextprojections="0">
+      <menulink text="" url=""/>
+    </control>
+  </panorama>
+  <panorama id="node31">
+    <input leveltileurl="tiles/node31/cf_%c/l_%l/c_%x/tile_%y.jpg" height="1728" levelingpitch="0" width="1728" levelbias="0.400" overlap="1" leveltilesize="510" levelbiashidpi="1.000" levelingroll="0">
+      <level width="1728" preload="0" predecode="0" height="1728"/>
+      <level width="864" preload="0" predecode="0" height="864"/>
+      <level width="432" preload="1" predecode="1" height="432"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view pannorth="0" fovmode="0">
+      <start tilt="0" pan="0" fov="70" projection="4"/>
+      <flyin tilt="-90" pan="0" fov="170" projection="9"/>
+      <min tilt="-90" pan="0" fovpixel="2"/>
+      <max tilt="90" pan="360" fovstereographic="330" fov="120" fovfisheye="360" scaletofit="1"/>
+    </view>
+    <userdata description="" author="" source="" info="" heading="0" title="" tags="panodel" copyright="" datetime="" latitude="" customnodeid="" nodeid="node31" comment="" longitude=""/>
+    <hotspots width="180" wordwrap="1" smoothmovement="0" height="20">
+      <label backgroundalpha="1" wordwrap="1" bordercolor="0x000000" backgroundcolor="0xffffff" borderalpha="1" enabled="1" height="20" border="1" width="180" background="1" textalpha="1" textcolor="0x000000" borderradius="1"/>
+      <polystyle backgroundalpha="0.25098" bordercolor="0x0000ff" mode="0" backgroundcolor="0x0000ff" borderalpha="1" handcursor="1"/>
+      <hotspot tilt="14.82" description="" pan="-79" id="Point01" title="图书馆" target="" skinid="ht_info" url="">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="3.41" description="" pan="-185.33" id="Point02" title="西区北门" target="-21.9/7.4/70.0" skinid="ht_node" url="{node38}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="2.79" description="" pan="-360" id="Point03" title="西区东门" target="-162.3/7.6/70.0" skinid="ht_node" url="{node33}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="-18.54" description="，很神奇" pan="-26.67" id="Point04" title="会潜泳的天鹅" target="" skinid="ht_info" url="">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+    </hotspots>
+    <media/>
+    <transition zoomout="0" zoomafteroutfov="20" zoomfov="20" blendtime="1" enabled="1" blendcolor="0x000000" type="crossdissolve" delay="none" zoomafterinfov="90" zoomspeed="2" zoomin="0" zoomoutpause="1" softedge="0"/>
+    <animation useinautorotation="0" animsequence="Animation01" clipsrandom="0" syncanimationwithvideo="0"/>
+    <control sensitivity="1" dblclickfullscreen="0" contextfullscreen="1" lockedkeyboardzoom="0" invertcontrol="1" hideabout="0" zoomcentercursor="1" invertwheel="0" speedwheel="1" rubberband="0" lockedmouse="0" contextvr="1" lockedwheel="0" simulatemass="1" lockedkeyboard="0" contextprojections="0">
+      <menulink text="" url=""/>
+    </control>
+  </panorama>
+  <panorama id="node32">
+    <input leveltileurl="tiles/node32/cf_%c/l_%l/c_%x/tile_%y.jpg" height="1728" levelingpitch="0" width="1728" levelbias="0.400" overlap="1" leveltilesize="510" levelbiashidpi="1.000" levelingroll="0">
+      <level width="1728" preload="0" predecode="0" height="1728"/>
+      <level width="864" preload="0" predecode="0" height="864"/>
+      <level width="432" preload="1" predecode="1" height="432"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view pannorth="0" fovmode="0">
+      <start tilt="0" pan="0" fov="70" projection="4"/>
+      <flyin tilt="-90" pan="0" fov="170" projection="9"/>
+      <min tilt="-90" pan="0" fovpixel="2"/>
+      <max tilt="90" pan="360" fovstereographic="330" fov="120" fovfisheye="360" scaletofit="1"/>
+    </view>
+    <userdata description="" author="" source="" info="" heading="0" title="" tags="panodel" copyright="" datetime="" latitude="" customnodeid="" nodeid="node32" comment="" longitude=""/>
+    <hotspots width="180" wordwrap="1" smoothmovement="0" height="20">
+      <label backgroundalpha="1" wordwrap="1" bordercolor="0x000000" backgroundcolor="0xffffff" borderalpha="1" enabled="1" height="20" border="1" width="180" background="1" textalpha="1" textcolor="0x000000" borderradius="1"/>
+      <polystyle backgroundalpha="0.25098" bordercolor="0x0000ff" mode="0" backgroundcolor="0x0000ff" borderalpha="1" handcursor="1"/>
+      <hotspot tilt="8.94" description="" pan="-153.58" id="Point01" title="电三楼" target="" skinid="ht_info" url="">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="3.33" description="" pan="-25.6" id="Point02" title="工院楼" target="" skinid="ht_info" url="">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="3.48" description="" pan="-61.65" id="Point03" title="西区东食堂" target="" skinid="ht_node" url="{node34}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="-5.14" description="" pan="-241.54" id="Point04" title="西区广场/三教" target="-27.8/6.7/100.0" skinid="ht_node" url="{node44}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="-5.73" description="" pan="-325.42" id="Point05" title="西区大路口" target="153.0/9.5/70.0" skinid="ht_node" url="{node42}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+    </hotspots>
+    <media/>
+    <transition zoomout="0" zoomafteroutfov="20" zoomfov="20" blendtime="1" enabled="1" blendcolor="0x000000" type="crossdissolve" delay="none" zoomafterinfov="90" zoomspeed="2" zoomin="0" zoomoutpause="1" softedge="0"/>
+    <animation useinautorotation="0" animsequence="Animation01" clipsrandom="0" syncanimationwithvideo="0"/>
+    <control sensitivity="1" dblclickfullscreen="0" contextfullscreen="1" lockedkeyboardzoom="0" invertcontrol="1" hideabout="0" zoomcentercursor="1" invertwheel="0" speedwheel="1" rubberband="0" lockedmouse="0" contextvr="1" lockedwheel="0" simulatemass="1" lockedkeyboard="0" contextprojections="0">
+      <menulink text="" url=""/>
+    </control>
+  </panorama>
+  <panorama id="node33">
+    <input leveltileurl="tiles/node33/cf_%c/l_%l/c_%x/tile_%y.jpg" height="1728" levelingpitch="0" width="1728" levelbias="0.400" overlap="1" leveltilesize="510" levelbiashidpi="1.000" levelingroll="0">
+      <level width="1728" preload="0" predecode="0" height="1728"/>
+      <level width="864" preload="0" predecode="0" height="864"/>
+      <level width="432" preload="1" predecode="1" height="432"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view pannorth="0" fovmode="0">
+      <start tilt="0" pan="0" fov="70" projection="4"/>
+      <flyin tilt="-90" pan="0" fov="170" projection="9"/>
+      <min tilt="-90" pan="0" fovpixel="2"/>
+      <max tilt="90" pan="360" fovstereographic="330" fov="120" fovfisheye="360" scaletofit="1"/>
+    </view>
+    <userdata description="" author="" source="" info="" heading="0" title="" tags="panodel" copyright="" datetime="" latitude="" customnodeid="" nodeid="node33" comment="" longitude=""/>
+    <hotspots width="180" wordwrap="1" smoothmovement="0" height="20">
+      <label backgroundalpha="1" wordwrap="1" bordercolor="0x000000" backgroundcolor="0xffffff" borderalpha="1" enabled="1" height="20" border="1" width="180" background="1" textalpha="1" textcolor="0x000000" borderradius="1"/>
+      <polystyle backgroundalpha="0.25098" bordercolor="0x0000ff" mode="0" backgroundcolor="0x0000ff" borderalpha="1" handcursor="1"/>
+      <hotspot tilt="0.54" description="" pan="-65.38" id="Point01" title="回中区" target="113.6/-2.3/70.0" skinid="ht_node" url="{node21}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="8.7" description="" pan="-61.32" id="Point02" title="直奔中区宿舍/活动场" target="0.0/0.0/70.0" skinid="ht_node" url="{node26}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="-1.24" description="" pan="-353.54" id="Point03" title="西区的美丽的桥" target="-37.9/-6.7/70.0" skinid="ht_node" url="{node31}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="-3.69" description="" pan="-295.55" id="Point04" title="西区大路口" target="7.2/1.1/70.0" skinid="ht_node" url="{node42}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="-2.22" description="" pan="-180.84" id="Point05" title="西区东食堂" target="0.0/0.0/70.0" skinid="ht_node" url="{node34}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+    </hotspots>
+    <media/>
+    <transition zoomout="0" zoomafteroutfov="20" zoomfov="20" blendtime="1" enabled="1" blendcolor="0x000000" type="crossdissolve" delay="none" zoomafterinfov="90" zoomspeed="2" zoomin="0" zoomoutpause="1" softedge="0"/>
+    <animation useinautorotation="0" animsequence="Animation01" clipsrandom="0" syncanimationwithvideo="0"/>
+    <control sensitivity="1" dblclickfullscreen="0" contextfullscreen="1" lockedkeyboardzoom="0" invertcontrol="1" hideabout="0" zoomcentercursor="1" invertwheel="0" speedwheel="1" rubberband="0" lockedmouse="0" contextvr="1" lockedwheel="0" simulatemass="1" lockedkeyboard="0" contextprojections="0">
+      <menulink text="" url=""/>
+    </control>
+  </panorama>
+  <panorama id="node34">
+    <input leveltileurl="tiles/node34/cf_%c/l_%l/c_%x/tile_%y.jpg" height="1728" levelingpitch="0" width="1728" levelbias="0.400" overlap="1" leveltilesize="510" levelbiashidpi="1.000" levelingroll="0">
+      <level width="1728" preload="0" predecode="0" height="1728"/>
+      <level width="864" preload="0" predecode="0" height="864"/>
+      <level width="432" preload="1" predecode="1" height="432"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view pannorth="0" fovmode="0">
+      <start tilt="0" pan="0" fov="70" projection="4"/>
+      <flyin tilt="-90" pan="0" fov="170" projection="9"/>
+      <min tilt="-90" pan="0" fovpixel="2"/>
+      <max tilt="90" pan="360" fovstereographic="330" fov="120" fovfisheye="360" scaletofit="1"/>
+    </view>
+    <userdata description="" author="" source="" info="" heading="0" title="" tags="panodel" copyright="" datetime="" latitude="" customnodeid="" nodeid="node34" comment="" longitude=""/>
+    <hotspots width="180" wordwrap="1" smoothmovement="0" height="20">
+      <label backgroundalpha="1" wordwrap="1" bordercolor="0x000000" backgroundcolor="0xffffff" borderalpha="1" enabled="1" height="20" border="1" width="180" background="1" textalpha="1" textcolor="0x000000" borderradius="1"/>
+      <polystyle backgroundalpha="0.25098" bordercolor="0x0000ff" mode="0" backgroundcolor="0x0000ff" borderalpha="1" handcursor="1"/>
+      <hotspot tilt="-2.12" description="" pan="-208.88" id="Point01" title="西区东门" target="0.0/0.0/70.0" skinid="ht_node" url="{node33}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="4.57" description="" pan="-161.09" id="Point02" title="各教学楼" target="160.6/-3.2/70.0" skinid="ht_node" url="{node32}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="3.12" description="" pan="-184.56" id="Point03" title="西区大路口" target="-20.0/-3.5/70.0" skinid="ht_node" url="{node42}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="-4.7" description="1楼也是食堂，有很多其他食堂没有的饭菜&#xa;比如土豆泥(划掉)酸梅汤、干面，而且人不多" pan="-313.72" id="Point04" title="1楼西苑餐厅" target="" skinid="ht_info" url="">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="9.24" description="" pan="-348.25" id="Point05" title="2楼芳华餐厅" target="" skinid="ht_info" url="">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+    </hotspots>
+    <media/>
+    <transition zoomout="0" zoomafteroutfov="20" zoomfov="20" blendtime="1" enabled="1" blendcolor="0x000000" type="crossdissolve" delay="none" zoomafterinfov="90" zoomspeed="2" zoomin="0" zoomoutpause="1" softedge="0"/>
+    <animation useinautorotation="0" animsequence="Animation01" clipsrandom="0" syncanimationwithvideo="0"/>
+    <control sensitivity="1" dblclickfullscreen="0" contextfullscreen="1" lockedkeyboardzoom="0" invertcontrol="1" hideabout="0" zoomcentercursor="1" invertwheel="0" speedwheel="1" rubberband="0" lockedmouse="0" contextvr="1" lockedwheel="0" simulatemass="1" lockedkeyboard="0" contextprojections="0">
+      <menulink text="" url=""/>
+    </control>
+  </panorama>
+  <panorama id="node35">
+    <input leveltileurl="tiles/node35/cf_%c/l_%l/c_%x/tile_%y.jpg" height="1728" levelingpitch="0" width="1728" levelbias="0.400" overlap="1" leveltilesize="510" levelbiashidpi="1.000" levelingroll="0">
+      <level width="1728" preload="0" predecode="0" height="1728"/>
+      <level width="864" preload="0" predecode="0" height="864"/>
+      <level width="432" preload="1" predecode="1" height="432"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view pannorth="0" fovmode="0">
+      <start tilt="0" pan="0" fov="70" projection="4"/>
+      <flyin tilt="-90" pan="0" fov="170" projection="9"/>
+      <min tilt="-90" pan="0" fovpixel="2"/>
+      <max tilt="90" pan="360" fovstereographic="330" fov="120" fovfisheye="360" scaletofit="1"/>
+    </view>
+    <userdata description="" author="" source="" info="" heading="0" title="" tags="panodel" copyright="" datetime="" latitude="" customnodeid="" nodeid="node35" comment="" longitude=""/>
+    <hotspots width="180" wordwrap="1" smoothmovement="0" height="20">
+      <label backgroundalpha="1" wordwrap="1" bordercolor="0x000000" backgroundcolor="0xffffff" borderalpha="1" enabled="1" height="20" border="1" width="180" background="1" textalpha="1" textcolor="0x000000" borderradius="1"/>
+      <polystyle backgroundalpha="0.25098" bordercolor="0x0000ff" mode="0" backgroundcolor="0x0000ff" borderalpha="1" handcursor="1"/>
+      <hotspot tilt="9.9" description="在三楼" pan="-8.35" id="Point01" title="活动室" target="" skinid="ht_node" url="{node36}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="0.66" description="" pan="-1.15" id="Point02" title="乒乓球馆" target="" skinid="ht_info" url="">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="2.62" description="" pan="-348.19" id="Point03" title="西区运动场" target="" skinid="ht_info" url="">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="9.22" description="" pan="-16.88" id="Point04" title="礼堂之一" target="" skinid="ht_info" url="">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="0.95" description="" pan="-174.85" id="Point05" title="西区北门" target="-90.7/3.4/70.0" skinid="ht_node" url="{node38}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="-3.86" description="" pan="-236.23" id="Point06" title="三教北" target="179.6/13.6/70.0" skinid="ht_node" url="{node30}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="4.46" description="来活动中心玩的时候很方便" pan="-62.82" id="Point07" title="西区西食堂" target="" skinid="ht_node" url="{node41}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+    </hotspots>
+    <media/>
+    <transition zoomout="0" zoomafteroutfov="20" zoomfov="20" blendtime="1" enabled="1" blendcolor="0x000000" type="crossdissolve" delay="none" zoomafterinfov="90" zoomspeed="2" zoomin="0" zoomoutpause="1" softedge="0"/>
+    <animation useinautorotation="0" animsequence="Animation01" clipsrandom="0" syncanimationwithvideo="0"/>
+    <control sensitivity="1" dblclickfullscreen="0" contextfullscreen="1" lockedkeyboardzoom="0" invertcontrol="1" hideabout="0" zoomcentercursor="1" invertwheel="0" speedwheel="1" rubberband="0" lockedmouse="0" contextvr="1" lockedwheel="0" simulatemass="1" lockedkeyboard="0" contextprojections="0">
+      <menulink text="" url=""/>
+    </control>
+  </panorama>
+  <panorama id="node36">
+    <input leveltileurl="tiles/node36/cf_%c/l_%l/c_%x/tile_%y.jpg" height="1728" levelingpitch="0" width="1728" levelbias="0.400" overlap="1" leveltilesize="510" levelbiashidpi="1.000" levelingroll="0">
+      <level width="1728" preload="0" predecode="0" height="1728"/>
+      <level width="864" preload="0" predecode="0" height="864"/>
+      <level width="432" preload="1" predecode="1" height="432"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view pannorth="0" fovmode="0">
+      <start tilt="0" pan="0" fov="70" projection="4"/>
+      <flyin tilt="-90" pan="0" fov="170" projection="9"/>
+      <min tilt="-90" pan="0" fovpixel="2"/>
+      <max tilt="90" pan="360" fovstereographic="330" fov="120" fovfisheye="360" scaletofit="1"/>
+    </view>
+    <userdata description="" author="" source="" info="" heading="0" title="" tags="panodel" copyright="" datetime="" latitude="" customnodeid="" nodeid="node36" comment="" longitude=""/>
+    <hotspots width="180" wordwrap="1" smoothmovement="0" height="20">
+      <label backgroundalpha="1" wordwrap="1" bordercolor="0x000000" backgroundcolor="0xffffff" borderalpha="1" enabled="1" height="20" border="1" width="180" background="1" textalpha="1" textcolor="0x000000" borderradius="1"/>
+      <polystyle backgroundalpha="0.25098" bordercolor="0x0000ff" mode="0" backgroundcolor="0x0000ff" borderalpha="1" handcursor="1"/>
+      <hotspot tilt="-6.87" description="301-336&#xa;一直向内走，号码变大&#xa;可以在二楼保安室凭学生卡借钥匙" pan="-177.36" id="Point01" title="活动室" target="" skinid="ht_info" url="">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="-2.58" description="" pan="-357.6" id="Point02" title="礼堂" target="" skinid="ht_info" url="">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="-11.25" description="" pan="-276.44" id="Point03" title="下楼" target="171.6/10.8/70.0" skinid="ht_node" url="{node35}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="1.79" description="" pan="-154.4" id="Point04" title="部分社团介绍" target="_blank" skinid="ht_url" url="https://m.baike.ustc.edu.cn/wiki?cid=205">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+    </hotspots>
+    <media/>
+    <transition zoomout="0" zoomafteroutfov="20" zoomfov="20" blendtime="1" enabled="1" blendcolor="0x000000" type="crossdissolve" delay="none" zoomafterinfov="90" zoomspeed="2" zoomin="0" zoomoutpause="1" softedge="0"/>
+    <animation useinautorotation="0" animsequence="Animation01" clipsrandom="0" syncanimationwithvideo="0"/>
+    <control sensitivity="1" dblclickfullscreen="0" contextfullscreen="1" lockedkeyboardzoom="0" invertcontrol="1" hideabout="0" zoomcentercursor="1" invertwheel="0" speedwheel="1" rubberband="0" lockedmouse="0" contextvr="1" lockedwheel="0" simulatemass="1" lockedkeyboard="0" contextprojections="0">
+      <menulink text="" url=""/>
+    </control>
+  </panorama>
+  <panorama id="node37">
+    <input leveltileurl="tiles/node37/cf_%c/l_%l/c_%x/tile_%y.jpg" height="1728" levelingpitch="0" width="1728" levelbias="0.400" overlap="1" leveltilesize="510" levelbiashidpi="1.000" levelingroll="0">
+      <level width="1728" preload="0" predecode="0" height="1728"/>
+      <level width="864" preload="0" predecode="0" height="864"/>
+      <level width="432" preload="1" predecode="1" height="432"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view pannorth="0" fovmode="0">
+      <start tilt="0" pan="0" fov="70" projection="4"/>
+      <flyin tilt="-90" pan="0" fov="170" projection="9"/>
+      <min tilt="-90" pan="0" fovpixel="2"/>
+      <max tilt="90" pan="360" fovstereographic="330" fov="120" fovfisheye="360" scaletofit="1"/>
+    </view>
+    <userdata description="" author="" source="" info="" heading="0" title="" tags="panodel" copyright="" datetime="" latitude="" customnodeid="" nodeid="node37" comment="" longitude=""/>
+    <hotspots width="180" wordwrap="1" smoothmovement="0" height="20">
+      <label backgroundalpha="1" wordwrap="1" bordercolor="0x000000" backgroundcolor="0xffffff" borderalpha="1" enabled="1" height="20" border="1" width="180" background="1" textalpha="1" textcolor="0x000000" borderradius="1"/>
+      <polystyle backgroundalpha="0.25098" bordercolor="0x0000ff" mode="0" backgroundcolor="0x0000ff" borderalpha="1" handcursor="1"/>
+      <hotspot tilt="6.93" description="" pan="-327.66" id="Point01" title="返回路口" target="163.6/19.5/70.0" skinid="ht_node" url="{node42}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="-5.89" description="学生卡同样打8折" pan="-303.92" id="Point02" title="西1958咖啡厅" target="" skinid="ht_info" url="">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+    </hotspots>
+    <media/>
+    <transition zoomout="0" zoomafteroutfov="20" zoomfov="20" blendtime="1" enabled="1" blendcolor="0x000000" type="crossdissolve" delay="none" zoomafterinfov="90" zoomspeed="2" zoomin="0" zoomoutpause="1" softedge="0"/>
+    <animation useinautorotation="0" animsequence="Animation01" clipsrandom="0" syncanimationwithvideo="0"/>
+    <control sensitivity="1" dblclickfullscreen="0" contextfullscreen="1" lockedkeyboardzoom="0" invertcontrol="1" hideabout="0" zoomcentercursor="1" invertwheel="0" speedwheel="1" rubberband="0" lockedmouse="0" contextvr="1" lockedwheel="0" simulatemass="1" lockedkeyboard="0" contextprojections="0">
+      <menulink text="" url=""/>
+    </control>
+  </panorama>
+  <panorama id="node38">
+    <input leveltileurl="tiles/node38/cf_%c/l_%l/c_%x/tile_%y.jpg" height="1728" levelingpitch="0" width="1728" levelbias="0.400" overlap="1" leveltilesize="510" levelbiashidpi="1.000" levelingroll="0">
+      <level width="1728" preload="0" predecode="0" height="1728"/>
+      <level width="864" preload="0" predecode="0" height="864"/>
+      <level width="432" preload="1" predecode="1" height="432"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view pannorth="0" fovmode="0">
+      <start tilt="0" pan="0" fov="70" projection="4"/>
+      <flyin tilt="-90" pan="0" fov="170" projection="9"/>
+      <min tilt="-90" pan="0" fovpixel="2"/>
+      <max tilt="90" pan="360" fovstereographic="330" fov="120" fovfisheye="360" scaletofit="1"/>
+    </view>
+    <userdata description="" author="" source="" info="" heading="0" title="" tags="panodel" copyright="" datetime="" latitude="" customnodeid="" nodeid="node38" comment="" longitude=""/>
+    <hotspots width="180" wordwrap="1" smoothmovement="0" height="20">
+      <label backgroundalpha="1" wordwrap="1" bordercolor="0x000000" backgroundcolor="0xffffff" borderalpha="1" enabled="1" height="20" border="1" width="180" background="1" textalpha="1" textcolor="0x000000" borderradius="1"/>
+      <polystyle backgroundalpha="0.25098" bordercolor="0x0000ff" mode="0" backgroundcolor="0x0000ff" borderalpha="1" handcursor="1"/>
+      <hotspot tilt="2.19" description="" pan="-359.34" id="Point01" title="北门" target="" skinid="ht_info" url="">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="-2.82" description="" pan="-279.9" id="Point02" title="西活动中心" target="" skinid="ht_node" url="{node35}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="-0.86" description="" pan="-75.08" id="Point03" title="西区小桥" target="0.0/0.0/70.0" skinid="ht_node" url="{node31}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="2.04" description="" pan="-174.96" id="Point04" title="西区大路口" target="" skinid="ht_node" url="{node42}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+    </hotspots>
+    <media/>
+    <transition zoomout="0" zoomafteroutfov="20" zoomfov="20" blendtime="1" enabled="1" blendcolor="0x000000" type="crossdissolve" delay="none" zoomafterinfov="90" zoomspeed="2" zoomin="0" zoomoutpause="1" softedge="0"/>
+    <animation useinautorotation="0" animsequence="Animation01" clipsrandom="0" syncanimationwithvideo="0"/>
+    <control sensitivity="1" dblclickfullscreen="0" contextfullscreen="1" lockedkeyboardzoom="0" invertcontrol="1" hideabout="0" zoomcentercursor="1" invertwheel="0" speedwheel="1" rubberband="0" lockedmouse="0" contextvr="1" lockedwheel="0" simulatemass="1" lockedkeyboard="0" contextprojections="0">
+      <menulink text="" url=""/>
+    </control>
+  </panorama>
+  <panorama id="node41">
+    <input leveltileurl="tiles/node41/cf_%c/l_%l/c_%x/tile_%y.jpg" height="1728" levelingpitch="0" width="1728" levelbias="0.400" overlap="1" leveltilesize="510" levelbiashidpi="1.000" levelingroll="0">
+      <level width="1728" preload="0" predecode="0" height="1728"/>
+      <level width="864" preload="0" predecode="0" height="864"/>
+      <level width="432" preload="1" predecode="1" height="432"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view pannorth="0" fovmode="0">
+      <start tilt="0" pan="0" fov="70" projection="4"/>
+      <flyin tilt="-90" pan="0" fov="170" projection="9"/>
+      <min tilt="-90" pan="0" fovpixel="2"/>
+      <max tilt="90" pan="360" fovstereographic="330" fov="120" fovfisheye="360" scaletofit="1"/>
+    </view>
+    <userdata description="" author="" source="" info="" heading="0" title="" tags="panodel" copyright="" datetime="" latitude="" customnodeid="" nodeid="node41" comment="" longitude=""/>
+    <hotspots width="180" wordwrap="1" smoothmovement="0" height="20">
+      <label backgroundalpha="1" wordwrap="1" bordercolor="0x000000" backgroundcolor="0xffffff" borderalpha="1" enabled="1" height="20" border="1" width="180" background="1" textalpha="1" textcolor="0x000000" borderradius="1"/>
+      <polystyle backgroundalpha="0.25098" bordercolor="0x0000ff" mode="0" backgroundcolor="0x0000ff" borderalpha="1" handcursor="1"/>
+      <hotspot tilt="3.4" description="两个门内部有至少四个食堂，相当丰富！" pan="-347.48" id="Point01" title="西区西食堂" target="" skinid="ht_info" url="">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="-2.95" description="" pan="-125.57" id="Point02" title="回活动中心" target="71.1/20.2/70.0" skinid="ht_node" url="{node35}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="2.88" description="" pan="-101.6" id="Point03" title="直达西区大路口" target="-161.2/14.2/70.0" skinid="ht_node" url="{node42}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+    </hotspots>
+    <media/>
+    <transition zoomout="0" zoomafteroutfov="20" zoomfov="20" blendtime="1" enabled="1" blendcolor="0x000000" type="crossdissolve" delay="none" zoomafterinfov="90" zoomspeed="2" zoomin="0" zoomoutpause="1" softedge="0"/>
+    <animation useinautorotation="0" animsequence="Animation01" clipsrandom="0" syncanimationwithvideo="0"/>
+    <control sensitivity="1" dblclickfullscreen="0" contextfullscreen="1" lockedkeyboardzoom="0" invertcontrol="1" hideabout="0" zoomcentercursor="1" invertwheel="0" speedwheel="1" rubberband="0" lockedmouse="0" contextvr="1" lockedwheel="0" simulatemass="1" lockedkeyboard="0" contextprojections="0">
+      <menulink text="" url=""/>
+    </control>
+  </panorama>
+  <panorama id="node42">
+    <input leveltileurl="tiles/node42/cf_%c/l_%l/c_%x/tile_%y.jpg" height="1728" levelingpitch="0" width="1728" levelbias="0.400" overlap="1" leveltilesize="510" levelbiashidpi="1.000" levelingroll="0">
+      <level width="1728" preload="0" predecode="0" height="1728"/>
+      <level width="864" preload="0" predecode="0" height="864"/>
+      <level width="432" preload="1" predecode="1" height="432"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view pannorth="0" fovmode="0">
+      <start tilt="0" pan="0" fov="70" projection="4"/>
+      <flyin tilt="-90" pan="0" fov="170" projection="9"/>
+      <min tilt="-90" pan="0" fovpixel="2"/>
+      <max tilt="90" pan="360" fovstereographic="330" fov="120" fovfisheye="360" scaletofit="1"/>
+    </view>
+    <userdata description="" author="" source="" info="" heading="0" title="" tags="panodel" copyright="" datetime="" latitude="" customnodeid="" nodeid="node42" comment="" longitude=""/>
+    <hotspots width="180" wordwrap="1" smoothmovement="0" height="20">
+      <label backgroundalpha="1" wordwrap="1" bordercolor="0x000000" backgroundcolor="0xffffff" borderalpha="1" enabled="1" height="20" border="1" width="180" background="1" textalpha="1" textcolor="0x000000" borderradius="1"/>
+      <polystyle backgroundalpha="0.25098" bordercolor="0x0000ff" mode="0" backgroundcolor="0x0000ff" borderalpha="1" handcursor="1"/>
+      <polyhotspot description="" id="Poly01" title="查看路口南侧" target="" url="{node43}">
+        <polystring>-206.57/34.18|-200.23/-14.46|-202.37/-16.99|-198.9/-19.32|-322.17/-8.9|-342.11/-15.59|-351.13/15.82|-333.18/36.5|-3.76/3.12|-267.94/53.33</polystring>
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </polyhotspot>
+      <hotspot tilt="2.76" description="可以在网站上找到时刻表&#xa;" pan="-14.11" id="Point01" title="西区校车站" target="" skinid="ht_info" url="">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="1.19" description="" pan="-358.14" id="Point02" title="三教北侧" target="146.0/10.6/70.0" skinid="ht_node" url="{node30}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="-0.01" description="" pan="-8.13" id="Point03" title="西区USTC1958/天鹅湖" target="-179.1/-11.4/70.0" skinid="ht_node" url="{node37}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="10.06" description="有很多讨论室可以预约&#xa;也有很多办公室" pan="-159.04" id="Point04" title="西图书馆" target="_blank" skinid="ht_url" url="https://lib.ustc.edu.cn/">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="3.19" description="" pan="-107.02" id="Point05" title="西区北门" target="-10.7/17.8/70.0" skinid="ht_node" url="{node38}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="5.39" description="" pan="-193.12" id="Point06" title="西区东门" target="-77.3/10.0/70.0" skinid="ht_node" url="{node33}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="15.49" description="" pan="-194.83" id="Point07" title="直达中区宿舍" target="" skinid="ht_node" url="{node28}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+    </hotspots>
+    <media/>
+    <transition zoomout="0" zoomafteroutfov="20" zoomfov="20" blendtime="1" enabled="1" blendcolor="0x000000" type="crossdissolve" delay="none" zoomafterinfov="90" zoomspeed="2" zoomin="0" zoomoutpause="1" softedge="0"/>
+    <animation useinautorotation="0" animsequence="Animation01" clipsrandom="0" syncanimationwithvideo="0"/>
+    <control sensitivity="1" dblclickfullscreen="0" contextfullscreen="1" lockedkeyboardzoom="0" invertcontrol="1" hideabout="0" zoomcentercursor="1" invertwheel="0" speedwheel="1" rubberband="0" lockedmouse="0" contextvr="1" lockedwheel="0" simulatemass="1" lockedkeyboard="0" contextprojections="0">
+      <menulink text="" url=""/>
+    </control>
+  </panorama>
+  <panorama id="node43">
+    <input leveltileurl="tiles/node43/cf_%c/l_%l/c_%x/tile_%y.jpg" height="1728" levelingpitch="0" width="1728" levelbias="0.400" overlap="1" leveltilesize="510" levelbiashidpi="1.000" levelingroll="0">
+      <level width="1728" preload="0" predecode="0" height="1728"/>
+      <level width="864" preload="0" predecode="0" height="864"/>
+      <level width="432" preload="1" predecode="1" height="432"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view pannorth="0" fovmode="0">
+      <start tilt="0" pan="0" fov="70" projection="4"/>
+      <flyin tilt="-90" pan="0" fov="170" projection="9"/>
+      <min tilt="-90" pan="0" fovpixel="2"/>
+      <max tilt="90" pan="360" fovstereographic="330" fov="120" fovfisheye="360" scaletofit="1"/>
+    </view>
+    <userdata description="" author="" source="" info="" heading="0" title="" tags="panodel" copyright="" datetime="" latitude="" customnodeid="" nodeid="node43" comment="" longitude=""/>
+    <hotspots width="180" wordwrap="1" smoothmovement="0" height="20">
+      <label backgroundalpha="1" wordwrap="1" bordercolor="0x000000" backgroundcolor="0xffffff" borderalpha="1" enabled="1" height="20" border="1" width="180" background="1" textalpha="1" textcolor="0x000000" borderradius="1"/>
+      <polystyle backgroundalpha="0.25098" bordercolor="0x0000ff" mode="0" backgroundcolor="0x0000ff" borderalpha="1" handcursor="1"/>
+      <hotspot tilt="-0.81" description="" pan="-250.74" id="Point01" title="西区USTC1958/天鹅湖" target="171.1/-1.3/70.0" skinid="ht_node" url="{node37}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="3.32" description="" pan="-169.71" id="Point02" title="西区广场/三教" target="-43.1/9.5/100.0" skinid="ht_node" url="{node44}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="3.7" description="" pan="-126.96" id="Point03" title="电三楼/工院" target="-55.9/-0.9/70.0" skinid="ht_node" url="{node32}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="1.16" description="" pan="-20.68" id="Point04" title="西区东门" target="" skinid="ht_node" url="{node33}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="3.38" description="" pan="-52.38" id="Point05" title="前往西区东食堂（芳华餐厅）" target="19.0/12.5/70.0" skinid="ht_node" url="{node34}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="3.71" description="" pan="-23.57" id="Point06" title="直达宿舍" target="173.7/-1.6/70.0" skinid="ht_node" url="{node28}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <polyhotspot description="" id="Poly01" title="查看路口北侧" target="" url="{node42}">
+        <polystring>-257.03/29.35|-257.71/-11.99|-11.14/-6.69|-14.24/23.61|-326.85/49.39</polystring>
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </polyhotspot>
+    </hotspots>
+    <media/>
+    <transition zoomout="0" zoomafteroutfov="20" zoomfov="20" blendtime="1" enabled="1" blendcolor="0x000000" type="crossdissolve" delay="none" zoomafterinfov="90" zoomspeed="2" zoomin="0" zoomoutpause="1" softedge="0"/>
+    <animation useinautorotation="0" animsequence="Animation01" clipsrandom="0" syncanimationwithvideo="0"/>
+    <control sensitivity="1" dblclickfullscreen="0" contextfullscreen="1" lockedkeyboardzoom="0" invertcontrol="1" hideabout="0" zoomcentercursor="1" invertwheel="0" speedwheel="1" rubberband="0" lockedmouse="0" contextvr="1" lockedwheel="0" simulatemass="1" lockedkeyboard="0" contextprojections="0">
+      <menulink text="" url=""/>
+    </control>
+  </panorama>
+  <panorama id="node44">
+    <input leveltileurl="tiles/node44/cf_%c/l_%l/c_%x/tile_%y.jpg" height="1728" levelingpitch="0" width="1728" levelbias="0.400" overlap="1" leveltilesize="510" levelbiashidpi="1.000" levelingroll="0">
+      <level width="1728" preload="0" predecode="0" height="1728"/>
+      <level width="864" preload="0" predecode="0" height="864"/>
+      <level width="432" preload="1" predecode="1" height="432"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view pannorth="0" fovmode="0">
+      <start tilt="0" pan="0" fov="100" projection="4"/>
+      <flyin tilt="-90" pan="0" fov="170" projection="9"/>
+      <min tilt="-90" pan="0" fovpixel="2"/>
+      <max tilt="90" pan="360" fovstereographic="330" fov="120" fovfisheye="360" scaletofit="1"/>
+    </view>
+    <userdata description="" author="" source="" info="" heading="0" title="Wsquare" tags="panodel" copyright="" datetime="" latitude="" customnodeid="" nodeid="node44" comment="" longitude=""/>
+    <hotspots width="180" wordwrap="1" smoothmovement="0" height="20">
+      <label backgroundalpha="1" wordwrap="1" bordercolor="0x000000" backgroundcolor="0xffffff" borderalpha="1" enabled="1" height="20" border="1" width="180" background="1" textalpha="1" textcolor="0x000000" borderradius="1"/>
+      <polystyle backgroundalpha="0.25098" bordercolor="0x0000ff" mode="0" backgroundcolor="0x0000ff" borderalpha="1" handcursor="1"/>
+      <hotspot tilt="-0.61" description="" pan="-331.17" id="Point01" title="严济慈像" target="_blank" skinid="ht_url" url="https://m.baike.ustc.edu.cn/wiki/detail?id=207&amp;keyword=%E4%B8%A5%E6%B5%8E%E6%85%88">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="2.58" description="" pan="-51.97" id="Point02" title="3B教学楼" target="" skinid="ht_info" url="">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="3.16" description="" pan="-64.67" id="Point03" title="3A教学楼" target="" skinid="ht_info" url="">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="-0.83" description="" pan="-229.66" id="Point04" title="电三楼/工院" target="-36.1/7.8/70.0" skinid="ht_node" url="{node32}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="1.4" description="" pan="-148.53" id="Point05" title="西区大路口" target="-177.5/13.2/70.0" skinid="ht_node" url="{node42}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="0.77" description="" pan="-15.32" id="Point06" title="3C教学楼" target="-114.3/0.6/70.0" skinid="ht_node" url="{node29}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="3.1" description="" pan="-67.89" id="Point07" title="进入自习室" target="_blank" skinid="ht_url" url="../../../room/node9">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="3.07" description="" pan="-47.72" id="Point08" title="进入自习室" target="_blank" skinid="ht_url" url="../../../room/node8">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+    </hotspots>
+    <media/>
+    <transition zoomout="0" zoomafteroutfov="20" zoomfov="20" blendtime="1" enabled="1" blendcolor="0x000000" type="crossdissolve" delay="none" zoomafterinfov="90" zoomspeed="2" zoomin="0" zoomoutpause="1" softedge="0"/>
+    <animation useinautorotation="0" animsequence="Animation01" clipsrandom="0" syncanimationwithvideo="0"/>
+    <control sensitivity="1" dblclickfullscreen="0" contextfullscreen="1" lockedkeyboardzoom="0" invertcontrol="1" hideabout="0" zoomcentercursor="1" invertwheel="0" speedwheel="1" rubberband="0" lockedmouse="0" contextvr="1" lockedwheel="0" simulatemass="1" lockedkeyboard="0" contextprojections="0">
+      <menulink text="" url=""/>
+    </control>
+  </panorama>
+  <panorama id="node45">
+    <input leveltileurl="tiles/node45/cf_%c/l_%l/c_%x/tile_%y.jpg" height="2120" levelingpitch="0" width="2120" levelbias="0.400" overlap="1" leveltilesize="510" levelbiashidpi="1.000" levelingroll="0">
+      <level width="2120" preload="0" predecode="0" height="2120"/>
+      <level width="1060" preload="0" predecode="0" height="1060"/>
+      <level width="530" preload="0" predecode="0" height="530"/>
+      <level width="265" preload="1" predecode="1" height="265"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view pannorth="0" fovmode="0">
+      <start tilt="0" pan="0" fov="70" projection="4"/>
+      <flyin tilt="-90" pan="0" fov="170" projection="9"/>
+      <min tilt="-90" pan="0" fovpixel="2"/>
+      <max tilt="90" pan="360" fovstereographic="330" fov="120" fovfisheye="360" scaletofit="1"/>
+    </view>
+    <userdata description="" author="" source="" info="" heading="0" title="" tags="deal2" copyright="" datetime="" latitude="31.840833" customnodeid="" nodeid="node45" comment="" longitude="117.263611"/>
+    <hotspots width="180" wordwrap="1" smoothmovement="0" height="20">
+      <label backgroundalpha="1" wordwrap="1" bordercolor="0x000000" backgroundcolor="0xffffff" borderalpha="1" enabled="1" height="20" border="1" width="180" background="1" textalpha="1" textcolor="0x000000" borderradius="1"/>
+      <polystyle backgroundalpha="0.25098" bordercolor="0x0000ff" mode="0" backgroundcolor="0x0000ff" borderalpha="1" handcursor="1"/>
+      <hotspot tilt="0.99" description="" pan="-315.07" id="Point01" title="东南路口" target="29.4/-5.1/70.0" skinid="ht_node" url="{node1}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="-0.17" description="" pan="-67.32" id="Point02" title="隧道口" target="175.5/-1.9/70.0" skinid="ht_node" url="{node49}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+    </hotspots>
+    <media/>
+    <transition zoomout="0" zoomafteroutfov="20" zoomfov="20" blendtime="1" enabled="1" blendcolor="0x000000" type="crossdissolve" delay="none" zoomafterinfov="90" zoomspeed="2" zoomin="0" zoomoutpause="1" softedge="0"/>
+    <animation useinautorotation="0" animsequence="Animation01" clipsrandom="0" syncanimationwithvideo="0"/>
+    <control sensitivity="1" dblclickfullscreen="0" contextfullscreen="1" lockedkeyboardzoom="0" invertcontrol="1" hideabout="0" zoomcentercursor="1" invertwheel="0" speedwheel="1" rubberband="0" lockedmouse="0" contextvr="1" lockedwheel="0" simulatemass="1" lockedkeyboard="0" contextprojections="0">
+      <menulink text="" url=""/>
+    </control>
+  </panorama>
+  <panorama id="node46">
+    <input leveltileurl="tiles/node46/cf_%c/l_%l/c_%x/tile_%y.jpg" height="2120" levelingpitch="0" width="2120" levelbias="0.400" overlap="1" leveltilesize="510" levelbiashidpi="1.000" levelingroll="0">
+      <level width="2120" preload="0" predecode="0" height="2120"/>
+      <level width="1060" preload="0" predecode="0" height="1060"/>
+      <level width="530" preload="0" predecode="0" height="530"/>
+      <level width="265" preload="1" predecode="1" height="265"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view pannorth="0" fovmode="0">
+      <start tilt="0" pan="0" fov="70" projection="4"/>
+      <flyin tilt="-90" pan="0" fov="170" projection="9"/>
+      <min tilt="-90" pan="0" fovpixel="2"/>
+      <max tilt="90" pan="360" fovstereographic="330" fov="120" fovfisheye="360" scaletofit="1"/>
+    </view>
+    <userdata description="" author="" source="" info="" heading="0" title="" tags="deal2" copyright="" datetime="" latitude="31.839722" customnodeid="" nodeid="node46" comment="" longitude="117.265000"/>
+    <hotspots width="180" wordwrap="1" smoothmovement="0" height="20">
+      <label backgroundalpha="1" wordwrap="1" bordercolor="0x000000" backgroundcolor="0xffffff" borderalpha="1" enabled="1" height="20" border="1" width="180" background="1" textalpha="1" textcolor="0x000000" borderradius="1"/>
+      <polystyle backgroundalpha="0.25098" bordercolor="0x0000ff" mode="0" backgroundcolor="0x0000ff" borderalpha="1" handcursor="1"/>
+      <hotspot tilt="2.22" description="" pan="-171.34" distance="192.317" id="Point01" target="18.1/3.4/70.0" skinid="ht_node" title="食堂" url="{node4}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="-1.17" description="" pan="-346.36" id="Point02" title="二教正门" target="" skinid="ht_info" url="">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="4.37" description="" pan="-283.7" id="Point03" title="前往少院楼" target="" skinid="ht_node" url="{node16}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="4.35" description="" pan="-39.68" distance="575.879" id="Point04" target="71.5/-1.9/70.0" skinid="ht_node" title="观赏美景" url="{node47}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="-0.28" description="" pan="-356.69" id="Point05" title="进入自习室" target="_blank" skinid="ht_url" url="../../../room/node7">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+    </hotspots>
+    <media/>
+    <transition zoomout="0" zoomafteroutfov="20" zoomfov="20" blendtime="1" enabled="1" blendcolor="0x000000" type="crossdissolve" delay="none" zoomafterinfov="90" zoomspeed="2" zoomin="0" zoomoutpause="1" softedge="0"/>
+    <animation useinautorotation="0" animsequence="Animation01" clipsrandom="0" syncanimationwithvideo="0"/>
+    <control sensitivity="1" dblclickfullscreen="0" contextfullscreen="1" lockedkeyboardzoom="0" invertcontrol="1" hideabout="0" zoomcentercursor="1" invertwheel="0" speedwheel="1" rubberband="0" lockedmouse="0" contextvr="1" lockedwheel="0" simulatemass="1" lockedkeyboard="0" contextprojections="0">
+      <menulink text="" url=""/>
+    </control>
+  </panorama>
+  <panorama id="node47">
+    <input leveltileurl="tiles/node47/cf_%c/l_%l/c_%x/tile_%y.jpg" height="2120" levelingpitch="0" width="2120" levelbias="0.400" overlap="1" leveltilesize="510" levelbiashidpi="1.000" levelingroll="0">
+      <level width="2120" preload="0" predecode="0" height="2120"/>
+      <level width="1060" preload="0" predecode="0" height="1060"/>
+      <level width="530" preload="0" predecode="0" height="530"/>
+      <level width="265" preload="1" predecode="1" height="265"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view pannorth="0" fovmode="0">
+      <start tilt="0" pan="0" fov="70" projection="4"/>
+      <flyin tilt="-90" pan="0" fov="170" projection="9"/>
+      <min tilt="-90" pan="0" fovpixel="2"/>
+      <max tilt="90" pan="360" fovstereographic="330" fov="120" fovfisheye="360" scaletofit="1"/>
+    </view>
+    <userdata description="" author="" source="" info="" heading="0" title="" tags="deal2" copyright="" datetime="" latitude="31.84094358" customnodeid="" nodeid="node47" comment="" longitude="117.25907564"/>
+    <hotspots width="180" wordwrap="1" smoothmovement="0" height="20">
+      <label backgroundalpha="1" wordwrap="1" bordercolor="0x000000" backgroundcolor="0xffffff" borderalpha="1" enabled="1" height="20" border="1" width="180" background="1" textalpha="1" textcolor="0x000000" borderradius="1"/>
+      <polystyle backgroundalpha="0.25098" bordercolor="0x0000ff" mode="0" backgroundcolor="0x0000ff" borderalpha="1" handcursor="1"/>
+      <hotspot tilt="-14.73" description="" pan="-296.8" distance="575.879" id="Point01" target="-167.7/3.4/70.0" skinid="ht_node" title="回到门口" url="{node46}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+    </hotspots>
+    <media/>
+    <transition zoomout="0" zoomafteroutfov="20" zoomfov="20" blendtime="1" enabled="1" blendcolor="0x000000" type="crossdissolve" delay="none" zoomafterinfov="90" zoomspeed="2" zoomin="0" zoomoutpause="1" softedge="0"/>
+    <animation useinautorotation="0" animsequence="Animation01" clipsrandom="0" syncanimationwithvideo="0"/>
+    <control sensitivity="1" dblclickfullscreen="0" contextfullscreen="1" lockedkeyboardzoom="0" invertcontrol="1" hideabout="0" zoomcentercursor="1" invertwheel="0" speedwheel="1" rubberband="0" lockedmouse="0" contextvr="1" lockedwheel="0" simulatemass="1" lockedkeyboard="0" contextprojections="0">
+      <menulink text="" url=""/>
+    </control>
+  </panorama>
+  <panorama id="node48">
+    <input leveltileurl="tiles/node48/cf_%c/l_%l/c_%x/tile_%y.jpg" height="2120" levelingpitch="0" width="2120" levelbias="0.400" overlap="1" leveltilesize="510" levelbiashidpi="1.000" levelingroll="0">
+      <level width="2120" preload="0" predecode="0" height="2120"/>
+      <level width="1060" preload="0" predecode="0" height="1060"/>
+      <level width="530" preload="0" predecode="0" height="530"/>
+      <level width="265" preload="1" predecode="1" height="265"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view pannorth="0" fovmode="0">
+      <start tilt="0" pan="0" fov="70" projection="4"/>
+      <flyin tilt="-90" pan="0" fov="170" projection="9"/>
+      <min tilt="-90" pan="0" fovpixel="2"/>
+      <max tilt="90" pan="360" fovstereographic="330" fov="120" fovfisheye="360" scaletofit="1"/>
+    </view>
+    <userdata description="" author="" source="" info="" heading="0" title="" tags="deal2" copyright="" datetime="" latitude="" customnodeid="" nodeid="node48" comment="" longitude=""/>
+    <hotspots width="180" wordwrap="1" smoothmovement="0" height="20">
+      <label backgroundalpha="1" wordwrap="1" bordercolor="0x000000" backgroundcolor="0xffffff" borderalpha="1" enabled="1" height="20" border="1" width="180" background="1" textalpha="1" textcolor="0x000000" borderradius="1"/>
+      <polystyle backgroundalpha="0.25098" bordercolor="0x0000ff" mode="0" backgroundcolor="0x0000ff" borderalpha="1" handcursor="1"/>
+      <hotspot tilt="-0.18" description="" pan="-355.35" id="Point01" title="出门" target="-14.1/1.7/70.0" skinid="ht_node" url="{node20}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="2.85" description="" pan="-226.67" id="Point02" title="前往礼堂" target="102.8/-2.4/70.0" skinid="ht_node" url="{node10}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="1.07" description="" pan="-84.54" id="Point03" title="隧道口" target="85.9/-0.1/70.0" skinid="ht_node" url="{node49}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="-0.65" description="" pan="-118.58" id="Point04" title="走一段路" target="-47.8/-10.0/70.0" skinid="ht_node" url="{node19}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+    </hotspots>
+    <media/>
+    <transition zoomout="0" zoomafteroutfov="20" zoomfov="20" blendtime="1" enabled="1" blendcolor="0x000000" type="crossdissolve" delay="none" zoomafterinfov="90" zoomspeed="2" zoomin="0" zoomoutpause="1" softedge="0"/>
+    <animation useinautorotation="0" animsequence="Animation01" clipsrandom="0" syncanimationwithvideo="0"/>
+    <control sensitivity="1" dblclickfullscreen="0" contextfullscreen="1" lockedkeyboardzoom="0" invertcontrol="1" hideabout="0" zoomcentercursor="1" invertwheel="0" speedwheel="1" rubberband="0" lockedmouse="0" contextvr="1" lockedwheel="0" simulatemass="1" lockedkeyboard="0" contextprojections="0">
+      <menulink text="" url=""/>
+    </control>
+  </panorama>
+  <panorama id="node49">
+    <input leveltileurl="tiles/node49/cf_%c/l_%l/c_%x/tile_%y.jpg" height="2120" levelingpitch="0" width="2120" levelbias="0.400" overlap="1" leveltilesize="510" levelbiashidpi="1.000" levelingroll="0">
+      <level width="2120" preload="0" predecode="0" height="2120"/>
+      <level width="1060" preload="0" predecode="0" height="1060"/>
+      <level width="530" preload="0" predecode="0" height="530"/>
+      <level width="265" preload="1" predecode="1" height="265"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view pannorth="0" fovmode="0">
+      <start tilt="0" pan="0" fov="70" projection="4"/>
+      <flyin tilt="-90" pan="0" fov="170" projection="9"/>
+      <min tilt="-90" pan="0" fovpixel="2"/>
+      <max tilt="90" pan="360" fovstereographic="330" fov="120" fovfisheye="360" scaletofit="1"/>
+    </view>
+    <userdata description="" author="" source="" info="" heading="0" title="" tags="deal2" copyright="" datetime="" latitude="" customnodeid="" nodeid="node49" comment="" longitude=""/>
+    <hotspots width="180" wordwrap="1" smoothmovement="0" height="20">
+      <label backgroundalpha="1" wordwrap="1" bordercolor="0x000000" backgroundcolor="0xffffff" borderalpha="1" enabled="1" height="20" border="1" width="180" background="1" textalpha="1" textcolor="0x000000" borderradius="1"/>
+      <polystyle backgroundalpha="0.25098" bordercolor="0x0000ff" mode="0" backgroundcolor="0x0000ff" borderalpha="1" handcursor="1"/>
+      <hotspot tilt="0.15" description="" pan="-176.85" id="Point01" title="进入隧道" target="140.2/-9.4/70.0" skinid="ht_node" url="{node22}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="13.04" description="" pan="-171.91" id="Point02" title="进入中区" target="" skinid="ht_node" url="{node25}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="22.45" description="" pan="-174.08" id="Point03" title="直达西区" target="" skinid="ht_node" url="{node33}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="-6.57" description="" pan="-67.39" id="Point04" title="走一段" target="132.1/1.4/70.0" skinid="ht_node" url="{node19}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="-1.5" description="" pan="-82.68" id="Point05" title="东区西门" target="134.0/18.0/70.0" skinid="ht_node" url="{node48}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="-1.26" description="" pan="-73.33" id="Point06" title="前往礼堂" target="86.5/-2.5/70.0" skinid="ht_node" url="{node10}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="0.38" description="" pan="-293.85" id="Point07" title="一教门口" target="-82.8/-5.0/70.0" skinid="ht_node" url="{node3}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="-4.56" description="网站提供校车时间" pan="-264.03" id="Point08" title="校车点" target="_blank" skinid="ht_url" url="../../../map/bus">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="-2" description="" pan="-335.37" id="Point09" title="前往一教" target="170.4/11.0/70.0" skinid="ht_node" url="{node45}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="-2.46" description="" pan="-0.31" id="Point10" title="向前走" target="37.1/0.4/70.0" skinid="ht_node" url="{node1}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+    </hotspots>
+    <media/>
+    <transition zoomout="0" zoomafteroutfov="20" zoomfov="20" blendtime="1" enabled="1" blendcolor="0x000000" type="crossdissolve" delay="none" zoomafterinfov="90" zoomspeed="2" zoomin="0" zoomoutpause="1" softedge="0"/>
+    <animation useinautorotation="0" animsequence="Animation01" clipsrandom="0" syncanimationwithvideo="0"/>
+    <control sensitivity="1" dblclickfullscreen="0" contextfullscreen="1" lockedkeyboardzoom="0" invertcontrol="1" hideabout="0" zoomcentercursor="1" invertwheel="0" speedwheel="1" rubberband="0" lockedmouse="0" contextvr="1" lockedwheel="0" simulatemass="1" lockedkeyboard="0" contextprojections="0">
+      <menulink text="" url=""/>
+    </control>
+  </panorama>
+  <panorama id="node50">
+    <input leveltileurl="tiles/node50/cf_%c/l_%l/c_%x/tile_%y.jpg" height="2120" levelingpitch="0" width="2120" levelbias="0.400" overlap="1" leveltilesize="510" levelbiashidpi="1.000" levelingroll="0">
+      <level width="2120" preload="0" predecode="0" height="2120"/>
+      <level width="1060" preload="0" predecode="0" height="1060"/>
+      <level width="530" preload="0" predecode="0" height="530"/>
+      <level width="265" preload="1" predecode="1" height="265"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view pannorth="0" fovmode="0">
+      <start tilt="0" pan="0" fov="70" projection="4"/>
+      <flyin tilt="-90" pan="0" fov="170" projection="9"/>
+      <min tilt="-90" pan="0" fovpixel="2"/>
+      <max tilt="90" pan="360" fovstereographic="330" fov="120" fovfisheye="360" scaletofit="1"/>
+    </view>
+    <userdata description="" author="" source="" info="" heading="0" title="" tags="deal2" copyright="" datetime="" latitude="31.842222" customnodeid="" nodeid="node50" comment="" longitude="117.258333"/>
+    <hotspots width="180" wordwrap="1" smoothmovement="0" height="20">
+      <label backgroundalpha="1" wordwrap="1" bordercolor="0x000000" backgroundcolor="0xffffff" borderalpha="1" enabled="1" height="20" border="1" width="180" background="1" textalpha="1" textcolor="0x000000" borderradius="1"/>
+      <polystyle backgroundalpha="0.25098" bordercolor="0x0000ff" mode="0" backgroundcolor="0x0000ff" borderalpha="1" handcursor="1"/>
+      <hotspot tilt="-3.54" description="" pan="-353.77" id="Point01" title="向南走" target="129.0/10.2/70.0" skinid="ht_node" url="{node24}">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="-0.83" description="" pan="-167.61" id="Point03" title="出门" target="" skinid="ht_info" url="">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="2.93" description="" pan="-176.91" id="Point02" title="外卖柜" target="" skinid="ht_info" url="">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+      <hotspot tilt="-0.96" description="" pan="-15.73" id="Point04" title="郭永怀介绍" target="_blank" skinid="ht_url" url="https://m.baike.ustc.edu.cn/wiki/detail?id=354&amp;keyword=%E9%83%AD%E6%B0%B8%E6%80%80">
+        <custompropertyvalue value="1.00" variablename="len"/>
+      </hotspot>
+    </hotspots>
+    <media/>
+    <transition zoomout="0" zoomafteroutfov="20" zoomfov="20" blendtime="1" enabled="1" blendcolor="0x000000" type="crossdissolve" delay="none" zoomafterinfov="90" zoomspeed="2" zoomin="0" zoomoutpause="1" softedge="0"/>
+    <animation useinautorotation="0" animsequence="Animation01" clipsrandom="0" syncanimationwithvideo="0"/>
+    <control sensitivity="1" dblclickfullscreen="0" contextfullscreen="1" lockedkeyboardzoom="0" invertcontrol="1" hideabout="0" zoomcentercursor="1" invertwheel="0" speedwheel="1" rubberband="0" lockedmouse="0" contextvr="1" lockedwheel="0" simulatemass="1" lockedkeyboard="0" contextprojections="0">
+      <menulink text="" url=""/>
+    </control>
+  </panorama>
+  <masternode>
+    <userdata description="" title="" author="" copyright="" tags="" comment=""/>
+    <animationsequences>
+      <sequence title="Animation01"/>
+    </animationsequences>
+  </masternode>
+  <customproperty propertytype="1" variabletype="1" variablename="len" defaultvalue="1.00"/>
+</tour>

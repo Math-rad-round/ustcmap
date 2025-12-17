@@ -32,6 +32,7 @@ router.get('/*/:name', (req, res) => {
   }else{
     filePath = path.join(publicPath, req.params.name);
   }
+  console.log(filePath);
   res.sendFile(filePath, options, (err) => {
     if(err){
       console.error("bugvrroom", err);

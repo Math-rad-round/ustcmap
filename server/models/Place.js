@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const placeSchema = new mongoose.Schema({
   name: String,
   pos:String,
+  priority: { type: Number, default: 4 },
   location: {
     type: { type: String, enum: ['Point'], required: true },
     coordinates: {

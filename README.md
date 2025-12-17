@@ -1,4 +1,9 @@
-Adapt from https://github.com/suxxsfe/ustc-app-store
+inital Adapt from https://github.com/suxxsfe/ustc-app-store
+GuideAuthor:
+- [Math-rad-round](https://github.com/Math-rad-round)
+
+UniSchoolAuthor:
+- [Math-rad-round](https://github.com/Math-rad-round)
 
 VRMapAuthor:
 - [Math-rad-round](https://github.com/Math-rad-round)
@@ -9,13 +14,13 @@ VRMapAuthor:
 The Pre-project Authors:
 - [Math-rad-round](https://github.com/Math-rad-round)
 - [suxxsfe](https://github.com/suxxsfe)  
-build:  
+
+How to build:  
 
 ```  
 git clone https://github.com/Math-rad-round/ustcmap
 cd ustcmap
 npm install
-npm run build
-npm run start
+npm run deploy
 ```
 
