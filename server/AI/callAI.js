@@ -24,7 +24,7 @@ const pre="你是中国科学技术大学校园导航助手。你要根据用户
     "请优先通过下方给出的描述确定节点ID，如果无法确定，可以搜索网络信息，识别到相近的节点ID也可以。";
 // 核心AI调用
 async function callAI(userInput) {
-  const prompt = pre+`提取起点终点后，返回JSON：{"s":"节点ID/null","e":"节点ID"}
+  const prompt = pre+`提取起点终点后，返回JSON，请注意节点ID要有node前缀：{"s":"节点ID/null","e":"节点ID"}
 可用节点：${generateNodeList()}
 规则：只使用上述节点ID
 输入：${userInput}`;

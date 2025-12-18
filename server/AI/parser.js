@@ -73,10 +73,11 @@ router.post('/parse', async (req, res) => {
     
     // 1. 先尝试规则匹配
     let result = fastRuleMatch(text);
-    
+    console.log('规则匹配结果:', result);
     // 2. 规则失败则调用AI
     if (!result.s || !result.e) {
       result = await callAI(text);
+      console.log('AI 解析结果:', result);
     }
     
     // 3. 验证结果
