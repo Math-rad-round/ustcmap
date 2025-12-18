@@ -1,7 +1,7 @@
 const fs = require("fs");
 const xml2js = require("xml2js");
-const xml = fs.readFileSync("./public/guide/pano.xml", "utf-8");
 
+const xml = fs.readFileSync("./public/guide/pano.xml", "utf-8");
 
 xml2js.parseString(xml, (err, result) => {
   if (err) {
@@ -10,13 +10,15 @@ xml2js.parseString(xml, (err, result) => {
   }
 
   const graph = {};
+  const hotspotYawMap = {}; // ⭐ 新增
 
-  // tour -> panorama[]
   const panoramas = result.tour.panorama || [];
 
   panoramas.forEach(pano => {
     const currentId = pano.$.id;
+
     graph[currentId] = {};
+    hotspotYawMap[currentId] = {}; // ⭐ 新增
 
     const hotspots =
       pano.hotspots &&
@@ -34,7 +36,7 @@ xml2js.parseString(xml, (err, result) => {
 
       const targetId = targetMatch[1];
 
-      // 查找 len
+      /* ========== len（原有逻辑） ========== */
       let len = null;
       if (hs.custompropertyvalue) {
         hs.custompropertyvalue.forEach(p => {
@@ -44,18 +46,43 @@ xml2js.parseString(xml, (err, result) => {
         });
       }
 
-      // len = -1 认为不可通行
+      // len = -1 不可通行
       if (len === null || len < 0) return;
 
       graph[currentId][targetId] = len;
+
+      /* ========== ⭐ hotspot yaw ========== */
+      if (hs.$.pan !== undefined) {
+        const yaw = parseFloat(hs.$.pan);
+        if (!Number.isNaN(yaw)) {
+          hotspotYawMap[currentId][targetId] = {
+            yaw
+          };
+        }
+      }
     });
+
+    // 如果某个节点没有可用热点，可以删掉空对象（可选）
+    if (Object.keys(hotspotYawMap[currentId]).length === 0) {
+      delete hotspotYawMap[currentId];
+    }
   });
 
+  /* ===============================
+   * 输出文件
+   * =============================== */
   fs.writeFileSync(
     "./client/dist/assets/route/graph.json",
     JSON.stringify(graph, null, 2),
     "utf-8"
   );
 
-  console.log("graph.json 构建完成");
+  fs.writeFileSync(
+    "./client/dist/assets/route/hotspot_yaw.json",
+    JSON.stringify(hotspotYawMap, null, 2),
+    "utf-8"
+  );
+
+  console.log("✅ graph.json 构建完成");
+  console.log("✅ hotspot_yaw.json 构建完成");
 });

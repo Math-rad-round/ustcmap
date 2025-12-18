@@ -149,7 +149,7 @@ class Savepos extends Component {
             />
           </div>
           <div>
-            <label>优先级（1-3）：</label>
+            <label>优先级（1-4）：</label>
             <select
               name="priority"
               value={priority}
@@ -159,6 +159,7 @@ class Savepos extends Component {
               <option value="1">优先级 1（最高，搜索范围最大）</option>
               <option value="2">优先级 2（中等，搜索范围中等）</option>
               <option value="3">优先级 3（较低，搜索范围较小）</option>
+              <option value="4">优先级 4（最低，搜索范围最小）</option>
             </select>
             <span style={{ marginLeft: '10px', fontSize: '12px', color: '#666' }}>
               优先级越高，在附近搜索时被找到的范围越大

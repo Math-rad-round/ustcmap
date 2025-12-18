@@ -1,8 +1,128 @@
+let HOTSPOT_YAW_MAP = null;
+let hotspotYawReady = false;
+
+function loadHotspotYawMap() {
+  return fetch("/assets/route/hotspot_yaw.json")
+    .then(res => {
+      if (!res.ok) {
+        throw new Error("hotspot_yaw.json 加载失败");
+      }
+      return res.json();
+    })
+    .then(data => {
+      HOTSPOT_YAW_MAP = data;
+      hotspotYawReady = true;
+      console.log("✅ hotspot_yaw.json loaded");
+    })
+    .catch(err => {
+      console.error("❌ hotspot_yaw.json 加载失败", err);
+    });
+}
+let currentPan = null;
+let currentFov = null;
+
+
 let panoReady = false;
 let currentRoute = [];
 let currentNodeId = null;
 
-/* 等待 pano ready */
+/* ===============================
+ * ⭐ 箭头系统相关配置
+ * =============================== */
+const ARROW_MARGIN = 5;      // 视野边缘缓冲角度
+const UPDATE_INTERVAL = 100;
+
+let arrowTimer = null;
+
+/* ===============================
+ * 工具：角度归一化
+ * =============================== */
+function normalizeAngle(angle) {
+  while (angle > 180) angle -= 360;
+  while (angle < -180) angle += 360;
+  return angle;
+}
+
+/* ===============================
+ * 工具：更新 Skin 箭头变量
+ * =============================== */
+function updateArrow(direction) {
+  if (!window.pano) return;
+  window.pano.setVariableValue(
+    "left",
+    direction === "LEFT" ? 1 : 0
+  );
+  window.pano.setVariableValue(
+    "right",
+    direction === "RIGHT" ? 1 : 0
+  );
+}
+
+/* ===============================
+ * ⭐ 核心：更新箭头方向
+ * =============================== */
+function updateRouteArrow() {
+  if (!panoReady || !currentNodeId || !currentRoute.length) {
+    updateArrow("NONE1");
+    return;
+  }
+
+  const index = currentRoute.indexOf(currentNodeId);
+  if (index === -1) {
+    updateArrow("NONE2");
+    return;
+  }
+
+  const nextNodeId = currentRoute[index + 1];
+  if (!nextNodeId) {
+    updateArrow("NONE3");
+    return;
+  }
+
+  const targetYaw = getHotspotYaw(currentNodeId, nextNodeId);
+  if (typeof targetYaw !== "number") {
+    updateArrow("NONE4");
+    return;
+  }
+  // ✅ 正确的相机参数获取方式
+  const cameraYaw = pano.getPan();
+  const fov = pano.getFov();
+  //  console.log(`[route.js] Camera yaw=${cameraYaw}, fov=${fov}`);
+  if (typeof cameraYaw !== "number" || typeof fov !== "number") {
+    updateArrow("NONE5");
+    return;
+  }
+  const deltaYaw =- normalizeAngle(targetYaw - cameraYaw);
+  const halfFov = fov / 2;
+  const DEAD = ARROW_MARGIN;
+
+  let direction = "NONE";
+  if (Math.abs(deltaYaw) > halfFov + DEAD) {
+    direction = deltaYaw > 0 ? "RIGHT" : "LEFT";
+  }
+
+  updateArrow(direction);
+}
+
+/* ===============================
+ * ⭐ 启动 / 停止箭头更新
+ * =============================== */
+function startArrowLoop() {
+  if (arrowTimer) return;
+  arrowTimer = setInterval(updateRouteArrow, UPDATE_INTERVAL);
+}
+
+function stopArrowLoop() {
+  if (arrowTimer) {
+    clearInterval(arrowTimer);
+    arrowTimer = null;
+  }
+  updateArrow("NONE");
+}
+
+/* ===============================
+ * 等待 pano ready
+ * =============================== */
 (function waitForPanoReady() {
   if (
     window.pano &&
@@ -11,36 +131,39 @@ let currentNodeId = null;
   ) {
     panoReady = true;
     console.log("✅ iframe: pano READY");
-
-    // 通知 React
+    loadHotspotYawMap();
     window.parent.postMessage({ type: "PANO_READY" }, "*");
 
     bindNodeChangeListener();
+    startArrowLoop();
     return;
   }
   setTimeout(waitForPanoReady, 50);
 })();
 
-/* 接收 React 路径 */
+/* ===============================
+ * 接收 React 路径
+ * =============================== */
 window.addEventListener("message", (e) => {
   if (!panoReady || !e.data) return;
 
   if (e.data.type === "SET_ROUTE") {
     currentRoute = e.data.route || [];
     console.log("[route.js] route received:", currentRoute);
-    console.log("[route.js] current node id:", currentNodeId);
-    currentNodeId = currentRoute[0];
 
-    // ✅ 现在一定能命中
+    currentNodeId = currentRoute[0] || null;
+
     if (currentNodeId) {
       updateHighlightByNode(currentNodeId);
     }
   }
 });
 
-/* 监听节点变化 */
+/* ===============================
+ * 监听节点变化
+ * =============================== */
 function bindNodeChangeListener() {
-  window.pano.on("changenode", function (e) {
+  window.pano.on("changenode", function () {
     const nodeId = window.pano.getCurrentNode();
     console.log("[route.js] changenode → current node:", nodeId);
 
@@ -52,15 +175,16 @@ function bindNodeChangeListener() {
 }
 
 
-/* 根据当前 nodeId 决定高亮 */
+/* ===============================
+ * 根据当前 nodeId 决定高亮
+ * =============================== */
 function updateHighlightByNode(nodeId) {
   if (!currentRoute.length) {
     clearHighlight();
     return;
   }
-console.log("[route.js] updateHighlightByNode:", nodeId);
-  const index = currentRoute.indexOf(nodeId);
 
+  const index = currentRoute.indexOf(nodeId);
   if (index === -1) {
     clearHighlight();
     return;
@@ -75,9 +199,11 @@ console.log("[route.js] updateHighlightByNode:", nodeId);
   setHighlightNode(nextNode);
 }
 
-/* 设置 Skin 变量 */
+/* ===============================
+ * 设置 / 清除高亮
+ * =============================== */
 function setHighlightNode(nodeId) {
-  const value = `{${nodeId}}`; // ⚠️ 必须加 {}
+  const value = `{${nodeId}}`;
   window.pano.setVariableValue("highlight_id", value);
   console.log("[route.js] highlight_id =", value);
 }
@@ -85,4 +211,24 @@ function setHighlightNode(nodeId) {
 function clearHighlight() {
   window.pano.setVariableValue("highlight_id", "");
   console.log("[route.js] highlight cleared");
+}
+
+/* =====================================================
+ * ⚠️【你必须提供的支持】节点 → yaw 的映射
+ * ===================================================== */
+
+/**
+ * 返回某个 nodeId 对应的 yaw（单位：度）
+ * ⚠️ 必须与 pano.getYaw() 同一坐标系
+ *
+ * 你可以用：
+ * - XML 解析后的数据
+ * - 后端传入的节点表
+ * - window.NODE_META 之类的全局对象
+ */
+function getHotspotYaw(currentNodeId, nextNodeId) {
+  return (
+    HOTSPOT_YAW_MAP?.[currentNodeId]?.[nextNodeId]?.yaw
+    ?? null
+  );
 }
