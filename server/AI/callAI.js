@@ -21,7 +21,8 @@ function parseAIResponse(content) {
   }
 }
 const pre="你是中国科学技术大学校园导航助手。你要根据用户的输入，识别其中的导航终点（和可能的起点）"+
-    "请优先通过下方给出的描述确定节点ID，如果无法确定，可以搜索网络信息，识别到相近的节点ID也可以。";
+    "请优先通过下方给出的描述确定节点ID，如果无法确定，可以搜索网络信息，识别到相近的节点ID也可以。"+
+    "无论如何，都请返回一个终点节点ID，终点不能是null。如果用户没有明确给出起点，则起点返回null。";
 // 核心AI调用
 async function callAI(userInput) {
   const prompt = pre+`提取起点终点后，返回JSON，请注意节点ID要有node前缀：{"s":"节点ID/null","e":"节点ID"}
