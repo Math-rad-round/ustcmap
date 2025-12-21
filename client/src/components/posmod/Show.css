@@ -1,0 +1,254 @@
+/* 附近地点组件简洁版 */
+.nearby-places {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  margin-top: 20px;
+}
+
+/* 头部样式 */
+.places-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.places-title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+/* 扩大搜索按钮 */
+.btn-expand-search {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  background: #f8f9fa;
+  color: #495057;
+  border: 1px solid #e9ecef;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-expand-search:hover {
+  background: #e9ecef;
+  border-color: #dee2e6;
+}
+
+.btn-icon {
+  font-size: 14px;
+}
+
+/* 地点列表 */
+.places-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.place-item {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 16px;
+  transition: all 0.2s ease;
+  border: 1px solid transparent;
+}
+
+.place-item:hover {
+  background: #ffffff;
+  border-color: #4dabf7;
+  transform: translateX(2px);
+  box-shadow: 0 2px 8px rgba(77, 171, 247, 0.1);
+}
+
+/* 地点内容 - 单行布局 */
+.place-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.place-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+/* 名称部分 - 左侧 */
+.place-name-section {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* 大号名称 */
+.place-name {
+  font-size: 18px; /* 更大的字号 */
+  font-weight: 600;
+  color: #1a1a1a;
+  line-height: 1.4;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* 统计信息 - 灰色小字 */
+.place-stats {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.priority-stat, .score-stat {
+  font-size: 12px; /* 比名称小很多 */
+  color: #999; /* 灰色不起眼 */
+  font-weight: 400;
+  opacity: 0.7;
+}
+
+/* 可选的：不同优先级的颜色（保持灰色但稍有区别） */
+.priority-stat[data-priority="1"] { color: #888; }
+.priority-stat[data-priority="2"] { color: #999; }
+.priority-stat[data-priority="3"] { color: #aaa; }
+
+/* 元信息部分 - 右侧 */
+.place-meta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-shrink: 0;
+  margin-left: 20px;
+}
+
+.place-distance {
+  font-size: 14px;
+  color: #666;
+  font-weight: 500;
+  min-width: 60px;
+  text-align: right;
+}
+
+/* 设为起点按钮 */
+.btn-set-start {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  background: linear-gradient(135deg, #4dabf7 0%, #339af0 100%);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.btn-set-start:hover {
+  background: linear-gradient(135deg, #339af0 0%, #228be6 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(77, 171, 247, 0.2);
+}
+
+.btn-set-start:active {
+  transform: translateY(0);
+}
+
+/* 空状态 */
+.empty-state {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.empty-icon {
+  font-size: 48px;
+  margin-bottom: 12px;
+  opacity: 0.3;
+}
+
+.empty-state p {
+  margin: 0;
+  color: #666;
+  font-size: 14px;
+}
+
+/* 加载状态 */
+.loading-state {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.loading-spinner {
+  width: 30px;
+  height: 30px;
+  border: 2px solid #e9ecef;
+  border-top-color: #4dabf7;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 12px;
+}
+
+.loading-state p {
+  margin: 0;
+  color: #666;
+  font-size: 14px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .nearby-places {
+    padding: 16px;
+  }
+  
+  .place-main {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .place-name-section {
+    width: 100%;
+  }
+  
+  .place-meta {
+    width: 100%;
+    justify-content: space-between;
+    margin-left: 0;
+    margin-top: 8px;
+  }
+  
+  .place-distance {
+    text-align: left;
+  }
+  
+  .btn-set-start {
+    padding: 6px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .place-stats {
+    flex-direction: column;
+    gap: 4px;
+    align-items: flex-start;
+  }
+  
+  .place-name {
+    font-size: 16px;
+  }
+}

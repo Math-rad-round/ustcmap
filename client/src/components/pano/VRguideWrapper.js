@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import VRguide from "./VRguide";
+import VRguide from "./../pos/VRguide";
 import graph from "./../../../dist/assets/route/graph.json";
 
 class VRguideWrapper extends Component {

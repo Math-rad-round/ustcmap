@@ -33,9 +33,9 @@ router.get('/nearby', (req, res) => {
             branches: [
               { case: { $eq: ["$priority", 1] }, then: "$distance" },        // 距离 ÷ 1
               { case: { $eq: ["$priority", 2] }, then: { $multiply: ["$distance", 2] } }, // 距离 ÷ 0.5
-              { case: { $eq: ["$priority", 3] }, then: { $multiply: ["$distance", 4] } }  // 距离 ÷ 0.25
+              { case: { $eq: ["$priority", 3] }, then: { $multiply: ["$distance", 3] } }  // 距离 ÷ 0.25
             ],
-            default: { $multiply: ["$distance", 8] } // 距离 ÷ 0.125
+            default: { $multiply: ["$distance", 4] } // 距离 ÷ 0.125
           }
         },
         // 计算有效搜索范围
@@ -44,9 +44,9 @@ router.get('/nearby', (req, res) => {
             branches: [
               { case: { $eq: ["$priority", 1] }, then: baseDist },       // 100%
               { case: { $eq: ["$priority", 2] }, then: baseDist * 0.5 }, // 50%
-              { case: { $eq: ["$priority", 3] }, then: baseDist * 0.25 } // 25%
+              { case: { $eq: ["$priority", 3] }, then: baseDist * 0.3333 } // 25%
             ],
-            default: baseDist * 0.125 // 12.5%
+            default: baseDist * 0.25 // 12.5%
           }
         }
       }

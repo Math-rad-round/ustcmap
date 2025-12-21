@@ -165,8 +165,9 @@ window.addEventListener("message", (e) => {
 function bindNodeChangeListener() {
   window.pano.on("changenode", function () {
     const nodeId = window.pano.getCurrentNode();
+    console.log("current route", currentRoute);
     console.log("[route.js] changenode → current node:", nodeId);
-
+    
     if (!nodeId) return;
 
     currentNodeId = nodeId;
@@ -186,6 +187,15 @@ function updateHighlightByNode(nodeId) {
 
   const index = currentRoute.indexOf(nodeId);
   if (index === -1) {
+    
+    // 发送消息给上层页面，告知需要重新加载路径
+    const message = {
+      type: 'RELOAD_NAVIGATION',
+      currentNode: nodeId  // 将目标节点ID传递给上层
+    };
+    console.log("[route.js] Sending message to parent:", message);
+    // 使用 postMessage 向上层页面发送消息
+    window.parent.postMessage(message, "*");
     clearHighlight();
     return;
   }
@@ -193,6 +203,11 @@ function updateHighlightByNode(nodeId) {
   const nextNode = currentRoute[index + 1];
   if (!nextNode) {
     clearHighlight();
+        const message = {
+      type: 'FINISH',
+    };
+    // 使用 postMessage 向上层页面发送消息
+    window.parent.postMessage(message, "*");
     return;
   }
 
@@ -213,19 +228,7 @@ function clearHighlight() {
   console.log("[route.js] highlight cleared");
 }
 
-/* =====================================================
- * ⚠️【你必须提供的支持】节点 → yaw 的映射
- * ===================================================== */
 
-/**
- * 返回某个 nodeId 对应的 yaw（单位：度）
- * ⚠️ 必须与 pano.getYaw() 同一坐标系
- *
- * 你可以用：
- * - XML 解析后的数据
- * - 后端传入的节点表
- * - window.NODE_META 之类的全局对象
- */
 function getHotspotYaw(currentNodeId, nextNodeId) {
   return (
     HOTSPOT_YAW_MAP?.[currentNodeId]?.[nextNodeId]?.yaw

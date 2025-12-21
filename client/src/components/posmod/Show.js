@@ -1,13 +1,17 @@
 import React, { Component } from 'react';
-
+import './Show.css';
 import { get } from "../../utilities.js";
 class NearbyPlaces extends Component {
   constructor(props) {
     super(props);
     this.state = {
       places: [], // 存储查询结果
-      error: ''
+      error: '',
+      num:5
     };
+  }
+  componentDidMount(){
+    this.fetchNearbyPlaces();
   }
   usepass=(roomId)=>{
     console.log("pass");
@@ -15,7 +19,7 @@ class NearbyPlaces extends Component {
     else console.log("no pass function");
   }
   // 查询附近地点
-  fetchNearbyPlaces = async () => {
+  fetchNearbyPlaces = async (num=5) => {
     const { latitude, longitude,maxDistance } = this.props; // 从 props 中获取经纬度d
     console.log('查询附近地点，位置：', latitude, longitude, '最大距离：', maxDistance);
     // 检查经纬度是否有效
@@ -24,67 +28,90 @@ class NearbyPlaces extends Component {
       return;
     }
 
-    get("/api/nearby", {latitude:latitude, longitude:longitude, maxDistance:maxDistance,num:5})
+    get("/api/nearby", {latitude:latitude, longitude:longitude, maxDistance:maxDistance,num:num})
         .then((data) => {
             console.log(data);
-             this.setState({ places:data, error: '' });
+             this.setState({ places:data, error: ''   ,num:num + 5});
         }).catch((err) => 
           this.setState({ error: '查询失败：' + err.message }));
           
   };
-
-  render() {
-    const { places, error, maxDistance } = this.state;
-
-    return (
-      <div className="nearby-places-container">
-        <h2>查询附近地点</h2>
-
-
-        <button onClick={this.fetchNearbyPlaces}>查询附近地点</button>
-
-        {error && <p style={{ color: 'red' }}>{error}</p>}
-
-        <div>
-  <h3>附近地点（按距离/优先级排序）：</h3>
-  {places == null || places.length === 0 ? (
-    <p>未找到附近地点</p>
-  ) : (
-    <div>
-      <p>基础搜索距离：{maxDistance}米</p>
-      <ul>
-        {places.map((place) => (
-          <li key={place._id} style={{ marginBottom: '10px', padding: '10px', border: '1px solid #ddd' }}>
-            <div>
-              <strong>{place.name}</strong>
-              <span style={{ marginLeft: '10px', color: '#666' }}>
-                距离：{place.distance >= 1000 
-                  ? `${(place.distance / 1000).toFixed(1)}公里` 
-                  : `${place.distance}米`}
-              </span>
-              <span style={{ marginLeft: '10px', color: place.priority === 1 ? '#f00' : place.priority === 2 ? '#f90' : '#09f' }}>
-                优先级：{place.priority || '无'}
-              </span>
-              <span style={{ marginLeft: '10px', color: '#999', fontSize: '12px' }}>
-                排序得分：{place.sortScore?.toFixed(2) || place.score?.toFixed(2) || 'N/A'}
-              </span>
-              <button onClick={()=>this.usepass(place.pos)}>设定起点</button>
-            </div>
-            <div style={{ marginTop: '5px', fontSize: '12px', color: '#888' }}>
-              {place.priority ? 
-                `搜索范围：${(maxDistance * (place.priority === 1 ? 1 : place.priority === 2 ? 0.5 : 0.25)).toFixed(0)}米` :
-                `搜索范围：${(maxDistance * 0.125).toFixed(0)}米`
-              }
-            </div>
-          </li>
-        ))}
-      </ul>
-    </div>
-  )}
-</div>
-      </div>
-    );
+  reset=()=>{
+    this.fetchNearbyPlaces(this.state.num+5);
   }
+render() {
+  const { places, error } = this.state;
+
+  return (
+    <div className="nearby-places">
+      <div className="places-header">
+        <h3 className="places-title">附近地点</h3>
+        <button 
+          onClick={this.reset} 
+          className="btn-expand-search"
+          title="扩大搜索范围"
+        >
+          <span className="btn-icon">🔍</span>
+          扩大范围
+        </button>
+      </div>
+
+      <div className="places-content">
+        {places == null ? (
+          <div className="loading-state">
+            <div className="loading-spinner"></div>
+            <p>正在加载...</p>
+          </div>
+        ) : places.length === 0 ? (
+          <div className="empty-state">
+            <span className="empty-icon">🏢</span>
+            <p>未找到附近地点</p>
+          </div>
+        ) : (
+          <div className="places-list">
+            {places.map((place) => (
+              <div key={place._id} className="place-item">
+                <div className="place-content">
+                  <div className="place-main">
+                    <div className="place-name-section">
+                      <span className="place-name">{place.name}</span>
+                      <div className="place-stats">
+                        {place.priority && (
+                          <span className="priority-stat">
+                            优先级 {place.priority}
+                          </span>
+                        )}
+                        {(place.sortScore || place.score) && (
+                          <span className="score-stat">
+                            排名分数 {(place.sortScore || place.score).toFixed(1)}
+                          </span>
+                        )}
+                      </div>
+                    </div>
+                    <div className="place-meta">
+                      <span className="place-distance">
+                        {place.distance >= 1000 
+                          ? `${(place.distance / 1000).toFixed(1)}km`
+                          : `${place.distance}m`}
+                      </span>
+                      <button 
+                        onClick={() => this.usepass(place.pos)}
+                        className="btn-set-start"
+                      >
+                        <span className="btn-icon">📍</span>
+                        设为起点
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
 }
 
 export default NearbyPlaces;
