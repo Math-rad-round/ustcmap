@@ -36,7 +36,7 @@ class VRguideWrapper extends Component {
           minDist = distances[node];
           current = node;
         }
-      }
+      }console.log(current);
 
       if (current === null) break;
       if (current === end) break;
@@ -61,7 +61,10 @@ class VRguideWrapper extends Component {
       path.unshift(cur);
       cur = prev[cur];
     }
-
+    console.log(path);
+    console.log(start);
+    console.log("end");
+    console.log(end);
     return path;
   }
   // calculate(start, end) {

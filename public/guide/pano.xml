@@ -76,6 +76,9 @@
         <polystring>-258.5/13|-254.15/-17.12|-41.23/-14.72|-37.85/14.88|-326.73/43.79|-262.08/20.19</polystring>
         <custompropertyvalue variablename="len" value="0.10"/>
       </polyhotspot>
+      <hotspot target="" url="{node3}" skinid="ht_node" tilt="2.97" description="" pan="-46.63" id="Point01" title="离开">
+        <custompropertyvalue variablename="len" value="10000.00"/>
+      </hotspot>
     </hotspots>
     <media/>
     <transition zoomafteroutfov="20" zoomout="0" zoomspeed="2" zoomoutpause="1" delay="none" zoomin="0" zoomafterinfov="90" enabled="1" softedge="0" blendtime="1" type="crossdissolve" zoomfov="20" blendcolor="0x000000"/>

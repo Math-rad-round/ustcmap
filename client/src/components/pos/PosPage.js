@@ -42,11 +42,14 @@ geoplace=()=>{
     navigator.geolocation.getCurrentPosition(
       (position) => {
         let { latitude, longitude, accuracy, altitude, altitudeAccuracy, heading, speed } = position.coords;
+        console.log(latitude);
+        console.log(latitude);
+
         const dlong=0.01497748079602431 * longitude + -1.7617585034728322;
-        const dlat=-0.4120287587707277 * latitude + 13.120712464364;
+      //  const dlat=-0.4120287587707277 * latitude + 13.120712464364;
         longitude-=dlong;
-        latitude-=dlat*1.8;
-       // latitude-=0.00215;
+        // latitude-=dlat*1.8;
+       latitude-=0.00215;
         console.log('完整位置信息:', {
           latitude, 
           longitude, 
