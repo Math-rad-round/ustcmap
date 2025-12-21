@@ -18,9 +18,7 @@ function fastRuleMatch(text) {
   ];
   
   for (const pattern of patterns) {
-    console.log(pattern)
     const match = text.match(pattern.regex);
-    console.log(match)
     if (match) {
       if (pattern.start !== null) {
         result.s = findNodeId(match[pattern.start].trim());

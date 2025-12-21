@@ -33,7 +33,6 @@ async function callAI(userInput) {
   if(process.env.ZHIPU_API_KEY===undefined){
     throw new Error("AI API Key 未配置");
   }
-  console.log("AI Prompt:", prompt);
   const response = await axios.post(
     'https://open.bigmodel.cn/api/paas/v4/chat/completions',
     {
