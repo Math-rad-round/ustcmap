@@ -4,3 +4,4 @@ node_modules/
 报告.*
 .env
 saveenv.txt
+test.py
