@@ -53,7 +53,6 @@ async function callAI(userInput) {
   );
   
   const content = response.data.choices[0].message.content;
-  console.log("AI Response Content:", content);
   return parseAIResponse(content);
 }
 

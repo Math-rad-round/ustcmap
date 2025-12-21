@@ -23,9 +23,11 @@ class PosPage extends Component {
     }
     post("/ai/parse", { text: this.state.text })
       .then((data) => {
-        if(data.s==null){
-          this.setState({end:data.e,endname:data.end})
-        }else this.setState({start:data.s, end:data.e,endname:data.end,startname:data.start})
+        console.log(data);
+        if(data.e!=null){
+          if(data.s==null)this.setState({end:data.e,endname:data.end})
+          else this.setState({start:data.s, end:data.e,endname:data.end,startname:data.start});
+        }else alert("还没有这个地点的数据，试试换个地点！");
         console.log('AI解析成功:', data);
       })
       .catch((err) => {
