@@ -37,6 +37,7 @@ class PosPage extends Component {
       });
   }
 geoplace=()=>{  
+  const ok=this.state.accuracy!=null;
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(
       (position) => {
@@ -66,7 +67,7 @@ geoplace=()=>{
           rawCoords: position.coords  // 保存完整信息
         });
         
-        if(this.state.accuracy !== null) {
+        if(ok) {
           alert(`重新定位成功！精度: ${accuracy}米`);
         }
       },
