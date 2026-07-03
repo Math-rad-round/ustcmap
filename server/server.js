@@ -37,8 +37,6 @@ const bodyParser = require("body-parser");
 app.use(bodyParser.json({limit: "100mb"}));
 app.use(bodyParser.urlencoded({extended:true, limit: "100mb"}))
 
-//express.json() 必须位于两条 limit 之后，否则不起作用，上传文件时将出现 413 payload too large
-//这玩意查了一下午，傻逼
 app.use(express.json());
 
 const resourcePath = path.join(__dirname, "upload");

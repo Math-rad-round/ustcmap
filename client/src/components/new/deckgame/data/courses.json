@@ -1,0 +1,14 @@
+{
+  "courses": [
+    { "id": "t1", "name": "Calculus I", "type": "Theory" },
+    { "id": "t2", "name": "Linear Algebra", "type": "Theory" },
+    { "id": "t3", "name": "Discrete Math", "type": "Theory" },
+    { "id": "t4", "name": "Algorithms", "type": "Theory" },
+    { "id": "t5", "name": "Physics Theory", "type": "Theory" },
+    { "id": "p1", "name": "Programming Lab", "type": "Practice" },
+    { "id": "p2", "name": "Electronics Lab", "type": "Practice" },
+    { "id": "p3", "name": "Design Workshop", "type": "Practice" },
+    { "id": "p4", "name": "Project Practice", "type": "Practice" },
+    { "id": "p5", "name": "Field Study", "type": "Practice" }
+  ]
+}

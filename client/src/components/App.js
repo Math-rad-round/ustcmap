@@ -31,7 +31,7 @@ import PosPage from "./pos/PosPage.js";
 import "../utilities.css";
 import "./App.css";
 import Savepos from "./pos/testpage.js";
-
+import DeckGame from "./new/deckgame/DeckGame.js";
 class App extends Component{
   constructor(props){
     super(props);
@@ -121,6 +121,7 @@ class App extends Component{
                 <Route path="/new/" element={<NewProjectPage />} />
                 <Route path="/addguess/" element={<Addguess />} />
                 <Route path="/guess" element={<Guess />} />
+                <Route path="/ustcgame" element={<DeckGame />} />
                 <Route path="/savepos" element={<Savepos />} />
                 <Route path="/getpos" element={<PosPage />} />
                 <Route path="/testapi" element={<Testapi />} />
