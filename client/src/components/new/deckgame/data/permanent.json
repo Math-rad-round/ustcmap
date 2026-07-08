@@ -1,0 +1,230 @@
+[
+  {
+    "id": "permanent_practice_accumulation",
+    "name": "实践积累",
+    "type": "permanent",
+    "symbol": null,
+    "content": "考试时实践符号 +1",
+    "effects": [
+      {
+        "effectType": "addSymbol",
+        "input": "practice",
+        "multi": 1
+      }
+    ]
+  },
+  {
+    "id": "permanent_advanced_practice_accumulation",
+    "name": "高级实践积累",
+    "type": "permanent",
+    "symbol": null,
+    "content": "考试时实践符号 +2",
+    "effects": [
+      {
+        "effectType": "addSymbol",
+        "input": "practice",
+        "multi": 2
+      }
+    ]
+  },
+  {
+    "id": "permanent_social_experience",
+    "name": "社会经验",
+    "type": "permanent",
+    "symbol": null,
+    "content": "考试时社会符号 +1",
+    "effects": [
+      {
+        "effectType": "addSymbol",
+        "input": "social",
+        "multi": 1
+      }
+    ]
+  },
+  {
+    "id": "permanent_advanced_social_experience",
+    "name": "高级社会经验",
+    "type": "permanent",
+    "symbol": null,
+    "content": "考试时社会符号 +2",
+    "effects": [
+      {
+        "effectType": "addSymbol",
+        "input": "social",
+        "multi": 2
+      }
+    ]
+  },
+  {
+    "id": "permanent_theory_accumulation",
+    "name": "理论积累",
+    "type": "permanent",
+    "symbol": null,
+    "content": "考试时理论符号 +1",
+    "effects": [
+      {
+        "effectType": "addSymbol",
+        "input": "theory",
+        "multi": 1
+      }
+    ]
+  },
+  {
+    "id": "permanent_advanced_theory_accumulation",
+    "name": "高级理论积累",
+    "type": "permanent",
+    "symbol": null,
+    "content": "考试时理论符号 +2",
+    "effects": [
+      {
+        "effectType": "addSymbol",
+        "input": "theory",
+        "multi": 2
+      }
+    ]
+  },
+  {
+    "id": "permanent_research_paper",
+    "name": "科研论文",
+    "type": "permanent",
+    "symbol": null,
+    "content": "考试时理论符号 +2",
+    "effects": [
+      {
+        "effectType": "addSymbol",
+        "input": "theory",
+        "multi": 2
+      }
+    ]
+  },
+  {
+    "id": "permanent_research_achievement",
+    "name": "科研成果",
+    "type": "permanent",
+    "symbol": null,
+    "content": "考试时理论符号 +1、实践符号 +1",
+    "effects": [
+      {
+        "effectType": "addSymbol",
+        "input": "theory",
+        "multi": 1
+      },
+      {
+        "effectType": "addSymbol",
+        "input": "practice",
+        "multi": 1
+      }
+    ]
+  },
+  {
+    "id": "permanent_innovation_achievement",
+    "name": "创新成果",
+    "type": "permanent",
+    "symbol": null,
+    "content": "考试时理论符号 +1、实践符号 +1",
+    "effects": [
+      {
+        "effectType": "addSymbol",
+        "input": "theory",
+        "multi": 1
+      },
+      {
+        "effectType": "addSymbol",
+        "input": "practice",
+        "multi": 1
+      }
+    ]
+  },
+  {
+    "id": "permanent_organization_experience",
+    "name": "组织经验",
+    "type": "permanent",
+    "symbol": null,
+    "content": "考试时理论符号 +1、社会符号 +1",
+    "effects": [
+      {
+        "effectType": "addSymbol",
+        "input": "theory",
+        "multi": 1
+      },
+      {
+        "effectType": "addSymbol",
+        "input": "social",
+        "multi": 1
+      }
+    ]
+  },
+  {
+    "id": "permanent_global_vision",
+    "name": "国际视野",
+    "type": "permanent",
+    "symbol": null,
+    "content": "考试时理论符号 +1、社会符号 +1",
+    "effects": [
+      {
+        "effectType": "addSymbol",
+        "input": "theory",
+        "multi": 1
+      },
+      {
+        "effectType": "addSymbol",
+        "input": "social",
+        "multi": 1
+      }
+    ]
+  },
+  {
+    "id": "permanent_company_offer",
+    "name": "企业Offer",
+    "type": "permanent",
+    "symbol": null,
+    "content": "考试时社会符号 +1",
+    "effects": [
+      {
+        "effectType": "addSymbol",
+        "input": "social",
+        "multi": 1
+      }
+    ]
+  },
+  {
+    "id": "permanent_company_experience",
+    "name": "企业经历",
+    "type": "permanent",
+    "symbol": null,
+    "content": "每次考试获得2推进",
+    "effects": [
+      {
+        "effectType": "giveProgress",
+        "num": 2
+      }
+    ]
+  },
+  {
+    "id": "permanent_national_scholarship",
+    "name": "国家奖学金",
+    "type": "permanent",
+    "symbol": null,
+    "content": "考试时固定获得6分",
+    "effects": [
+      {
+        "effectType": "addScore",
+        "input": "const1",
+        "multi": 6
+      }
+    ]
+  },
+  {
+    "id": "permanent_outstanding_graduation_project",
+    "name": "优秀毕业设计",
+    "type": "permanent",
+    "symbol": null,
+    "content": "考试时获得2成就点",
+    "effects": [
+      {
+        "effectType": "addAchievement",
+        "input": 2
+      }
+    ]
+  }
+]

@@ -1,0 +1,273 @@
+[
+  {
+    "id": "test_calculus",
+    "name": "高等数学考试",
+    "content": "考察数学理论基础，每张理论符号额外提供2分。",
+    "drawnum": 5,
+    "effect": [
+      {
+        "effectType": "addScore",
+        "input": "theory",
+        "multi": 2
+      }
+    ]
+  },
+  {
+    "id": "test_physics",
+    "name": "大学物理考试",
+    "content": "考察物理理论与实验能力，每张理论符号提供1分，每张实践符号提供1分。",
+    "drawnum": 5,
+    "effect": [
+      {
+        "effectType": "addScore",
+        "input": "theory",
+        "multi": 1
+      },
+      {
+        "effectType": "addScore",
+        "input": "practice",
+        "multi": 1
+      }
+    ]
+  },
+  {
+    "id": "test_programming",
+    "name": "程序设计考试",
+    "content": "考察计算机编程与工程实践能力，每张实践符号额外提供2分。",
+    "drawnum": 5,
+    "effect": [
+      {
+        "effectType": "addScore",
+        "input": "practice",
+        "multi": 2
+      }
+    ]
+  },
+  {
+    "id": "test_english",
+    "name": "英语能力测试",
+    "content": "考察语言交流与表达能力，每张社会符号提供2分，并额外获得4分。",
+    "drawnum": 5,
+    "effect": [
+      {
+        "effectType": "addScore",
+        "input": "social",
+        "multi": 2
+      },
+      {
+        "effectType": "addScore",
+        "input": "const1",
+        "multi": 4
+      }
+    ]
+  },
+  {
+    "id": "test_lab",
+    "name": "大物实验考核",
+    "content": "完成实验操作并提交实验成果。获得2温习值用于准备，每张实践符号提供1分，每点项目推进额外提供1分。",
+    "drawnum": 5,
+    "start": [
+      {
+        "effectType": "addReview",
+        "input": 2
+      }
+    ],
+    "effect": [
+      {
+        "effectType": "addScore",
+        "input": "practice",
+        "multi": 1
+      },
+      {
+        "effectType": "addScore",
+        "input": "progress",
+        "multi": 1
+      }
+    ]
+  },
+  {
+    "id": "test_basic",
+    "name": "大基础考试",
+    "content": "考察基础综合掌握情况，达标要求提高50%。获得3温习值用于准备，每张理论或实践符号提供1分。",
+    "drawnum": 6,
+    "scorescaling": 1.5,
+    "start": [
+      {
+        "effectType": "addReview",
+        "input": 3
+      }
+    ],
+    "effect": [
+      {
+        "effectType": "addScore",
+        "input": "theory",
+        "multi": 1
+      },
+      {
+        "effectType": "addScore",
+        "input": "practice",
+        "multi": 1
+      }
+    ]
+  },
+  {
+    "id": "test_course_design",
+    "name": "大作业设计答辩",
+    "content": "展示设计成果，考察综合实践能力。每张实践符号提供1分，每张理论符号提供1分，每个项目额外提供3分。",
+    "drawnum": 5,
+    "effect": [
+      {
+        "effectType": "addScore",
+        "input": "practice",
+        "multi": 1
+      },
+      {
+        "effectType": "addScore",
+        "input": "theory",
+        "multi": 1
+      },
+      {
+        "effectType": "addScore",
+        "input": "project",
+        "multi": 3
+      }
+    ]
+  },
+  {
+    "id": "test_innovation",
+    "name": "创新能力考核",
+    "content": "评价发现问题和解决问题的能力，每张理论或实践符号提供1分，每点项目推进额外提供2分。",
+    "drawnum": 5,
+    "effect": [
+      {
+        "effectType": "addScore",
+        "input": "theory",
+        "multi": 1
+      },
+      {
+        "effectType": "addScore",
+        "input": "practice",
+        "multi": 1
+      },
+      {
+        "effectType": "addScore",
+        "input": "progress",
+        "multi": 2
+      }
+    ]
+  },
+  {
+    "id": "test_easy",
+    "name": "简单课程考核",
+    "content": "考察基础课程掌握情况，本次考试达标要求降低50%，每个理论符号提供1分。",
+    "drawnum": 5,
+    "scorescaling": 0.5,
+    "effect": [
+      {
+        "effectType": "addScore",
+        "input": "theory",
+        "multi": 1
+      }
+    ]
+  },
+  {
+    "id": "test_comprehensive",
+    "name": "综合素质评价",
+    "content": "大学阶段综合能力评估。本次考试达标要求提高50%，按照理论、实践、社会中数量最多的一类符号计分，每个提供2分。",
+    "drawnum": 5,
+    "scorescaling": 1.5,
+    "effect": [
+      {
+        "effectType": "getHighest",
+        "target": "symbol",
+        "output": "highest"
+      },
+      {
+        "effectType": "addScore",
+        "input": "highest",
+        "multi": 2
+      },
+      {
+        "effectType": "getVariable",
+        "target": "theory",
+        "output": "t"
+      },
+      {
+        "effectType": "getVariable",
+        "target": "practice",
+        "output": "p"
+      },
+      {
+        "effectType": "getVariable",
+        "target": "social",
+        "output": "s"
+      }
+    ]
+  },
+  {
+    "id": "test_competition",
+    "name": "竞赛选拔考试",
+    "content": "学院组织优秀学生选拔，每张实践符号提供2分，每个永久成果额外提供5分。",
+    "drawnum": 5,
+    "effect": [
+      {
+        "effectType": "addScore",
+        "input": "practice",
+        "multi": 2
+      },
+      {
+        "effectType": "addScore",
+        "input": "permanent",
+        "multi": 5
+      }
+    ]
+  },
+  {
+    "id": "test_final",
+    "name": "期末突击考试",
+    "content": "临近期末的综合检查，本次考试达标要求降低50%，每张理论符号提供1分，每点温习值额外提供2分。",
+    "drawnum": 3,
+    "scorescaling": 0.5,
+    "effect": [
+      {
+        "effectType": "addScore",
+        "input": "theory",
+        "multi": 1
+      },
+      {
+        "effectType": "addScore",
+        "input": "review",
+        "multi": 2
+      }
+    ]
+  },
+  {
+    "id": "test_graduation",
+    "name": "全面能力考核",
+    "content": "检查学生是否达到能力要求。本次考试达标要求提高50%，每张理论、实践、社会符号提供1分，每个永久成果额外提供3分。",
+    "drawnum": 6,
+    "scorescaling": 1.5,
+    "effect": [
+      {
+        "effectType": "addScore",
+        "input": "theory",
+        "multi": 1
+      },
+      {
+        "effectType": "addScore",
+        "input": "practice",
+        "multi": 1
+      },
+      {
+        "effectType": "addScore",
+        "input": "social",
+        "multi": 1
+      },
+      {
+        "effectType": "addScore",
+        "input": "permanent",
+        "multi": 3
+      }
+    ]
+  }
+]

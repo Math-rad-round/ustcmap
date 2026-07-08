@@ -225,7 +225,7 @@ router.get("/search", (req, res) => {
     if(req.query.content!="") {option["name"]={$regex:req.query.content};}
     if(req.query.platform!="all")option["platforms"]=req.query.platform;
     if(req.query.tag!="all")option["tags"]={$elemMatch:{name:req.query.tag}}
-    App.find(option). then((app)=>res.send({projects:app})).catch((err)=>res.status(422).send("nofile"+error));
+    App.find(option). then((app)=>res.send({projects:app})).catch((err)=>res.status(422).send("nofile"+err));
 });
 router.get("/applist",(req,res)=>{
   App.find({}).sort({createdate:1,name:1}).then((app)=>{res.send(app)});

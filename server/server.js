@@ -17,6 +17,7 @@ const api_room = require("./apiRoom");
 const api_talk = require("./apiTalk");
 const api_vr = require("./apiVr");
 const api_login = require("./apiLogin");
+const api_game = require("./apiGame");
 const parser = require("./AI/parser");
 // server.js 或 app.js
 const mongoConnectionURL = process.env.MONGODB_NET;
@@ -58,6 +59,7 @@ app.use("/api", api_login);
 app.use("/api",api_place);
 app.use("/askroom", api_room);
 app.use("/ai",parser);
+app.use("/api", api_game);
 // // load the compiled react files, which will serve /index.html and /bundle.js
 
 app.get('/upload/:dir1/:name', (req, res) => {

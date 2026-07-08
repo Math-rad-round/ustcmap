@@ -12,7 +12,8 @@
     "start": "nodemon",
     "dev": "webpack-dev-server",
     "build": "npm run build:graph && npm run build:client",
-    "deploy": "npm run build && npm run start:server"
+    "deploy": "npm run build && npm run start:server",
+    "test": "npm run build:client && npm run start:server"
   },
   "keywords": [],
   "author": "",

@@ -1,0 +1,1367 @@
+[
+  {
+    "id": "event_course_selection",
+    "name": "选课时间",
+    "symbol": "book",
+    "semester": "1-4",
+    "weight": 4,
+    "content": "来选课。",
+    "options": [
+      {
+        "name": "选课！",
+        "content": "课程三选一。",
+        "cost": [],
+        "effects": [
+          {
+            "effectType": "sReward",
+            "shownum": 3
+          }
+        ]
+      },
+      {
+        "name": "仔细选课！",
+        "content": "课程五选一。",
+        "cost": [
+          {
+            "type": "discardEvent",
+            "symbol": "book",
+            "num": 1
+          }
+        ],
+        "effects": [
+          {
+            "effectType": "sReward",
+            "shownum": 5
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "event_campus_competition",
+    "name": "校内比赛",
+    "symbol": "connect",
+    "semester": "1-8",
+    "weight": 3,
+    "content": "参加校园比赛，争取好成绩。",
+    "options": [
+      {
+        "name": "参与比赛",
+        "content": "获得3成就点。",
+        "cost": [],
+        "effects": [
+          {
+            "effectType": "addAchievement",
+            "input": "const1",
+            "multi": 3
+          }
+        ]
+      },
+      {
+        "name": "全力以赴",
+        "content": "获得5成就点。",
+        "cost": [
+          {
+            "type": "discardEvent",
+            "symbol": "connect",
+            "num": 1
+          }
+        ],
+        "effects": [
+          {
+            "effectType": "addAchievement",
+            "input": "const1",
+            "multi": 5
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "event_review",
+    "name": "复习",
+    "symbol": "book",
+    "semester": "1-8",
+    "weight": 4,
+    "content": "临近期末，赶紧复习吧。",
+    "options": [
+      {
+        "name": "认真复习",
+        "content": "获得1成就点与3温习值。",
+        "cost": [],
+        "effects": [
+          {
+            "effectType": "addAchievement",
+            "input": "const1"
+          },
+          {
+            "effectType": "addReview",
+            "input": 3
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "event_computer_age",
+    "name": "计算机时代",
+    "symbol": "data",
+    "semester": "2-8",
+    "weight": 2,
+    "content": "计算机时代已经来临。",
+    "options": [
+      {
+        "name": "机器人方向",
+        "content": "获得机器人项目。",
+        "cost": [],
+        "effects": [
+          {
+            "effectType": "giveProject",
+            "name": "pro_robotmaster"
+          }
+        ]
+      },
+      {
+        "name": "ICPC方向",
+        "content": "获得ICPC项目。",
+        "cost": [],
+        "effects": [
+          {
+            "effectType": "giveProject",
+            "name": "pro_ICPC"
+          }
+        ]
+      },
+      {
+        "name": "学习实践",
+        "content": "获得一门实践课程（2选1）。",
+        "cost": [],
+        "effects": [
+          {
+            "effectType": "sReward",
+            "lessontype": "practice",
+            "shownum": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "event_club_fair",
+    "name": "社团游园会",
+    "symbol": "connect",
+    "semester": "1-3",
+    "weight": 3,
+    "content": "丰富多彩的社团活动等你参与。",
+    "options": [
+      {
+        "name": "加入社团日常工作",
+        "content": "获得社团文化节项目。",
+        "cost": [],
+        "effects": [
+          {
+            "effectType": "giveProject",
+            "name": "pro_group"
+          }
+        ]
+      },
+      {
+        "name": "闭门学习",
+        "content": "获得3温习值，下次考试+1分。",
+        "cost": [],
+        "effects": [
+          {
+            "effectType": "addReview",
+            "input": 3
+          },
+          {
+            "effectType": "addNextScore",
+            "input": "const1"
+          }
+        ]
+      },
+      {
+        "name": "社团散心",
+        "content": "抽2张事件卡。",
+        "cost": [],
+        "effects": [
+          {
+            "effectType": "drawEvent",
+            "num": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "event_time_plan",
+    "name": "时间规划",
+    "symbol": null,
+    "semester": "1-8",
+    "weight": 4,
+    "content": "如何安排你的宝贵时间？",
+    "options": [
+      {
+        "name": "专心课余工作",
+        "content": "弃置2张事件卡，获得5成就点。",
+        "cost": [
+          {
+            "type": "discardEvent",
+            "num": 2
+          }
+        ],
+        "effects": [
+          {
+            "effectType": "addAchievement",
+            "input": "const1",
+            "multi": 5
+          }
+        ]
+      },
+      {
+        "name": "专心学习",
+        "content": "弃置1张事件卡，获得1成就点、3温习值，下次考试+2分。",
+        "cost": [
+          {
+            "type": "discardEvent",
+            "num": 1
+          }
+        ],
+        "effects": [
+          {
+            "effectType": "addAchievement",
+            "input": "const1"
+          },
+          {
+            "effectType": "addReview",
+            "input": 3
+          },
+          {
+            "effectType": "addNextScore",
+            "input": "const1",
+            "multi": 2
+          }
+        ]
+      },
+      {
+        "name": "专心探索",
+        "content": "抽3张事件卡。",
+        "cost": [],
+        "effects": [
+          {
+            "effectType": "drawEvent",
+            "num": 3
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "event_money_plan",
+    "name": "金钱规划",
+    "symbol": "connect",
+    "semester": "2-8",
+    "weight": 3,
+    "content": "规划自己的课余收入。",
+    "options": [
+      {
+        "name": "寻找家教",
+        "content": "获得兼职家教项目。",
+        "cost": [],
+        "effects": [
+          {
+            "effectType": "giveProject",
+            "name": "pro_teach"
+          }
+        ]
+      },
+      {
+        "name": "全力接单",
+        "content": "弃置1张人脉事件与1门课程，获得兼职家教项目并增加3推进。",
+        "cost": [
+          {
+            "type": "discardEvent",
+            "symbol": "connect",
+            "num": 1
+          },
+          {
+            "type": "discardLesson",
+            "num": 1
+          }
+        ],
+        "effects": [
+          {
+            "effectType": "giveProject",
+            "name": "pro_teach"
+          },
+          {
+            "effectType": "giveProgressOn",
+            "target": "pro_teach",
+            "num": 3
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "event_lab_recruit",
+    "name": "实验室招新",
+    "symbol": "research",
+    "semester": "2-5",
+    "weight": 2,
+    "content": "导师开放实验室招募本科生。",
+    "options": [
+      {
+        "name": "报名加入",
+        "content": "获得科研训练项目。",
+        "cost": [],
+        "effects": [
+          {
+            "effectType": "giveProject",
+            "name": "pro_research"
+          }
+        ]
+      },
+      {
+        "name": "旁听交流",
+        "content": "获得一门理论课程（2选1）。",
+        "cost": [],
+        "effects": [
+          {
+            "effectType": "sReward",
+            "lessontype": "theory",
+            "shownum": 2
+          }
+        ]
+      },
+      {
+        "name": "继续学习",
+        "content": "获得2温习值。",
+        "cost": [],
+        "effects": [
+          {
+            "effectType": "addReview",
+            "input": 2
+          }
+        ]
+      }
+    ]
+  },  {
+    "id": "event_tutor_discussion",
+    "name": "导师交流",
+    "symbol": "research",
+    "semester": "3-8",
+    "weight": 3,
+    "content": "导师与你讨论未来的发展方向。",
+    "options": [
+      {
+        "name": "请教科研",
+        "content": "获得2推进。",
+        "cost": [],
+        "effects": [
+          {
+            "effectType": "giveProgress",
+            "num": 2
+          }
+        ]
+      },
+      {
+        "name": "请教课程",
+        "content": "获得一门理论课程（3选1）。",
+        "cost": [],
+        "effects": [
+          {
+            "effectType": "sReward",
+            "lessontype": "theory",
+            "shownum": 3
+          }
+        ]
+      },
+      {
+        "name": "请教经验",
+        "content": "抽1张事件卡。",
+        "cost": [],
+        "effects": [
+          {
+            "effectType": "drawEvent",
+            "num": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "event_programming_contest",
+    "name": "程序设计竞赛",
+    "symbol": "engineering",
+    "semester": "2-6",
+    "weight": 2,
+    "content": "学院举办程序设计竞赛。",
+    "options": [
+      {
+        "name": "报名参赛",
+        "content": "获得ICPC项目。",
+        "cost": [],
+        "effects": [
+          {
+            "effectType": "giveProject",
+            "name": "pro_ICPC"
+          }
+        ]
+      },
+      {
+        "name": "参加培训",
+        "content": "获得一门实践课程（2选1）。",
+        "cost": [],
+        "effects": [
+          {
+            "effectType": "sReward",
+            "lessontype": "practice",
+            "shownum": 2
+          }
+        ]
+      },
+      {
+        "name": "观看比赛",
+        "content": "抽2张事件卡。",
+        "cost": [],
+        "effects": [
+          {
+            "effectType": "drawEvent",
+            "num": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "event_lab_open_day",
+    "name": "实验室开放日",
+    "symbol": "engineering",
+    "semester": "2-5",
+    "weight": 3,
+    "content": "各实验室开放参观。",
+    "options": [
+      {
+        "name": "动手实践",
+        "content": "获得2推进。",
+        "cost": [],
+        "effects": [
+          {
+            "effectType": "giveProgress",
+            "num": 2
+          }
+        ]
+      },
+      {
+        "name": "体验设备",
+        "content": "获得一门实践课程（3选1）。",
+        "cost": [],
+        "effects": [
+          {
+            "effectType": "sReward",
+            "lessontype": "practice",
+            "shownum": 3
+          }
+        ]
+      },
+      {
+        "name": "认识学长",
+        "content": "获得1工程推进。",
+        "cost": [],
+        "effects": [
+          {
+            "effectType": "giveProgress",
+            "num": 1,
+            "type": "engineering"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "event_academic_lecture",
+    "name": "学院讲座",
+    "symbol": "research",
+    "semester": "1-8",
+    "weight": 4,
+    "content": "学院邀请专家开展专题讲座。",
+    "options": [
+      {
+        "name": "认真听讲",
+        "content": "获得3温习值。",
+        "cost": [],
+        "effects": [
+          {
+            "effectType": "addReview",
+            "input": 3
+          }
+        ]
+      },
+      {
+        "name": "积极提问",
+        "content": "获得一门理论课程（2选1）。",
+        "cost": [],
+        "effects": [
+          {
+            "effectType": "sReward",
+            "lessontype": "theory",
+            "shownum": 2
+          }
+        ]
+      },
+      {
+        "name": "课后交流",
+        "content": "获得1推进。",
+        "cost": [],
+        "effects": [
+          {
+            "effectType": "giveProgress",
+            "num": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "event_midterm_week",
+    "name": "期中周",
+    "symbol": null,
+    "semester": "2-8",
+    "weight": 4,
+    "content": "期中考试逐渐临近。",
+    "options": [
+      {
+        "name": "集中复习",
+        "content": "获得4温习值。",
+        "cost": [],
+        "effects": [
+          {
+            "effectType": "addReview",
+            "input": 4
+          }
+        ]
+      },
+      {
+        "name": "完成课程设计",
+        "content": "获得2推进。",
+        "cost": [],
+        "effects": [
+          {
+            "effectType": "giveProgress",
+            "num": 2
+          }
+        ]
+      },
+      {
+        "name": "调整状态",
+        "content": "下次考试+3分。",
+        "cost": [],
+        "effects": [
+          {
+            "effectType": "addNextScore",
+            "input": "const1",
+            "multi": 3
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "event_summer_plan",
+    "name": "暑期安排",
+    "symbol": null,
+    "semester": "2/4/6",
+    "weight": 2,
+    "content": "暑假即将开始，你决定如何安排。",
+    "options": [
+      {
+        "name": "留校科研",
+        "content": "获得科研训练项目。",
+        "cost": [],
+        "effects": [
+          {
+            "effectType": "giveProject",
+            "name": "pro_research"
+          }
+        ]
+      },
+      {
+        "name": "企业实习",
+        "content": "获得企业实习项目。",
+        "cost": [],
+        "effects": [
+          {
+            "effectType": "giveProject",
+            "name": "pro_company"
+          }
+        ]
+      },
+      {
+        "name": "放松假期",
+        "content": "获得2成就点。",
+        "cost": [],
+        "effects": [
+          {
+            "effectType": "addAchievement",
+            "input": "const1",
+            "multi": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "event_dorm_chat",
+    "name": "宿舍夜谈",
+    "symbol": "connect",
+    "semester": "1-4",
+    "weight": 4,
+    "content": "晚上，宿舍里讨论起未来的发展。",
+    "options": [
+      {
+        "name": "分享学习经验",
+        "content": "获得2温习值。",
+        "cost": [],
+        "effects": [
+          {
+            "effectType": "addReview",
+            "input": 2
+          }
+        ]
+      },
+      {
+        "name": "一起做项目",
+        "content": "获得2推进。",
+        "cost": [],
+        "effects": [
+          {
+            "effectType": "giveProgress",
+            "num": 2
+          }
+        ]
+      },
+      {
+        "name": "聊聊校园生活",
+        "content": "抽2张事件卡。",
+        "cost": [],
+        "effects": [
+          {
+            "effectType": "drawEvent",
+            "num": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "event_job_fair",
+    "name": "校园招聘会",
+    "symbol": "connect",
+    "semester": "6-8",
+    "weight": 2,
+    "content": "企业来到学校举办招聘宣讲。",
+    "options": [
+      {
+        "name": "投递简历",
+        "content": "获得企业实习项目。",
+        "cost": [],
+        "effects": [
+          {
+            "effectType": "giveProject",
+            "name": "pro_company"
+          }
+        ]
+      },
+      {
+        "name": "参加宣讲",
+        "content": "获得一门实践课程（2选1）。",
+        "cost": [],
+        "effects": [
+          {
+            "effectType": "sReward",
+            "lessontype": "practice",
+            "shownum": 2
+          }
+        ]
+      },
+      {
+        "name": "建立联系",
+        "content": "获得1人脉推进。",
+        "cost": [],
+        "effects": [
+          {
+            "effectType": "giveProgress",
+            "num": 1,
+            "type": "connect"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "event_innovation_program",
+    "name": "创新训练计划",
+    "symbol": "engineering",
+    "semester": "3-6",
+    "weight": 2,
+    "content": "学校开放大学生创新训练计划申请。",
+    "options": [
+      {
+        "name": "独立申请",
+        "content": "获得创新创业项目。",
+        "cost": [],
+        "effects": [
+          {
+            "effectType": "giveProject",
+            "name": "pro_startup"
+          }
+        ]
+      },
+      {
+        "name": "加入团队",
+        "content": "获得2推进。",
+        "cost": [],
+        "effects": [
+          {
+            "effectType": "giveProgress",
+            "num": 2
+          }
+        ]
+      },
+      {
+        "name": "学习经验",
+        "content": "抽2张事件卡。",
+        "cost": [],
+        "effects": [
+          {
+            "effectType": "drawEvent",
+            "num": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "event_open_week",
+    "name": "校园开放周",
+    "symbol": "connect",
+    "semester": "1-2",
+    "weight": 3,
+    "content": "校园举办丰富多彩的展示活动。",
+    "options": [
+      {
+        "name": "参加学术展示",
+        "content": "获得一门理论课程（2选1）。",
+        "cost": [],
+        "effects": [
+          {
+            "effectType": "sReward",
+            "lessontype": "theory",
+            "shownum": 2
+          }
+        ]
+      },
+      {
+        "name": "体验实践项目",
+        "content": "获得一门实践课程（2选1）。",
+        "cost": [],
+        "effects": [
+          {
+            "effectType": "sReward",
+            "lessontype": "practice",
+            "shownum": 2
+          }
+        ]
+      },
+      {
+        "name": "参加社团展示",
+        "content": "获得一门社会课程（2选1）。",
+        "cost": [],
+        "effects": [
+          {
+            "effectType": "sReward",
+            "lessontype": "social",
+            "shownum": 2
+          }
+        ]
+      },
+      {
+        "name": "全都要",
+        "content": "课程5选2。",
+        "cost": [
+          {
+            "type": "discardEvent",
+            "num": 3
+          }
+        ],
+        "effects": [
+          {
+            "effectType": "sReward",
+            "shownum": 5,
+            "selectnum": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "event_curriculum_reform",
+    "name": "课程改革",
+    "symbol": "book",
+    "semester": "2-6",
+    "weight": 3,
+    "content": "学校调整了培养方案。",
+    "options": [
+      {
+        "name": "正常选课",
+        "content": "获得一门课程（2选1）。",
+        "cost": [],
+        "effects": [
+          {
+            "effectType": "sReward",
+            "shownum": 2
+          }
+        ]
+      },
+      {
+        "name": "仔细规划",
+        "content": "课程5选1。",
+        "cost": [
+          {
+            "type": "discardEvent",
+            "symbol": "book",
+            "num": 1
+          }
+        ],
+        "effects": [
+          {
+            "effectType": "sReward",
+            "shownum": 5
+          }
+        ]
+      },
+      {
+        "name": "调整方向",
+        "content": "删除1张课程，课程3选1。",
+        "cost": [
+          {
+            "type": "discardEvent",
+            "num": 2
+          }
+        ],
+        "effects": [
+          {
+            "effectType": "deleteLessons",
+            "num": 1
+          },
+          {
+            "effectType": "sReward",
+            "shownum": 3
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "event_professor_recommendation",
+    "name": "导师推荐",
+    "symbol": "research",
+    "semester": "3-8",
+    "weight": 2,
+    "content": "导师推荐优秀学生加入科研项目。",
+    "options": [
+      {
+        "name": "接受推荐",
+        "content": "获得2推进。",
+        "cost": [],
+        "effects": [
+          {
+            "effectType": "giveProgress",
+            "num": 2
+          }
+        ]
+      },
+      {
+        "name": "加入课题组",
+        "content": "获得科研训练项目。",
+        "cost": [
+          {
+            "type": "discardEvent",
+            "symbol": "research",
+            "num": 1
+          }
+        ],
+        "effects": [
+          {
+            "effectType": "giveProject",
+            "name": "pro_research"
+          }
+        ]
+      },
+      {
+        "name": "主动申请",
+        "content": "获得科研训练项目，并增加2推进。",
+        "cost": [
+          {
+            "type": "discardEvent",
+            "num": 2
+          }
+        ],
+        "effects": [
+          {
+            "effectType": "giveProject",
+            "name": "pro_research"
+          },
+          {
+            "effectType": "giveProgressOn",
+            "name": "pro_research",
+            "num": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "event_tech_sharing",
+    "name": "技术分享会",
+    "symbol": "engineering",
+    "semester": "2-8",
+    "weight": 3,
+    "content": "校园举办技术交流活动。",
+    "options": [
+      {
+        "name": "认真听讲",
+        "content": "获得一门实践课程（2选1）。",
+        "cost": [],
+        "effects": [
+          {
+            "effectType": "sReward",
+            "lessontype": "practice",
+            "shownum": 2
+          }
+        ]
+      },
+      {
+        "name": "深入交流",
+        "content": "获得一门实践课程（4选1）。",
+        "cost": [
+          {
+            "type": "discardEvent",
+            "symbol": "engineering",
+            "num": 1
+          }
+        ],
+        "effects": [
+          {
+            "effectType": "sReward",
+            "lessontype": "practice",
+            "shownum": 4
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "event_self_study",
+    "name": "自主学习",
+    "symbol": "book",
+    "semester": "1-8",
+    "weight": 4,
+    "content": "难得的空闲时间，你决定提升自己。",
+    "options": [
+      {
+        "name": "阅读教材",
+        "content": "获得3温习值。",
+        "cost": [],
+        "effects": [
+          {
+            "effectType": "addReview",
+            "input": 3
+          }
+        ]
+      },
+      {
+        "name": "系统学习",
+        "content": "获得一门理论课程（3选1）。",
+        "cost": [
+          {
+            "type": "discardEvent",
+            "symbol": "book",
+            "num": 1
+          }
+        ],
+        "effects": [
+          {
+            "effectType": "sReward",
+            "lessontype": "theory",
+            "shownum": 3
+          }
+        ]
+      },
+      {
+        "name": "专项训练",
+        "content": "删除1张课程，获得2温习值。",
+        "cost": [
+          {
+            "type": "discardEvent",
+            "num": 2
+          }
+        ],
+        "effects": [
+          {
+            "effectType": "deleteLessons",
+            "num": 1
+          },
+          {
+            "effectType": "addReview",
+            "input": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "event_lab_assignment",
+    "name": "实验安排",
+    "symbol": "engineering",
+    "semester": "2-5",
+    "weight": 3,
+    "content": "实验室开放新的实验项目。",
+    "options": [
+      {
+        "name": "完成实验",
+        "content": "获得2推进。",
+        "cost": [],
+        "effects": [
+          {
+            "effectType": "giveProgress",
+            "num": 2
+          }
+        ]
+      },
+      {
+        "name": "加入实验室",
+        "content": "获得机器人项目。",
+        "cost": [
+          {
+            "type": "discardEvent",
+            "symbol": "engineering",
+            "num": 1
+          }
+        ],
+        "effects": [
+          {
+            "effectType": "giveProject",
+            "name": "pro_robotmaster"
+          }
+        ]
+      },
+      {
+        "name": "连续攻关",
+        "content": "获得机器人项目，并增加2推进。",
+        "cost": [
+          {
+            "type": "discardEvent",
+            "num": 2
+          }
+        ],
+        "effects": [
+          {
+            "effectType": "giveProject",
+            "name": "pro_robotmaster"
+          },
+          {
+            "effectType": "giveProgressOn",
+            "name": "pro_robotmaster",
+            "num": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "event_senior_sharing",
+    "name": "学长经验分享",
+    "symbol": "connect",
+    "semester": "2-6",
+    "weight": 3,
+    "content": "学长与你分享大学经验。",
+    "options": [
+      {
+        "name": "认真倾听",
+        "content": "获得2温习值。",
+        "cost": [],
+        "effects": [
+          {
+            "effectType": "addReview",
+            "input": 2
+          }
+        ]
+      },
+      {
+        "name": "请教学长",
+        "content": "获得一门课程（3选1）。",
+        "cost": [
+          {
+            "type": "discardEvent",
+            "symbol": "connect",
+            "num": 1
+          }
+        ],
+        "effects": [
+          {
+            "effectType": "sReward",
+            "shownum": 3
+          }
+        ]
+      },
+      {
+        "name": "建立联系",
+        "content": "获得1人脉推进并抽1张事件卡。",
+        "cost": [
+          {
+            "type": "discardEvent",
+            "num": 2
+          }
+        ],
+        "effects": [
+          {
+            "effectType": "giveProgress",
+            "type": "connect",
+            "num": 1
+          },
+          {
+            "effectType": "drawEvent",
+            "num": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "event_lab_showcase",
+    "name": "实验课展示",
+    "symbol": "engineering",
+    "semester": "1-4",
+    "weight": 3,
+    "content": "各实验课程展示优秀作品。",
+    "options": [
+      {
+        "name": "观摩学习",
+        "content": "获得一门实践课程（2选1）。",
+        "cost": [],
+        "effects": [
+          {
+            "effectType": "sReward",
+            "lessontype": "practice",
+            "shownum": 2
+          }
+        ]
+      },
+      {
+        "name": "参与制作",
+        "content": "获得2推进。",
+        "cost": [
+          {
+            "type": "discardEvent",
+            "symbol": "engineering",
+            "num": 1
+          }
+        ],
+        "effects": [
+          {
+            "effectType": "giveProgress",
+            "num": 2
+          }
+        ]
+      },
+      {
+        "name": "加入团队",
+        "content": "获得机器人项目。",
+        "cost": [
+          {
+            "type": "discardEvent",
+            "num": 2
+          }
+        ],
+        "effects": [
+          {
+            "effectType": "giveProject",
+            "name": "pro_robotmaster"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "event_book_club",
+    "name": "读书分享会",
+    "symbol": "book",
+    "semester": "1-8",
+    "weight": 3,
+    "content": "图书馆举办读书交流活动。",
+    "options": [
+      {
+        "name": "安静阅读",
+        "content": "获得2温习值。",
+        "cost": [],
+        "effects": [
+          {
+            "effectType": "addReview",
+            "input": 2
+          }
+        ]
+      },
+      {
+        "name": "分享心得",
+        "content": "获得一门理论课程（3选1）。",
+        "cost": [
+          {
+            "type": "discardEvent",
+            "symbol": "book",
+            "num": 1
+          }
+        ],
+        "effects": [
+          {
+            "effectType": "sReward",
+            "lessontype": "theory",
+            "shownum": 3
+          }
+        ]
+      },
+      {
+        "name": "专题研究",
+        "content": "获得科研训练项目。",
+        "cost": [
+          {
+            "type": "discardEvent",
+            "num": 2
+          }
+        ],
+        "effects": [
+          {
+            "effectType": "giveProject",
+            "name": "pro_research"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "event_company_talk",
+    "name": "企业宣讲",
+    "symbol": "engineering",
+    "semester": "5-8",
+    "weight": 2,
+    "content": "企业来到学校举办技术宣讲。",
+    "options": [
+      {
+        "name": "参加宣讲",
+        "content": "获得一门实践课程（2选1）。",
+        "cost": [],
+        "effects": [
+          {
+            "effectType": "sReward",
+            "lessontype": "practice",
+            "shownum": 2
+          }
+        ]
+      },
+      {
+        "name": "现场面试",
+        "content": "获得企业实习项目。",
+        "cost": [
+          {
+            "type": "discardEvent",
+            "symbol": "engineering",
+            "num": 1
+          }
+        ],
+        "effects": [
+          {
+            "effectType": "giveProject",
+            "name": "pro_company"
+          }
+        ]
+      },
+      {
+        "name": "签约实习",
+        "content": "获得企业实习项目，并增加3推进。",
+        "cost": [
+          {
+            "type": "discardEvent",
+            "num": 3
+          }
+        ],
+        "effects": [
+          {
+            "effectType": "giveProject",
+            "name": "pro_company"
+          },
+          {
+            "effectType": "giveProgressOn",
+            "name": "pro_company",
+            "num": 3
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "event_cross_major",
+    "name": "跨专业交流",
+    "symbol": "book",
+    "semester": "2-8",
+    "weight": 2,
+    "content": "不同专业举办联合交流活动。",
+    "options": [
+      {
+        "name": "听讲座",
+        "content": "获得一门理论课程（2选1）。",
+        "cost": [],
+        "effects": [
+          {
+            "effectType": "sReward",
+            "lessontype": "theory",
+            "shownum": 2
+          }
+        ]
+      },
+      {
+        "name": "合作学习",
+        "content": "获得一门课程（4选1）。",
+        "cost": [
+          {
+            "type": "discardEvent",
+            "symbol": "book",
+            "num": 1
+          }
+        ],
+        "effects": [
+          {
+            "effectType": "sReward",
+            "shownum": 4
+          }
+        ]
+      },
+      {
+        "name": "联合项目",
+        "content": "获得创新创业项目。",
+        "cost": [
+          {
+            "type": "discardEvent",
+            "num": 2
+          }
+        ],
+        "effects": [
+          {
+            "effectType": "giveProject",
+            "name": "pro_startup"
+          }
+        ]
+      }
+    ]
+  }
+]

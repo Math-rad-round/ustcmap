@@ -39,7 +39,7 @@ import DeckGame from './client/src/components/new/deckgame/DeckGame';
 
 常用命令（示例）
 -----------------
-- `START_EXAM`：开始考试，参数 `{ type: 'START_EXAM', draw: 5 }`，Engine 会洗牌并抽 `draw` 张牌，计算 counts 与 score，返回更新后的 `GameState`。
+- `START_SEMESTER`：开始学期，参数 `{ type: 'START_SEMESTER', draw: 5 }`，Engine 会先进入事件阶段；事件/温习结束后抽 `draw` 张课程牌，计算 counts 与 score，返回更新后的 `GameState`。
 
 开发建议
 --------
