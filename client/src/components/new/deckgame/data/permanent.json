@@ -178,11 +178,16 @@
     "name": "企业Offer",
     "type": "permanent",
     "symbol": null,
-    "content": "考试时社会符号 +1",
+    "content": "考试时社会符号 +1、实践符号 +1",
     "effects": [
       {
         "effectType": "addSymbol",
         "input": "social",
+        "multi": 1
+      },
+      {
+        "effectType": "addSymbol",
+        "input": "practice",
         "multi": 1
       }
     ]

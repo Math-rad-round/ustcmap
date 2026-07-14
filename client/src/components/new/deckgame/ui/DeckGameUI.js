@@ -28,6 +28,18 @@ const EVENT_SYMBOLS = {
   engineering: { icon: '⚙️', label: '工程' },
 };
 
+const PROJECT_TYPES = {
+  general: { icon: '▫️', label: '通用' },
+  book: EVENT_SYMBOLS.book,
+  course: EVENT_SYMBOLS.book,
+  connect: EVENT_SYMBOLS.connect,
+  social: EVENT_SYMBOLS.connect,
+  data: EVENT_SYMBOLS.data,
+  research: EVENT_SYMBOLS.research,
+  engineering: EVENT_SYMBOLS.engineering,
+  practice: EVENT_SYMBOLS.engineering,
+};
+
 const TOUR_STEPS = [
   {
     id: 'welcome',
@@ -39,27 +51,27 @@ const TOUR_STEPS = [
   {
     id: 'first_exam_card',
     title: '第一学期：翻开考试卡',
-    text: '每学期开始时会先看到本学期考试。现在翻开的是“大学物理考试”：理论符号和实践符号都会提供分数。第一学期我们跳过事件和温习，直接看考试如何结算。',
+    text: '每学期开始时会先看到本学期考试。现在翻开的是“大学物理统考”：理论符号和实践符号都会提供分数。第一学期我们跳过事件和温习，直接看考试如何结算。',
     focus: '当前考试',
     setup: { type: 'TUTORIAL_SETUP', reset: true, clearPermanents: true, semester: 1, testId: 'test_physics', courseIds: ['math', 'practice', 'experiment', 'chemistry', 'computer', 'physics', 'classmates', 'sports', 'hobby', 'extracurricular', 'extratask'], phase: 'briefing' },
   },
   {
     id: 'first_exam_draw',
     title: '第一次考试：抽出课程',
-    text: '第一学期是上学期，会额外多抽 1 张牌。这次固定抽前 6 张课程：高中数学、练习、高中实验、高中化学、电脑基础和高中物理。',
+    text: '第一学期是上学期，会额外多抽 1 张牌。这次固定抽前 6 张课程：少院数学预修、练习、基础实验预备、化学原理预修、瀚海电脑入门和力学预修。',
     focus: '考试阶段',
     setup: { type: 'TUTORIAL_SETUP', reset: true, clearPermanents: true, semester: 1, testId: 'test_physics', courseIds: ['math', 'practice', 'experiment', 'chemistry', 'computer', 'physics', 'classmates', 'sports', 'hobby', 'extracurricular', 'extratask'], phase: 'exam' },
   },
   {
     id: 'first_exam_symbols',
     title: '课程符号会互相配合',
-    text: '高中数学提供理论，练习和高中实验提供实践。大学物理考试会把理论和实践都转化为分数；高中实验还会根据实践数量额外得分。',
+    text: '少院数学预修提供理论，练习和基础实验预备提供实践。大学物理统考会把理论和实践都转化为分数；基础实验预备还会根据实践数量额外得分。',
     focus: '课程牌 / 知识符号',
   },
   {
     id: 'first_exam_effects',
     title: '课程也有自己的效果',
-    text: '高中化学会固定加分；电脑基础在前两学期很强；高中物理会检查理论是否足够突出。考试不是只数符号，课程效果也会一起结算。',
+    text: '化学原理预修会固定加分；瀚海电脑入门在前两学期很强；力学预修会检查理论是否足够突出。考试不是只数符号，课程效果也会一起结算。',
     focus: '课程结算日志',
   },
   {
@@ -67,55 +79,55 @@ const TOUR_STEPS = [
     title: '第一次考试结果',
     text: '本次考试总分来自考试卡、课程符号和课程效果。达到不同分数档位会获得不同成就点，未达到最低线会扣成就点。接下来我们学习如何在考试前主动准备。',
     focus: '考试总分 / 日志',
-    more: { label: '查看分数档位', text: '大一考试按 10 / 15 / 20 / 30 分给 1 / 4 / 6 / 8 成就点；如果低于 10 分，扣除 5 成就点。大二、大三、大四会把这些分数线按 1.5 / 2 / 2.5 倍提高。' },
+    more: { label: '查看分数档位', text: '大一普通考试按 10 / 15 / 20 / 30 分给 1 / 4 / 6 / 8 成就点；简单考试给 1 / 3 / 4 / 5，困难考试给 2 / 5 / 8 / 12。如果低于本次及格线，扣除 5 成就点。大二、大三、大四会提高本次及格要求。' },
   },
   {
     id: 'second_exam_card',
-    title: '第二学期：先看高等数学考试',
-    text: '第二学期开始时，先翻出“高等数学考试”。它主要吃理论符号：每个理论符号额外提供 2 分，所以我们这学期要主动找理论课程。',
+    title: '第二学期：先看数学分析期末',
+    text: '第二学期开始时，先翻出“数学分析期末”。它主要吃理论符号：每个理论符号额外提供 2 分，所以我们这学期要主动找理论课程。',
     focus: '当前考试',
     setup: { type: 'TUTORIAL_SETUP', reset: true, clearPermanents: true, semester: 2, testId: 'test_calculus', courseIds: ['sports', 'classmates', 'extratask', 'physics', 'chemistry', 'math'], eventIds: ['event_course_selection', 'event_review', 'event_campus_competition'], phase: 'briefing' },
   },
   {
     id: 'second_event_phase',
     title: '进入事件阶段',
-    text: '现在确认考试，进入事件阶段。每个学期进入事件阶段时，会保留上回合未打出的事件，并新抽 3 张事件卡；这里固定给你“选课时间、复习、校内比赛”。',
+    text: '现在确认考试，进入事件阶段。每个学期进入事件阶段时，会保留上回合未打出的事件，并新抽 3 张事件卡；这里固定给你“瀚海选课夜、图书馆闭关、东区擂台赛”。',
     focus: '事件手牌',
     setup: { type: 'TUTORIAL_SETUP', semester: 2, testId: 'test_calculus', courseIds: ['sports', 'classmates', 'extratask', 'physics', 'chemistry', 'math'], eventIds: ['event_course_selection', 'event_review', 'event_campus_competition'], phase: 'event' },
   },
   {
     id: 'course_reward_event',
-    title: '打出选课时间',
-    text: '请打出“选课时间”。教程会固定展示三张理论相关课程：高等数学A、线性代数、概率论基础。选择的课程会加入牌堆顶，本学期考试一定能抽到。',
+    title: '打出瀚海选课夜',
+    text: '请打出“瀚海选课夜”。教程会固定展示三张理论相关课程：数学分析A1、线性代数、概率论基础。选择的课程会加入牌堆顶，本学期考试一定能抽到。',
     focus: '事件手牌 / 课程奖励',
     more: { label: '为什么新课程一定能抽到', text: '课程奖励会把新课程放到牌堆顶。课程牌堆只在每个学期开始时洗牌，所以事件阶段获得并置顶的课程，不会在本学期考试前被再次洗走。' },
-    actions: [{ label: '打出选课时间', commands: [{ type: 'PLAY_EVENT', eventIndex: 0, optionIndex: 0 }, { type: 'TUTORIAL_SETUP', courseRewardIds: ['advancedMath', 'linearAlgebra', 'probability'], courseReward: { source: '选课时间', selectnum: 1, lessontype: 'theory' } }] }],
+    actions: [{ label: '打出瀚海选课夜', commands: [{ type: 'PLAY_EVENT', eventIndex: 0, optionIndex: 0 }, { type: 'TUTORIAL_SETUP', courseRewardIds: ['advancedMath', 'linearAlgebra', 'probability'], courseReward: { source: '瀚海选课夜', selectnum: 1, lessontype: 'theory' } }] }],
   },
   {
     id: 'course_reward_pick',
-    title: '选择高等数学A',
-    text: '高等数学A提供 2 理论符号，并固定获得 5 分。它很适合高等数学考试。你可以手动点选，也可以使用教程按钮直接选择第一张。',
+    title: '选择数学分析A1',
+    text: '数学分析A1提供 2 理论符号，并固定获得 5 分。它很适合数学分析期末。你可以手动点选，也可以使用教程按钮直接选择第一张。',
     focus: '课程奖励面板',
-    actions: [{ label: '选择高等数学A', commands: [{ type: 'TOGGLE_COURSE_REWARD_SELECTION', choiceIndex: 0 }, { type: 'CONFIRM_COURSE_REWARD' }] }],
+    actions: [{ label: '选择数学分析A1', commands: [{ type: 'TOGGLE_COURSE_REWARD_SELECTION', choiceIndex: 0 }, { type: 'CONFIRM_COURSE_REWARD' }] }],
   },
   {
     id: 'review_event',
-    title: '打出复习',
-    text: '现在打出“复习”。它会给你成就点和温习值。温习值不直接等于分数，但能在温习阶段帮你调整牌堆。',
+    title: '打出图书馆闭关',
+    text: '现在打出“图书馆闭关”。它会给你成就点和温习值。温习值不直接等于分数，但能在温习阶段帮你调整牌堆。',
     focus: '事件手牌',
-    actions: [{ label: '打出复习', command: { type: 'PLAY_EVENT', eventIndex: 0, optionIndex: 0 } }],
+    actions: [{ label: '打出图书馆闭关', command: { type: 'PLAY_EVENT', eventIndex: 0, optionIndex: 0 } }],
   },
   {
     id: 'second_event_end',
     title: '结束事件阶段：保留未打出的事件',
-    text: '现在事件阶段还剩“校内比赛”。未打出的事件会保留到下学期；如果事件阶段结束时手牌超过 3 张，才会弃置到只剩 3 张。',
+    text: '现在事件阶段还剩“东区擂台赛”。未打出的事件会保留到下学期；如果事件阶段结束时手牌超过 3 张，才会弃置到只剩 3 张。',
     focus: '事件手牌 / 温习区',
     actions: [{ label: '结束事件阶段', command: { type: 'CONFIRM_EVENT_PHASE' } }],
   },
   {
     id: 'second_review_phase',
     title: '温习阶段：调整牌堆',
-    text: '温习值让你查看牌堆底部课程。现在底部三张是高中物理、高中化学、高中数学；请把它们移到牌堆顶，为高等数学考试准备理论符号。',
+    text: '温习值让你查看牌堆底部课程。现在底部三张是力学预修、化学原理预修、少院数学预修；请把它们移到牌堆顶，为数学分析期末准备理论符号。',
     focus: '温习区',
     more: { label: '温习值会怎样消耗', text: '温习值不会在温习阶段直接扣除。它决定你能查看多少张牌堆底部课程。每个学期考试结算后，剩余温习值会减半并向下取整。' },
     actions: [{ label: '按教程完成温习调整', commands: [{ type: 'REVIEW_CARD', cardIndex: 2 }, { type: 'REVIEW_CARD', cardIndex: 0 }, { type: 'REVIEW_CARD', cardIndex: 0 }, { type: 'END_REVIEW' }] }],
@@ -123,21 +135,29 @@ const TOUR_STEPS = [
   {
     id: 'second_exam',
     title: '第二次考试：选课和温习生效',
-    text: '现在进入第二次考试。刚才你在温习阶段把理论课程移到了牌堆顶，所以高等数学考试会真实抽到这些课程；高等数学A也仍在本学期牌堆中，会一起提高总分。',
+    text: '现在进入第二次考试。刚才你在温习阶段把理论课程移到了牌堆顶，所以数学分析期末会真实抽到这些课程；数学分析A1也仍在本学期牌堆中，会一起提高总分。',
     focus: '考试阶段',
+  },
+  {
+    id: 'third_exam_choice',
+    title: '第三学期：考试二选一',
+    text: '从第三学期开始，教程展示考试二选一。这里同时出现“大学英语测评”和“程序设计机试”：英语更吃社会符号，程序设计更吃实践符号。为了后面学习项目与成果，我们选择程序设计机试。',
+    focus: '当前考试',
+    setup: { type: 'TUTORIAL_SETUP', reset: true, clearPermanents: true, semester: 3, testIds: ['test_english', 'test_programming'], courseIds: ['computer', 'practice', 'experiment', 'math', 'physics', 'chemistry'], eventIds: ['event_campus_competition', 'event_computer_age', 'event_club_fair', 'event_time_plan'], phase: 'briefing' },
+    actions: [{ label: '选择程序设计机试', command: { type: 'SELECT_TEST', testIndex: 1 } }],
   },
   {
     id: 'project_start',
     title: '第三学期：获得项目',
-    text: '项目是长期目标。现在打出“计算机时代”的 ICPC 方向，获得一个 ICPC 项目。项目会显示推进进度和可用选项。',
+    text: '项目是长期目标。现在打出“瀚海码潮”的 ICPC集训队 方向，获得一个 ICPC集训队 项目。项目会显示推进进度和可用选项。',
     focus: '事件手牌 / 项目区',
     setup: { type: 'TUTORIAL_SETUP', reset: true, clearPermanents: true, semester: 3, testId: 'test_programming', courseIds: ['computer', 'practice', 'experiment', 'math', 'physics', 'chemistry'], eventIds: ['event_campus_competition', 'event_computer_age', 'event_club_fair', 'event_time_plan'], phase: 'event' },
-    actions: [{ label: '选择 ICPC 方向', command: { type: 'PLAY_EVENT', eventIndex: 1, optionIndex: 1 } }],
+    actions: [{ label: '选择 ICPC集训队 方向', command: { type: 'PLAY_EVENT', eventIndex: 1, optionIndex: 1 } }],
   },
   {
     id: 'project_progress',
     title: '推进项目',
-    text: '事件阶段点击项目会消耗一次事件行动并增加 1 推进。教程先把 ICPC 放到 3 推进，你可以点按钮补到 4，观察“保证银牌”选项高亮。',
+    text: '事件阶段点击项目会消耗一次事件行动并增加 1 推进。教程先把 ICPC集训队 放到 3 推进，你可以点按钮补到 4，观察“保证银牌”选项高亮。',
     focus: '项目区',
     setup: { type: 'TUTORIAL_SETUP', semester: 3, projects: [{ id: 'project_icpc', progress: 3 }], phase: 'event' },
     actions: [{ label: '推进到 4', command: { type: 'TUTORIAL_SETUP', projects: [{ id: 'project_icpc', progress: 4 }], phase: 'event' } }],
@@ -145,14 +165,14 @@ const TOUR_STEPS = [
   {
     id: 'project_milestone',
     title: '项目选项：里程碑',
-    text: 'ICPC 的“保证银牌”需要 4 推进，类型是 milestone：执行后不移除项目，也不清空推进，但同一个里程碑只能领一次。',
-    focus: 'ICPC 项目',
+    text: 'ICPC集训队 的“保证银牌”需要 4 推进，类型是 milestone：执行后不移除项目，也不清空推进，但同一个里程碑只能领一次。',
+    focus: 'ICPC集训队 项目',
     actions: [{ label: '领取保证银牌', command: { type: 'PLAY_PROJECT_OPTION', projectIndex: 0, optionIndex: 0 } }],
   },
   {
     id: 'project_permanent',
     title: '项目选项：获得成果',
-    text: '把 ICPC 推进到 9 后，“备战金牌”会移除项目并获得成果“实践积累”。成果会长期留在成果区，考试时自动给实践符号 +1。',
+    text: '把 ICPC集训队 推进到 9 后，“备战金牌”会移除项目并获得成果“实践积累”。成果会长期留在成果区，考试时自动给实践符号 +1。',
     focus: '项目区 / 成果区',
     setup: { type: 'TUTORIAL_SETUP', projects: [{ id: 'project_icpc', progress: 9 }], phase: 'event' },
     actions: [{ label: '领取备战金牌', command: { type: 'PLAY_PROJECT_OPTION', projectIndex: 0, optionIndex: 1 } }],
@@ -176,6 +196,12 @@ const TOUR_STEPS = [
     title: '临阵磨枪：事件阶段的一次补救',
     text: '临阵磨枪整局只能用一次，只能在事件阶段使用。它会给 1 温习值，并让下一次考试 +4 分，适合在关键考试前补一点稳定性。',
     focus: '状态区 / 临阵磨枪',
+  },
+  {
+    id: 'exam_reroll_intro',
+    title: '重抽考试：选择前的一次改命',
+    text: '重抽考试整局只能用一次，只能在还没有选择本学期考试时使用。它会弃掉当前两张考试候选，重新抽两张。和临阵磨枪、重考一样，它属于一次性补救机会。',
+    focus: '状态区 / 重抽考试',
   },
   {
     id: 'retake_intro',
@@ -291,7 +317,7 @@ const styles = {
     cursor: 'pointer',
   },
   secondaryButton: {
-    border: '1px solid #cbd5e1',
+    border: '1px solid #94a3b8',
     background: '#fff',
     color: '#1e293b',
     borderRadius: 7,
@@ -318,6 +344,27 @@ const styles = {
     flexDirection: 'column',
     gap: 8,
   },
+  courseFloatLayer: {
+    position: 'fixed',
+    inset: 0,
+    zIndex: 1600,
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: 24,
+    background: 'rgba(15, 23, 42, 0.62)' ,
+    boxSizing: 'border-box',
+  },
+  ownedCoursesModal: {
+    width: 'min(1320px, calc(100vw - 32px))',
+    maxHeight: '90vh',
+    overflow: 'hidden',
+    background: '#fff',
+    border: '1px solid #cbd5e1',
+    borderRadius: 8,
+    padding: 16,
+    boxShadow: '0 24px 70px rgba(15, 23, 42, 0.36)',
+  },
 };
 
 export default class DeckGameUI extends React.Component {
@@ -330,6 +377,7 @@ export default class DeckGameUI extends React.Component {
       saveSlots: this.readSaveSlots(),
       saveMessage: '',
       cloudLatestSave: null,
+      showOwnedCourses: false,
       tutorialStepIndex: 0,
       tutorialCollapsed: false,
       tutorialDetailOpen: false,
@@ -343,9 +391,9 @@ export default class DeckGameUI extends React.Component {
     this.sessionStartedAt = Date.now();
     this.refreshCloudSaves();
     if (this.props.initialSaveData) {
-      window.setTimeout(() => this.loadSaveData(this.props.initialSaveData, '云端存档'), 0);
+      window.setTimeout(() => this.loadSaveData(this.props.initialSaveData, '云端存档', { alert: false }), 0);
     } else if (this.props.initialSaveSlot) {
-      window.setTimeout(() => this.loadSave(this.props.initialSaveSlot), 0);
+      window.setTimeout(() => this.loadSave(this.props.initialSaveSlot, { alert: false }), 0);
     } else if (this.props.tutorialMode) {
       window.setTimeout(() => this.applyTutorialStep(0), 0);
     }
@@ -362,7 +410,11 @@ export default class DeckGameUI extends React.Component {
       goalResults: state.goalResults,
       acquiredCourseCount: state.acquiredCourseCount,
       totalExamScore: state.totalExamScore,
+      ownedCourses: state.ownedCourses || [],
       currentTest: state.currentTest,
+      candidateTests: state.candidateTests || [],
+      selectedTestIndex: state.selectedTestIndex,
+      examRerollUsed: state.examRerollUsed,
       awaitingEventStart: state.awaitingEventStart,
       testResults: state.testResults,
       examRequirement: state.examRequirement,
@@ -387,9 +439,11 @@ export default class DeckGameUI extends React.Component {
       pendingProjectProgress: state.pendingProjectProgress,
       pendingProjectProgressQueue: state.pendingProjectProgressQueue || [],
       pendingCourseReward: state.pendingCourseReward,
+      pendingCourseDeletion: state.pendingCourseDeletion,
       eventHand: state.eventHand,
       eventOptionStates: state.eventOptionStates,
       pendingEventPayment: state.pendingEventPayment,
+      pendingEventDiscard: state.pendingEventDiscard,
       eventStageActive: state.eventStageActive,
       eventPlayedCount: state.eventPlayedCount,
       eventResults: state.eventResults,
@@ -399,6 +453,10 @@ export default class DeckGameUI extends React.Component {
       reviewSelectedCards: state.reviewSelectedCards,
       reviewPreviewCount: state.reviewPreviewCount,
       reviewMessage: state.reviewMessage,
+      finalExamAchievementAward: state.finalExamAchievementAward,
+      examHistory: state.examHistory || [],
+      gameFinished: state.gameFinished,
+      graduationSummary: state.graduationSummary,
     };
   }
   isTutorialActive() {
@@ -573,22 +631,27 @@ export default class DeckGameUI extends React.Component {
     this.writeSave(AUTOSAVE_SLOT, { silent: true });
   }
 
-  loadSaveData(save, label = '存档') {
+  loadSaveData(save, label = '存档', options = {}) {
+    const shouldAlert = options.alert !== false;
     if (!save || !save.snapshot) {
-      this.setState({ saveMessage: `${label} 没有存档` });
+      const message = label + ' 没有存档';
+      this.setState({ saveMessage: message });
+      if (shouldAlert && typeof window !== 'undefined' && window.alert) window.alert(message);
       return;
     }
     const restored = this.engine.importSnapshot(save.snapshot);
     this.syncState(restored, { skipAutosave: true });
+    const message = '已读取' + label;
     this.setState({
       saveSlots: this.mergeSaveSlots(this.readSaveSlots(), this.state.cloudSaveSlots),
-      saveMessage: `已读取${label}`,
+      saveMessage: message,
     });
+    if (shouldAlert && typeof window !== 'undefined' && window.alert) window.alert(message);
   }
 
-  loadSave(slot) {
+  loadSave(slot, options = {}) {
     const save = this.readSaveSlot(slot);
-    this.loadSaveData(save, `槽位 ${slot}`);
+    this.loadSaveData(save, `槽位 ${slot}`, options);
   }
 
   loadLatestCloudSave = () => {
@@ -611,6 +674,8 @@ export default class DeckGameUI extends React.Component {
     return date.toLocaleString('zh-CN', { hour12: false });
   }
   startSemester = () => this.syncState(this.engine.execute({ type: 'START_SEMESTER', draw: 5 }));
+  selectTest = (testIndex) => this.syncState(this.engine.execute({ type: 'SELECT_TEST', testIndex }));
+  rerollTests = () => this.syncState(this.engine.execute({ type: 'USE_EXAM_REROLL' }));
   startEventPhase = () => this.syncState(this.engine.execute({ type: 'CONFIRM_START_EVENT', draw: 5 }));
   playEvent = (eventIndex, optionIndex) => this.syncState(this.engine.execute({ type: 'PLAY_EVENT', eventIndex, optionIndex }));
   toggleEventPaymentCard = (cardIndex) => this.syncState(this.engine.execute({ type: 'TOGGLE_EVENT_PAYMENT_CARD', cardIndex }));
@@ -625,12 +690,15 @@ export default class DeckGameUI extends React.Component {
   confirmExam = () => this.syncState(this.engine.execute({ type: 'CONFIRM_EXAM' }));
   toggleCourseRewardSelection = (choiceIndex) => this.syncState(this.engine.execute({ type: 'TOGGLE_COURSE_REWARD_SELECTION', choiceIndex }));
   confirmCourseReward = () => this.syncState(this.engine.execute({ type: 'CONFIRM_COURSE_REWARD' }));
+  toggleCourseDeletionSelection = (courseIndex) => this.syncState(this.engine.execute({ type: 'TOGGLE_COURSE_DELETION_SELECTION', courseIndex }));
+  confirmCourseDeletion = () => this.syncState(this.engine.execute({ type: 'CONFIRM_COURSE_DELETION' }));
   reviewCard = (cardIndex) => this.syncState(this.engine.execute({ type: 'REVIEW_CARD', cardIndex }));
   resetReview = () => this.syncState(this.engine.execute({ type: 'RESET_REVIEW' }));
   endReview = () => this.syncState(this.engine.execute({ type: 'END_REVIEW', draw: 5 }));
   tradeExamDrawForProgress = (amount) => this.syncState(this.engine.execute({ type: 'TRADE_EXAM_DRAW_FOR_PROGRESS', amount }));
   useCram = () => this.syncState(this.engine.execute({ type: 'USE_CRAM' }));
   useRetake = () => this.syncState(this.engine.execute({ type: 'USE_RETAKE' }));
+  toggleOwnedCourses = () => this.setState((prev) => ({ showOwnedCourses: !prev.showOwnedCourses }));
 
   getPhase() {
     if (this.state.awaitingEventStart) return 'briefing';
@@ -641,6 +709,7 @@ export default class DeckGameUI extends React.Component {
   }
 
   getPhaseName() {
+    if (this.state.gameFinished) return '毕业总结';
     const phase = this.getPhase();
     if (phase === 'briefing') return '考试揭示';
     if (phase === 'event') return '事件阶段';
@@ -662,21 +731,32 @@ export default class DeckGameUI extends React.Component {
     }
     if (this.state.pendingEventPayment) {
       const selected = this.state.pendingEventPayment.selectedIndices || [];
+      const required = this.getPendingEventPaymentRequiredCount();
       return {
-        text: `选择用于支付费用的事件牌（已选 ${selected.length}）`,
+        text: '选择用于支付费用的事件牌（已选 ' + selected.length + ' / ' + required + '）',
         buttonText: '确认支付',
         onClick: this.confirmEventPayment,
-        disabled: selected.length !== this.getPendingEventPaymentRequiredCount(),
+        disabled: selected.length !== required,
       };
     }
     if (this.state.pendingEventDiscard) {
       const selected = this.state.pendingEventDiscard.selectedIndices || [];
       const discardCount = this.state.pendingEventDiscard.discardCount || 0;
       return {
-        text: '事件手牌超过 3 张，请选择 ' + discardCount + ' 张弃置（已选 ' + selected.length + '）',
-        buttonText: '确认弃置',
+        text: '选择超出上限的事件牌弃置（已选 ' + selected.length + ' / ' + discardCount + '）',
+        buttonText: '确认弃置并进入温习',
         onClick: this.confirmEventDiscard,
         disabled: selected.length !== discardCount,
+      };
+    }
+    if (this.state.pendingCourseDeletion) {
+      const selected = this.state.pendingCourseDeletion.selectedIndices || [];
+      const amount = this.state.pendingCourseDeletion.amount || 0;
+      return {
+        text: '从拥有课程中选择要删除的课程（已选 ' + selected.length + ' / ' + amount + '）',
+        buttonText: '确认删除课程',
+        onClick: this.confirmCourseDeletion,
+        disabled: selected.length !== amount,
       };
     }
     if (this.state.pendingProjectProgress) {
@@ -685,8 +765,16 @@ export default class DeckGameUI extends React.Component {
       };
     }
     if (this.state.awaitingEventStart) {
+      if (!this.state.currentTest) {
+        return {
+          text: '本学期抽到了两张考试卡，请先选择一张作为本次考试。',
+          buttonText: this.state.examRerollUsed ? '已重抽考试' : '重抽考试',
+          onClick: this.rerollTests,
+          disabled: this.state.examRerollUsed,
+        };
+      }
       return {
-        text: '查看本学期考试卡，确认后进入事件阶段',
+        text: '已确定本学期考试。确认后进入事件阶段，并新抽 3 张事件卡。',
         buttonText: '进入事件阶段',
         onClick: this.startEventPhase,
       };
@@ -694,7 +782,7 @@ export default class DeckGameUI extends React.Component {
     if (this.state.eventStageActive) {
       return {
         text: `打出事件或推进项目（已行动 ${this.state.eventPlayedCount} / 2）`,
-        buttonText: `${this.state.eventPlayedCount === 2 ? '进入温习' : `提前结束，获得 ${4-this.state.eventPlayedCount*2} 温习值`}`,
+        buttonText: `${this.state.eventPlayedCount === 2 ? '进入温习' : `提前结束，获得 ${4 - this.state.eventPlayedCount * 2} 温习值`}`,
         onClick: this.endEventPhase,
       };
     }
@@ -739,42 +827,53 @@ export default class DeckGameUI extends React.Component {
   }
   getExamFeatureBlocks(test = this.state.currentTest) {
     if (!test) return [];
+    const getYearScaling = () => {
+      const year = Math.max(1, Math.ceil((Number(this.state.semester) || 1) / 2));
+      if (year <= 1) return 1;
+      if (year === 2) return 1.5;
+      if (year === 3) return 2;
+      return 2.5;
+    };
+    const cardScaling = Number(test.scorescaling) || (Number(test.requirement) > 0 ? Number(test.requirement) / 10 : 1);
+    const passLine = Math.floor(10 * cardScaling * getYearScaling());
+    const achievementMode = String(test.achievementMode || 'normal').toLowerCase();
+    const modeText = achievementMode === 'hard' ? '困难奖励' : (achievementMode === 'easy' ? '简单奖励' : '普通奖励');
+    const achievementStyle = achievementMode === 'hard'
+      ? { bg: '#fff1f2', border: '#fecdd3', color: '#be123c', valueColor: '#9f1239' }
+      : achievementMode === 'easy'
+        ? { bg: '#f0fdf4', border: '#bbf7d0', color: '#15803d', valueColor: '#166534' }
+        : { bg: '#eff6ff', border: '#bfdbfe', color: '#1d4ed8', valueColor: '#1e40af' };
     const blocks = [
-      { key: 'draw', label: '抽牌', value: `${this.state.examDrawCount || test.drawnum || 0} 张`, bg: '#eff6ff', border: '#bfdbfe', color: '#1d4ed8' },
+      { key: 'draw', label: '抽牌', value: `${this.state.currentTest === test ? (this.state.examDrawCount || test.drawnum || 0) : (test.drawnum || 5)} 张`, bg: '#eff6ff', border: '#bfdbfe', color: '#1d4ed8' },
+      { key: 'current-requirement', label: '本次及格', value: passLine + ' 分', bg: '#fef2f2', border: '#fecaca', color: '#b91c1c' },
+      { key: 'achievement-mode', label: '成就档位', value: modeText, ...achievementStyle },
     ];
-    const scaling = Number(this.state.examScoreScaling || test.scorescaling || 1);
-    if (scaling !== 1) {
-      blocks.push({ key: 'scaling', label: '达标倍率', value: `${scaling}x`, bg: '#fff7ed', border: '#fed7aa', color: '#c2410c' });
-    }
     const describeInput = (input) => {
       const map = {
-        theory: '理论',
-        practice: '实践',
-        social: '社会',
-        review: '温习值',
-        progress: '项目推进',
-        project: '项目数量',
-        permanent: '成果数量',
-        highest: '最高符号',
-        const1: '固定',
+        theory: '理论', practice: '实践', social: '社会', review: '温习值', progress: '项目推进',
+        project: '项目数量', completepro: '完成项目', completedProject: '完成项目', permanent: '成果数量',
+        eventHand: '事件手牌', randomSymbol: '随机符号', lowest: '最低符号', highest: '最高符号', const1: '固定',
       };
       return map[input] || input || '变量';
     };
     const styleForInput = (input, type) => {
-      if (type === 'review') return { bg: '#f0fdf4', border: '#bbf7d0', color: '#166534' };
+      if (type === 'review' || input === 'review') return { bg: '#f0fdf4', border: '#bbf7d0', color: '#166534' };
       if (input === 'theory') return { bg: '#eef2ff', border: '#c7d2fe', color: '#3730a3' };
       if (input === 'practice') return { bg: '#ecfdf5', border: '#a7f3d0', color: '#047857' };
       if (input === 'social') return { bg: '#fdf2f8', border: '#fbcfe8', color: '#be185d' };
-      if (input === 'review') return { bg: '#f0fdf4', border: '#bbf7d0', color: '#166534' };
-      if (input === 'progress' || input === 'project') return { bg: '#fefce8', border: '#fde68a', color: '#a16207' };
+      if (['progress', 'project', 'completepro', 'completedProject'].includes(input)) return { bg: '#fefce8', border: '#fde68a', color: '#a16207' };
       if (input === 'permanent') return { bg: '#faf5ff', border: '#ddd6fe', color: '#7e22ce' };
-      if (input === 'const1') return { bg: '#f8fafc', border: '#cbd5e1', color: '#334155' };
       return { bg: '#f8fafc', border: '#cbd5e1', color: '#334155' };
     };
     (test.start || []).forEach((effect, index) => {
       if (effect.effectType === 'addReview') {
         const value = Number(effect.input) || Number(effect.multi) || 0;
         blocks.push({ key: `start-review-${index}`, label: '开局温习', value: `+${value}`, ...styleForInput('review', 'review') });
+      } else if (effect.effectType === 'addSymbol') {
+        const value = Number(effect.amount ?? effect.multi ?? 1) || 0;
+        blocks.push({ key: `start-symbol-${index}`, label: '临时符号', value: `${describeInput(effect.input)} +${value}`, ...styleForInput(effect.input) });
+      } else if (effect.effectType === 'randomExamSymbol') {
+        blocks.push({ key: `start-random-${index}`, label: '随机方向', value: '随机符号', bg: '#fff7ed', border: '#fed7aa', color: '#c2410c' });
       }
     });
     (test.effect || []).forEach((effect, index) => {
@@ -786,6 +885,10 @@ export default class DeckGameUI extends React.Component {
         blocks.push({ key: `score-${index}`, label, value, ...styleForInput(input) });
       } else if (effect.effectType === 'getHighest') {
         blocks.push({ key: `highest-${index}`, label: '最高符号', value: '取最大', ...styleForInput('highest') });
+      } else if (effect.effectType === 'getLowest') {
+        blocks.push({ key: `lowest-${index}`, label: '最低符号', value: '取最小', ...styleForInput('lowest') });
+      } else if (effect.effectType === 'doublePermanentEffects') {
+        blocks.push({ key: `double-permanent-${index}`, label: '成果加成', value: '效果翻倍', ...styleForInput('permanent') });
       }
     });
     return blocks;
@@ -799,7 +902,7 @@ export default class DeckGameUI extends React.Component {
         {blocks.map((block) => (
           <div key={block.key} style={{ border: `1px solid ${block.border}`, background: block.bg, color: block.color, borderRadius: 7, padding: '7px 9px', minWidth: 86 }}>
             <div style={{ fontSize: 11, fontWeight: 800, opacity: 0.82 }}>{block.label}</div>
-            <div style={{ fontSize: 14, fontWeight: 900, marginTop: 2 }}>{block.value}</div>
+            <div style={{ fontSize: 14, fontWeight: 900, marginTop: 2, color: block.valueColor || block.color }}>{block.value}</div>
           </div>
         ))}
       </div>
@@ -865,7 +968,7 @@ export default class DeckGameUI extends React.Component {
   };
 
   getTutorialKeywordRegex() {
-    const words = ['大学物理考试', '高等数学考试', '高等数学A', '临阵磨枪', '成就点', '考试卡', '课程奖励', '事件阶段', '温习阶段', '考试阶段', 'ICPC', '理论', '实践', '社会', '考试', '课程', '事件', '温习', '项目', '成果', '重考', '存档', '目标'];
+    const words = ['大学物理统考', '数学分析期末', '数学分析A1', '临阵磨枪', '成就点', '考试卡', '课程奖励', '事件阶段', '温习阶段', '考试阶段', 'ICPC集训队', '理论', '实践', '社会', '考试', '课程', '事件', '温习', '项目', '成果', '重考', '存档', '目标'];
     const escaped = words.map((word) => word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'));
     return new RegExp(`(${escaped.join('|')})`, 'g');
   }
@@ -892,7 +995,7 @@ export default class DeckGameUI extends React.Component {
       exam: ['考试阶段', '考试总分', '第一次考试', '第二次考试', '课程牌'],
       event: ['事件手牌', '事件阶段', '课程奖励'],
       review: ['温习区', '温习阶段'],
-      project: ['项目区', 'ICPC', '项目'],
+      project: ['项目区', 'ICPC集训队', '项目'],
       permanent: ['成果区', '成果'],
       status: ['状态区', '知识符号', '临阵磨枪', '重考', '补救'],
       goals: ['目标'],
@@ -1121,7 +1224,6 @@ export default class DeckGameUI extends React.Component {
       if (cost.type === 'symbolCost' || cost.type === 'discardEvent') {
         return cost.symbol ? `弃置 ${amount} 张${symbol}事件` : `弃置 ${amount} 张事件`;
       }
-      if (cost.type === 'discardLesson') return `弃置 ${amount} 门课程`;
       if (['eventCost', 'cardCost', 'anyCost', 'anyEventCost'].includes(cost.type)) return `弃置 ${amount} 张事件`;
       return cost.type || '未知费用';
     }).join('；');
@@ -1132,7 +1234,7 @@ export default class DeckGameUI extends React.Component {
     if (!name) return null;
     const aliases = {
       pro_robotmaster: 'project_robotmaster',
-      pro_ICPC: 'project_icpc',
+      pro_ICPC集训队: 'project_icpc',
       pro_icpc: 'project_icpc',
       pro_group: 'project_group',
       pro_teach: 'project_teach',
@@ -1274,16 +1376,21 @@ export default class DeckGameUI extends React.Component {
       <div key={project._instanceId || project._id || project.id || i} onClick={canAdvance ? () => this.advanceProject(i) : undefined} style={{ flex: '1 1 220px', maxWidth: 280, padding: 9, border: canAdvance ? '1px solid #3b82f6' : '1px solid #c7d7ea', borderTop: '4px solid #0ea5e9', borderRadius: 8, background: canAdvance ? '#eff6ff' : '#fff', cursor: canAdvance ? 'pointer' : 'default' }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', gap: 8 }}>
           <div style={{ fontSize: 14, fontWeight: 800 }}>{project.name}</div>
-          <div style={{ color: '#0f766e', fontSize: 12, fontWeight: 700 }}>{project.type || '通用'}</div>
+          <div>{this.renderProjectType(project.type)}</div>
         </div>
         <div style={{ margin: '5px 0' }}>{this.renderProgressSymbols(project.progress)}</div>
         <div style={{ color: '#475569', fontSize: 12, marginBottom: 6, lineHeight: 1.35 }}>{project.content || '无描述'}</div>
         {(project.options || []).map((option, idx) => {
-          const ready = this.canUseProjectOption(project, option);
+          const usedMilestone = this.isProjectMilestoneUsed(project, option, idx);
+          const ready = !usedMilestone && this.canUseProjectOption(project, option);
           const requirement = this.getProjectRequirement(project, option);
+          const typeLabel = this.getProjectOptionTypeLabel(option);
           return (
             <button key={idx} disabled={!ready} onClick={(evt) => { evt.stopPropagation(); this.playProjectOption(i, idx); }} style={{ ...this.buttonStyle(!ready), display: 'block', width: '100%', marginTop: 5, padding: '6px 7px', textAlign: 'left', fontSize: 12 }}>
-              <div>{option.name} · {requirement} · {this.getProjectOptionTypeLabel(option)}</div>
+              <div style={{ display: 'flex', justifyContent: 'space-between', gap: 8 }}>
+                <span>{option.name} {'·'} {requirement} {'·'} {typeLabel}</span>
+                {this.getProjectOptionType(option) === 'milestone' && <span style={{ color: usedMilestone ? '#16a34a' : '#7c3aed', fontWeight: 900 }}>{usedMilestone ? '已领取' : '未领取'}</span>}
+              </div>
               <div style={{ marginTop: 3, fontSize: 12, fontWeight: 500 }}>{option.content}</div>
             </button>
           );
@@ -1398,7 +1505,7 @@ export default class DeckGameUI extends React.Component {
     );
   }
   renderStatusPanel() {
-    const { achievementPoints, reviewValue, score, counts, appliedNextScoreBonus, examDrawPenalty, cramUsed, retakeUsed, eventStageActive, examStageActive, examRequirement, pendingEventPayment, pendingCourseReward } = this.state;
+    const { achievementPoints, reviewValue, score, counts, appliedNextScoreBonus, examDrawPenalty, cramUsed, retakeUsed, examRerollUsed, eventStageActive, examStageActive, awaitingEventStart, currentTest, examRequirement, pendingEventPayment, pendingCourseReward, ownedCourses = [], showOwnedCourses } = this.state;
     const statItems = [
       { label: '成就点', value: achievementPoints, color: '#7c2d12', bg: '#fff7ed', border: '#fed7aa' },
       { label: '温习值', value: reviewValue, color: '#166534', bg: '#f0fdf4', border: '#bbf7d0' },
@@ -1420,15 +1527,22 @@ export default class DeckGameUI extends React.Component {
             <div style={{ textAlign: 'center', color: '#334155' }}><div style={{ fontSize: 22 }}>🔧</div><strong>{counts.Practice}</strong></div>
             <div style={{ textAlign: 'center', color: '#334155' }}><div style={{ fontSize: 22 }}>💬</div><strong>{counts.Social}</strong></div>
           </div>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 8, marginTop: 10 }}>
+          <button onClick={this.toggleOwnedCourses} style={{ ...styles.secondaryButton, width: '100%', marginTop: 10 }}>
+            {showOwnedCourses ? '收起拥有课程' : '查看拥有课程（' + ownedCourses.length + '）'}
+          </button>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 8, marginTop: 10 }}>
             <button onClick={this.useCram} disabled={cramUsed || !eventStageActive || !!pendingEventPayment || !!pendingCourseReward} style={this.buttonStyle(cramUsed || !eventStageActive || !!pendingEventPayment || !!pendingCourseReward)}>
               临阵磨枪{cramUsed ? '（已用）' : ''}
             </button>
             <button onClick={this.useRetake} disabled={retakeUsed || !examStageActive || !!pendingCourseReward || score >= examRequirement} style={this.buttonStyle(retakeUsed || !examStageActive || !!pendingCourseReward || score >= examRequirement)}>
               重考{retakeUsed ? '（已用）' : ''}
             </button>
+            <button onClick={this.rerollTests} disabled={examRerollUsed || !awaitingEventStart || !!currentTest} style={this.buttonStyle(examRerollUsed || !awaitingEventStart || !!currentTest)}>
+              重抽考试{examRerollUsed ? '（已用）' : ''}
+            </button>
           </div>
-          {!cramUsed && !retakeUsed && <div style={{ marginTop: 6, color: '#64748b', fontSize: 12 }}>若两次机会均未使用，游戏结束时 +1 最终成就值。</div>}          {(appliedNextScoreBonus > 0 || examDrawPenalty > 0) && (
+          <div style={{ marginTop: 6, color: '#64748b', fontSize: 12 }}>三个补救机会均未使用，游戏结束时 +2 最终成就点；使用 1-2 个仍 +1。</div>
+{(appliedNextScoreBonus > 0 || examDrawPenalty > 0) && (
             <div style={{ marginTop: 8, color: '#475569', fontSize: 12, lineHeight: 1.5 }}>
               {appliedNextScoreBonus > 0 && <div>已应用加分 {appliedNextScoreBonus}</div>}
               {examDrawPenalty > 0 && <div>本次考试少抽 {examDrawPenalty} 张</div>}
@@ -1439,6 +1553,45 @@ export default class DeckGameUI extends React.Component {
     );
   }
 
+  getOwnedCourseSymbolTotals() {
+    return (this.state.ownedCourses || []).reduce((totals, course) => {
+      const symbols = course.symbols || {};
+      totals.Theory += Number(symbols.Theory) || 0;
+      totals.Practice += Number(symbols.Practice) || 0;
+      totals.Social += Number(symbols.Social) || 0;
+      return totals;
+    }, { Theory: 0, Practice: 0, Social: 0 });
+  }
+
+  renderOwnedCoursesPanel() {
+    if (!this.state.showOwnedCourses) return null;
+    const ownedCourses = this.state.ownedCourses || [];
+    const ownedCourseItems = this.getOwnedCoursesForDisplay();
+    const totals = this.getOwnedCourseSymbolTotals();
+    return (
+      <div style={styles.courseFloatLayer} onClick={this.toggleOwnedCourses}>
+        <div style={styles.ownedCoursesModal} onClick={(evt) => evt.stopPropagation()}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 12, marginBottom: 12 }}>
+            {this.renderSectionTitle('拥有课程', ownedCourses.length + ' 门')}
+            <button type="button" onClick={this.toggleOwnedCourses} style={styles.secondaryButton}>关闭</button>
+          </div>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, minmax(120px, 1fr))', gap: 10, marginBottom: 12 }}>
+            <div style={{ border: '1px solid #c7d2fe', borderRadius: 8, padding: 10, background: '#eef2ff', color: '#3730a3', textAlign: 'center' }}><div>🧠 理论</div><strong>{totals.Theory}</strong></div>
+            <div style={{ border: '1px solid #a7f3d0', borderRadius: 8, padding: 10, background: '#ecfdf5', color: '#047857', textAlign: 'center' }}><div>🔧 实践</div><strong>{totals.Practice}</strong></div>
+            <div style={{ border: '1px solid #fbcfe8', borderRadius: 8, padding: 10, background: '#fdf2f8', color: '#be185d', textAlign: 'center' }}><div>💬 社会</div><strong>{totals.Social}</strong></div>
+          </div>
+          <div style={{ color: '#64748b', fontSize: 12, lineHeight: 1.5, marginBottom: 10 }}>按课程名称排序展示，不代表当前牌堆顺序。</div>
+          <div style={{ maxHeight: '64vh', overflowY: 'auto', paddingRight: 6 }}>
+            <div style={styles.cardGrid}>
+              {ownedCourses.length === 0
+                ? <div style={{ color: '#94a3b8' }}>暂无拥有课程</div>
+                : ownedCourseItems.map(({ course, index }) => this.renderCourseCard(course, index, {}, true))}
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
   renderGoalPanel() {
     const { immediateGoals, finalGoals } = this.state;
     return (
@@ -1467,6 +1620,11 @@ export default class DeckGameUI extends React.Component {
   }
 
 
+  getOwnedCoursesForDisplay() {
+    return (this.state.ownedCourses || [])
+      .map((course, index) => ({ course, index }))
+      .sort((a, b) => String(a.course.name || '').localeCompare(String(b.course.name || ''), 'zh-Hans-CN'));
+  }
   getPendingEventPaymentOption() {
     const pending = this.state.pendingEventPayment;
     if (!pending) return null;
@@ -1536,26 +1694,57 @@ export default class DeckGameUI extends React.Component {
     if (!pending) return null;
     const selected = pending.selectedIndices || [];
     const discardCount = pending.discardCount || 0;
+    const canConfirm = selected.length === discardCount;
     return (
-      <div style={{ ...styles.panel, borderColor: '#fb7185', background: '#fff1f2', marginBottom: 12, ...this.getTutorialHighlightStyle('event') }}>
-        {this.renderSectionTitle('选择弃置事件', `${selected.length} / ${discardCount}`)}
-        <div style={{ color: '#9f1239', fontSize: 13, lineHeight: 1.45, marginBottom: 10 }}>
-          事件阶段结束时最多保留 3 张事件卡。请选择要弃置的事件卡，未选择的会保留到下学期。
+      <div style={{ position: 'fixed', inset: 0, zIndex: 1700, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 24, background: 'rgba(15, 23, 42, 0.58)', boxSizing: 'border-box' }}>
+        <div style={{ width: 'min(980px, calc(100vw - 32px))', maxHeight: '88vh', overflowY: 'auto', ...styles.panel, border: '2px solid #e11d48', background: '#fff1f2', boxShadow: '0 24px 70px rgba(15, 23, 42, 0.34)' }}>
+          {this.renderSectionTitle('弃牌结算', `弃置 ${selected.length} / ${discardCount}`)}
+          <div style={{ color: '#9f1239', fontSize: 13, lineHeight: 1.5, marginBottom: 12 }}>
+            {'事件阶段结束时最多保留 3 张事件卡。请点选超出上限的事件牌弃置；没有被选中的会保留到下学期。'}
+          </div>
+          <div style={styles.cardGrid}>{this.state.eventHand.map((card, idx) => {
+            const checked = selected.includes(idx);
+            const disabled = !checked && selected.length >= discardCount;
+            return (
+              <button key={card._id || card.id || idx} onClick={() => this.toggleEventDiscardCard(idx)} disabled={disabled} style={{ flex: '1 1 190px', minHeight: 86, padding: 9, border: checked ? '2px solid #e11d48' : '1px solid #fecdd3', borderRadius: 8, background: checked ? '#ffe4e6' : '#fff', color: disabled ? '#94a3b8' : '#881337', textAlign: 'left', cursor: disabled ? 'not-allowed' : 'pointer', opacity: disabled ? 0.7 : 1 }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', gap: 8, alignItems: 'center' }}>
+                  <strong>{card.name}</strong>
+                  {this.renderEventSymbol(card.symbol)}
+                </div>
+                <div style={{ marginTop: 6, fontSize: 12, fontWeight: 800 }}>{checked ? '将被弃置' : '保留'}</div>
+                {card.content && <div style={{ marginTop: 5, fontSize: 12, color: checked ? '#9f1239' : '#64748b', lineHeight: 1.35 }}>{card.content}</div>}
+              </button>
+            );
+          })}</div>
+          <div style={{ display: 'flex', justifyContent: 'flex-end', gap: 8, marginTop: 14 }}>
+            <button onClick={this.confirmEventDiscard} disabled={!canConfirm} style={this.buttonStyle(!canConfirm, true)}>{'确认弃置并进入温习'}</button>
+          </div>
         </div>
-        <div style={styles.cardGrid}>{this.state.eventHand.map((card, idx) => {
-          const checked = selected.includes(idx);
-          const disabled = !checked && selected.length >= discardCount;
+      </div>
+    );
+  }
+  renderCourseDeletionPanel() {
+    const pending = this.state.pendingCourseDeletion;
+    if (!pending) return null;
+    const selected = pending.selectedIndices || [];
+    const amount = pending.amount || 0;
+    const ownedCourseItems = this.getOwnedCoursesForDisplay();
+    return (
+      <div style={{ ...styles.panel, borderColor: '#dc2626', background: '#fef2f2', marginBottom: 12 }}>
+        {this.renderSectionTitle('选择删除课程', selected.length + ' / ' + amount)}
+        <div style={{ color: '#991b1b', fontSize: 13, lineHeight: 1.45, marginBottom: 10 }}>
+          从拥有课程库中选择要删除的课程。这里按课程名称排序，不代表当前牌堆顺序。
+        </div>
+        <div style={styles.cardGrid}>{ownedCourseItems.map(({ course, index }) => {
+          const checked = selected.includes(index);
+          const disabled = !checked && selected.length >= amount;
           return (
-            <button key={card._id || card.id || idx} onClick={() => this.toggleEventDiscardCard(idx)} disabled={disabled} style={{ flex: '1 1 170px', padding: 8, border: checked ? '2px solid #e11d48' : '1px solid #fecdd3', borderRadius: 8, background: checked ? '#ffe4e6' : '#fff', color: disabled ? '#94a3b8' : '#881337', textAlign: 'left', cursor: disabled ? 'not-allowed' : 'pointer' }}>
-              <div style={{ display: 'flex', justifyContent: 'space-between', gap: 8 }}>
-                <strong>{card.name}</strong>
-                {this.renderEventSymbol(card.symbol)}
-              </div>
-              <div style={{ marginTop: 4, fontSize: 12 }}>{checked ? '将被弃置' : '保留'}</div>
+            <button key={course._id || course.id || index} onClick={() => this.toggleCourseDeletionSelection(index)} disabled={disabled} style={{ padding: 0, border: checked ? '2px solid #dc2626' : '1px solid transparent', borderRadius: 9, background: checked ? '#fee2e2' : 'transparent', cursor: disabled ? 'not-allowed' : 'pointer', opacity: disabled ? 0.6 : 1 }}>
+              {this.renderCourseCard(course, index, {}, true)}
             </button>
           );
         })}</div>
-        <button onClick={this.confirmEventDiscard} disabled={selected.length !== discardCount} style={{ ...this.buttonStyle(selected.length !== discardCount, true), marginTop: 10 }}>确认弃置并进入温习</button>
+        <button onClick={this.confirmCourseDeletion} disabled={selected.length !== amount} style={{ ...this.buttonStyle(selected.length !== amount, true), marginTop: 10 }}>确认删除课程</button>
       </div>
     );
   }
@@ -1565,6 +1754,7 @@ export default class DeckGameUI extends React.Component {
       <>
         {this.renderEventPaymentPanel()}
         {this.renderEventDiscardPanel()}
+        {this.renderCourseDeletionPanel()}
         {pendingProjectProgress && (
           <div style={{ ...styles.panel, borderColor: '#93c5fd', background: '#eff6ff', marginBottom: 12, ...this.getTutorialHighlightStyle('project') }}>
             {this.renderSectionTitle('选择项目推进', '+' + pendingProjectProgress.amount)}
@@ -1638,6 +1828,17 @@ export default class DeckGameUI extends React.Component {
     );
   }
 
+  renderTestChoiceCard(test, index) {
+    return (
+      <div key={test.id || index} style={{ ...styles.panel, border: '2px solid #c4b5fd', background: '#fbfaff', flex: '1 1 280px' }}>
+        <div style={{ fontSize: 20, fontWeight: 900, color: '#4c1d95', marginBottom: 8 }}>{test.name}</div>
+        <div style={{ color: '#5b4b80', fontSize: 13, lineHeight: 1.55, minHeight: 42 }}>{test.content || '暂无描述'}</div>
+        {this.renderTestFeatureBlocks(test)}
+        <button onClick={() => this.selectTest(index)} style={{ ...this.buttonStyle(false, true), marginTop: 12, width: '100%' }}>选择这场考试</button>
+      </div>
+    );
+  }
+
   renderExamPhase(resultMap) {
     return (
       <div style={{ ...styles.panel, ...this.getTutorialHighlightStyle('exam') }}>
@@ -1651,13 +1852,26 @@ export default class DeckGameUI extends React.Component {
 
   renderReadyPhase() {
     const disabled = this.state.eventStageActive || this.state.reviewStageActive || this.state.examStageActive || !!this.state.pendingCourseReward;
+    if (this.state.awaitingEventStart && !this.state.currentTest) {
+      const choices = this.state.candidateTests || [];
+      return (
+        <div style={{ ...styles.panel, border: '2px solid #7c3aed', background: '#faf5ff', ...this.getTutorialHighlightStyle('test') }}>
+          {this.renderSectionTitle('选择本学期考试', this.state.examRerollUsed ? '已使用重抽考试' : '二选一，可重抽一次')}
+          <div style={{ color: '#5b4b80', fontSize: 14, lineHeight: 1.55, marginBottom: 12 }}>每个学期开始时抽两张考试卡，选择一张作为本学期考试；未选择的考试会弃置。</div>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12 }}>
+            {choices.length === 0 ? <div style={{ color: '#94a3b8' }}>暂无考试候选</div> : choices.map((test, index) => this.renderTestChoiceCard(test, index))}
+          </div>
+          <button onClick={this.rerollTests} disabled={this.state.examRerollUsed} style={{ ...this.buttonStyle(this.state.examRerollUsed), marginTop: 12 }}>重抽考试{this.state.examRerollUsed ? '（已用）' : ''}</button>
+        </div>
+      );
+    }
     if (this.state.awaitingEventStart && this.state.currentTest) {
       const test = this.state.currentTest;
       return (
         <div style={{ ...styles.panel, border: '2px solid #7c3aed', background: '#faf5ff', boxShadow: '0 10px 24px rgba(124, 58, 237, 0.14)', ...this.getTutorialHighlightStyle('test') }}>
           {this.renderSectionTitle('本学期考试', '确认后进入事件阶段')}
           <div style={{ fontSize: 24, fontWeight: 900, color: '#4c1d95', marginBottom: 8 }}>{test.name}</div>
-          <div style={{ color: '#5b4b80', fontSize: 14, lineHeight: 1.55, marginBottom: 12 }}>{test.content || '无描述'}</div>
+          <div style={{ color: '#5b4b80', fontSize: 14, lineHeight: 1.55, marginBottom: 12 }}>{test.content || '暂无描述'}</div>
           {this.renderTestFeatureBlocks(test)}
           <div style={{ marginBottom: 14 }} />
           <button onClick={this.startEventPhase} style={this.buttonStyle(false, true)}>进入事件阶段</button>
@@ -1667,12 +1881,162 @@ export default class DeckGameUI extends React.Component {
     return (
       <div style={{ ...styles.panel, ...this.getTutorialHighlightStyle('test') }}>
         {this.renderSectionTitle('准备阶段', '等待开始')}
-        <div style={{ color: '#64748b', marginBottom: 12 }}>开始新学期后会先揭示考试牌；确认后才会保留已有事件牌并新抽 3 张事件卡。</div>
+        <div style={{ color: '#64748b', marginBottom: 12 }}>开始新学期后会先抽两张考试卡供你选择；确认考试后才会保留已有事件牌并新抽 3 张事件卡。</div>
         <button onClick={this.startSemester} disabled={disabled} style={this.buttonStyle(disabled, true)}>开始学期</button>
       </div>
     );
   }
+  buildGraduationProfileForAI() {
+    const summary = this.state.graduationSummary || {};
+    const finalGoals = summary.finalGoals || this.state.finalGoals || [];
+    const exams = (this.state.examHistory && this.state.examHistory.length ? this.state.examHistory : summary.exams) || [];
+    const chanceTools = summary.chanceTools || {
+      cramUsed: !!this.state.cramUsed,
+      retakeUsed: !!this.state.retakeUsed,
+      examRerollUsed: !!this.state.examRerollUsed,
+    };
+    return {
+      game: 'USTC Deckgame',
+      result: {
+        semesterEnded: summary.semesterEnded || this.state.semester,
+        finalAchievementPoints: summary.finalAchievementPoints ?? this.state.achievementPoints,
+        totalExamScore: summary.totalExamScore ?? this.state.totalExamScore,
+        finalExamAchievementAward: summary.finalExamAchievementAward ?? this.state.finalExamAchievementAward,
+      },
+      goals: {
+        immediate: this.state.immediateGoals || [],
+        final: finalGoals,
+      },
+      academicProfile: {
+        ownedCoursesCount: summary.ownedCoursesCount ?? (this.state.ownedCourses || []).length,
+        notableCourses: (this.state.ownedCourses || []).slice(-8).map((course) => course.name),
+      },
+      projects: {
+        activeCount: summary.activeProjectCount ?? (this.state.activeProjects || []).length,
+        completedCount: summary.completedProjectCount ?? this.state.completedProjectCount ?? 0,
+        active: (this.state.activeProjects || []).map((project) => ({ name: project.name, progress: project.progress, type: project.type })),
+      },
+      permanents: {
+        count: summary.permanentCount ?? (this.state.activePermanents || []).length,
+        names: (this.state.activePermanents || []).map((permanent) => permanent.name),
+      },
+      exams,
+      chanceTools,
+    };
+  }
+
+  buildAiSummaryPrompt() {
+    const profile = this.buildGraduationProfileForAI();
+    return [
+      '你是中国科学技术大学主题卡牌游戏的毕业总结撰写者。',
+      '请根据下面 JSON 为玩家写一段中文毕业评语，150-250 字。',
+      '要求：总结玩家路线、优势与积累；温和指出一个遗憾或风险；引用 1-2 个具体事实，例如考试记录、成就点、课程/项目/成果数量或目标结果。',
+      '不要改写或虚构分数、评级、成就点、目标结果、课程、项目、成果。不要输出标题、列表或 JSON，只输出评语正文。',
+      JSON.stringify(profile, null, 2),
+    ].join('\n');
+  }
+
+  extractAiSummaryText(data) {
+    if (!data) return '';
+    if (typeof data === 'string') return data;
+    if (typeof data.text === 'string') return data.text;
+    if (typeof data.result === 'string') return data.result;
+    if (typeof data.response === 'string') return data.response;
+    if (typeof data.content === 'string') return data.content;
+    if (data.data) return this.extractAiSummaryText(data.data);
+    return '';
+  }
+
+  generateAiSummary = () => {
+    if (this.state.aiSummaryLoading) return;
+    const parseText = this.buildAiSummaryPrompt();
+    this.setState({ aiSummaryLoading: true, aiSummaryError: '' });
+    post('/ai/forall', { text: parseText, max_tokens: 500, temperature: 0.7 })
+      .then((data) => {
+        const aiSummaryText = this.extractAiSummaryText(data).trim();
+        if (!aiSummaryText) {
+          this.setState({ aiSummaryLoading: false, aiSummaryError: 'AI 没有返回可用内容' });
+          return;
+        }
+        this.setState({ aiSummaryLoading: false, aiSummaryText, aiSummaryError: '' });
+      })
+      .catch(() => {
+        this.setState({ aiSummaryLoading: false, aiSummaryError: 'AI 总结生成失败，请稍后再试' });
+      });
+  };
+  renderGraduationSummary() {
+    const summary = this.state.graduationSummary || {};
+    const goals = summary.finalGoals || this.state.finalGoals || [];
+    const exams = (this.state.examHistory && this.state.examHistory.length ? this.state.examHistory : summary.exams) || [];
+    const chanceTools = summary.chanceTools || {};
+    const toolText = [
+      ['临阵磨枪', chanceTools.cramUsed],
+      ['重考', chanceTools.retakeUsed],
+      ['重抽考试', chanceTools.examRerollUsed],
+    ].map(([name, used]) => name + '：' + (used ? '已使用' : '未使用'));
+    return (
+      <div style={{ ...styles.panel, border: '2px solid #2563eb', background: '#f8fbff' }}>
+        {this.renderSectionTitle('毕业总结', '第 8 学期结束')}
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, minmax(120px, 1fr))', gap: 10, marginBottom: 12 }}>
+          <div style={{ ...styles.summaryStat, borderColor: '#bfdbfe', background: '#eff6ff' }}><div>{'最终成就点'}</div><strong>{summary.finalAchievementPoints ?? this.state.achievementPoints}</strong></div>
+          <div style={{ ...styles.summaryStat, borderColor: '#bbf7d0', background: '#f0fdf4' }}><div>{'总考试分'}</div><strong>{summary.totalExamScore ?? this.state.totalExamScore}</strong></div>
+          <div style={{ ...styles.summaryStat, borderColor: '#ddd6fe', background: '#f5f3ff' }}><div>{'最终考试成就'}</div><strong>{summary.finalExamAchievementAward ?? this.state.finalExamAchievementAward}</strong></div>
+          <div style={styles.summaryStat}><div>{'拥有课程'}</div><strong>{summary.ownedCoursesCount ?? (this.state.ownedCourses || []).length}</strong></div>
+          <div style={styles.summaryStat}><div>{'项目 / 完成'}</div><strong>{summary.activeProjectCount ?? 0} / {summary.completedProjectCount ?? 0}</strong></div>
+          <div style={styles.summaryStat}><div>{'成果'}</div><strong>{summary.permanentCount ?? (this.state.activePermanents || []).length}</strong></div>
+        </div>
+        <div style={{ marginBottom: 12 }}>
+          {this.renderSectionTitle('终局目标', goals.length + ' 项')}
+          <div style={styles.compactList}>{goals.map((goal, idx) => this.renderGoalCard(goal, idx, 'final'))}</div>
+        </div>
+        <div style={{ marginBottom: 12 }}>
+          {this.renderSectionTitle('机会使用', toolText.join(' · '))}
+        </div>
+        <div style={{ marginBottom: 12, padding: 12, border: '1px solid #bfdbfe', borderRadius: 8, background: '#eff6ff' }}>
+          {this.renderSectionTitle('AI 总结', this.state.aiSummaryText ? '已生成' : '可选')}
+          <button onClick={this.generateAiSummary} disabled={this.state.aiSummaryLoading} style={{ ...this.buttonStyle(this.state.aiSummaryLoading, true), marginBottom: this.state.aiSummaryText || this.state.aiSummaryError ? 10 : 0 }}>
+            {this.state.aiSummaryLoading ? '生成中...' : '生成 AI 毕业评语'}
+          </button>
+          {this.state.aiSummaryError && <div style={{ color: '#b91c1c', fontSize: 13, fontWeight: 800 }}>{this.state.aiSummaryError}</div>}
+          {this.state.aiSummaryText && <div style={{ color: '#1e3a8a', fontSize: 14, lineHeight: 1.7, whiteSpace: 'pre-wrap' }}>{this.state.aiSummaryText}</div>}
+        </div>
+        <div>
+          {this.renderSectionTitle('考试记录', exams.length + ' 次')}
+          <div style={{ maxHeight: 220, overflowY: 'auto' }}>
+            {exams.map((exam, idx) => (
+              <div key={idx} style={{ display: 'grid', gridTemplateColumns: '64px 1fr auto', gap: 8, padding: '7px 0', borderTop: idx === 0 ? 'none' : '1px solid #e2e8f0', fontSize: 13 }}>
+                <strong>{'第'} {exam.semester} {'学期'}</strong>
+                <span>{exam.testName}</span>
+                <span>{'总分'} {exam.score} {'· 成就'} {exam.achievementAward}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  getProjectOptionKey(option = {}, optionIndex = 0) {
+    return option.id || option.name || `option_${optionIndex}`;
+  }
+
+  isProjectMilestoneUsed(project = {}, option = {}, optionIndex = 0) {
+    if (this.getProjectOptionType(option) !== 'milestone') return false;
+    const key = this.getProjectOptionKey(option, optionIndex);
+    return Array.isArray(project._usedMilestones) && project._usedMilestones.includes(key);
+  }
+
+  getProjectTypeMeta(type) {
+    return PROJECT_TYPES[String(type || 'general').toLowerCase()] || { icon: '▫️', label: type || '通用' };
+  }
+
+  renderProjectType(type) {
+    const meta = this.getProjectTypeMeta(type);
+    return <span title={meta.label} style={{ display: 'inline-flex', alignItems: 'center', gap: 4, color: '#0f766e', fontSize: 12, fontWeight: 800 }}><span style={{ fontSize: 16 }}>{meta.icon}</span><span>{meta.label}</span></span>;
+  }
+
   renderMainPhase(resultMap) {
+    if (this.state.gameFinished) return this.renderGraduationSummary();
     if (this.state.awaitingEventStart) return this.renderReadyPhase();
     if (this.state.eventStageActive) return this.renderEventPhase();
     if (this.state.reviewStageActive) return this.renderReviewPhase();
@@ -1739,7 +2103,7 @@ export default class DeckGameUI extends React.Component {
         <div style={styles.topbar}>
           <div>
             <h3 style={styles.title}>Deckgame</h3>
-            <div style={styles.subtitle}>第 {this.state.semester} 学期 · {this.getPhaseName()}</div>
+            <div style={styles.subtitle}>{this.state.gameFinished ? '游戏结束' : `第 ${this.state.semester} 学期`} {'·'} {this.getPhaseName()}</div>
           </div>
           {this.renderTopAction()}
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end', gap: 8, flexWrap: 'wrap' }}>
@@ -1754,6 +2118,7 @@ export default class DeckGameUI extends React.Component {
         <div style={styles.board}>
           <div>
             {this.renderStatusPanel()}
+            {this.renderOwnedCoursesPanel()}
             {this.renderGoalPanel()}
           </div>
           <div>

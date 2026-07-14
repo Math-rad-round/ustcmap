@@ -9,6 +9,7 @@ import VRgame from "./pano/VRgame.js";
 import AppPage from "./pages/AppPage.js";
 import Profile from "./pages/Profile.js";
 import Search from "./pages/Search.js";
+import Home from "./pages/Home.js";
 //import DBGGame from "../../../archive/dbgpart/Game.js";
 import NewProjectPage from "./pages/NewProjectPage.js";
 import SignInPage from "./pages/SignInPage.js";
@@ -32,6 +33,8 @@ import "../utilities.css";
 import "./App.css";
 import Savepos from "./pos/testpage.js";
 import DeckGame from "./new/deckgame/DeckGame.js";
+import DBGGame from "./new/dbg/DBGGame.js";
+import Game100Gateway from "./new/Game100Gateway.js";
 class App extends Component{
   constructor(props){
     super(props);
@@ -104,7 +107,7 @@ class App extends Component{
                                        />}
                               errorElement={<NotFound />}
               >
-                <Route path="/" element={<Search />} />
+                <Route path="/" element={<Home userId={this.state.whoami._id} />} />
                 <Route path="/app/:appId/path" element={<PathParamsHOC component={Path}/>} />
                 <Route path="/map" element={<Map />} />
                 <Route path="/map/bus" element={<Busmap />} />
@@ -122,6 +125,8 @@ class App extends Component{
                 <Route path="/addguess/" element={<Addguess />} />
                 <Route path="/guess" element={<Guess />} />
                 <Route path="/ustcgame" element={<DeckGame />} />
+                <Route path="/dbg" element={<DBGGame />} />
+                <Route path="/game100" element={<Game100Gateway />} />
                 <Route path="/savepos" element={<Savepos />} />
                 <Route path="/getpos" element={<PosPage />} />
                 <Route path="/testapi" element={<Testapi />} />

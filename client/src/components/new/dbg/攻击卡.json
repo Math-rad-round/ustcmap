@@ -1,0 +1,2155 @@
+{
+  "version": 2.12,
+  "cardset_id": "cb960ba4-009c-4548-b928-16e592c172e3",
+  "name": "攻击",
+  "blueprint_id": "9b511ab8-27bb-4e18-a829-693c09ed7d77",
+  "hint_order_index": 8,
+  "cards": [
+    {
+      "card_id": "d3d17d50-4f5c-4067-9485-8f1922e0b91f",
+      "amount": 1,
+      "front_layers": [
+        {
+          "blueprint_layer_id": "e6768024-5aab-4650-9ad7-d7e69f0681b1",
+          "panels": [
+            {
+              "blueprint_panel_id": "8eb14b23-456f-428e-bb5b-31a55468ec3f",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "{Creatures/angel-outfit}"
+              }
+            },
+            {
+              "blueprint_panel_id": "1e1194aa-1529-4840-8eaa-c8c992abe58a",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "III"
+              }
+            },
+            {
+              "blueprint_panel_id": "c21c670c-38c4-4875-89d5-382d2045009a",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "I"
+              }
+            },
+            {
+              "blueprint_panel_id": "0e60d558-acab-4ec3-be1a-6f5c95e11e2c",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "8"
+              }
+            },
+            {
+              "blueprint_panel_id": "444ad7de-8f48-45c4-9029-0c2660797c8b",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "10"
+              }
+            },
+            {
+              "blueprint_panel_id": "5302c4bc-d69d-40dd-997c-b86c3bbcc71e",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "11"
+              }
+            },
+            {
+              "blueprint_panel_id": "c4294e62-9217-4aa3-9fa7-7686da393da3",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "7"
+              }
+            },
+            {
+              "blueprint_panel_id": "05f10160-69df-4fc8-84e3-2b08698c770b",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "9"
+              }
+            },
+            {
+              "blueprint_panel_id": "38619717-8e34-4061-abbf-71ef49e20dbc",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "10"
+              }
+            },
+            {
+              "blueprint_panel_id": "e2ae5764-8dad-404a-b3c4-d096527ecf42",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "I"
+              }
+            },
+            {
+              "blueprint_panel_id": "87916193-74b1-4619-ba5a-eda0cc4605fc",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "5"
+              }
+            },
+            {
+              "blueprint_panel_id": "e4bb3f6e-738e-4abd-bc77-4736d8232af5",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "7"
+              }
+            },
+            {
+              "blueprint_panel_id": "e84e9c66-3054-4513-84c9-dff5d9eb7485",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "8"
+              }
+            },
+            {
+              "blueprint_panel_id": "3c1c648e-70c3-4c6f-9087-7828a0e1368f",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "II"
+              }
+            },
+            {
+              "blueprint_panel_id": "271065d7-8d0a-468b-ab07-8230ca840ffd",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "1"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "card_id": "1b8d1e57-056a-4b1e-983f-7e4eb4828e34",
+      "amount": 1,
+      "front_layers": [
+        {
+          "blueprint_layer_id": "e6768024-5aab-4650-9ad7-d7e69f0681b1",
+          "panels": [
+            {
+              "blueprint_panel_id": "8eb14b23-456f-428e-bb5b-31a55468ec3f",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "{Building/maze}"
+              }
+            },
+            {
+              "blueprint_panel_id": "1e1194aa-1529-4840-8eaa-c8c992abe58a",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "III"
+              }
+            },
+            {
+              "blueprint_panel_id": "c21c670c-38c4-4875-89d5-382d2045009a",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "I"
+              }
+            },
+            {
+              "blueprint_panel_id": "0e60d558-acab-4ec3-be1a-6f5c95e11e2c",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "10"
+              }
+            },
+            {
+              "blueprint_panel_id": "444ad7de-8f48-45c4-9029-0c2660797c8b",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "11"
+              }
+            },
+            {
+              "blueprint_panel_id": "5302c4bc-d69d-40dd-997c-b86c3bbcc71e",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "12"
+              }
+            },
+            {
+              "blueprint_panel_id": "c4294e62-9217-4aa3-9fa7-7686da393da3",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "6"
+              }
+            },
+            {
+              "blueprint_panel_id": "05f10160-69df-4fc8-84e3-2b08698c770b",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "7"
+              }
+            },
+            {
+              "blueprint_panel_id": "38619717-8e34-4061-abbf-71ef49e20dbc",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "9"
+              }
+            },
+            {
+              "blueprint_panel_id": "e2ae5764-8dad-404a-b3c4-d096527ecf42",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "II"
+              }
+            },
+            {
+              "blueprint_panel_id": "87916193-74b1-4619-ba5a-eda0cc4605fc",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "4"
+              }
+            },
+            {
+              "blueprint_panel_id": "e4bb3f6e-738e-4abd-bc77-4736d8232af5",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "6"
+              }
+            },
+            {
+              "blueprint_panel_id": "e84e9c66-3054-4513-84c9-dff5d9eb7485",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "7"
+              }
+            },
+            {
+              "blueprint_panel_id": "3c1c648e-70c3-4c6f-9087-7828a0e1368f",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "III"
+              }
+            },
+            {
+              "blueprint_panel_id": "271065d7-8d0a-468b-ab07-8230ca840ffd",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "2"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "card_id": "fa1d4823-e88c-435c-9df0-ea5b9ef51e24",
+      "amount": 1,
+      "front_layers": [
+        {
+          "blueprint_layer_id": "e6768024-5aab-4650-9ad7-d7e69f0681b1",
+          "panels": [
+            {
+              "blueprint_panel_id": "8eb14b23-456f-428e-bb5b-31a55468ec3f",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "{Creatures/angel-outfit}"
+              }
+            },
+            {
+              "blueprint_panel_id": "1e1194aa-1529-4840-8eaa-c8c992abe58a",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "II"
+              }
+            },
+            {
+              "blueprint_panel_id": "c21c670c-38c4-4875-89d5-382d2045009a",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "I"
+              }
+            },
+            {
+              "blueprint_panel_id": "0e60d558-acab-4ec3-be1a-6f5c95e11e2c",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "8"
+              }
+            },
+            {
+              "blueprint_panel_id": "444ad7de-8f48-45c4-9029-0c2660797c8b",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "11"
+              }
+            },
+            {
+              "blueprint_panel_id": "5302c4bc-d69d-40dd-997c-b86c3bbcc71e",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "14"
+              }
+            },
+            {
+              "blueprint_panel_id": "c4294e62-9217-4aa3-9fa7-7686da393da3",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "5"
+              }
+            },
+            {
+              "blueprint_panel_id": "05f10160-69df-4fc8-84e3-2b08698c770b",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "8"
+              }
+            },
+            {
+              "blueprint_panel_id": "38619717-8e34-4061-abbf-71ef49e20dbc",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "11"
+              }
+            },
+            {
+              "blueprint_panel_id": "e2ae5764-8dad-404a-b3c4-d096527ecf42",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "I"
+              }
+            },
+            {
+              "blueprint_panel_id": "87916193-74b1-4619-ba5a-eda0cc4605fc",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "2"
+              }
+            },
+            {
+              "blueprint_panel_id": "e4bb3f6e-738e-4abd-bc77-4736d8232af5",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "5"
+              }
+            },
+            {
+              "blueprint_panel_id": "e84e9c66-3054-4513-84c9-dff5d9eb7485",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "8"
+              }
+            },
+            {
+              "blueprint_panel_id": "3c1c648e-70c3-4c6f-9087-7828a0e1368f",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "II"
+              }
+            },
+            {
+              "blueprint_panel_id": "271065d7-8d0a-468b-ab07-8230ca840ffd",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "3"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "card_id": "320df343-0057-4e0d-b36e-f5e13ce01e10",
+      "amount": 1,
+      "front_layers": [
+        {
+          "blueprint_layer_id": "e6768024-5aab-4650-9ad7-d7e69f0681b1",
+          "panels": [
+            {
+              "blueprint_panel_id": "8eb14b23-456f-428e-bb5b-31a55468ec3f",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "{Other/cardboard-box}"
+              }
+            },
+            {
+              "blueprint_panel_id": "1e1194aa-1529-4840-8eaa-c8c992abe58a",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "IV"
+              }
+            },
+            {
+              "blueprint_panel_id": "c21c670c-38c4-4875-89d5-382d2045009a",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "II"
+              }
+            },
+            {
+              "blueprint_panel_id": "0e60d558-acab-4ec3-be1a-6f5c95e11e2c",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "7"
+              }
+            },
+            {
+              "blueprint_panel_id": "444ad7de-8f48-45c4-9029-0c2660797c8b",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "9"
+              }
+            },
+            {
+              "blueprint_panel_id": "5302c4bc-d69d-40dd-997c-b86c3bbcc71e",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "11"
+              }
+            },
+            {
+              "blueprint_panel_id": "c4294e62-9217-4aa3-9fa7-7686da393da3",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "6"
+              }
+            },
+            {
+              "blueprint_panel_id": "05f10160-69df-4fc8-84e3-2b08698c770b",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "8"
+              }
+            },
+            {
+              "blueprint_panel_id": "38619717-8e34-4061-abbf-71ef49e20dbc",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "9"
+              }
+            },
+            {
+              "blueprint_panel_id": "e2ae5764-8dad-404a-b3c4-d096527ecf42",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "II"
+              }
+            },
+            {
+              "blueprint_panel_id": "87916193-74b1-4619-ba5a-eda0cc4605fc",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "5"
+              }
+            },
+            {
+              "blueprint_panel_id": "e4bb3f6e-738e-4abd-bc77-4736d8232af5",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "6"
+              }
+            },
+            {
+              "blueprint_panel_id": "e84e9c66-3054-4513-84c9-dff5d9eb7485",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "7"
+              }
+            },
+            {
+              "blueprint_panel_id": "3c1c648e-70c3-4c6f-9087-7828a0e1368f",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "IV"
+              }
+            },
+            {
+              "blueprint_panel_id": "271065d7-8d0a-468b-ab07-8230ca840ffd",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "4"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "card_id": "a85692af-ac9b-4eac-86ba-30afbb9388df",
+      "amount": 1,
+      "front_layers": [
+        {
+          "blueprint_layer_id": "e6768024-5aab-4650-9ad7-d7e69f0681b1",
+          "panels": [
+            {
+              "blueprint_panel_id": "8eb14b23-456f-428e-bb5b-31a55468ec3f",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "{Creatures/angel-outfit}    {Tabletop/card-draw}   {Tabletop/card-draw}  "
+              }
+            },
+            {
+              "blueprint_panel_id": "1e1194aa-1529-4840-8eaa-c8c992abe58a",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "III"
+              }
+            },
+            {
+              "blueprint_panel_id": "c21c670c-38c4-4875-89d5-382d2045009a",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "I"
+              }
+            },
+            {
+              "blueprint_panel_id": "0e60d558-acab-4ec3-be1a-6f5c95e11e2c",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "5"
+              }
+            },
+            {
+              "blueprint_panel_id": "444ad7de-8f48-45c4-9029-0c2660797c8b",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "12"
+              }
+            },
+            {
+              "blueprint_panel_id": "5302c4bc-d69d-40dd-997c-b86c3bbcc71e",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "17"
+              }
+            },
+            {
+              "blueprint_panel_id": "c4294e62-9217-4aa3-9fa7-7686da393da3",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "4"
+              }
+            },
+            {
+              "blueprint_panel_id": "05f10160-69df-4fc8-84e3-2b08698c770b",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "10"
+              }
+            },
+            {
+              "blueprint_panel_id": "38619717-8e34-4061-abbf-71ef49e20dbc",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "12"
+              }
+            },
+            {
+              "blueprint_panel_id": "e2ae5764-8dad-404a-b3c4-d096527ecf42",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "II"
+              }
+            },
+            {
+              "blueprint_panel_id": "87916193-74b1-4619-ba5a-eda0cc4605fc",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "0"
+              }
+            },
+            {
+              "blueprint_panel_id": "e4bb3f6e-738e-4abd-bc77-4736d8232af5",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "4"
+              }
+            },
+            {
+              "blueprint_panel_id": "e84e9c66-3054-4513-84c9-dff5d9eb7485",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "5"
+              }
+            },
+            {
+              "blueprint_panel_id": "3c1c648e-70c3-4c6f-9087-7828a0e1368f",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "IV"
+              }
+            },
+            {
+              "blueprint_panel_id": "271065d7-8d0a-468b-ab07-8230ca840ffd",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "5"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "card_id": "25087d54-4449-4ab1-9bbd-e982c7d1552b",
+      "amount": 1,
+      "front_layers": [
+        {
+          "blueprint_layer_id": "e6768024-5aab-4650-9ad7-d7e69f0681b1",
+          "panels": [
+            {
+              "blueprint_panel_id": "8eb14b23-456f-428e-bb5b-31a55468ec3f",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "{Building/maze}    {Building/maze}"
+              }
+            },
+            {
+              "blueprint_panel_id": "1e1194aa-1529-4840-8eaa-c8c992abe58a",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "III"
+              }
+            },
+            {
+              "blueprint_panel_id": "c21c670c-38c4-4875-89d5-382d2045009a",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "I"
+              }
+            },
+            {
+              "blueprint_panel_id": "0e60d558-acab-4ec3-be1a-6f5c95e11e2c",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "10"
+              }
+            },
+            {
+              "blueprint_panel_id": "444ad7de-8f48-45c4-9029-0c2660797c8b",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "11"
+              }
+            },
+            {
+              "blueprint_panel_id": "5302c4bc-d69d-40dd-997c-b86c3bbcc71e",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "12"
+              }
+            },
+            {
+              "blueprint_panel_id": "c4294e62-9217-4aa3-9fa7-7686da393da3",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "7"
+              }
+            },
+            {
+              "blueprint_panel_id": "05f10160-69df-4fc8-84e3-2b08698c770b",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "8"
+              }
+            },
+            {
+              "blueprint_panel_id": "38619717-8e34-4061-abbf-71ef49e20dbc",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "9"
+              }
+            },
+            {
+              "blueprint_panel_id": "e2ae5764-8dad-404a-b3c4-d096527ecf42",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "I"
+              }
+            },
+            {
+              "blueprint_panel_id": "87916193-74b1-4619-ba5a-eda0cc4605fc",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "4"
+              }
+            },
+            {
+              "blueprint_panel_id": "e4bb3f6e-738e-4abd-bc77-4736d8232af5",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "5"
+              }
+            },
+            {
+              "blueprint_panel_id": "e84e9c66-3054-4513-84c9-dff5d9eb7485",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "6"
+              }
+            },
+            {
+              "blueprint_panel_id": "3c1c648e-70c3-4c6f-9087-7828a0e1368f",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "II"
+              }
+            },
+            {
+              "blueprint_panel_id": "271065d7-8d0a-468b-ab07-8230ca840ffd",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "6"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "card_id": "3c9ff7aa-6955-4f78-80b3-a7e44e68003b",
+      "amount": 1,
+      "front_layers": [
+        {
+          "blueprint_layer_id": "e6768024-5aab-4650-9ad7-d7e69f0681b1",
+          "panels": [
+            {
+              "blueprint_panel_id": "8eb14b23-456f-428e-bb5b-31a55468ec3f",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "<color=#E02C32FF>{Abstract/move}     {Basic/st1_attack}  </color> next turn"
+              }
+            },
+            {
+              "blueprint_panel_id": "1e1194aa-1529-4840-8eaa-c8c992abe58a",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "III"
+              }
+            },
+            {
+              "blueprint_panel_id": "c21c670c-38c4-4875-89d5-382d2045009a",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "I"
+              }
+            },
+            {
+              "blueprint_panel_id": "0e60d558-acab-4ec3-be1a-6f5c95e11e2c",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "2"
+              }
+            },
+            {
+              "blueprint_panel_id": "444ad7de-8f48-45c4-9029-0c2660797c8b",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "8"
+              }
+            },
+            {
+              "blueprint_panel_id": "5302c4bc-d69d-40dd-997c-b86c3bbcc71e",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "10"
+              }
+            },
+            {
+              "blueprint_panel_id": "c4294e62-9217-4aa3-9fa7-7686da393da3",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "X"
+              }
+            },
+            {
+              "blueprint_panel_id": "05f10160-69df-4fc8-84e3-2b08698c770b",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "5"
+              }
+            },
+            {
+              "blueprint_panel_id": "38619717-8e34-4061-abbf-71ef49e20dbc",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "7"
+              }
+            },
+            {
+              "blueprint_panel_id": "e2ae5764-8dad-404a-b3c4-d096527ecf42",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "I"
+              }
+            },
+            {
+              "blueprint_panel_id": "87916193-74b1-4619-ba5a-eda0cc4605fc",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "X"
+              }
+            },
+            {
+              "blueprint_panel_id": "e4bb3f6e-738e-4abd-bc77-4736d8232af5",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "X"
+              }
+            },
+            {
+              "blueprint_panel_id": "e84e9c66-3054-4513-84c9-dff5d9eb7485",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "X"
+              }
+            },
+            {
+              "blueprint_panel_id": "3c1c648e-70c3-4c6f-9087-7828a0e1368f",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "III"
+              }
+            },
+            {
+              "blueprint_panel_id": "271065d7-8d0a-468b-ab07-8230ca840ffd",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "7"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "card_id": "84583a02-5bef-45c4-89e0-8647b51a0d16",
+      "amount": 1,
+      "front_layers": [
+        {
+          "blueprint_layer_id": "e6768024-5aab-4650-9ad7-d7e69f0681b1",
+          "panels": [
+            {
+              "blueprint_panel_id": "8eb14b23-456f-428e-bb5b-31a55468ec3f",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "<color=#3ED065FF>{Basic/st1_time} </color>"
+              }
+            },
+            {
+              "blueprint_panel_id": "1e1194aa-1529-4840-8eaa-c8c992abe58a",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "III"
+              }
+            },
+            {
+              "blueprint_panel_id": "c21c670c-38c4-4875-89d5-382d2045009a",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "I"
+              }
+            },
+            {
+              "blueprint_panel_id": "0e60d558-acab-4ec3-be1a-6f5c95e11e2c",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "11"
+              }
+            },
+            {
+              "blueprint_panel_id": "444ad7de-8f48-45c4-9029-0c2660797c8b",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "16"
+              }
+            },
+            {
+              "blueprint_panel_id": "5302c4bc-d69d-40dd-997c-b86c3bbcc71e",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "19"
+              }
+            },
+            {
+              "blueprint_panel_id": "c4294e62-9217-4aa3-9fa7-7686da393da3",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "10"
+              }
+            },
+            {
+              "blueprint_panel_id": "05f10160-69df-4fc8-84e3-2b08698c770b",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "13"
+              }
+            },
+            {
+              "blueprint_panel_id": "38619717-8e34-4061-abbf-71ef49e20dbc",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "16"
+              }
+            },
+            {
+              "blueprint_panel_id": "e2ae5764-8dad-404a-b3c4-d096527ecf42",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "II"
+              }
+            },
+            {
+              "blueprint_panel_id": "87916193-74b1-4619-ba5a-eda0cc4605fc",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "8"
+              }
+            },
+            {
+              "blueprint_panel_id": "e4bb3f6e-738e-4abd-bc77-4736d8232af5",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "12"
+              }
+            },
+            {
+              "blueprint_panel_id": "e84e9c66-3054-4513-84c9-dff5d9eb7485",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "15"
+              }
+            },
+            {
+              "blueprint_panel_id": "3c1c648e-70c3-4c6f-9087-7828a0e1368f",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "III"
+              }
+            },
+            {
+              "blueprint_panel_id": "271065d7-8d0a-468b-ab07-8230ca840ffd",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "8"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "card_id": "5caff0a4-b0b4-4cb5-bb8a-d44b0765cfd8",
+      "amount": 1,
+      "front_layers": [
+        {
+          "blueprint_layer_id": "e6768024-5aab-4650-9ad7-d7e69f0681b1",
+          "panels": [
+            {
+              "blueprint_panel_id": "8eb14b23-456f-428e-bb5b-31a55468ec3f",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "{Creatures/angel-outfit}"
+              }
+            },
+            {
+              "blueprint_panel_id": "5302c4bc-d69d-40dd-997c-b86c3bbcc71e",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "10"
+              }
+            },
+            {
+              "blueprint_panel_id": "271065d7-8d0a-468b-ab07-8230ca840ffd",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "9"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "card_id": "f4cc6dff-9804-4c6e-a5ec-c6b3c22afa92",
+      "amount": 1,
+      "front_layers": [
+        {
+          "blueprint_layer_id": "e6768024-5aab-4650-9ad7-d7e69f0681b1",
+          "panels": [
+            {
+              "blueprint_panel_id": "8eb14b23-456f-428e-bb5b-31a55468ec3f",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "{Creatures/angel-outfit}"
+              }
+            },
+            {
+              "blueprint_panel_id": "1e1194aa-1529-4840-8eaa-c8c992abe58a",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "II"
+              }
+            },
+            {
+              "blueprint_panel_id": "c21c670c-38c4-4875-89d5-382d2045009a",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "I"
+              }
+            },
+            {
+              "blueprint_panel_id": "0e60d558-acab-4ec3-be1a-6f5c95e11e2c",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "8"
+              }
+            },
+            {
+              "blueprint_panel_id": "444ad7de-8f48-45c4-9029-0c2660797c8b",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "10"
+              }
+            },
+            {
+              "blueprint_panel_id": "5302c4bc-d69d-40dd-997c-b86c3bbcc71e",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "12"
+              }
+            },
+            {
+              "blueprint_panel_id": "c4294e62-9217-4aa3-9fa7-7686da393da3",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "6"
+              }
+            },
+            {
+              "blueprint_panel_id": "05f10160-69df-4fc8-84e3-2b08698c770b",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "8"
+              }
+            },
+            {
+              "blueprint_panel_id": "38619717-8e34-4061-abbf-71ef49e20dbc",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "10"
+              }
+            },
+            {
+              "blueprint_panel_id": "e2ae5764-8dad-404a-b3c4-d096527ecf42",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "I"
+              }
+            },
+            {
+              "blueprint_panel_id": "87916193-74b1-4619-ba5a-eda0cc4605fc",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "4"
+              }
+            },
+            {
+              "blueprint_panel_id": "e4bb3f6e-738e-4abd-bc77-4736d8232af5",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "6"
+              }
+            },
+            {
+              "blueprint_panel_id": "e84e9c66-3054-4513-84c9-dff5d9eb7485",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "8"
+              }
+            },
+            {
+              "blueprint_panel_id": "3c1c648e-70c3-4c6f-9087-7828a0e1368f",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "II"
+              }
+            },
+            {
+              "blueprint_panel_id": "271065d7-8d0a-468b-ab07-8230ca840ffd",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "10"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "card_id": "3b4f1917-1c2b-4890-b3bd-acd52bf84d16",
+      "amount": 1,
+      "front_layers": [
+        {
+          "blueprint_layer_id": "e6768024-5aab-4650-9ad7-d7e69f0681b1",
+          "panels": [
+            {
+              "blueprint_panel_id": "8eb14b23-456f-428e-bb5b-31a55468ec3f",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "{Creatures/angel-outfit}"
+              }
+            },
+            {
+              "blueprint_panel_id": "1e1194aa-1529-4840-8eaa-c8c992abe58a",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "II"
+              }
+            },
+            {
+              "blueprint_panel_id": "c21c670c-38c4-4875-89d5-382d2045009a",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "I"
+              }
+            },
+            {
+              "blueprint_panel_id": "0e60d558-acab-4ec3-be1a-6f5c95e11e2c",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "10"
+              }
+            },
+            {
+              "blueprint_panel_id": "444ad7de-8f48-45c4-9029-0c2660797c8b",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "11"
+              }
+            },
+            {
+              "blueprint_panel_id": "5302c4bc-d69d-40dd-997c-b86c3bbcc71e",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "12"
+              }
+            },
+            {
+              "blueprint_panel_id": "c4294e62-9217-4aa3-9fa7-7686da393da3",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "6"
+              }
+            },
+            {
+              "blueprint_panel_id": "05f10160-69df-4fc8-84e3-2b08698c770b",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "7"
+              }
+            },
+            {
+              "blueprint_panel_id": "38619717-8e34-4061-abbf-71ef49e20dbc",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "11"
+              }
+            },
+            {
+              "blueprint_panel_id": "e2ae5764-8dad-404a-b3c4-d096527ecf42",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "I"
+              }
+            },
+            {
+              "blueprint_panel_id": "87916193-74b1-4619-ba5a-eda0cc4605fc",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "2"
+              }
+            },
+            {
+              "blueprint_panel_id": "e4bb3f6e-738e-4abd-bc77-4736d8232af5",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "6"
+              }
+            },
+            {
+              "blueprint_panel_id": "e84e9c66-3054-4513-84c9-dff5d9eb7485",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "10"
+              }
+            },
+            {
+              "blueprint_panel_id": "3c1c648e-70c3-4c6f-9087-7828a0e1368f",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "II"
+              }
+            },
+            {
+              "blueprint_panel_id": "271065d7-8d0a-468b-ab07-8230ca840ffd",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "11"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "card_id": "36245453-400f-4c55-92ed-b32186d06920",
+      "amount": 1,
+      "front_layers": [
+        {
+          "blueprint_layer_id": "e6768024-5aab-4650-9ad7-d7e69f0681b1",
+          "panels": [
+            {
+              "blueprint_panel_id": "8eb14b23-456f-428e-bb5b-31a55468ec3f",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "<color=#3ED015FF>1.5*   {Abstract/cloud-upload} </color>   next turn"
+              }
+            },
+            {
+              "blueprint_panel_id": "1e1194aa-1529-4840-8eaa-c8c992abe58a",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "III"
+              }
+            },
+            {
+              "blueprint_panel_id": "c21c670c-38c4-4875-89d5-382d2045009a",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "I"
+              }
+            },
+            {
+              "blueprint_panel_id": "0e60d558-acab-4ec3-be1a-6f5c95e11e2c",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "8"
+              }
+            },
+            {
+              "blueprint_panel_id": "444ad7de-8f48-45c4-9029-0c2660797c8b",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "13"
+              }
+            },
+            {
+              "blueprint_panel_id": "5302c4bc-d69d-40dd-997c-b86c3bbcc71e",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "16"
+              }
+            },
+            {
+              "blueprint_panel_id": "c4294e62-9217-4aa3-9fa7-7686da393da3",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "7"
+              }
+            },
+            {
+              "blueprint_panel_id": "05f10160-69df-4fc8-84e3-2b08698c770b",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "12"
+              }
+            },
+            {
+              "blueprint_panel_id": "38619717-8e34-4061-abbf-71ef49e20dbc",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "15"
+              }
+            },
+            {
+              "blueprint_panel_id": "e2ae5764-8dad-404a-b3c4-d096527ecf42",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "I"
+              }
+            },
+            {
+              "blueprint_panel_id": "87916193-74b1-4619-ba5a-eda0cc4605fc",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "6"
+              }
+            },
+            {
+              "blueprint_panel_id": "e4bb3f6e-738e-4abd-bc77-4736d8232af5",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "11"
+              }
+            },
+            {
+              "blueprint_panel_id": "e84e9c66-3054-4513-84c9-dff5d9eb7485",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "14"
+              }
+            },
+            {
+              "blueprint_panel_id": "3c1c648e-70c3-4c6f-9087-7828a0e1368f",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "II"
+              }
+            },
+            {
+              "blueprint_panel_id": "271065d7-8d0a-468b-ab07-8230ca840ffd",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "12"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "card_id": "8fdc442b-72f7-4457-8da7-24f8303dfdaf",
+      "amount": 7,
+      "front_layers": [
+        {
+          "blueprint_layer_id": "e6768024-5aab-4650-9ad7-d7e69f0681b1",
+          "panels": [
+            {
+              "blueprint_panel_id": "8eb14b23-456f-428e-bb5b-31a55468ec3f",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "{Creatures/angel-outfit}              <color=#E10707FF>{Machine/breaking-chain}    {Creatures/angel-outfit} </color>"
+              }
+            },
+            {
+              "blueprint_panel_id": "1e1194aa-1529-4840-8eaa-c8c992abe58a",
+              "rotation": 0
+            },
+            {
+              "blueprint_panel_id": "c21c670c-38c4-4875-89d5-382d2045009a",
+              "rotation": 0
+            },
+            {
+              "blueprint_panel_id": "0e60d558-acab-4ec3-be1a-6f5c95e11e2c",
+              "rotation": 0
+            },
+            {
+              "blueprint_panel_id": "444ad7de-8f48-45c4-9029-0c2660797c8b",
+              "rotation": 0
+            },
+            {
+              "blueprint_panel_id": "5302c4bc-d69d-40dd-997c-b86c3bbcc71e",
+              "rotation": 0
+            },
+            {
+              "blueprint_panel_id": "c4294e62-9217-4aa3-9fa7-7686da393da3",
+              "rotation": 0
+            },
+            {
+              "blueprint_panel_id": "05f10160-69df-4fc8-84e3-2b08698c770b",
+              "rotation": 0
+            },
+            {
+              "blueprint_panel_id": "38619717-8e34-4061-abbf-71ef49e20dbc",
+              "rotation": 0
+            },
+            {
+              "blueprint_panel_id": "e2ae5764-8dad-404a-b3c4-d096527ecf42",
+              "rotation": 0
+            },
+            {
+              "blueprint_panel_id": "87916193-74b1-4619-ba5a-eda0cc4605fc",
+              "rotation": 0
+            },
+            {
+              "blueprint_panel_id": "e4bb3f6e-738e-4abd-bc77-4736d8232af5",
+              "rotation": 0
+            },
+            {
+              "blueprint_panel_id": "e84e9c66-3054-4513-84c9-dff5d9eb7485",
+              "rotation": 0
+            },
+            {
+              "blueprint_panel_id": "3c1c648e-70c3-4c6f-9087-7828a0e1368f",
+              "rotation": 0
+            },
+            {
+              "blueprint_panel_id": "271065d7-8d0a-468b-ab07-8230ca840ffd",
+              "rotation": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "card_id": "adedc693-ace7-452d-8d49-27337df6855e",
+      "amount": 1,
+      "front_layers": [
+        {
+          "blueprint_layer_id": "e6768024-5aab-4650-9ad7-d7e69f0681b1",
+          "panels": [
+            {
+              "blueprint_panel_id": "8eb14b23-456f-428e-bb5b-31a55468ec3f",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "<color=#3ED015FF>{Abstract/load}     {Abstract/load} </color>  next turn"
+              }
+            },
+            {
+              "blueprint_panel_id": "1e1194aa-1529-4840-8eaa-c8c992abe58a",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "III"
+              }
+            },
+            {
+              "blueprint_panel_id": "c21c670c-38c4-4875-89d5-382d2045009a",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "I"
+              }
+            },
+            {
+              "blueprint_panel_id": "0e60d558-acab-4ec3-be1a-6f5c95e11e2c",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "9"
+              }
+            },
+            {
+              "blueprint_panel_id": "444ad7de-8f48-45c4-9029-0c2660797c8b",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "13"
+              }
+            },
+            {
+              "blueprint_panel_id": "5302c4bc-d69d-40dd-997c-b86c3bbcc71e",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "15"
+              }
+            },
+            {
+              "blueprint_panel_id": "c4294e62-9217-4aa3-9fa7-7686da393da3",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "8"
+              }
+            },
+            {
+              "blueprint_panel_id": "05f10160-69df-4fc8-84e3-2b08698c770b",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "11"
+              }
+            },
+            {
+              "blueprint_panel_id": "38619717-8e34-4061-abbf-71ef49e20dbc",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "14"
+              }
+            },
+            {
+              "blueprint_panel_id": "e2ae5764-8dad-404a-b3c4-d096527ecf42",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "I"
+              }
+            },
+            {
+              "blueprint_panel_id": "87916193-74b1-4619-ba5a-eda0cc4605fc",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "7"
+              }
+            },
+            {
+              "blueprint_panel_id": "e4bb3f6e-738e-4abd-bc77-4736d8232af5",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "9"
+              }
+            },
+            {
+              "blueprint_panel_id": "e84e9c66-3054-4513-84c9-dff5d9eb7485",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "13"
+              }
+            },
+            {
+              "blueprint_panel_id": "3c1c648e-70c3-4c6f-9087-7828a0e1368f",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "II"
+              }
+            },
+            {
+              "blueprint_panel_id": "271065d7-8d0a-468b-ab07-8230ca840ffd",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "13"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "card_id": "739b6323-a7b4-4dce-a333-429b76416a32",
+      "amount": 1,
+      "front_layers": [
+        {
+          "blueprint_layer_id": "e6768024-5aab-4650-9ad7-d7e69f0681b1",
+          "panels": [
+            {
+              "blueprint_panel_id": "8eb14b23-456f-428e-bb5b-31a55468ec3f",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "{Creatures/angel-outfit}"
+              }
+            },
+            {
+              "blueprint_panel_id": "1e1194aa-1529-4840-8eaa-c8c992abe58a",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "IV"
+              }
+            },
+            {
+              "blueprint_panel_id": "c21c670c-38c4-4875-89d5-382d2045009a",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "I"
+              }
+            },
+            {
+              "blueprint_panel_id": "0e60d558-acab-4ec3-be1a-6f5c95e11e2c",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "2"
+              }
+            },
+            {
+              "blueprint_panel_id": "444ad7de-8f48-45c4-9029-0c2660797c8b",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "10"
+              }
+            },
+            {
+              "blueprint_panel_id": "5302c4bc-d69d-40dd-997c-b86c3bbcc71e",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "11"
+              }
+            },
+            {
+              "blueprint_panel_id": "c4294e62-9217-4aa3-9fa7-7686da393da3",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "1"
+              }
+            },
+            {
+              "blueprint_panel_id": "05f10160-69df-4fc8-84e3-2b08698c770b",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "8"
+              }
+            },
+            {
+              "blueprint_panel_id": "38619717-8e34-4061-abbf-71ef49e20dbc",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "10"
+              }
+            },
+            {
+              "blueprint_panel_id": "e2ae5764-8dad-404a-b3c4-d096527ecf42",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "I"
+              }
+            },
+            {
+              "blueprint_panel_id": "87916193-74b1-4619-ba5a-eda0cc4605fc",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "0"
+              }
+            },
+            {
+              "blueprint_panel_id": "e4bb3f6e-738e-4abd-bc77-4736d8232af5",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "1"
+              }
+            },
+            {
+              "blueprint_panel_id": "e84e9c66-3054-4513-84c9-dff5d9eb7485",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "2"
+              }
+            },
+            {
+              "blueprint_panel_id": "3c1c648e-70c3-4c6f-9087-7828a0e1368f",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "IV"
+              }
+            },
+            {
+              "blueprint_panel_id": "271065d7-8d0a-468b-ab07-8230ca840ffd",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "14"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "card_id": "10d8ed41-7661-4754-acd0-c7a4a164c2c3",
+      "amount": 1,
+      "front_layers": [
+        {
+          "blueprint_layer_id": "e6768024-5aab-4650-9ad7-d7e69f0681b1",
+          "panels": [
+            {
+              "blueprint_panel_id": "8eb14b23-456f-428e-bb5b-31a55468ec3f",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "<=10   {Body&Actions/rough-wound} "
+              }
+            },
+            {
+              "blueprint_panel_id": "1e1194aa-1529-4840-8eaa-c8c992abe58a",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "III"
+              }
+            },
+            {
+              "blueprint_panel_id": "c21c670c-38c4-4875-89d5-382d2045009a",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "I"
+              }
+            },
+            {
+              "blueprint_panel_id": "0e60d558-acab-4ec3-be1a-6f5c95e11e2c",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "4"
+              }
+            },
+            {
+              "blueprint_panel_id": "444ad7de-8f48-45c4-9029-0c2660797c8b",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "8"
+              }
+            },
+            {
+              "blueprint_panel_id": "5302c4bc-d69d-40dd-997c-b86c3bbcc71e",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "10"
+              }
+            },
+            {
+              "blueprint_panel_id": "c4294e62-9217-4aa3-9fa7-7686da393da3",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "X"
+              }
+            },
+            {
+              "blueprint_panel_id": "05f10160-69df-4fc8-84e3-2b08698c770b",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "5"
+              }
+            },
+            {
+              "blueprint_panel_id": "38619717-8e34-4061-abbf-71ef49e20dbc",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "8"
+              }
+            },
+            {
+              "blueprint_panel_id": "e2ae5764-8dad-404a-b3c4-d096527ecf42",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "I"
+              }
+            },
+            {
+              "blueprint_panel_id": "87916193-74b1-4619-ba5a-eda0cc4605fc",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "X"
+              }
+            },
+            {
+              "blueprint_panel_id": "e4bb3f6e-738e-4abd-bc77-4736d8232af5",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "X"
+              }
+            },
+            {
+              "blueprint_panel_id": "e84e9c66-3054-4513-84c9-dff5d9eb7485",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "X"
+              }
+            },
+            {
+              "blueprint_panel_id": "3c1c648e-70c3-4c6f-9087-7828a0e1368f",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "III"
+              }
+            },
+            {
+              "blueprint_panel_id": "271065d7-8d0a-468b-ab07-8230ca840ffd",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "15"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "card_id": "25f019b2-f2fa-4c2a-95eb-865c533a3218",
+      "amount": 1,
+      "front_layers": [
+        {
+          "blueprint_layer_id": "e6768024-5aab-4650-9ad7-d7e69f0681b1",
+          "panels": [
+            {
+              "blueprint_panel_id": "8eb14b23-456f-428e-bb5b-31a55468ec3f",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "{Creatures/angel-outfit}              <color=#E10707FF>{Machine/breaking-chain}    {Creatures/angel-outfit} </color>"
+              }
+            },
+            {
+              "blueprint_panel_id": "1e1194aa-1529-4840-8eaa-c8c992abe58a",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "II"
+              }
+            },
+            {
+              "blueprint_panel_id": "c21c670c-38c4-4875-89d5-382d2045009a",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "I"
+              }
+            },
+            {
+              "blueprint_panel_id": "0e60d558-acab-4ec3-be1a-6f5c95e11e2c",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "4"
+              }
+            },
+            {
+              "blueprint_panel_id": "444ad7de-8f48-45c4-9029-0c2660797c8b",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "6"
+              }
+            },
+            {
+              "blueprint_panel_id": "5302c4bc-d69d-40dd-997c-b86c3bbcc71e",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "8"
+              }
+            },
+            {
+              "blueprint_panel_id": "c4294e62-9217-4aa3-9fa7-7686da393da3",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "1"
+              }
+            },
+            {
+              "blueprint_panel_id": "05f10160-69df-4fc8-84e3-2b08698c770b",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "4"
+              }
+            },
+            {
+              "blueprint_panel_id": "38619717-8e34-4061-abbf-71ef49e20dbc",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "6"
+              }
+            },
+            {
+              "blueprint_panel_id": "e2ae5764-8dad-404a-b3c4-d096527ecf42",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "I"
+              }
+            },
+            {
+              "blueprint_panel_id": "87916193-74b1-4619-ba5a-eda0cc4605fc",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "!"
+              }
+            },
+            {
+              "blueprint_panel_id": "e4bb3f6e-738e-4abd-bc77-4736d8232af5",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "4 !"
+              }
+            },
+            {
+              "blueprint_panel_id": "e84e9c66-3054-4513-84c9-dff5d9eb7485",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "6 !"
+              }
+            },
+            {
+              "blueprint_panel_id": "3c1c648e-70c3-4c6f-9087-7828a0e1368f",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "III"
+              }
+            },
+            {
+              "blueprint_panel_id": "271065d7-8d0a-468b-ab07-8230ca840ffd",
+              "rotation": 0,
+              "type": "text",
+              "data": {
+                "text": "16"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "card_id": "893b881e-f80c-4b64-8152-165ee88ff158",
+      "amount": 1,
+      "front_layers": [
+        {
+          "blueprint_layer_id": "e6768024-5aab-4650-9ad7-d7e69f0681b1",
+          "panels": [
+            {
+              "blueprint_panel_id": "8eb14b23-456f-428e-bb5b-31a55468ec3f",
+              "rotation": 0
+            },
+            {
+              "blueprint_panel_id": "1e1194aa-1529-4840-8eaa-c8c992abe58a",
+              "rotation": 0
+            },
+            {
+              "blueprint_panel_id": "c21c670c-38c4-4875-89d5-382d2045009a",
+              "rotation": 0
+            },
+            {
+              "blueprint_panel_id": "0e60d558-acab-4ec3-be1a-6f5c95e11e2c",
+              "rotation": 0
+            },
+            {
+              "blueprint_panel_id": "444ad7de-8f48-45c4-9029-0c2660797c8b",
+              "rotation": 0
+            },
+            {
+              "blueprint_panel_id": "5302c4bc-d69d-40dd-997c-b86c3bbcc71e",
+              "rotation": 0
+            },
+            {
+              "blueprint_panel_id": "c4294e62-9217-4aa3-9fa7-7686da393da3",
+              "rotation": 0
+            },
+            {
+              "blueprint_panel_id": "05f10160-69df-4fc8-84e3-2b08698c770b",
+              "rotation": 0
+            },
+            {
+              "blueprint_panel_id": "38619717-8e34-4061-abbf-71ef49e20dbc",
+              "rotation": 0
+            },
+            {
+              "blueprint_panel_id": "e2ae5764-8dad-404a-b3c4-d096527ecf42",
+              "rotation": 0
+            },
+            {
+              "blueprint_panel_id": "87916193-74b1-4619-ba5a-eda0cc4605fc",
+              "rotation": 0
+            },
+            {
+              "blueprint_panel_id": "e4bb3f6e-738e-4abd-bc77-4736d8232af5",
+              "rotation": 0
+            },
+            {
+              "blueprint_panel_id": "e84e9c66-3054-4513-84c9-dff5d9eb7485",
+              "rotation": 0
+            },
+            {
+              "blueprint_panel_id": "3c1c648e-70c3-4c6f-9087-7828a0e1368f",
+              "rotation": 0
+            },
+            {
+              "blueprint_panel_id": "271065d7-8d0a-468b-ab07-8230ca840ffd",
+              "rotation": 0
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

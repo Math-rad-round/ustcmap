@@ -1,0 +1,74 @@
+[
+  {
+    "id": "status_stun",
+    "name": "处理延迟",
+    "type": "status",
+    "copies": 40,
+    "tags": ["stun"],
+    "canDiscardForBlock": true,
+    "canUpgrade": true,
+    "base": {
+      "keywords": [],
+      "gain": {},
+      "modes": [],
+      "effects": [],
+      "cleanup": [
+        {
+          "type": "exileIfInHandAtEndTurn"
+        }
+      ]
+    },
+    "upgrade": {
+      "mode": "add",
+      "keywords": [],
+      "gain": {},
+      "modes": [],
+      "effects": [],
+      "cleanup": [
+        {
+          "type": "gainWhenExiled",
+          "gain": {
+            "upload": 1
+          }
+        }
+      ]
+    },
+    "text": "无效果。回合结束时如果仍在手牌中，将其移除。升级后的晕眩被移除时获得 1 上传。"
+  },
+  {
+    "id": "status_wound",
+    "name": "机体损伤",
+    "type": "status",
+    "copies": 30,
+    "tags": ["wound"],
+    "canDiscardForBlock": true,
+    "canUpgrade": false,
+    "canTrash": false,
+    "base": {
+      "keywords": [],
+      "gain": {},
+      "modes": [],
+      "effects": []
+    },
+    "upgrade": null,
+    "text": "无效果。不能升级，不能被删除，会留在牌组中拖慢抽牌。"
+  },
+  {
+    "id": "status_bleed",
+    "name": "线路泄漏",
+    "type": "status",
+    "copies": 30,
+    "tags": ["bleed"],
+    "canDiscardForBlock": false,
+    "canUpgrade": false,
+    "canTrash": false,
+    "base": {
+      "keywords": [],
+      "gain": {},
+      "modes": [],
+      "effects": []
+    },
+    "upgrade": null,
+    "text": "无效果。不能升级，不能被删除，不能用于发动弃置本牌获得 1 防护的通用动作。"
+  }
+]

@@ -1,0 +1,931 @@
+[
+  {
+    "id": "attack_01",
+    "name": "天击余波",
+    "number": 1,
+    "sourceCardId": "d3d17d50-4f5c-4067-9485-8f1922e0b91f",
+    "amount": 1,
+    "difficulties": ["easy", "standard", "harsh"],
+    "mobilityBreakpoints": [
+      1,
+      3
+    ],
+    "counterBreakpoints": [
+      1,
+      2
+    ],
+    "attackTable": [
+      [
+        {
+          "attack": 11
+        },
+        {
+          "attack": 10
+        },
+        {
+          "attack": 8
+        }
+      ],
+      [
+        {
+          "attack": 10
+        },
+        {
+          "attack": 9
+        },
+        {
+          "attack": 7
+        }
+      ],
+      [
+        {
+          "attack": 8
+        },
+        {
+          "attack": 7
+        },
+        {
+          "attack": 5
+        }
+      ]
+    ],
+    "afterAttack": {
+      "effects": [
+        {
+          "type": "addDecay",
+          "amount": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": "attack_02",
+    "name": "空间迷宫",
+    "number": 2,
+    "sourceCardId": "1b8d1e57-056a-4b1e-983f-7e4eb4828e34",
+    "amount": 1,
+    "difficulties": ["easy", "standard", "harsh"],
+    "mobilityBreakpoints": [
+      1,
+      3
+    ],
+    "counterBreakpoints": [
+      2,
+      3
+    ],
+    "attackTable": [
+      [
+        {
+          "attack": 12
+        },
+        {
+          "attack": 9
+        },
+        {
+          "attack": 7
+        }
+      ],
+      [
+        {
+          "attack": 11
+        },
+        {
+          "attack": 7
+        },
+        {
+          "attack": 6
+        }
+      ],
+      [
+        {
+          "attack": 10
+        },
+        {
+          "attack": 6
+        },
+        {
+          "attack": 4
+        }
+      ]
+    ],
+    "afterAttack": {
+      "effects": [
+        {
+          "type": "gainStatus",
+          "cardId": "status_stun",
+          "amount": 1,
+          "to": "discard"
+        }
+      ]
+    }
+  },
+  {
+    "id": "attack_03",
+    "name": "折射轰击",
+    "number": 3,
+    "sourceCardId": "fa1d4823-e88c-435c-9df0-ea5b9ef51e24",
+    "amount": 1,
+    "difficulties": ["standard", "harsh"],
+    "mobilityBreakpoints": [
+      1,
+      2
+    ],
+    "counterBreakpoints": [
+      1,
+      2
+    ],
+    "attackTable": [
+      [
+        {
+          "attack": 14
+        },
+        {
+          "attack": 11
+        },
+        {
+          "attack": 8
+        }
+      ],
+      [
+        {
+          "attack": 11
+        },
+        {
+          "attack": 8
+        },
+        {
+          "attack": 5
+        }
+      ],
+      [
+        {
+          "attack": 8
+        },
+        {
+          "attack": 5
+        },
+        {
+          "attack": 2
+        }
+      ]
+    ],
+    "afterAttack": {
+      "effects": [
+        {
+          "type": "addDecay",
+          "amount": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": "attack_04",
+    "name": "驻留崩解",
+    "number": 4,
+    "sourceCardId": "320df343-0057-4e0d-b36e-f5e13ce01e10",
+    "amount": 1,
+    "difficulties": ["easy", "standard", "harsh"],
+    "mobilityBreakpoints": [
+      2,
+      4
+    ],
+    "counterBreakpoints": [
+      2,
+      4
+    ],
+    "attackTable": [
+      [
+        {
+          "attack": 11
+        },
+        {
+          "attack": 9
+        },
+        {
+          "attack": 7
+        }
+      ],
+      [
+        {
+          "attack": 9
+        },
+        {
+          "attack": 8
+        },
+        {
+          "attack": 6
+        }
+      ],
+      [
+        {
+          "attack": 7
+        },
+        {
+          "attack": 6
+        },
+        {
+          "attack": 5
+        }
+      ]
+    ],
+    "afterAttack": {
+      "effects": [
+        {
+          "type": "discardAllRetainedCards"
+        }
+      ]
+    }
+  },
+  {
+    "id": "attack_05",
+    "name": "强袭取样",
+    "number": 5,
+    "sourceCardId": "a85692af-ac9b-4eac-86ba-30afbb9388df",
+    "amount": 1,
+    "difficulties": ["standard", "harsh"],
+    "mobilityBreakpoints": [
+      1,
+      3
+    ],
+    "counterBreakpoints": [
+      2,
+      4
+    ],
+    "attackTable": [
+      [
+        {
+          "attack": 17
+        },
+        {
+          "attack": 12
+        },
+        {
+          "attack": 5
+        }
+      ],
+      [
+        {
+          "attack": 12
+        },
+        {
+          "attack": 10
+        },
+        {
+          "attack": 4
+        }
+      ],
+      [
+        {
+          "attack": 5
+        },
+        {
+          "attack": 4
+        },
+        {
+          "attack": 0
+        }
+      ]
+    ],
+    "afterAttack": {
+      "effects": [
+        {
+          "type": "addDecay",
+          "amount": 1
+        },
+        {
+          "type": "draw",
+          "amount": 2
+        }
+      ]
+    }
+  },
+  {
+    "id": "attack_06",
+    "name": "连续眩光",
+    "number": 6,
+    "sourceCardId": "25087d54-4449-4ab1-9bbd-e982c7d1552b",
+    "amount": 1,
+    "difficulties": ["standard", "harsh"],
+    "mobilityBreakpoints": [
+      1,
+      3
+    ],
+    "counterBreakpoints": [
+      1,
+      2
+    ],
+    "attackTable": [
+      [
+        {
+          "attack": 12
+        },
+        {
+          "attack": 9
+        },
+        {
+          "attack": 6
+        }
+      ],
+      [
+        {
+          "attack": 11
+        },
+        {
+          "attack": 8
+        },
+        {
+          "attack": 5
+        }
+      ],
+      [
+        {
+          "attack": 10
+        },
+        {
+          "attack": 7
+        },
+        {
+          "attack": 4
+        }
+      ]
+    ],
+    "afterAttack": {
+      "effects": [
+        {
+          "type": "gainStatus",
+          "cardId": "status_stun",
+          "amount": 2,
+          "to": "discard"
+        }
+      ]
+    }
+  },
+  {
+    "id": "attack_07",
+    "name": "下轮压制",
+    "number": 7,
+    "sourceCardId": "3c9ff7aa-6955-4f78-80b3-a7e44e68003b",
+    "amount": 1,
+    "difficulties": ["easy", "standard", "harsh"],
+    "mobilityBreakpoints": [
+      1,
+      3
+    ],
+    "counterBreakpoints": [
+      1,
+      3
+    ],
+    "attackTable": [
+      [
+        {
+          "attack": 10
+        },
+        {
+          "attack": 7
+        },
+        {
+          "attack": null
+        }
+      ],
+      [
+        {
+          "attack": 8
+        },
+        {
+          "attack": 5
+        },
+        {
+          "attack": null
+        }
+      ],
+      [
+        {
+          "attack": 2
+        },
+        {
+          "attack": null
+        },
+        {
+          "attack": null
+        }
+      ]
+    ],
+    "afterAttack": {
+      "effects": [
+        {
+          "type": "nextTurnLose",
+          "loss": {
+            "mobility": 1,
+            "counter": 1
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "attack_08",
+    "name": "静默主炮",
+    "number": 8,
+    "sourceCardId": "84583a02-5bef-45c4-89e0-8647b51a0d16",
+    "amount": 1,
+    "difficulties": ["harsh"],
+    "mobilityBreakpoints": [
+      1,
+      3
+    ],
+    "counterBreakpoints": [
+      2,
+      3
+    ],
+    "attackTable": [
+      [
+        {
+          "attack": 19
+        },
+        {
+          "attack": 16
+        },
+        {
+          "attack": 15
+        }
+      ],
+      [
+        {
+          "attack": 16
+        },
+        {
+          "attack": 13
+        },
+        {
+          "attack": 12
+        }
+      ],
+      [
+        {
+          "attack": 11
+        },
+        {
+          "attack": 10
+        },
+        {
+          "attack": 8
+        }
+      ]
+    ],
+    "afterAttack": {},
+    "onReveal": {
+      "effects": [
+        {
+          "type": "skipAttackOnRevealTurn"
+        }
+      ]
+    }
+  },
+  {
+    "id": "attack_09",
+    "name": "锁定射线",
+    "number": 9,
+    "sourceCardId": "5caff0a4-b0b4-4cb5-bb8a-d44b0765cfd8",
+    "amount": 1,
+    "difficulties": ["easy", "standard", "harsh"],
+    "fixedAttack": 10,
+    "afterAttack": {
+      "effects": [
+        {
+          "type": "addDecay",
+          "amount": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": "attack_10",
+    "name": "侵蚀射击",
+    "number": 10,
+    "sourceCardId": "f4cc6dff-9804-4c6e-a5ec-c6b3c22afa92",
+    "amount": 1,
+    "difficulties": ["easy", "standard", "harsh"],
+    "mobilityBreakpoints": [
+      1,
+      2
+    ],
+    "counterBreakpoints": [
+      1,
+      2
+    ],
+    "attackTable": [
+      [
+        {
+          "attack": 12
+        },
+        {
+          "attack": 10
+        },
+        {
+          "attack": 8
+        }
+      ],
+      [
+        {
+          "attack": 10
+        },
+        {
+          "attack": 8
+        },
+        {
+          "attack": 6
+        }
+      ],
+      [
+        {
+          "attack": 8
+        },
+        {
+          "attack": 6
+        },
+        {
+          "attack": 4
+        }
+      ]
+    ],
+    "afterAttack": {
+      "effects": [
+        {
+          "type": "addDecay",
+          "amount": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": "attack_11",
+    "name": "广域扫射",
+    "number": 11,
+    "sourceCardId": "3b4f1917-1c2b-4890-b3bd-acd52bf84d16",
+    "amount": 1,
+    "difficulties": ["standard", "harsh"],
+    "mobilityBreakpoints": [
+      1,
+      2
+    ],
+    "counterBreakpoints": [
+      1,
+      2
+    ],
+    "attackTable": [
+      [
+        {
+          "attack": 12
+        },
+        {
+          "attack": 11
+        },
+        {
+          "attack": 10
+        }
+      ],
+      [
+        {
+          "attack": 11
+        },
+        {
+          "attack": 7
+        },
+        {
+          "attack": 6
+        }
+      ],
+      [
+        {
+          "attack": 10
+        },
+        {
+          "attack": 6
+        },
+        {
+          "attack": 2
+        }
+      ]
+    ],
+    "afterAttack": {
+      "effects": [
+        {
+          "type": "addDecay",
+          "amount": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": "attack_12",
+    "name": "上传窗口",
+    "number": 12,
+    "sourceCardId": "36245453-400f-4c55-92ed-b32186d06920",
+    "amount": 1,
+    "difficulties": ["standard", "harsh"],
+    "mobilityBreakpoints": [
+      1,
+      3
+    ],
+    "counterBreakpoints": [
+      1,
+      2
+    ],
+    "attackTable": [
+      [
+        {
+          "attack": 16
+        },
+        {
+          "attack": 15
+        },
+        {
+          "attack": 14
+        }
+      ],
+      [
+        {
+          "attack": 13
+        },
+        {
+          "attack": 12
+        },
+        {
+          "attack": 11
+        }
+      ],
+      [
+        {
+          "attack": 8
+        },
+        {
+          "attack": 7
+        },
+        {
+          "attack": 6
+        }
+      ]
+    ],
+    "afterAttack": {
+      "effects": [
+        {
+          "type": "nextTurnUploadMultiplier",
+          "multiplier": 1.5,
+          "round": "floor"
+        }
+      ]
+    }
+  },
+  {
+    "id": "attack_13",
+    "name": "补给窗口",
+    "number": 13,
+    "sourceCardId": "adedc693-ace7-452d-8d49-27337df6855e",
+    "amount": 1,
+    "difficulties": ["standard", "harsh"],
+    "mobilityBreakpoints": [
+      1,
+      3
+    ],
+    "counterBreakpoints": [
+      1,
+      2
+    ],
+    "attackTable": [
+      [
+        {
+          "attack": 15
+        },
+        {
+          "attack": 14
+        },
+        {
+          "attack": 13
+        }
+      ],
+      [
+        {
+          "attack": 13
+        },
+        {
+          "attack": 11
+        },
+        {
+          "attack": 9
+        }
+      ],
+      [
+        {
+          "attack": 9
+        },
+        {
+          "attack": 8
+        },
+        {
+          "attack": 7
+        }
+      ]
+    ],
+    "afterAttack": {
+      "effects": [
+        {
+          "type": "nextTurnGain",
+          "gain": {
+            "download": 2
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "attack_14",
+    "name": "低空穿刺",
+    "number": 14,
+    "sourceCardId": "739b6323-a7b4-4dce-a333-429b76416a32",
+    "amount": 1,
+    "difficulties": ["easy", "standard", "harsh"],
+    "mobilityBreakpoints": [
+      1,
+      4
+    ],
+    "counterBreakpoints": [
+      1,
+      4
+    ],
+    "attackTable": [
+      [
+        {
+          "attack": 11
+        },
+        {
+          "attack": 10
+        },
+        {
+          "attack": 2
+        }
+      ],
+      [
+        {
+          "attack": 10
+        },
+        {
+          "attack": 8
+        },
+        {
+          "attack": 1
+        }
+      ],
+      [
+        {
+          "attack": 2
+        },
+        {
+          "attack": 1
+        },
+        {
+          "attack": 0
+        }
+      ]
+    ],
+    "afterAttack": {
+      "effects": [
+        {
+          "type": "addDecay",
+          "amount": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": "attack_15",
+    "name": "破甲创伤",
+    "number": 15,
+    "sourceCardId": "10d8ed41-7661-4754-acd0-c7a4a164c2c3",
+    "amount": 1,
+    "difficulties": ["standard", "harsh"],
+    "mobilityBreakpoints": [
+      1,
+      3
+    ],
+    "counterBreakpoints": [
+      1,
+      3
+    ],
+    "attackTable": [
+      [
+        {
+          "attack": 10
+        },
+        {
+          "attack": 8
+        },
+        {
+          "attack": null
+        }
+      ],
+      [
+        {
+          "attack": 8
+        },
+        {
+          "attack": 5
+        },
+        {
+          "attack": null
+        }
+      ],
+      [
+        {
+          "attack": 4
+        },
+        {
+          "attack": null
+        },
+        {
+          "attack": null
+        }
+      ]
+    ],
+    "afterAttack": {
+      "effects": [
+        {
+          "type": "gainStatus",
+          "cardId": "status_wound",
+          "amount": 1,
+          "to": "discard"
+        }
+      ]
+    },
+    "revealCondition": {
+      "armorAtMost": 10
+    }
+  },
+  {
+    "id": "attack_16",
+    "name": "红区连锁",
+    "number": 16,
+    "sourceCardId": "25f019b2-f2fa-4c2a-95eb-865c533a3218",
+    "amount": 1,
+    "difficulties": ["standard", "harsh"],
+    "mobilityBreakpoints": [
+      1,
+      2
+    ],
+    "counterBreakpoints": [
+      1,
+      3
+    ],
+    "attackTable": [
+      [
+        {
+          "attack": 8
+        },
+        {
+          "attack": 6
+        },
+        {
+          "attack": 6,
+          "cancelRedEffects": true
+        }
+      ],
+      [
+        {
+          "attack": 6
+        },
+        {
+          "attack": 4
+        },
+        {
+          "attack": 4,
+          "cancelRedEffects": true
+        }
+      ],
+      [
+        {
+          "attack": 4
+        },
+        {
+          "attack": 1
+        },
+        {
+          "attack": null,
+          "cancelRedEffects": true
+        }
+      ]
+    ],
+    "afterAttack": {
+      "effects": [
+        {
+          "type": "addDecay",
+          "amount": 1
+        }
+      ],
+      "redEffects": [
+        {
+          "type": "addDecay",
+          "amount": 1
+        }
+      ]
+    }
+  }
+]

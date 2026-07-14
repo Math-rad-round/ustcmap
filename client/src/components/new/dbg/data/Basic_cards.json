@@ -1,0 +1,433 @@
+[
+  {
+    "id": "basic_supply_download",
+    "name": "备用协议",
+    "sourceLine": 12,
+    "type": "equipment",
+    "tier": "basic",
+    "copies": 1,
+    "cost": 1,
+    "tags": ["download", "supply"],
+    "canDiscardForBlock": true,
+    "base": {
+      "keywords": ["supply"],
+      "gain": {
+        "download": 1
+      },
+      "modes": [],
+      "effects": []
+    },
+    "upgrade": {
+      "mode": "add",
+      "keywords": [],
+      "gain": {
+        "download": 1
+      },
+      "modes": [],
+      "effects": []
+    },
+    "text": "补给。获得 1 下载。升级后额外获得 1 下载。"
+  },
+  {
+    "id": "basic_supply_draw",
+    "name": "补给抽取",
+    "sourceLine": 23,
+    "type": "equipment",
+    "tier": "basic",
+    "copies": 1,
+    "cost": 2,
+    "tags": ["draw", "supply", "upload"],
+    "canDiscardForBlock": true,
+    "base": {
+      "keywords": ["supply"],
+      "gain": {
+        "draw": 1
+      },
+      "modes": [],
+      "effects": []
+    },
+    "upgrade": {
+      "mode": "add",
+      "keywords": [],
+      "gain": {
+        "upload": 1
+      },
+      "modes": [],
+      "effects": []
+    },
+    "text": "补给。抽 1 张牌。升级后额外获得 1 上传。"
+  },
+  {
+    "id": "basic_download_pair",
+    "name": "战型装填",
+    "sourceLine": 13,
+    "type": "equipment",
+    "tier": "basic",
+    "copies": 2,
+    "cost": 3,
+    "tags": ["download"],
+    "canDiscardForBlock": true,
+    "base": {
+      "keywords": [],
+      "gain": {
+        "download": 2
+      },
+      "modes": [],
+      "effects": []
+    },
+    "upgrade": {
+      "mode": "add",
+      "keywords": [],
+      "gain": {
+        "download": 1
+      },
+      "modes": [],
+      "effects": []
+    },
+    "text": "获得 2 下载。升级后额外获得 1 下载。"
+  },
+  {
+    "id": "basic_large_download",
+    "name": "临界装填",
+    "sourceLine": 14,
+    "type": "equipment",
+    "tier": "basic",
+    "copies": 1,
+    "cost": 6,
+    "tags": ["download"],
+    "canDiscardForBlock": true,
+    "base": {
+      "keywords": [],
+      "gain": {
+        "download": 3
+      },
+      "modes": [],
+      "effects": []
+    },
+    "upgrade": {
+      "mode": "add",
+      "keywords": [],
+      "gain": {
+        "download": 1
+      },
+      "modes": [],
+      "effects": []
+    },
+    "text": "获得 3 下载。升级后额外获得 1 下载。"
+  },
+  {
+    "id": "basic_upload_pair",
+    "name": "观测日志",
+    "sourceLine": 15,
+    "type": "equipment",
+    "tier": "basic",
+    "copies": 1,
+    "cost": 4,
+    "tags": ["upload"],
+    "canDiscardForBlock": true,
+    "base": {
+      "keywords": [],
+      "gain": {
+        "upload": 2
+      },
+      "modes": [],
+      "effects": []
+    },
+    "upgrade": {
+      "mode": "add",
+      "keywords": [],
+      "gain": {
+        "upload": 1
+      },
+      "modes": [],
+      "effects": []
+    },
+    "text": "获得 2 上传。升级后额外获得 1 上传。"
+  },
+  {
+    "id": "basic_large_upload",
+    "name": "记忆封包",
+    "sourceLine": 16,
+    "type": "equipment",
+    "tier": "basic",
+    "copies": 1,
+    "cost": 7,
+    "tags": ["upload"],
+    "canDiscardForBlock": true,
+    "base": {
+      "keywords": [],
+      "gain": {
+        "upload": 3
+      },
+      "modes": [],
+      "effects": []
+    },
+    "upgrade": {
+      "mode": "add",
+      "keywords": [],
+      "gain": {
+        "upload": 1
+      },
+      "modes": [],
+      "effects": []
+    },
+    "text": "获得 3 上传。升级后额外获得 1 上传。"
+  },
+  {
+    "id": "basic_counter_guard",
+    "name": "干涉护层",
+    "sourceLine": 17,
+    "type": "equipment",
+    "tier": "basic",
+    "copies": 1,
+    "cost": 4,
+    "tags": ["counter", "defense", "retain"],
+    "canDiscardForBlock": true,
+    "base": {
+      "keywords": [],
+      "gain": {
+        "counter": 1,
+        "block": 1
+      },
+      "modes": [],
+      "effects": []
+    },
+    "upgrade": {
+      "mode": "add",
+      "keywords": ["retain"],
+      "gain": {
+        "block": 1
+      },
+      "modes": [],
+      "effects": []
+    },
+    "text": "获得 1 反击和 1 防护。升级后额外获得 1 防护且保留。"
+  },
+  {
+    "id": "basic_mobility_guard",
+    "name": "相位偏移",
+    "sourceLine": 18,
+    "type": "equipment",
+    "tier": "basic",
+    "copies": 1,
+    "cost": 3,
+    "tags": ["mobility", "defense", "retain"],
+    "canDiscardForBlock": true,
+    "base": {
+      "keywords": [],
+      "gain": {
+        "mobility": 1,
+        "block": 1
+      },
+      "modes": [],
+      "effects": []
+    },
+    "upgrade": {
+      "mode": "add",
+      "keywords": ["retain"],
+      "gain": {
+        "block": 1
+      },
+      "modes": [],
+      "effects": []
+    },
+    "text": "获得 1 机动和 1 防护。升级后额外获得 1 防护且保留。"
+  },
+  {
+    "id": "basic_forced_upgrade",
+    "name": "强制改写",
+    "sourceLine": 19,
+    "type": "equipment",
+    "tier": "basic",
+    "copies": 1,
+    "cost": 4,
+    "tags": ["upgrade", "downloadCost"],
+    "canDiscardForBlock": true,
+    "base": {
+      "keywords": [],
+      "gain": {
+        "upgrade": 1
+      },
+      "modes": [],
+      "effects": [
+        {
+          "type": "payResource",
+          "resource": "download",
+          "amount": 1,
+          "required": true
+        }
+      ]
+    },
+    "upgrade": {
+      "mode": "replace",
+      "keywords": [],
+      "gain": {
+        "upgrade": 1
+      },
+      "modes": [],
+      "effects": []
+    },
+    "text": "必须支付 1 下载。升级 1 张手牌并放回手牌原位。升级后取消 1 下载的费用。"
+  },
+  {
+    "id": "basic_clean_choice",
+    "name": "空白归档",
+    "sourceLine": 20,
+    "type": "equipment",
+    "tier": "basic",
+    "copies": 1,
+    "cost": 5,
+    "tags": ["trash", "choice"],
+    "canDiscardForBlock": true,
+    "base": {
+      "keywords": [],
+      "gain": {
+        "trash": 1
+      },
+      "modes": [],
+      "effects": []
+    },
+    "upgrade": {
+      "mode": "replace",
+      "keywords": [],
+      "gain": {
+        "download": 1
+      },
+      "modes": [
+        {
+          "id": "upload",
+          "name": "上传",
+          "gain": {
+            "upload": 1
+          },
+          "effects": []
+        },
+        {
+          "id": "trash",
+          "name": "清除",
+          "gain": {
+            "trash": 1
+          },
+          "effects": []
+        }
+      ],
+      "effects": []
+    },
+    "text": "删除 1 张手牌或弃牌堆中的牌。升级后改为获得 1 下载，然后选择获得 1 上传或删除 1 张牌。"
+  },
+  {
+    "id": "basic_all_out_upload",
+    "name": "遗言协议",
+    "sourceLine": 21,
+    "type": "equipment",
+    "tier": "basic",
+    "copies": 1,
+    "cost": 9,
+    "tags": ["upload", "fullPower", "selfUpgrade"],
+    "canDiscardForBlock": true,
+    "base": {
+      "keywords": ["fullPower"],
+      "gain": {
+        "upload": 6
+      },
+      "modes": [],
+      "effects": [
+        {
+          "type": "upgradeSelf"
+        }
+      ]
+    },
+    "upgrade": {
+      "mode": "replace",
+      "keywords": ["fullPower"],
+      "gain": {
+        "upload": 11
+      },
+      "modes": [],
+      "effects": [
+        {
+          "type": "trashSelf"
+        }
+      ]
+    },
+    "text": "全力。获得 6 上传，升级自身。升级后改为获得 11 上传并移除自身。"
+  },
+  {
+    "id": "basic_scoring_shelter",
+    "name": "蓝宝石戒指",
+    "sourceLine": 22,
+    "type": "equipment",
+    "tier": "basic",
+    "copies": 1,
+    "cost": 7,
+    "tags": ["defense", "fullPower", "uploadLock", "selfUpgrade"],
+    "canDiscardForBlock": true,
+    "base": {
+      "keywords": ["fullPower"],
+      "gain": {
+        "block": 2
+      },
+      "modes": [],
+      "effects": [
+        {
+          "type": "upgradeSelf"
+        },
+        {
+          "type": "lockUploadGain",
+          "scope": "wholeTurn",
+          "resetExistingUploadThisTurn": true
+        }
+      ]
+    },
+    "upgrade": {
+      "mode": "replace",
+      "keywords": ["fullPower", "retain"],
+      "gain": {},
+      "modes": [
+        {
+          "id": "guard",
+          "name": "额外护幕",
+          "gain": {
+            "block": 3
+          },
+          "effects": [
+            {
+              "type": "lockUploadGain",
+              "scope": "wholeTurn",
+              "resetExistingUploadThisTurn": true
+            }
+          ]
+        },
+        {
+          "id": "rating_shelter",
+          "name": "戒指庇护",
+          "gain": {},
+          "effects": [
+            {
+              "type": "requireLifeLossAtMost",
+              "amount": 2
+            },
+            {
+              "type": "trashSelf"
+            },
+            {
+              "type": "improveFinalRating",
+              "amount": 1
+            },
+            {
+              "type": "preventRatingPenaltyAtLifeLoss",
+              "lifeLoss": 3
+            },
+            {
+              "type": "lockUploadGain",
+              "scope": "wholeTurn",
+              "resetExistingUploadThisTurn": true
+            }
+          ]
+        }
+      ],
+      "effects": []
+    },
+    "text": "全力。获得 2 防护，升级自身，本回合不能获得任何上传。升级后保留，全力，选择获得 3 防护，或在生命受损不超过 2 时移除本牌并提升评分、阻止第 3 点生命受损的评分降低；本回合上传全部归 0。"
+  }
+]

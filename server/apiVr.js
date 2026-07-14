@@ -2,6 +2,7 @@
 const express = require("express");
 const router = express.Router();
 const path = require("path");
+const { safeResolve } = require("./safePath");
 const databaseName = "cluster0";
 const Cache = require("./models/Cache.js");
 
@@ -27,7 +28,10 @@ router.post('/del',(req,res)=>{
 });
 router.get('/:id/*/:name', (req, res) => {
   const dirs = req.params[0].split('/').filter(Boolean);
-  const filePath = path.join(publicPath, ...dirs, req.params.name);
+  const filePath = safeResolve(publicPath, ...dirs, req.params.name);
+  if (!filePath) {
+    return res.status(403).json({ error: 'Invalid path' });
+  }
  // console.log("dirs", dirs);
 const nowdate= new Date();
   Cache.findOneAndUpdate(

@@ -89,7 +89,10 @@ module.exports = {
   devServer: {
     historyApiFallback: true,
     port: 5000,
-    static: path.resolve(__dirname, "client", "dist"),
+    static: [
+      path.resolve(__dirname, "client", "dist"),
+      path.resolve(__dirname, "public"),
+    ],
     open: true,
     proxy: {
       "/api": "http://localhost:3000",

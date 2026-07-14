@@ -1,0 +1,101 @@
+[
+  {
+    "id": "threat_deadline",
+    "name": "突发 DDL 堆叠",
+    "tier": 1,
+    "pressure": 3,
+    "damage": 2,
+    "reward": 5,
+    "content": "低阶威胁。拖延会让后续回合更难清除。"
+  },
+  {
+    "id": "threat_device",
+    "name": "设备临时故障",
+    "tier": 1,
+    "pressure": 4,
+    "damage": 2,
+    "reward": 6,
+    "content": "需要尽快投入行动力处理。"
+  },
+  {
+    "id": "threat_schedule",
+    "name": "日程冲突",
+    "tier": 1,
+    "pressure": 4,
+    "damage": 3,
+    "reward": 6,
+    "content": "会消耗团队节奏。"
+  },
+  {
+    "id": "threat_external_review",
+    "name": "外部评审突袭",
+    "tier": 2,
+    "pressure": 6,
+    "damage": 3,
+    "reward": 9,
+    "content": "中阶威胁。需要更成熟的牌组支撑。"
+  },
+  {
+    "id": "threat_server",
+    "name": "服务宕机",
+    "tier": 2,
+    "pressure": 6,
+    "damage": 4,
+    "reward": 10,
+    "content": "如果没能清除，毁灭值会明显上涨。"
+  },
+  {
+    "id": "threat_resource",
+    "name": "资源挤兑",
+    "tier": 2,
+    "pressure": 7,
+    "damage": 4,
+    "reward": 11,
+    "content": "越晚处理越沉重。"
+  },
+  {
+    "id": "threat_public_opinion",
+    "name": "舆论发酵",
+    "tier": 3,
+    "pressure": 8,
+    "damage": 5,
+    "reward": 13,
+    "content": "高阶威胁。防护与高行动力都很关键。"
+  },
+  {
+    "id": "threat_audit",
+    "name": "审计风暴",
+    "tier": 3,
+    "pressure": 9,
+    "damage": 5,
+    "reward": 14,
+    "content": "清除它能提供大量分数。"
+  },
+  {
+    "id": "threat_competitor",
+    "name": "外部竞争压迫",
+    "tier": 3,
+    "pressure": 9,
+    "damage": 6,
+    "reward": 15,
+    "content": "如果牌组发展不足，会快速失控。"
+  },
+  {
+    "id": "threat_graduation",
+    "name": "终局验收",
+    "tier": 4,
+    "pressure": 11,
+    "damage": 7,
+    "reward": 18,
+    "content": "终局威胁。此时必须依靠完整构筑。"
+  },
+  {
+    "id": "threat_black_swan",
+    "name": "黑天鹅事件",
+    "tier": 4,
+    "pressure": 12,
+    "damage": 8,
+    "reward": 20,
+    "content": "毁灭性威胁。越早解决越好。"
+  }
+]

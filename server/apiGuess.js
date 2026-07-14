@@ -2,6 +2,7 @@
 const express = require("express");
 const router = express.Router();
 const path = require("path");
+const { safeResolve } = require("./safePath");
 const databaseName = "cluster0";
 const Guess = require("./models/Guess.js");
 const User = require("./models/User.js");
@@ -58,7 +59,7 @@ router.post("/pass", (req, res) => {
 });
 
 router.get('/:target/index.html', (req, res) => {
-  res.sendFile(path.join(publicPath,"guess","index.html"), options, (err) => {
+  res.sendFile(safeResolve(publicPath,"guess","index.html"), options, (err) => {
     if(err){
       console.log("fuck"+err);
       res.status(err.status).end();
@@ -72,9 +73,12 @@ router.get('/*/:name', (req, res) => {
   let filePath;
   if(req.params[0]!=undefined){
   const dirs = req.params[0].split('/').filter(Boolean);
-    filePath = path.join(publicPath, ...dirs, req.params.name);
+    filePath = safeResolve(publicPath, ...dirs, req.params.name);
   }else{
-    filePath = path.join(publicPath, req.params.name);
+    filePath = safeResolve(publicPath, req.params.name);
+  }
+  if (!filePath) {
+    return res.status(403).json({ error: 'Invalid path' });
   }
   res.sendFile(filePath, options, (err) => {
     if(err){

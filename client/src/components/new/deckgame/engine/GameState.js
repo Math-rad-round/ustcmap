@@ -26,6 +26,7 @@ export default class GameState {
     this.appliedNextScoreBonus = 0;
     this.cramUsed = false;
     this.retakeUsed = false;
+    this.examRerollUsed = false;
     this.currentExamAchievementDelta = 0;
     this.currentExamEffectAchievementDelta = 0;
     this.currentExamScoreDelta = 0;
@@ -38,6 +39,11 @@ export default class GameState {
     this.examStartProgress = 0;
     // 当前学期抽到的考试卡及结算展示字段
     this.currentTest = null;
+    this.candidateTests = [];
+    this.selectedTestIndex = -1;
+    this.examRandomSymbol = null;
+    this.examTempSymbols = { theory: 0, practice: 0, social: 0 };
+    this.doublePermanentEffectsActive = false;
     this.awaitingEventStart = false;
     this.eventStartDraw = 5;
     this.testResults = [];
@@ -57,6 +63,10 @@ export default class GameState {
     this.earnedPermanentCount = 0;
     this.acquiredCourseCount = 0;
     this.totalExamScore = 0;
+    this.finalExamAchievementAward = 0;
+    this.examHistory = [];
+    this.gameFinished = false;
+    this.graduationSummary = null;
     this.ownedCourses = [];
 
     // `cardResults` 每张卡本次考试的得分和成就点明细
@@ -68,6 +78,8 @@ export default class GameState {
     this.pendingProjectProgressQueue = [];
     // 需要玩家从高级课程中选择并加入牌堆顶的待处理效果
     this.pendingCourseReward = null;
+    this.pendingCourseDeletion = null;
+    this.pendingCourseDeletionQueue = [];
     // 已获得并放置在场上的项目卡
     this.activeProjects = [];
     // 已获得并放置在场上的永久成果卡

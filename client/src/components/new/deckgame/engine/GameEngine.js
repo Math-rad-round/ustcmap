@@ -59,7 +59,7 @@ export default class GameEngine {
       { id: 'final_knowledge', name: '知识积累', content: '拥有课程至少11张，+4成就点', reward: 4, threshold: 11 },
       { id: 'final_project_master', name: '项目达人', content: '拥有和完成项目至少5个，+4成就点', reward: 4, threshold: 5 },
       { id: 'final_permanent_collector', name: '积累者', content: '永久成果至少3个，+4成就点', reward: 4, threshold: 3 },
-      { id: 'final_score_65', name: '绩点优秀', content: '最终考试总分至少65分，+4成就点', reward: 4, threshold: 65 },
+      { id: 'final_score_65', name: '绩点优秀', content: '最终考试获得至少6成就点，+4成就点', reward: 4, threshold: 6 },
     ];
   }
 
@@ -171,17 +171,54 @@ export default class GameEngine {
       case 'final_permanent_collector':
         return (this.state.activePermanents || []).length;
       case 'final_score_65':
-        return this.state.totalExamScore || 0;
+        return this.state.finalExamAchievementAward || 0;
       default:
         return 0;
     }
   }
 
+  _refreshFinalGoalProgress() {
+    (this.state.finalGoals || []).forEach((goal) => {
+      if (!goal || goal.status === 'completed' || goal.status === 'failed') return;
+      goal.value = this._getFinalGoalValue(goal);
+    });
+  }
+
+  _buildGraduationSummary() {
+    const finalGoals = (this.state.finalGoals || []).map((goal) => ({
+      id: goal.id,
+      name: goal.name,
+      status: goal.status,
+      value: goal.value,
+      threshold: goal.threshold,
+      reward: goal.reward,
+    }));
+    return {
+      semesterEnded: 8,
+      finalAchievementPoints: this.state.achievementPoints || 0,
+      totalExamScore: this.state.totalExamScore || 0,
+      finalExamAchievementAward: this.state.finalExamAchievementAward || 0,
+      ownedCoursesCount: (this.state.ownedCourses || []).length,
+      activeProjectCount: (this.state.activeProjects || []).length,
+      completedProjectCount: this.state.completedProjectCount || 0,
+      permanentCount: (this.state.activePermanents || []).length,
+      finalGoals,
+      exams: this.state.examHistory || [],
+      chanceTools: {
+        cramUsed: !!this.state.cramUsed,
+        retakeUsed: !!this.state.retakeUsed,
+        examRerollUsed: !!this.state.examRerollUsed,
+      },
+    };
+  }
+
   _settleFinalGoals() {
-    if (!this.state.cramUsed && !this.state.retakeUsed && !this.state.finalChanceBonusAwarded) {
-      this.state.achievementPoints += 1;
+    if (!this.state.finalChanceBonusAwarded) {
+      const usedChances = [this.state.cramUsed, this.state.retakeUsed, this.state.examRerollUsed].filter(Boolean).length;
+      const bonus = usedChances === 0 ? 2 : (usedChances <= 2 ? 1 : 0);
+      if (bonus > 0) this.state.achievementPoints += bonus;
       this.state.finalChanceBonusAwarded = true;
-      this.state.goalResults.push('保留临阵磨枪与重考机会，最终成就值 +1。');
+      this.state.goalResults.push('补救机会使用 ' + usedChances + ' 次，最终成就点 +' + bonus + '。');
     }
     (this.state.finalGoals || []).forEach((goal) => {
       if (goal.status !== 'active') return;
@@ -260,6 +297,13 @@ export default class GameEngine {
         this._prepareSemesterStart(command.draw || 5);
         return this.state;
       }
+      case 'SELECT_TEST': {
+        return this._selectTest(command.testIndex ?? command.index ?? 0);
+      }
+      case 'REROLL_TESTS':
+      case 'USE_EXAM_REROLL': {
+        return this._rerollExamChoices();
+      }
       case 'CONFIRM_START_EVENT': {
         this._startEventPhase(command.draw || this.state.eventStartDraw || 5);
         return this.state;
@@ -279,6 +323,12 @@ export default class GameEngine {
       case 'CANCEL_EVENT_PAYMENT': {
         return this._cancelEventPayment();
       }
+      case 'TOGGLE_COURSE_DELETION_SELECTION': {
+        return this._toggleCourseDeletionSelection(command);
+      }
+      case 'CONFIRM_COURSE_DELETION': {
+        return this._confirmCourseDeletion();
+      }
       case 'TOGGLE_EVENT_DISCARD_CARD': {
         return this._toggleEventDiscardCard(command);
       }
@@ -293,7 +343,7 @@ export default class GameEngine {
       }
       case 'CONFIRM_EVENT_PHASE':
       case 'END_EVENT_PHASE': {
-        if (this.state.pendingCourseReward || this.state.pendingEventPayment || this.state.pendingEventDiscard) return this.state;
+        if (this.state.pendingCourseReward || this.state.pendingCourseDeletion || this.state.pendingEventPayment || this.state.pendingEventDiscard) return this.state;
         const unused = Math.max(0, 2 - this.state.eventPlayedCount);
         const gain = unused * 2;
         if (gain > 0) {
@@ -381,9 +431,68 @@ export default class GameEngine {
   _removeCourseEverywhere(card) {
     if (!card) return;
     if (Array.isArray(this.state.ownedCourses)) this._removeFirstMatchingCourse(this.state.ownedCourses, card);
+    if (this.state.deck && Array.isArray(this.state.deck.cards)) this._removeFirstMatchingCourse(this.state.deck.cards, card);
     if (this.state.deck && Array.isArray(this.state.deck._original)) this._removeFirstMatchingCourse(this.state.deck._original, card);
   }
 
+
+  _queueCourseDeletion(deletion = {}) {
+    const amount = Math.max(0, Number(deletion.amount) || 0);
+    if (amount <= 0 || (this.state.ownedCourses || []).length === 0) return false;
+    const pending = {
+      amount: Math.min(amount, this.state.ownedCourses.length),
+      selectedIndices: [],
+      source: deletion.source || '删除课程',
+    };
+    if (!this.state.pendingCourseDeletion) {
+      this.state.pendingCourseDeletion = pending;
+    } else {
+      this.state.pendingCourseDeletionQueue = Array.isArray(this.state.pendingCourseDeletionQueue) ? this.state.pendingCourseDeletionQueue : [];
+      this.state.pendingCourseDeletionQueue.push(pending);
+    }
+    return true;
+  }
+
+  _advanceCourseDeletionQueue() {
+    const queue = Array.isArray(this.state.pendingCourseDeletionQueue) ? this.state.pendingCourseDeletionQueue : [];
+    this.state.pendingCourseDeletion = queue.length > 0 ? queue.shift() : null;
+    this.state.pendingCourseDeletionQueue = queue;
+  }
+
+  _toggleCourseDeletionSelection(command = {}) {
+    const pending = this.state.pendingCourseDeletion;
+    if (!pending) return this.state;
+    const courseIndex = Number(command.courseIndex ?? 0);
+    if (!this.state.ownedCourses[courseIndex]) return this.state;
+    const selected = pending.selectedIndices || [];
+    const existingIndex = selected.indexOf(courseIndex);
+    if (existingIndex >= 0) {
+      selected.splice(existingIndex, 1);
+    } else if (selected.length < pending.amount) {
+      selected.push(courseIndex);
+    }
+    pending.selectedIndices = selected;
+    return this.state;
+  }
+
+  _confirmCourseDeletion() {
+    const pending = this.state.pendingCourseDeletion;
+    if (!pending || (pending.selectedIndices || []).length !== pending.amount) return this.state;
+    const selectedCards = pending.selectedIndices
+      .map((idx) => this.state.ownedCourses[idx])
+      .filter(Boolean);
+    selectedCards.forEach((card) => this._removeCourseEverywhere(card));
+    const names = selectedCards.map((card) => card.name).join('、') || '无';
+    this.state.eventResults.push({
+      id: 'deleteLessons',
+      name: pending.source,
+      optionName: '删除课程',
+      effects: [`删除课程：${names}`],
+    });
+    this._advanceCourseDeletionQueue();
+    this._refreshFinalGoalProgress();
+    return this.state;
+  }
   _findEventCard(id) {
     return this._findCardById(this._buildEventsFromData(), id);
   }
@@ -423,7 +532,7 @@ export default class GameEngine {
     this.state.examRequirement = 0;
     this.state.examAchievementAward = 0;
     this.state.examDrawCount = this._getExamDrawCount(test);
-    this.state.examScoreScaling = this._getExamScoreScaling(test);
+    this.state.examScoreScaling = this._getExamYearScaling();
     this.state.testResults = [];
     if (applyStart && Array.isArray(test.start)) {
       const effects = this._applyEffects(test.start, this._getExamVariables({}));
@@ -464,6 +573,8 @@ export default class GameEngine {
     this.state.pendingProjectProgress = null;
     this.state.pendingProjectProgressQueue = [];
     this.state.pendingCourseReward = null;
+    this.state.pendingCourseDeletion = null;
+    this.state.pendingCourseDeletionQueue = [];
     this.state.pendingEventPayment = null;
     this.state.pendingEventDiscard = null;
     this.state.hand = [];
@@ -520,6 +631,12 @@ export default class GameEngine {
     if (command.nextScoreBonus != null) this.state.nextScoreBonus = Math.max(0, Number(command.nextScoreBonus) || 0);
     if (command.achievementPoints != null) this.state.achievementPoints = Number(command.achievementPoints) || 0;
     if (Array.isArray(command.courseRewardIds)) this._setTutorialCourseReward(command.courseRewardIds, command.courseReward || {});
+    if (Array.isArray(command.testIds)) {
+      this.state.candidateTests = command.testIds.map((id, index) => this._cloneTutorialCard(this._findTestCard(id), 'tour_test_choice', index)).filter(Boolean);
+      this.state.currentTest = null;
+      this.state.selectedTestIndex = -1;
+      this.state.awaitingEventStart = true;
+    }
     if (command.testId) this._setTutorialTest(command.testId, !!command.applyTestStart);
     if (command.phase) this._setTutorialPhase(command.phase, command.draw || this.state.eventStartDraw || 5);
     return this.state;
@@ -539,6 +656,7 @@ export default class GameEngine {
     this.state.eventStageActive = false;
     this.state.eventPlayedCount = 0;
     this.state.eventResults = [];
+    this._refreshEventOptionStates();
     this.state.eventMessage = '';
     this.state.reviewStageActive = false;
     this.state.reviewPreviewCards = [];
@@ -566,6 +684,7 @@ export default class GameEngine {
     if (!this.state.awaitingEventStart) {
       this._prepareSemesterStart(draw);
     }
+    if (!this.state.currentTest) return this.state;
     this.state.awaitingEventStart = false;
     this.state.eventStartDraw = draw;
     this.state.deck.reset();
@@ -574,10 +693,11 @@ export default class GameEngine {
     this.state.eventStageActive = true;
     this.state.eventPlayedCount = 0;
     this.state.eventResults = [];
+    this._refreshEventOptionStates();
     this.state.eventMessage = '保留上回合未打出的事件牌，并新抽 3 张事件卡；本学期可打出 0~2 张，也可以点击项目卡推进 1 点进度。';
   }
   _playEvent(command = {}) {
-    if (this.state.pendingCourseReward || this.state.pendingEventPayment) return this.state;
+    if (this.state.pendingCourseReward || this.state.pendingCourseDeletion || this.state.pendingEventPayment) return this.state;
     if (!this.state.eventStageActive || this.state.eventPlayedCount >= 2) return this.state;
     const eventIndex = Number(command.eventIndex ?? 0);
     const optionIndex = Number(command.optionIndex ?? 0);
@@ -664,7 +784,7 @@ export default class GameEngine {
   }
 
   _advanceProject(command = {}) {
-    if (this.state.pendingCourseReward) return this.state;
+    if (this.state.pendingCourseReward || this.state.pendingCourseDeletion) return this.state;
     if (!this.state.eventStageActive || this.state.eventPlayedCount >= 2) return this.state;
     const projectIndex = Number(command.projectIndex ?? 0);
     const project = this.state.activeProjects[projectIndex];
@@ -684,7 +804,7 @@ export default class GameEngine {
   }
 
   _playProjectOption(command = {}) {
-    if (this.state.pendingCourseReward) return this.state;
+    if (this.state.pendingCourseReward || this.state.pendingCourseDeletion) return this.state;
     const projectIndex = Number(command.projectIndex ?? 0);
     const optionIndex = Number(command.optionIndex ?? 0);
     const project = this.state.activeProjects[projectIndex];
@@ -718,6 +838,7 @@ export default class GameEngine {
     };
     this.state.activeProjects.push(placedProject);
     this._checkImmediateGoals();
+    this._refreshFinalGoalProgress();
     return placedProject;
   }
 
@@ -765,6 +886,7 @@ export default class GameEngine {
       this.state.earnedPermanentCount += 1;
       this._checkImmediateGoals();
     }
+    this._refreshFinalGoalProgress();
     return placedPermanent;
   }
 
@@ -784,20 +906,66 @@ export default class GameEngine {
     return this.state.testDeck.draw(1)[0] || null;
   }
 
+  _drawTestChoices(count = 2) {
+    const choices = [];
+    while (choices.length < count) {
+      const test = this._drawTestCard();
+      if (!test) break;
+      choices.push(test);
+    }
+    return choices;
+  }
+
   _prepareSemesterTest() {
-    const test = this._drawTestCard();
+    this.state.candidateTests = this._drawTestChoices(2);
+    this.state.currentTest = null;
+    this.state.selectedTestIndex = -1;
+    this.state.examRequirement = 0;
+    this.state.examAchievementAward = 0;
+    this.state.examDrawCount = 0;
+    this.state.examScoreScaling = this._getExamYearScaling();
+    this.state.testResults = [];
+    this.state.examRandomSymbol = null;
+    this.state.examTempSymbols = { theory: 0, practice: 0, social: 0 };
+    this.state.doublePermanentEffectsActive = false;
+  }
+
+  _selectTest(index = 0) {
+    if (!this.state.awaitingEventStart || this.state.currentTest) return this.state;
+    const choiceIndex = Math.max(0, Number(index) || 0);
+    const test = (this.state.candidateTests || [])[choiceIndex];
+    if (!test) return this.state;
     this.state.currentTest = test;
+    this.state.selectedTestIndex = choiceIndex;
     this.state.examRequirement = 0;
     this.state.examAchievementAward = 0;
     this.state.examDrawCount = this._getExamDrawCount(test);
     this.state.examScoreScaling = this._getExamScoreScaling(test);
     this.state.testResults = [];
+    this.state.examRandomSymbol = null;
+    this.state.examTempSymbols = { theory: 0, practice: 0, social: 0 };
+    this.state.doublePermanentEffectsActive = false;
+    this._applySelectedTestStart();
+    return this.state;
+  }
+
+  _rerollExamChoices() {
+    if (this.state.examRerollUsed || !this.state.awaitingEventStart || this.state.currentTest) return this.state;
+    this.state.examRerollUsed = true;
+    this.state.candidateTests = this._drawTestChoices(2);
+    this.state.selectedTestIndex = -1;
+    this.state.testResults = [];
+    return this.state;
+  }
+
+  _applySelectedTestStart() {
+    const test = this.state.currentTest;
     if (test && Array.isArray(test.start)) {
       const effects = this._applyEffects(test.start, this._getExamVariables({}));
       this.state.testResults.push({
         id: test._id || test.id,
         name: test.name,
-        effects: effects.map((line) => `开始：${line}`),
+        effects: effects.map((line) => '开始：' + line),
       });
     }
   }
@@ -814,8 +982,37 @@ export default class GameEngine {
     return 2.5;
   }
 
+  _getExamBaseRequirement() {
+    return 10;
+  }
+
   _getExamScoreScaling(test = this.state.currentTest) {
-    return (Number(test && test.scorescaling) || 1) * this._getExamYearScaling();
+    const legacyRequirement = Number(test && (test.requirement ?? test.baseRequirement ?? test.baserequirement));
+    const cardScaling = Number(test && test.scorescaling) || (legacyRequirement > 0 ? legacyRequirement / 10 : 1);
+    return cardScaling * this._getExamYearScaling();
+  }
+
+  _getAchievementTable(test = this.state.currentTest) {
+    if (test && Array.isArray(test.achievementTable)) return test.achievementTable;
+    const mode = String((test && test.achievementMode) || 'normal').toLowerCase();
+    if (mode === 'easy') return [
+      { multiplier: 3, achievement: 5 },
+      { multiplier: 2, achievement: 4 },
+      { multiplier: 1.5, achievement: 3 },
+      { multiplier: 1, achievement: 1 },
+    ];
+    if (mode === 'hard') return [
+      { multiplier: 3, achievement: 12 },
+      { multiplier: 2, achievement: 8 },
+      { multiplier: 1.5, achievement: 5 },
+      { multiplier: 1, achievement: 2 },
+    ];
+    return [
+      { multiplier: 3, achievement: 8 },
+      { multiplier: 2, achievement: 6 },
+      { multiplier: 1.5, achievement: 4 },
+      { multiplier: 1, achievement: 1 },
+    ];
   }
 
   _getExamDrawCount(test = this.state.currentTest) {
@@ -833,6 +1030,11 @@ export default class GameEngine {
       progress: this.state.examStartProgress || 0,
       project: (this.state.activeProjects || []).length,
       permanent: (this.state.activePermanents || []).length,
+      completedProject: this.state.completedProjectCount || 0,
+      completepro: this.state.completedProjectCount || 0,
+      eventHand: (this.state.eventHand || []).length,
+      randomSymbol: this.state.examRandomSymbol ? Number(counts[this.state.examRandomSymbol] ?? this.state.counts[this._capitalizeSymbol(this.state.examRandomSymbol)] ?? 0) : 0,
+      randomSymbolName: this.state.examRandomSymbol || '',
       semester: this.state.semester,
       achievement: this.state.achievementPoints,
       review: this.state.reviewValue,
@@ -841,16 +1043,14 @@ export default class GameEngine {
   }
 
   _getExamAchievement(score) {
-    const scaling = this._getExamScoreScaling();
-    const thresholds = [
-      { score: 30 * scaling, achievement: 8 },
-      { score: 20 * scaling, achievement: 6 },
-      { score: 15 * scaling, achievement: 4 },
-      { score: 10 * scaling, achievement: 1 },
-    ];
+    const passLine = Math.floor(this._getExamBaseRequirement() * this._getExamScoreScaling());
+    const thresholds = this._getAchievementTable().map((item) => ({
+      score: Math.floor(Number(item.score ?? (passLine * (Number(item.multiplier) || 1))) || passLine),
+      achievement: Number(item.achievement) || 0,
+    })).sort((a, b) => b.score - a.score);
     const passed = thresholds.find((item) => score >= item.score);
-    if (passed) return { requirement: passed.score, achievement: passed.achievement, passed: true };
-    return { requirement: 10 * scaling, achievement: -5, passed: false };
+    if (passed) return { requirement: passLine, achievement: passed.achievement, passed: true, achievedScore: passed.score };
+    return { requirement: passLine, achievement: -5, passed: false, achievedScore: 0 };
   }
   _isEventEligibleForSemester(event, semester = this.state.semester) {
     const rule = event && event.semester;
@@ -964,6 +1164,31 @@ export default class GameEngine {
           effectDetails.push(`下次考试分数 +${addValue}`);
           break;
         }
+        case 'addSymbol': {
+          const symbol = String(effect.input || '').toLowerCase();
+          const addValue = Math.max(0, Number(effect.amount ?? effect.multi ?? 1) || 0);
+          this.state.examTempSymbols = this.state.examTempSymbols || { theory: 0, practice: 0, social: 0 };
+          if (Object.prototype.hasOwnProperty.call(this.state.examTempSymbols, symbol)) {
+            this.state.examTempSymbols[symbol] += addValue;
+            effectDetails.push('本次考试' + symbol + '符号 +' + addValue);
+          } else {
+            effectDetails.push('未知符号：' + effect.input);
+          }
+          break;
+        }
+        case 'randomExamSymbol': {
+          const symbols = ['theory', 'practice', 'social'];
+          const picked = symbols[Math.floor(Math.random() * symbols.length)];
+          this.state.examRandomSymbol = picked;
+          if (effect.output) vars[effect.output] = picked;
+          effectDetails.push('随机考试符号：' + picked);
+          break;
+        }
+        case 'doublePermanentEffects': {
+          this.state.doublePermanentEffectsActive = true;
+          effectDetails.push('本次考试成果效果翻倍');
+          break;
+        }
         case 'drawEvent': {
           const value = this._resolveValue(effect.num, vars);
           const drawCount = Math.max(0, Number(value) || 0);
@@ -1006,9 +1231,11 @@ export default class GameEngine {
         }
         case 'deleteLessons': {
           const amount = Math.max(0, Number(this._resolveValue(effect.input ?? effect.num ?? 1, vars)) || 0);
-          const deleted = this.state.deck ? this.state.deck.draw(amount) : [];
-          deleted.forEach((card) => this._removeCourseEverywhere(card));
-          effectDetails.push(deleted.length > 0 ? `删除课程：${deleted.map((card) => card.name).join('、')}` : '没有可删除的课程');
+          if (this._queueCourseDeletion({ amount, source: effect.source || '效果' })) {
+            effectDetails.push('等待选择删除 ' + Math.min(amount, this.state.ownedCourses.length) + ' 门课程');
+          } else {
+            effectDetails.push('没有可删除的课程');
+          }
           break;
         }
         case 'sReward': {
@@ -1041,7 +1268,6 @@ export default class GameEngine {
       const amount = Number(cost.amount ?? cost.num ?? 1) || 0;
       if (cost.type === 'symbolCost') return `花费 ${amount} 张 ${cost.symbol} 事件牌`;
       if (cost.type === 'discardEvent') return cost.symbol ? `弃置 ${amount} 张 ${cost.symbol} 事件牌` : `弃置 ${amount} 张事件牌`;
-      if (cost.type === 'discardLesson') return `弃置 ${amount} 门课程`;
       if (['eventCost', 'cardCost', 'anyCost', 'anyEventCost'].includes(cost.type)) return `花费 ${amount} 张事件牌`;
       return cost.type || '未知花费';
     }).join('；');
@@ -1050,14 +1276,8 @@ export default class GameEngine {
   _canPayCosts(costs = [], eventIndex = -1) {
     if (!Array.isArray(costs) || costs.length === 0) return true;
     const reservedEvents = new Set();
-    let lessonCost = 0;
     for (const cost of costs) {
       const amount = Math.max(0, Number(cost.amount ?? cost.num ?? 1) || 0);
-      if (cost.type === 'discardLesson') {
-        lessonCost += amount;
-        if (!this.state.deck || this.state.deck.remaining() < lessonCost) return false;
-        continue;
-      }
       const matches = this._findCostPaymentIndices(cost, eventIndex, reservedEvents);
       if (matches.length < amount) return false;
       matches.slice(0, amount).forEach((idx) => reservedEvents.add(idx));
@@ -1086,7 +1306,6 @@ export default class GameEngine {
     const card = this.state.eventHand[pending.eventIndex];
     return card && Array.isArray(card.options) ? card.options[pending.optionIndex] || card.options[0] : null;
   }
-
   _canSelectEventPaymentCard(pending, cardIndex) {
     if (!pending || cardIndex === pending.eventIndex) return false;
     const card = this.state.eventHand[cardIndex];
@@ -1102,7 +1321,6 @@ export default class GameEngine {
     let selectedEventCostCount = 0;
     for (const cost of (Array.isArray(costs) ? costs : [])) {
       const amount = Math.max(0, Number(cost.amount ?? cost.num ?? 1) || 0);
-      if (cost.type === 'discardLesson') continue;
       if (!this._isEventPaymentCost(cost)) continue;
       selectedEventCostCount += amount;
       for (let i = 0; i < amount; i += 1) {
@@ -1120,14 +1338,9 @@ export default class GameEngine {
     const used = new Set();
     const paidIndices = [];
     const details = [];
-    let lessonCost = 0;
 
     costs.forEach((cost) => {
       const amount = Math.max(0, Number(cost.amount ?? cost.num ?? 1) || 0);
-      if (cost.type === 'discardLesson') {
-        lessonCost += amount;
-        return;
-      }
       if (!this._isEventPaymentCost(cost)) return;
       const matches = [];
       for (let i = 0; i < amount; i += 1) {
@@ -1141,11 +1354,6 @@ export default class GameEngine {
         details.push(`支付花费：弃置 ${matches.map((idx) => this.state.eventHand[idx]?.name).filter(Boolean).join('、')}`);
       }
     });
-
-    if (lessonCost > 0 && this.state.deck) {
-      const discardedLessons = this.state.deck.draw(lessonCost);
-      details.push(`支付花费：弃置课程 ${discardedLessons.map((card) => card.name).join('、')}`);
-    }
 
     [...new Set(paidIndices)].sort((a, b) => b - a).forEach((idx) => {
       this.state.eventHand.splice(idx, 1);
@@ -1229,9 +1437,9 @@ export default class GameEngine {
     const project = this.state.activeProjects[projectIndex];
     if (!project) return this.state;
 
-    if (pending.projectType && project.type !== pending.projectType) return this.state;
-
-    const amount = Number(pending.amount) || 0;
+    const baseAmount = Number(pending.amount) || 0;
+    const matchedType = !!pending.projectType && project.type === pending.projectType;
+    const amount = matchedType ? baseAmount * 2 : baseAmount;
     project.progress = (Number(project.progress) || 0) + amount;
     this.state.eventResults.push({
       id: project._instanceId || project._id || project.id,
@@ -1240,6 +1448,7 @@ export default class GameEngine {
       effects: [`项目进度 +${amount}（当前 ${project.progress}）`],
     });
     this._advanceProjectProgressQueue();
+    this._refreshFinalGoalProgress();
     return this.state;
   }
   _startCourseReward(effect = {}, vars = {}) {
@@ -1323,6 +1532,7 @@ export default class GameEngine {
       effects: [`置于牌堆顶：${selectedCards.map((card) => card.name).join('、')}`],
     });
     this.state.pendingCourseReward = null;
+    this._refreshFinalGoalProgress();
     return this.state;
   }
   _finishEventPhase(draw = 5) {
@@ -1431,7 +1641,7 @@ export default class GameEngine {
     return this.state;
   }
   _endReview(draw = 5) {
-    if (this.state.pendingCourseReward) return this.state;
+    if (this.state.pendingCourseReward || this.state.pendingCourseDeletion) return this.state;
     if (!this.state.reviewStageActive) {
       this._drawExamHand(draw);
       return this.state;
@@ -1475,6 +1685,7 @@ export default class GameEngine {
     const result = this._getExamAchievement(this.state.score);
     this.state.examRequirement = result.requirement;
     this.state.examAchievementAward = result.achievement;
+    if ((Number(this.state.semester) || 1) >= 8) this.state.finalExamAchievementAward = result.achievement;
     this.state.achievementPoints += result.achievement;
     this.state.currentExamAchievementDelta = (Number(this.state.currentExamAchievementDelta) || 0) + result.achievement;
     if (result.passed) {
@@ -1482,7 +1693,39 @@ export default class GameEngine {
     } else {
       this.state.lastAchievement = `第 ${this.state.semester} 学期考试未达最低要求 ${result.requirement}，扣除 5 个成就点。`;
     }
+    const resultEffects = this.state.currentTest && Array.isArray(this.state.currentTest.result) ? this.state.currentTest.result : [];
+    if (resultEffects.length > 0) {
+      const resultVars = {
+        ...this._getExamVariables({
+          theory: this.state.counts.Theory || 0,
+          practice: this.state.counts.Practice || 0,
+          social: this.state.counts.Social || 0,
+        }),
+        passed: result.passed ? 1 : 0,
+        score: this.state.score || 0,
+        requirement: result.requirement,
+      };
+      const resultOutcome = this._applyScoringEffects(resultEffects, resultVars, (this.state.currentTest.name || '考试') + '结果', { ignoreSideEffects: !!options.ignoreSideEffects });
+      this.state.score += Number(resultOutcome.score) || 0;
+      this.state.achievementPoints += Number(resultOutcome.achievement) || 0;
+      this.state.currentExamEffectAchievementDelta = (Number(this.state.currentExamEffectAchievementDelta) || 0) + (Number(resultOutcome.achievement) || 0);
+      this.state.testResults.push({
+        id: (this.state.currentTest.id || this.state.currentTest._id || 'test') + '_result',
+        name: (this.state.currentTest.name || '考试') + '结果',
+        score: Number(resultOutcome.score) || 0,
+        achievement: Number(resultOutcome.achievement) || 0,
+        effects: resultOutcome.details,
+      });
+    }
     this.state.totalExamScore += this.state.score;
+    this.state.examHistory = Array.isArray(this.state.examHistory) ? this.state.examHistory : [];
+    this.state.examHistory.push({
+      semester: this.state.semester,
+      testName: this.state.currentTest ? this.state.currentTest.name : '未知',
+      score: this.state.score,
+      achievementAward: this.state.examAchievementAward,
+      requirement: this.state.examRequirement,
+    });
     this.state.currentExamScoreDelta = (Number(this.state.currentExamScoreDelta) || 0) + this.state.score;
     this._captureCurrentExamGoalState();
     const beforeGoalAchievement = Number(this.state.achievementPoints) || 0;
@@ -1541,7 +1784,8 @@ export default class GameEngine {
   _confirmExam() {
     if (!this.state.examStageActive || this.state.pendingProjectProgress || this.state.pendingCourseReward) return this.state;
     this._expireImmediateGoalsForSemester(this.state.semester);
-    if (this.state.semester >= 8) {
+    const isFinalSemester = this.state.semester >= 8;
+    if (isFinalSemester) {
       this._settleFinalGoals();
     }
     const oldReviewValue = Number(this.state.reviewValue) || 0;
@@ -1552,8 +1796,19 @@ export default class GameEngine {
     this.state.examStageActive = false;
     this.state.hand = [];
     this.state.currentTest = null;
+    this.state.candidateTests = [];
+    this.state.selectedTestIndex = -1;
+    this.state.examRandomSymbol = null;
+    this.state.examTempSymbols = { theory: 0, practice: 0, social: 0 };
+    this.state.doublePermanentEffectsActive = false;
     this.state.awaitingEventStart = false;
+    if (isFinalSemester) {
+      this.state.gameFinished = true;
+      this.state.graduationSummary = this._buildGraduationSummary();
+      return this.state;
+    }
     this.state.semester += 1;
+    this._refreshFinalGoalProgress();
     return this.state;
   }
 
@@ -1587,6 +1842,11 @@ export default class GameEngine {
           details.push(this._describeEffect(effect, vars[effect.output]));
           break;
         }
+        case 'getLowest': {
+          vars[effect.output] = this._getLowest(effect.target, vars);
+          details.push(this._describeEffect(effect, vars[effect.output]));
+          break;
+        }
         case 'match': {
           const value = this._resolveValue(effect.input, vars);
           vars[effect.output] = Array.isArray(effect.list) && effect.list.includes(value) ? 1 : 0;
@@ -1598,6 +1858,28 @@ export default class GameEngine {
           const right = this._resolveValue(effect.input2, vars);
           vars[effect.output] = this._compareValues(left, right, effect.type) ? 1 : 0;
           details.push(this._describeEffect(effect, vars[effect.output]));
+          break;
+        }
+        case 'randomExamSymbol': {
+          const symbolKeys = ['theory', 'practice', 'social'];
+          const picked = symbolKeys[Math.floor(Math.random() * symbolKeys.length)];
+          this.state.examRandomSymbol = picked;
+          vars.randomSymbolName = picked;
+          vars.randomSymbol = Number(vars[picked] || 0);
+          if (effect.output) vars[effect.output] = picked;
+          details.push('随机计分符号：' + picked);
+          break;
+        }
+        case 'doublePermanentEffects': {
+          this.state.doublePermanentEffectsActive = true;
+          details.push('成果效果翻倍');
+          break;
+        }
+        case 'addAchievementIf': {
+          const condition = this._resolveValue(effect.condition || effect.input || 'const0', vars);
+          const addValue = condition ? (Number(effect.amount ?? effect.multi ?? 0) || 0) : 0;
+          achievement += addValue;
+          details.push(addValue > 0 ? ('额外成就点 +' + addValue) : '条件未满足，无成就点');
           break;
         }
         case 'addScore': {
@@ -1648,7 +1930,15 @@ export default class GameEngine {
       }
     });
 
-    const permanentResults = this._applyPermanentEffects(counts);
+    const tempSymbols = this.state.examTempSymbols || {};
+    counts.theory += Number(tempSymbols.theory) || 0;
+    counts.practice += Number(tempSymbols.practice) || 0;
+    counts.social += Number(tempSymbols.social) || 0;
+
+    const permanentOutcome = this._applyPermanentEffects(counts);
+    const permanentResults = permanentOutcome.results || [];
+    const permanentScore = Number(permanentOutcome.score) || 0;
+    const permanentAchievement = Number(permanentOutcome.achievement) || 0;
     this.state.counts = {
       Theory: counts.theory,
       Practice: counts.practice,
@@ -1661,10 +1951,19 @@ export default class GameEngine {
     const recalcOptions = { ignoreSideEffects: !!this.state.ignoreExamSideEffects };
     const testScoreResult = this._applyScoringEffects(testEffects, { ...baseVariables }, test ? test.name : '考试', recalcOptions);
     const baseScore = testScoreResult.score;
-    let score = baseScore + (Number(this.state.appliedNextScoreBonus) || 0);
-    let achievementGain = testScoreResult.achievement;
+    let score = permanentScore + baseScore + (Number(this.state.appliedNextScoreBonus) || 0);
+    let achievementGain = permanentAchievement + testScoreResult.achievement;
     const cardResults = [];
     const testResults = (this.state.testResults || []).slice();
+    if (permanentScore || permanentAchievement) {
+      testResults.push({
+        id: 'permanent_effects',
+        name: '成果结算',
+        score: permanentScore,
+        achievement: permanentAchievement,
+        effects: permanentResults.flatMap((item) => item.effects || []),
+      });
+    }
     if (test) {
       testResults.push({
         id: test._id || test.id,
@@ -1681,7 +1980,7 @@ export default class GameEngine {
         name: '下次考试加分',
         score: Number(this.state.appliedNextScoreBonus) || 0,
         achievement: 0,
-        effects: [`分数 +${this.state.appliedNextScoreBonus}`],
+        effects: ['分数 +' + this.state.appliedNextScoreBonus],
       });
     }
 
@@ -1709,26 +2008,35 @@ export default class GameEngine {
 
   _applyPermanentEffects(counts) {
     const permanentResults = [];
+    let score = 0;
+    let achievement = 0;
+    const multiplier = this._shouldDoublePermanentEffects() ? 2 : 1;
     this.state.activePermanents.forEach((permanent) => {
       const effects = [];
       if (Array.isArray(permanent.effects)) {
         permanent.effects.forEach((effect) => {
-          switch (effect.effectType) {
-            case 'addSymbol': {
-              const symbol = String(effect.input || '').toLowerCase();
-              const amount = Number(effect.amount ?? effect.multi ?? 1) || 0;
-              if (Object.prototype.hasOwnProperty.call(counts, symbol)) {
-                counts[symbol] += amount;
-                effects.push(`${symbol} 符号 +${amount}`);
-              } else {
-                effects.push(`未知符号：${effect.input}`);
-              }
-              break;
+          const scaled = { ...effect };
+          if (scaled.effectType === 'addSymbol') {
+            const symbol = String(scaled.input || '').toLowerCase();
+            const amount = (Number(scaled.amount ?? scaled.multi ?? 1) || 0) * multiplier;
+            if (Object.prototype.hasOwnProperty.call(counts, symbol)) {
+              counts[symbol] += amount;
+              effects.push(symbol + ' 符号 +' + amount);
+            } else {
+              effects.push('未知符号：' + scaled.input);
             }
-            default:
-              effects.push(effect.effectType || '未知效果');
-              break;
+            return;
           }
+          if (['addScore', 'addAchievement', 'giveProgress', 'addProjectProgress'].includes(scaled.effectType)) {
+            if (scaled.multi != null) scaled.multi = (Number(scaled.multi) || 1) * multiplier;
+            else if (scaled.num != null) scaled.num = (Number(scaled.num) || 0) * multiplier;
+            else if (typeof scaled.input === 'number') scaled.input = scaled.input * multiplier;
+            else scaled.multi = multiplier;
+          }
+          const result = this._applyScoringEffects([scaled], this._getExamVariables(counts), permanent.name, { ignoreSideEffects: !!this.state.ignoreExamSideEffects });
+          score += result.score;
+          achievement += result.achievement;
+          effects.push(...result.details);
         });
       }
       permanentResults.push({
@@ -1737,8 +2045,13 @@ export default class GameEngine {
         effects,
       });
     });
-    return permanentResults;
+    return { results: permanentResults, score, achievement };
   }
+
+  _shouldDoublePermanentEffects() {
+    return !!this.state.doublePermanentEffectsActive || !!(this.state.currentTest && Array.isArray(this.state.currentTest.effect) && this.state.currentTest.effect.some((effect) => effect.effectType === 'doublePermanentEffects'));
+  }
+
   _describeEffect(effect, value) {
     switch (effect.effectType) {
       case 'addScore':
@@ -1770,6 +2083,11 @@ export default class GameEngine {
     return Number.isNaN(parsed) ? 0 : parsed;
   }
 
+  _capitalizeSymbol(symbol) {
+    const map = { theory: 'Theory', practice: 'Practice', social: 'Social' };
+    return map[symbol] || symbol;
+  }
+
   _getHighest(target, vars) {
     const symbolKeys = ['theory', 'practice', 'social'];
     if (target === 'symbol') {
@@ -1780,6 +2098,18 @@ export default class GameEngine {
     const max = Math.max(...values);
     const targetValue = Number(vars[target] || 0);
     return targetValue >= max ? 1 : 0;
+  }
+
+  _getLowest(target, vars) {
+    const symbolKeys = ['theory', 'practice', 'social'];
+    if (target === 'symbol') {
+      return Math.min(...symbolKeys.map((key) => Number(vars[key] || 0)));
+    }
+    const keys = ['theory', 'practice', 'social', 'achievement', 'progress', 'project', 'permanent', 'completedProject', 'completepro', 'eventHand'];
+    const values = keys.map((key) => Number(vars[key] || 0));
+    const min = Math.min(...values);
+    const targetValue = Number(vars[target] || 0);
+    return targetValue <= min ? 1 : 0;
   }
 
   _compareValues(left, right, type) {
@@ -1847,6 +2177,18 @@ export default class GameEngine {
     nextState.eventDeck = this._restoreDeck(source.eventDeck, this._buildEventsFromData());
     nextState.testDeck = this._restoreDeck(source.testDeck, this._buildTestsFromData());
     nextState.pendingProjectProgressQueue = Array.isArray(nextState.pendingProjectProgressQueue) ? nextState.pendingProjectProgressQueue : [];
+    nextState.candidateTests = Array.isArray(nextState.candidateTests) ? nextState.candidateTests : [];
+    nextState.selectedTestIndex = Number.isFinite(Number(nextState.selectedTestIndex)) ? Number(nextState.selectedTestIndex) : -1;
+    nextState.examRerollUsed = !!nextState.examRerollUsed;
+    nextState.examRandomSymbol = nextState.examRandomSymbol || null;
+    nextState.examTempSymbols = nextState.examTempSymbols || { theory: 0, practice: 0, social: 0 };
+    nextState.doublePermanentEffectsActive = !!nextState.doublePermanentEffectsActive;
+    nextState.pendingCourseDeletion = nextState.pendingCourseDeletion || null;
+    nextState.pendingCourseDeletionQueue = Array.isArray(nextState.pendingCourseDeletionQueue) ? nextState.pendingCourseDeletionQueue : [];
+    nextState.examHistory = Array.isArray(nextState.examHistory) ? nextState.examHistory : [];
+    nextState.finalExamAchievementAward = Number(nextState.finalExamAchievementAward) || 0;
+    nextState.gameFinished = !!nextState.gameFinished;
+    nextState.graduationSummary = nextState.graduationSummary || null;
     nextState.currentExamAchievementDelta = Number(nextState.currentExamAchievementDelta) || 0;
     nextState.currentExamEffectAchievementDelta = Number(nextState.currentExamEffectAchievementDelta) || 0;
     nextState.currentExamScoreDelta = Number(nextState.currentExamScoreDelta) || 0;
@@ -1860,6 +2202,7 @@ export default class GameEngine {
   }
   // 返回当前 GameState（用于 UI 读取）
   getState() {
+    this._refreshFinalGoalProgress();
     return this.state;
   }
 }

@@ -1,7 +1,7 @@
 [
   {
     "id": "event_course_selection",
-    "name": "选课时间",
+    "name": "瀚海选课夜",
     "symbol": "book",
     "semester": "1-4",
     "weight": 4,
@@ -39,7 +39,7 @@
   },
   {
     "id": "event_campus_competition",
-    "name": "校内比赛",
+    "name": "东区擂台赛",
     "symbol": "connect",
     "semester": "1-8",
     "weight": 3,
@@ -47,13 +47,13 @@
     "options": [
       {
         "name": "参与比赛",
-        "content": "获得3成就点。",
+        "content": "获得2成就点。",
         "cost": [],
         "effects": [
           {
             "effectType": "addAchievement",
             "input": "const1",
-            "multi": 3
+            "multi": 2
           }
         ]
       },
@@ -79,7 +79,7 @@
   },
   {
     "id": "event_review",
-    "name": "复习",
+    "name": "图书馆闭关",
     "symbol": "book",
     "semester": "1-8",
     "weight": 4,
@@ -87,16 +87,12 @@
     "options": [
       {
         "name": "认真复习",
-        "content": "获得1成就点与3温习值。",
+        "content": "获得4温习值。",
         "cost": [],
         "effects": [
           {
-            "effectType": "addAchievement",
-            "input": "const1"
-          },
-          {
             "effectType": "addReview",
-            "input": 3
+            "input": 4
           }
         ]
       }
@@ -104,15 +100,15 @@
   },
   {
     "id": "event_computer_age",
-    "name": "计算机时代",
+    "name": "瀚海码潮",
     "symbol": "data",
     "semester": "2-8",
     "weight": 2,
-    "content": "计算机时代已经来临。",
+    "content": "瀚海码潮已经来临。",
     "options": [
       {
-        "name": "机器人方向",
-        "content": "获得机器人项目。",
+        "name": "RoboGame机器人队方向",
+        "content": "获得RoboGame机器人队项目。",
         "cost": [],
         "effects": [
           {
@@ -122,8 +118,8 @@
         ]
       },
       {
-        "name": "ICPC方向",
-        "content": "获得ICPC项目。",
+        "name": "ICPC集训队方向",
+        "content": "获得ICPC集训队项目。",
         "cost": [],
         "effects": [
           {
@@ -148,7 +144,7 @@
   },
   {
     "id": "event_club_fair",
-    "name": "社团游园会",
+    "name": "社团百团大战",
     "symbol": "connect",
     "semester": "1-3",
     "weight": 3,
@@ -156,7 +152,7 @@
     "options": [
       {
         "name": "加入社团日常工作",
-        "content": "获得社团文化节项目。",
+        "content": "获得百团文化节项目。",
         "cost": [],
         "effects": [
           {
@@ -195,7 +191,7 @@
   },
   {
     "id": "event_time_plan",
-    "name": "时间规划",
+    "name": "学期时间表",
     "symbol": null,
     "semester": "1-8",
     "weight": 4,
@@ -258,7 +254,7 @@
   },
   {
     "id": "event_money_plan",
-    "name": "金钱规划",
+    "name": "生活费规划",
     "symbol": "connect",
     "semester": "2-8",
     "weight": 3,
@@ -277,7 +273,7 @@
       },
       {
         "name": "全力接单",
-        "content": "弃置1张人脉事件与1门课程，获得兼职家教项目并增加3推进。",
+        "content": "弃置1张人脉事件与1张课程事件，获得兼职家教项目并增加2推进。",
         "cost": [
           {
             "type": "discardEvent",
@@ -285,7 +281,8 @@
             "num": 1
           },
           {
-            "type": "discardLesson",
+            "type": "discardEvent",
+            "symbol": "book",
             "num": 1
           }
         ],
@@ -297,7 +294,7 @@
           {
             "effectType": "giveProgressOn",
             "target": "pro_teach",
-            "num": 3
+            "num": 2
           }
         ]
       }
@@ -305,7 +302,7 @@
   },
   {
     "id": "event_lab_recruit",
-    "name": "实验室招新",
+    "name": "实验室开放招新",
     "symbol": "research",
     "semester": "2-5",
     "weight": 2,
@@ -313,7 +310,7 @@
     "options": [
       {
         "name": "报名加入",
-        "content": "获得科研训练项目。",
+        "content": "获得本研科研训练项目。",
         "cost": [],
         "effects": [
           {
@@ -346,9 +343,10 @@
         ]
       }
     ]
-  },  {
+  },
+  {
     "id": "event_tutor_discussion",
-    "name": "导师交流",
+    "name": "导师茶歇",
     "symbol": "research",
     "semester": "3-8",
     "weight": 3,
@@ -392,15 +390,15 @@
   },
   {
     "id": "event_programming_contest",
-    "name": "程序设计竞赛",
+    "name": "程序设计校赛",
     "symbol": "engineering",
     "semester": "2-6",
     "weight": 2,
-    "content": "学院举办程序设计竞赛。",
+    "content": "学院举办程序设计校赛。",
     "options": [
       {
         "name": "报名参赛",
-        "content": "获得ICPC项目。",
+        "content": "获得ICPC集训队项目。",
         "cost": [],
         "effects": [
           {
@@ -436,7 +434,7 @@
   },
   {
     "id": "event_lab_open_day",
-    "name": "实验室开放日",
+    "name": "先进实验室开放日",
     "symbol": "engineering",
     "semester": "2-5",
     "weight": 3,
@@ -481,7 +479,7 @@
   },
   {
     "id": "event_academic_lecture",
-    "name": "学院讲座",
+    "name": "大师讲坛",
     "symbol": "research",
     "semester": "1-8",
     "weight": 4,
@@ -489,35 +487,36 @@
     "options": [
       {
         "name": "认真听讲",
-        "content": "获得3温习值。",
+        "content": "获得4温习值。",
         "cost": [],
         "effects": [
           {
             "effectType": "addReview",
-            "input": 3
+            "input": 4
           }
         ]
       },
       {
         "name": "积极提问",
-        "content": "获得一门理论课程（2选1）。",
+        "content": "获得一次3选1的理论课程奖励。",
         "cost": [],
         "effects": [
           {
             "effectType": "sReward",
             "lessontype": "theory",
-            "shownum": 2
+            "shownum": 3
           }
         ]
       },
       {
         "name": "课后交流",
-        "content": "获得1推进。",
+        "content": "获得2科研推进。",
         "cost": [],
         "effects": [
           {
             "effectType": "giveProgress",
-            "num": 1
+            "num": 2,
+            "type": "research"
           }
         ]
       }
@@ -525,7 +524,7 @@
   },
   {
     "id": "event_midterm_week",
-    "name": "期中周",
+    "name": "期中周警报",
     "symbol": null,
     "semester": "2-8",
     "weight": 4,
@@ -569,7 +568,7 @@
   },
   {
     "id": "event_summer_plan",
-    "name": "暑期安排",
+    "name": "暑期留校计划",
     "symbol": null,
     "semester": "2/4/6",
     "weight": 2,
@@ -577,7 +576,7 @@
     "options": [
       {
         "name": "留校科研",
-        "content": "获得科研训练项目。",
+        "content": "获得本研本研科研训练项目。",
         "cost": [],
         "effects": [
           {
@@ -613,7 +612,7 @@
   },
   {
     "id": "event_dorm_chat",
-    "name": "宿舍夜谈",
+    "name": "宿舍卧谈会",
     "symbol": "connect",
     "semester": "1-4",
     "weight": 4,
@@ -656,7 +655,7 @@
   },
   {
     "id": "event_job_fair",
-    "name": "校园招聘会",
+    "name": "西区招聘会",
     "symbol": "connect",
     "semester": "6-8",
     "weight": 2,
@@ -701,15 +700,15 @@
   },
   {
     "id": "event_innovation_program",
-    "name": "创新训练计划",
+    "name": "大创申报季",
     "symbol": "engineering",
     "semester": "3-6",
     "weight": 2,
-    "content": "学校开放大学生创新训练计划申请。",
+    "content": "学校开放大学生大创申报季申请。",
     "options": [
       {
         "name": "独立申请",
-        "content": "获得创新创业项目。",
+        "content": "获得大创创业项目。",
         "cost": [],
         "effects": [
           {
@@ -744,7 +743,7 @@
   },
   {
     "id": "event_open_week",
-    "name": "校园开放周",
+    "name": "科大开放周",
     "symbol": "connect",
     "semester": "1-2",
     "weight": 3,
@@ -807,7 +806,7 @@
   },
   {
     "id": "event_curriculum_reform",
-    "name": "课程改革",
+    "name": "培养方案调整",
     "symbol": "book",
     "semester": "2-6",
     "weight": 3,
@@ -865,11 +864,11 @@
   },
   {
     "id": "event_professor_recommendation",
-    "name": "导师推荐",
+    "name": "老师内推课题",
     "symbol": "research",
     "semester": "3-8",
     "weight": 2,
-    "content": "导师推荐优秀学生加入科研项目。",
+    "content": "老师内推课题优秀学生加入科研项目。",
     "options": [
       {
         "name": "接受推荐",
@@ -884,7 +883,7 @@
       },
       {
         "name": "加入课题组",
-        "content": "获得科研训练项目。",
+        "content": "获得本研本研科研训练项目。",
         "cost": [
           {
             "type": "discardEvent",
@@ -901,7 +900,7 @@
       },
       {
         "name": "主动申请",
-        "content": "获得科研训练项目，并增加2推进。",
+        "content": "获得本研本研科研训练项目，并增加2推进。",
         "cost": [
           {
             "type": "discardEvent",
@@ -924,7 +923,7 @@
   },
   {
     "id": "event_tech_sharing",
-    "name": "技术分享会",
+    "name": "瀚海技术沙龙",
     "symbol": "engineering",
     "semester": "2-8",
     "weight": 3,
@@ -964,7 +963,7 @@
   },
   {
     "id": "event_self_study",
-    "name": "自主学习",
+    "name": "图书馆自习日",
     "symbol": "book",
     "semester": "1-8",
     "weight": 4,
@@ -1001,7 +1000,7 @@
       },
       {
         "name": "专项训练",
-        "content": "删除1张课程，获得2温习值。",
+        "content": "删除1张课程，获得3温习值。",
         "cost": [
           {
             "type": "discardEvent",
@@ -1015,7 +1014,7 @@
           },
           {
             "effectType": "addReview",
-            "input": 2
+            "input": 3
           }
         ]
       }
@@ -1023,7 +1022,7 @@
   },
   {
     "id": "event_lab_assignment",
-    "name": "实验安排",
+    "name": "实验课排程",
     "symbol": "engineering",
     "semester": "2-5",
     "weight": 3,
@@ -1042,7 +1041,7 @@
       },
       {
         "name": "加入实验室",
-        "content": "获得机器人项目。",
+        "content": "获得RoboGame机器人队项目。",
         "cost": [
           {
             "type": "discardEvent",
@@ -1059,7 +1058,7 @@
       },
       {
         "name": "连续攻关",
-        "content": "获得机器人项目，并增加2推进。",
+        "content": "获得RoboGame机器人队项目，并增加2推进。",
         "cost": [
           {
             "type": "discardEvent",
@@ -1082,7 +1081,7 @@
   },
   {
     "id": "event_senior_sharing",
-    "name": "学长经验分享",
+    "name": "学长学姐避坑会",
     "symbol": "connect",
     "semester": "2-6",
     "weight": 3,
@@ -1118,7 +1117,7 @@
       },
       {
         "name": "建立联系",
-        "content": "获得1人脉推进并抽1张事件卡。",
+        "content": "获得2人脉推进并抽1张事件卡。",
         "cost": [
           {
             "type": "discardEvent",
@@ -1129,7 +1128,7 @@
           {
             "effectType": "giveProgress",
             "type": "connect",
-            "num": 1
+            "num": 2
           },
           {
             "effectType": "drawEvent",
@@ -1141,7 +1140,7 @@
   },
   {
     "id": "event_lab_showcase",
-    "name": "实验课展示",
+    "name": "大物实验展示",
     "symbol": "engineering",
     "semester": "1-4",
     "weight": 3,
@@ -1178,11 +1177,11 @@
       },
       {
         "name": "加入团队",
-        "content": "获得机器人项目。",
+        "content": "获得RoboGame机器人队项目。",
         "cost": [
           {
             "type": "discardEvent",
-            "num": 2
+            "num": 1
           }
         ],
         "effects": [
@@ -1196,7 +1195,7 @@
   },
   {
     "id": "event_book_club",
-    "name": "读书分享会",
+    "name": "图书馆读书会",
     "symbol": "book",
     "semester": "1-8",
     "weight": 3,
@@ -1233,11 +1232,11 @@
       },
       {
         "name": "专题研究",
-        "content": "获得科研训练项目。",
+        "content": "获得本研本研科研训练项目。",
         "cost": [
           {
             "type": "discardEvent",
-            "num": 2
+            "num": 1
           }
         ],
         "effects": [
@@ -1251,7 +1250,7 @@
   },
   {
     "id": "event_company_talk",
-    "name": "企业宣讲",
+    "name": "高新区企业宣讲",
     "symbol": "engineering",
     "semester": "5-8",
     "weight": 2,
@@ -1311,7 +1310,7 @@
   },
   {
     "id": "event_cross_major",
-    "name": "跨专业交流",
+    "name": "交叉学科圆桌",
     "symbol": "book",
     "semester": "2-8",
     "weight": 2,
@@ -1348,11 +1347,11 @@
       },
       {
         "name": "联合项目",
-        "content": "获得创新创业项目。",
+        "content": "获得大创创业项目。",
         "cost": [
           {
             "type": "discardEvent",
-            "num": 2
+            "num": 1
           }
         ],
         "effects": [

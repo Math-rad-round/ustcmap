@@ -1,0 +1,681 @@
+[
+  {
+    "id": "complete_tutorial",
+    "name": "完整教程",
+    "description": "在固定局面中学习接入、压迫、循环、改写、代价与上传。",
+    "difficulty": "easy",
+    "steps": [
+      {
+        "id": "intro_setup",
+        "title": "第一章：接入",
+        "text": "你不需要知道风从哪里吹来。只要记住：信号还没有送达，工具还在一件件接入，而防线正在被无声地推近。本教程使用固定局面，不会保存，也不会写入解锁进度。先把任意装备拖到中间打出区。",
+        "focus": "hand",
+        "placement": "left",
+        "waitText": "拖出任意一张手牌，让它接入本回合。",
+        "setup": {
+          "reset": true,
+          "difficulty": "easy",
+          "characterId": "character_stun_cycle",
+          "turn": 1,
+          "armor": 13,
+          "baseArmor": 13,
+          "decay": 0,
+          "skipAttackTurns": [],
+          "skipDecayTurns": [],
+          "resources": {
+            "download": 0,
+            "upload": 0,
+            "block": 0,
+            "mobility": 0,
+            "counter": 0
+          },
+          "zones": {
+            "hand": [
+              "start_download_seed",
+              "start_guard_cache",
+              "start_mobile_cache",
+              "start_counter_node",
+              "start_retained_guard"
+            ],
+            "drawPile": [
+              "start_download_seed",
+              "start_download_seed",
+              "start_mobility_node",
+              "status_stun"
+            ],
+            "discardPile": []
+          },
+          "upMarket": [
+            "up_retained_guard",
+            "up_download_or_upload",
+            "up_burst_choice",
+            "up_stun_download"
+          ],
+          "upDeck": [
+            "up_download_draw",
+            "up_filter_hand",
+            "up_guard_or_download"
+          ],
+          "basicMarket": [
+            "basic_supply_download",
+            "basic_supply_draw",
+            "basic_download_pair",
+            "basic_upload_pair",
+            "basic_mobility_guard",
+            "basic_counter_guard",
+            "basic_forced_upgrade",
+            "basic_clean_choice"
+          ],
+          "currentAttack": "attack_01",
+          "attackDeck": [
+            "attack_02",
+            "attack_04",
+            "attack_07"
+          ],
+          "log": [
+            "接入开始：拖出手牌即可打出。"
+          ]
+        },
+        "waitFor": {
+          "type": "command",
+          "command": "PLAY_CARD"
+        }
+      },
+      {
+        "id": "read_upload_bar",
+        "title": "信号进度",
+        "text": "顶部的条带是信号抵达前的距离。获得上传会推进它；填满时，这场抢修就有了出口。右侧状态只告诉你现在能行动、在选择，还是已经结束。",
+        "focus": "status",
+        "placement": "left",
+        "actions": [
+          {
+            "label": "继续",
+            "closeModals": true,
+            "advance": true
+          }
+        ]
+      },
+      {
+        "id": "buy_first_card",
+        "title": "装载工具",
+        "text": "下载不是得分，而是临时带宽。这里先给你 3 点下载，点击一张买得起的进阶装备，或右侧推荐的基础装备。新牌会先沉到弃牌堆。",
+        "focus": "market",
+        "placement": "left",
+        "waitText": "购买一张买得起的牌。",
+        "setup": {
+          "reset": false,
+          "resources": {
+            "download": 3
+          }
+        },
+        "waitFor": {
+          "type": "command",
+          "command": "BUY_CARD"
+        }
+      },
+      {
+        "id": "open_basic_shop",
+        "title": "固定库",
+        "text": "进阶装备只露出几张，基础装备则像一排备用工具。点击基础商店查看完整列表；它们也有数量，拿走后不会凭空补回。",
+        "focus": "market",
+        "placement": "left",
+        "waitText": "点击“基础商店”。",
+        "waitFor": {
+          "type": "ui",
+          "event": "OPEN_BASIC_SHOP"
+        }
+      },
+      {
+        "id": "close_basic_shop",
+        "title": "基础商店窗口",
+        "text": "中央窗口会保留完整列表。之后想精确寻找某件基础装备，就从这里翻。",
+        "focus": "basicShop",
+        "placement": "right",
+        "actions": [
+          {
+            "label": "继续",
+            "closeModals": true,
+            "advance": true
+          }
+        ]
+      },
+      {
+        "id": "end_first_turn",
+        "title": "第一轮收束",
+        "text": "行动告一段落，就结束回合。威胁会按当前防护、机动、反击落到一个结果；本回合打出的牌和未保留的手牌会进入弃牌堆。",
+        "focus": "actions",
+        "placement": "left",
+        "waitText": "点击“结束回合”。",
+        "waitFor": {
+          "type": "command",
+          "command": "END_TURN"
+        }
+      },
+      {
+        "id": "threat_table",
+        "title": "第二章：压迫",
+        "text": "威胁表像一张正在收紧的网：左上角最危险，右下角最安全。机动决定你落在哪一行，反击决定哪一列；当前格子的攻击值会撞上你的防护。",
+        "focus": "threat",
+        "placement": "right",
+        "actions": [
+          {
+            "label": "继续承压",
+            "advance": true
+          }
+        ]
+      },
+      {
+        "id": "defense_setup",
+        "title": "临时防线",
+        "text": "现在压力贴近一些。右键一张可用手牌，可以把它弃置为 1 点防护；受伤也能这样撑一下，流血不能。",
+        "focus": "hand",
+        "placement": "left",
+        "waitText": "右键一张可弃作防护的手牌。",
+        "setup": {
+          "reset": true,
+          "difficulty": "easy",
+          "characterId": "character_stun_cycle",
+          "turn": 3,
+          "armor": 8,
+          "baseArmor": 13,
+          "decay": 2,
+          "resources": {
+            "download": 0,
+            "upload": 5,
+            "block": 0,
+            "mobility": 0,
+            "counter": 0
+          },
+          "zones": {
+            "hand": [
+              "status_wound",
+              "status_bleed",
+              "start_guard_cache",
+              "start_mobile_cache",
+              "start_counter_node"
+            ],
+            "drawPile": [
+              "start_download_seed",
+              "start_retained_guard"
+            ],
+            "discardPile": [
+              "status_stun",
+              "basic_supply_download"
+            ]
+          },
+          "upMarket": [
+            "up_retained_guard",
+            "up_discard_for_block",
+            "up_no_upload_tactic",
+            "up_download_draw"
+          ],
+          "basicMarket": [
+            "basic_supply_download",
+            "basic_supply_draw",
+            "basic_download_pair",
+            "basic_mobility_guard",
+            "basic_counter_guard",
+            "basic_forced_upgrade",
+            "basic_clean_choice"
+          ],
+          "currentAttack": "attack_02",
+          "attackDeck": [
+            "attack_10",
+            "attack_14"
+          ],
+          "log": [
+            "防线演示：右键手牌可以弃作防护。"
+          ]
+        },
+        "waitFor": {
+          "type": "command",
+          "command": "DISCARD_FOR_BLOCK"
+        }
+      },
+      {
+        "id": "combat_prediction",
+        "title": "战斗预估",
+        "text": "威胁区下方会提前估算：如果把手牌都压进战斗，会得到多少机动、反击，以及还差多少防护。保留牌会另算一条“保存实力”的结果。",
+        "focus": "threat",
+        "placement": "right",
+        "actions": [
+          {
+            "label": "继续",
+            "closeModals": true,
+            "advance": true
+          }
+        ]
+      },
+      {
+        "id": "resolve_damage",
+        "title": "裂口与晕眩",
+        "text": "防护没挡住的压力会留下痕迹：每 3 点溢出造成 1 点生命损失，余数化作晕眩。生命损失会弹窗；只吃到晕眩时，威胁牌会闪一下。",
+        "focus": "actions",
+        "placement": "left",
+        "waitText": "结束回合，看看这次冲击留下什么。",
+        "waitFor": {
+          "type": "command",
+          "command": "END_TURN"
+        }
+      },
+      {
+        "id": "quick_checkpoint",
+        "title": "快速接入完成",
+        "text": "到这里，快速教程已经结束。你已经知道如何打出、购买、读威胁、补防线，并撑过一次结算。后面的章节会讲牌组如何循环、如何改写，以及状态怎样把压力带进下一轮。",
+        "focus": "log",
+        "placement": "right",
+        "actions": [
+          {
+            "label": "继续完整教程",
+            "advance": true
+          },
+          {
+            "label": "返回主菜单",
+            "exit": true
+          }
+        ]
+      },
+      {
+        "id": "open_discard",
+        "title": "第三章：循环",
+        "text": "用过的工具不会消失，它们先落进弃牌堆。抽牌堆见底时，弃牌堆会洗回去，成为下一轮能摸到的东西。点右侧“弃”看看。",
+        "focus": "actions",
+        "placement": "left",
+        "waitText": "点击“弃”。",
+        "waitFor": {
+          "type": "ui",
+          "event": "OPEN_PILE_VIEWER",
+          "zone": "discardPile"
+        }
+      },
+      {
+        "id": "discard_view",
+        "title": "弃牌堆查看",
+        "text": "这里不是废料堆，更像正在冷却的工具链。你能提前知道哪些牌会在之后回到循环。",
+        "focus": "pileViewer",
+        "placement": "right",
+        "actions": [
+          {
+            "label": "继续",
+            "closeModals": true,
+            "advance": true
+          }
+        ]
+      },
+      {
+        "id": "open_draw",
+        "title": "抽牌堆查看",
+        "text": "抽牌堆也能查看，但它不承诺顺序。你看到的是构成，不是预言。点右侧“抽”看一眼。",
+        "focus": "actions",
+        "placement": "left",
+        "waitText": "点击“抽”。",
+        "waitFor": {
+          "type": "ui",
+          "event": "OPEN_PILE_VIEWER",
+          "zone": "drawPile"
+        }
+      },
+      {
+        "id": "draw_view",
+        "title": "不是预言",
+        "text": "这里显示的抽牌堆只帮助你判断牌组形状，不代表接下来一定按这个顺序抽到。",
+        "focus": "pileViewer",
+        "placement": "right",
+        "actions": [
+          {
+            "label": "进入改写",
+            "closeModals": true,
+            "advance": true
+          }
+        ]
+      },
+      {
+        "id": "upgrade_preview",
+        "title": "第四章：改写",
+        "text": "当工具开始变多，问题不再只是“拿更多”。点击“升级预览”，先看看可见牌被改写后的样子，再决定哪些值得投入。",
+        "focus": "market",
+        "placement": "left",
+        "setup": {
+          "reset": true,
+          "difficulty": "easy",
+          "characterId": "character_stun_cycle",
+          "turn": 4,
+          "armor": 12,
+          "baseArmor": 13,
+          "decay": 1,
+          "resources": {
+            "download": 2,
+            "upload": 10,
+            "block": 0,
+            "mobility": 0,
+            "counter": 0
+          },
+          "zones": {
+            "hand": [
+              "basic_forced_upgrade",
+              "start_download_seed",
+              "start_retained_guard",
+              "basic_clean_choice",
+              "status_wound"
+            ],
+            "drawPile": [
+              "start_mobile_cache",
+              "start_counter_node"
+            ],
+            "discardPile": [
+              "basic_supply_download",
+              "status_stun"
+            ]
+          },
+          "upMarket": [
+            "up_upgrade_burst",
+            "up_trash_burst",
+            "up_self_cycle_download",
+            "up_counter_protocol"
+          ],
+          "basicMarket": [
+            "basic_supply_download",
+            "basic_supply_draw",
+            "basic_download_pair",
+            "basic_upload_pair",
+            "basic_mobility_guard",
+            "basic_counter_guard",
+            "basic_forced_upgrade",
+            "basic_clean_choice"
+          ],
+          "currentAttack": "attack_07",
+          "attackDeck": [
+            "attack_01",
+            "attack_02"
+          ],
+          "log": [
+            "改写演示：先打开升级预览。"
+          ]
+        },
+        "waitText": "点击“升级预览”。",
+        "waitFor": {
+          "type": "ui",
+          "event": "TOGGLE_UPGRADE_PREVIEW"
+        }
+      },
+      {
+        "id": "play_upgrade_card",
+        "title": "强制改写",
+        "text": "打出“强制改写”。它会让你选择 1 张手牌升级；升级后的牌会留在原位置，也就是仍在手里。",
+        "focus": "hand",
+        "placement": "left",
+        "waitText": "拖出并打出“强制改写”。",
+        "waitFor": {
+          "type": "command",
+          "command": "PLAY_CARD",
+          "cardId": "basic_forced_upgrade"
+        }
+      },
+      {
+        "id": "choose_upgrade_target",
+        "title": "选中目标",
+        "text": "选择手牌或市场牌时，不会另开窗口。直接点那张牌，再点中央确认条。",
+        "focus": "choice",
+        "placement": "right",
+        "waitText": "选择 1 张手牌并确认。",
+        "waitFor": {
+          "type": "command",
+          "command": "RESOLVE_CHOICE",
+          "choiceEffect": "upgradeCards"
+        }
+      },
+      {
+        "id": "play_trash_card",
+        "title": "空白归档",
+        "text": "打出“空白归档”。删牌能让循环变轻，但不是所有痕迹都能抹掉：受伤和流血不能被删除。",
+        "focus": "hand",
+        "placement": "left",
+        "waitText": "拖出并打出“空白归档”。",
+        "waitFor": {
+          "type": "command",
+          "command": "PLAY_CARD",
+          "cardId": "basic_clean_choice"
+        }
+      },
+      {
+        "id": "choose_trash_target",
+        "title": "跨区选择",
+        "text": "当目标可能来自手牌和弃牌堆，系统会打开中央窗口。选一张能删除的牌并确认。",
+        "focus": "choice",
+        "placement": "right",
+        "waitText": "选择 1 张可删除牌并确认。",
+        "waitFor": {
+          "type": "command",
+          "command": "RESOLVE_CHOICE",
+          "choiceEffect": "trashCards"
+        }
+      },
+      {
+        "id": "keywords_setup",
+        "title": "第五章：代价",
+        "text": "有些工具不是单纯给数值，而是改变这一轮的呼吸。保留会留下，全力会占用本回合的爆发位，补给可以抵消一次全力。",
+        "focus": "hand",
+        "placement": "left",
+        "setup": {
+          "reset": true,
+          "difficulty": "easy",
+          "characterId": "character_stun_cycle",
+          "turn": 5,
+          "armor": 12,
+          "baseArmor": 13,
+          "decay": 1,
+          "resources": {
+            "download": 1,
+            "upload": 16,
+            "block": 0,
+            "mobility": 0,
+            "counter": 0
+          },
+          "zones": {
+            "hand": [
+              "basic_supply_download",
+              "up_download_or_upload",
+              "up_all_out_download",
+              "up_retained_guard",
+              {
+                "id": "up_download_to_mobility",
+                "upgraded": true
+              }
+            ],
+            "drawPile": [
+              "start_download_seed",
+              "start_guard_cache"
+            ],
+            "discardPile": []
+          },
+          "upMarket": [
+            "up_supply_cache",
+            "up_big_all_out_upload",
+            "up_counter_to_upload",
+            "up_decay_supply"
+          ],
+          "basicMarket": [
+            "basic_supply_download",
+            "basic_supply_draw",
+            "basic_download_pair",
+            "basic_upload_pair",
+            "basic_mobility_guard",
+            "basic_counter_guard",
+            "basic_forced_upgrade",
+            "basic_clean_choice"
+          ],
+          "currentAttack": "attack_10",
+          "attackDeck": [
+            "attack_12",
+            "attack_13"
+          ],
+          "log": [
+            "代价演示：先打出补给，再尝试全力。"
+          ]
+        },
+        "waitText": "先打出“备用协议”（补给）。",
+        "waitFor": {
+          "type": "command",
+          "command": "PLAY_CARD",
+          "cardId": "basic_supply_download"
+        }
+      },
+      {
+        "id": "play_full_power",
+        "title": "全力与补给",
+        "text": "补给像预留的缓冲。现在打出任意一张全力牌；这次全力会被补给抵消，之后仍可尝试另一张全力。",
+        "focus": "hand",
+        "placement": "left",
+        "waitText": "打出“双向输出回路”或“破限装填”。",
+        "waitFor": {
+          "type": "command",
+          "command": "PLAY_CARD",
+          "cardIds": [
+            "up_download_or_upload",
+            "up_all_out_download"
+          ]
+        }
+      },
+      {
+        "id": "play_conversion_card",
+        "title": "转换回路",
+        "text": "带播放/快进符号的效果会在右侧生成转换按钮。打出升级的“轨迹改写”，让下载临时转向机动。",
+        "focus": "hand",
+        "placement": "left",
+        "waitText": "打出“轨迹改写+”。",
+        "waitFor": {
+          "type": "command",
+          "command": "PLAY_CARD",
+          "cardId": "up_download_to_mobility"
+        }
+      },
+      {
+        "id": "use_conversion",
+        "title": "手动转换",
+        "text": "转换按钮会标明限一次或不限次。现在点击它，把 1 点下载转成 1 点机动。",
+        "focus": "actions",
+        "placement": "left",
+        "waitText": "点击转换按钮。",
+        "waitFor": {
+          "type": "command",
+          "command": "CONVERT_RESOURCE"
+        }
+      },
+      {
+        "id": "retain_end_turn",
+        "title": "留在手中",
+        "text": "保留牌不会在回合结束时被丢掉。结束回合后，观察它怎样留在手里，像一件没收回的工具。",
+        "focus": "actions",
+        "placement": "left",
+        "waitText": "点击结束回合。",
+        "waitFor": {
+          "type": "command",
+          "command": "END_TURN"
+        }
+      },
+      {
+        "id": "status_setup",
+        "title": "第六章：残留",
+        "text": "最后看状态牌。晕眩会在回合结束时散去；受伤会留在牌组里，但还能撑成防护；流血更重，不能防护，也不能删除。",
+        "focus": "hand",
+        "placement": "left",
+        "setup": {
+          "reset": true,
+          "difficulty": "easy",
+          "characterId": "character_stun_cycle",
+          "turn": 6,
+          "armor": 9,
+          "baseArmor": 13,
+          "decay": 3,
+          "lifeLoss": 1,
+          "resources": {
+            "download": 0,
+            "upload": 63,
+            "block": 0,
+            "mobility": 1,
+            "counter": 1
+          },
+          "zones": {
+            "hand": [
+              {
+                "id": "status_stun",
+                "upgraded": true
+              },
+              "status_wound",
+              "status_bleed",
+              "basic_upload_pair",
+              "up_balanced_upload"
+            ],
+            "drawPile": [
+              "start_download_seed",
+              "start_guard_cache"
+            ],
+            "discardPile": []
+          },
+          "upMarket": [
+            "up_huge_upload",
+            "up_big_all_out_upload",
+            "up_retained_upload",
+            "up_supply_upload_cycle"
+          ],
+          "basicMarket": [
+            "basic_supply_download",
+            "basic_supply_draw",
+            "basic_download_pair",
+            "basic_upload_pair",
+            "basic_large_upload",
+            "basic_mobility_guard",
+            "basic_counter_guard"
+          ],
+          "currentAttack": "attack_14",
+          "attackDeck": [
+            "attack_01"
+          ],
+          "log": [
+            "残留演示：升级晕眩在回合结束移除时会获得上传。"
+          ]
+        },
+        "actions": [
+          {
+            "label": "继续",
+            "advance": true
+          }
+        ]
+      },
+      {
+        "id": "win_by_upload",
+        "title": "完成上传",
+        "text": "信号已经接近终点。打出上传牌推进最后一段；只要进度填满，这场抢修就算抵达。",
+        "focus": "hand",
+        "placement": "left",
+        "waitText": "打出“观测日志”或“误差归档”。",
+        "waitFor": {
+          "type": "command",
+          "command": "PLAY_CARD",
+          "cardIds": [
+            "basic_upload_pair",
+            "up_balanced_upload"
+          ]
+        }
+      },
+      {
+        "id": "finish",
+        "title": "教程完成",
+        "text": "你已经穿过完整链路：接入工具、购买装备、承受威胁、补起防线、让牌堆循环、改写或归档旧牌，最后带着残留完成上传。",
+        "focus": "log",
+        "placement": "right",
+        "complete": true,
+        "actions": [
+          {
+            "label": "留在当前局面",
+            "complete": true
+          },
+          {
+            "label": "返回主菜单",
+            "exit": true
+          }
+        ]
+      }
+    ]
+  }
+]

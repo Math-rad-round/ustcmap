@@ -1,0 +1,348 @@
+[
+  {
+    "id": "character_wound_draw",
+    "name": "破损观测体",
+    "sourceLine": 5,
+    "type": "character",
+    "setup": [
+      {
+        "type": "setArmor",
+        "amount": 11
+      },
+      {
+        "type": "addCard",
+        "zone": "drawPile",
+        "cardId": "status_wound",
+        "amount": 2
+      }
+    ],
+    "passives": [
+      {
+        "type": "extraHandDrawEachTurn",
+        "amount": 1
+      }
+    ],
+    "abilities": [],
+    "text": "起始永久护甲 -1，抽牌堆额外获得 2 受伤。每回合多抽 1 张牌。"
+  },
+  {
+    "id": "character_stun_cycle",
+    "name": "过载循环体",
+    "sourceLine": 6,
+    "type": "character",
+    "setup": [
+      {
+        "type": "addCard",
+        "zone": "discardPile",
+        "cardId": "status_stun",
+        "amount": 1
+      }
+    ],
+    "passives": [],
+    "abilities": [
+      {
+        "id": "stun_to_value",
+        "name": "过载回收",
+        "timing": "action",
+        "oncePerTurn": true,
+        "blockedByFullPower": true,
+        "cost": [],
+        "gain": {
+          "download": 1,
+          "upload": 1
+        },
+        "effects": [
+          {
+            "type": "gainStatus",
+            "cardId": "status_stun",
+            "amount": 1,
+            "to": "discard"
+          }
+        ]
+      }
+    ],
+    "text": "开局弃牌堆放入 1 晕眩。OPT：获得 1 下载、1 上传和 1 晕眩。"
+  },
+  {
+    "id": "character_decay_retainer",
+    "name": "崩坏留存体",
+    "sourceLine": 7,
+    "type": "character",
+    "setup": [
+      {
+        "type": "addDecay",
+        "amount": 1
+      }
+    ],
+    "passives": [
+      {
+        "type": "retainHandCardEachTurn",
+        "amount": 1
+      }
+    ],
+    "abilities": [],
+    "text": "开局获得 1 衰减。你每回合可以保留 1 张手牌。"
+  },
+  {
+    "id": "character_decay_mobility",
+    "name": "偏移演算体",
+    "sourceLine": 8,
+    "type": "character",
+    "setup": [
+      {
+        "type": "addDecay",
+        "amount": 1
+      },
+      {
+        "type": "addCard",
+        "zone": "discardPile",
+        "cardId": "status_stun",
+        "amount": 1
+      }
+    ],
+    "passives": [],
+    "abilities": [
+      {
+        "id": "download_to_mobility",
+        "name": "下载转向",
+        "timing": "action",
+        "oncePerTurn": true,
+        "blockedByFullPower": true,
+        "cost": [
+          {
+            "type": "payResource",
+            "resource": "download",
+            "amount": 1
+          }
+        ],
+        "gain": {
+          "mobility": 1
+        },
+        "effects": []
+      }
+    ],
+    "text": "开局获得 1 衰减，弃牌堆放入 1 晕眩。OPT：将 1 下载改为 1 机动。"
+  },
+  {
+    "id": "character_stun_burst",
+    "name": "过载爆发体",
+    "sourceLine": 9,
+    "type": "character",
+    "setup": [
+      {
+        "type": "addCard",
+        "zone": "discardPile",
+        "cardId": "status_stun",
+        "amount": 4
+      }
+    ],
+    "passives": [],
+    "abilities": [
+      {
+        "id": "all_out_download",
+        "name": "全力装填",
+        "timing": "action",
+        "oncePerTurn": true,
+        "blockedByFullPower": true,
+        "keywords": ["fullPower"],
+        "cost": [],
+        "gain": {
+          "download": 1
+        },
+        "effects": [
+          {
+            "type": "triggerFullPower"
+          }
+        ]
+      }
+    ],
+    "text": "开局弃牌堆放入 4 晕眩。OPT：全力，获得 1 下载。"
+  },
+  {
+    "id": "character_attack_scout",
+    "name": "威胁预判体",
+    "sourceLine": 10,
+    "type": "character",
+    "setup": [
+      {
+        "type": "setLifeLoss",
+        "amount": 1,
+        "skipLifeLossEffects": true
+      },
+      {
+        "type": "setArmor",
+        "amount": 11
+      },
+      {
+        "type": "skipThreatAttackOnTurn",
+        "turn": 1
+      },
+      {
+        "type": "skipDecayOnTurn",
+        "turn": 1
+      }
+    ],
+    "passives": [
+      {
+        "type": "peekNextAttackCard",
+        "amount": 1
+      }
+    ],
+    "abilities": [],
+    "text": "开局已损失 1 生命且不触发生命损失效果，起始护甲为 11。第一回合不攻击且没有衰减。你始终可以看到下一张攻击牌。"
+  },
+  {
+    "id": "character_high_pressure",
+    "name": "休比：心之上传",
+    "sourceLine": 13,
+    "type": "character",
+    "unlock": {
+      "type": "completeDifferentCharacters",
+      "count": 2,
+      "exclude": ["character_high_pressure", "character_fast_decay_tutor"],
+      "hidden": true
+    },
+    "setup": [
+      {
+        "type": "removeCard",
+        "zone": "drawPile",
+        "cardId": "start_download_seed",
+        "amount": 1
+      },
+      {
+        "type": "removeCard",
+        "zone": "drawPile",
+        "cardId": "start_retained_guard",
+        "amount": 1
+      },
+      {
+        "type": "addCard",
+        "zone": "drawPile",
+        "cardId": "basic_download_pair",
+        "amount": 1
+      },
+      {
+        "type": "addCard",
+        "zone": "drawPile",
+        "cardId": "basic_scoring_shelter",
+        "amount": 1
+      },
+      {
+        "type": "removeCardFromBasicMarket",
+        "cardId": "basic_download_pair",
+        "amount": 1
+      },
+      {
+        "type": "removeCardFromBasicMarket",
+        "cardId": "basic_scoring_shelter",
+        "amount": 1
+      }
+    ],
+    "passives": [
+      {
+        "type": "loseOnUnpreventedRatingPenaltyAtLifeLoss",
+        "lifeLoss": 3
+      }
+    ],
+    "abilities": [
+      {
+        "id": "mandatory_upload_tax",
+        "name": "戒指协议",
+        "timing": "actionOrBeforeThreatAttack",
+        "oncePerTurn": true,
+        "blockedByFullPower": false,
+        "mandatory": true,
+        "mandatoryTiming": "beforeThreatAttack",
+        "options": [
+          {
+            "id": "pay_download",
+            "name": "支付算力",
+            "cost": [
+              {
+                "type": "payResource",
+                "resource": "download",
+                "amount": 1
+              }
+            ],
+            "gain": {
+              "upload": 1
+            },
+            "effects": []
+          },
+          {
+            "id": "take_stun",
+            "name": "承受过载",
+            "cost": [],
+            "gain": {
+              "upload": 1
+            },
+            "effects": [
+              {
+                "type": "gainStatus",
+                "cardId": "status_stun",
+                "amount": 1,
+                "to": "discard"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "text": "若触发第 3 点生命损失的评分降低且未被评分庇护抵消，立刻落败。起始牌组用 1 张下载包和 1 张评分庇护替换 1 张下载种子和 1 张驻留防护，并从基础购买池移除这两张牌。每回合必须支付 1 下载或获得 1 晕眩，然后获得 1 上传；可以提前使用，若未使用则在攻击结算前强制结算。"
+  },
+  {
+    "id": "character_fast_decay_tutor",
+    "name": "连接体：集群检索",
+    "sourceLine": 18,
+    "type": "character",
+    "unlock": {
+      "type": "completeCharacter",
+      "characterId": "character_high_pressure",
+      "hidden": true
+    },
+    "setup": [
+      {
+        "type": "addCard",
+        "zone": "initialHand",
+        "cardId": "status_wound",
+        "amount": 1
+      },
+      {
+        "type": "addCard",
+        "zone": "initialHand",
+        "cardId": "status_stun",
+        "amount": 1
+      }
+    ],
+    "passives": [
+      {
+        "type": "setDecayPerArmorLoss",
+        "amount": 3
+      }
+    ],
+    "abilities": [
+      {
+        "id": "discard_to_tutor",
+        "name": "集群检索",
+        "timing": "action",
+        "oncePerTurn": true,
+        "blockedByFullPower": true,
+        "cost": [
+          {
+            "type": "discardFromHand",
+            "amount": 1
+          }
+        ],
+        "gain": {},
+        "effects": [
+          {
+            "type": "searchDrawPileToHand",
+            "amount": 1,
+            "shuffleAfter": true
+          }
+        ]
+      }
+    ],
+    "text": "初始手牌额外有 1 受伤和 1 晕眩。每 3 衰减减少 1 点永久防护。OPT：弃 1 张牌，从抽牌堆搜索 1 张牌加入手牌，然后洗牌。"
+  }
+]

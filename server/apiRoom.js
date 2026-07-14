@@ -2,6 +2,7 @@
 const express = require("express");
 const router = express.Router();
 const path = require("path");
+const { safeResolve } = require("./safePath");
 const databaseName = "cluster0";
 const options = { useNewUrlParser: true, useUnifiedTopology: true, dbName: databaseName};
 const publicPath = path.resolve(__dirname, "..", "public");
@@ -28,9 +29,12 @@ router.get('/*/:name', (req, res) => {
   let filePath;
   if(req.params[0]!=undefined){
   const dirs = req.params[0].split('/').filter(Boolean);
-    filePath = path.join(publicPath, ...dirs, req.params.name);
+    filePath = safeResolve(publicPath, ...dirs, req.params.name);
   }else{
-    filePath = path.join(publicPath, req.params.name);
+    filePath = safeResolve(publicPath, req.params.name);
+  }
+  if (!filePath) {
+    return res.status(403).json({ error: 'Invalid path' });
   }
   console.log(filePath);
   res.sendFile(filePath, options, (err) => {

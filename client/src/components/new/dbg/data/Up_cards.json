@@ -1,0 +1,1763 @@
+[
+  {
+    "id": "up_stun_download",
+    "name": "强制载入",
+    "sourceLine": 25,
+    "type": "equipment",
+    "tier": "up",
+    "copies": 1,
+    "cost": 3,
+    "tags": ["download", "stun"],
+    "canDiscardForBlock": true,
+    "base": {
+      "keywords": [],
+      "gain": {
+        "download": 3
+      },
+      "modes": [],
+      "effects": [
+        {
+          "type": "gainStatus",
+          "cardId": "status_stun",
+          "amount": 1,
+          "to": "discard"
+        }
+      ]
+    },
+    "upgrade": {
+      "mode": "add",
+      "keywords": [],
+      "gain": {
+        "download": 1
+      },
+      "modes": [],
+      "effects": []
+    },
+    "text": "获得 3 下载，获得 1 晕眩到弃牌堆。升级后额外获得 1 下载。"
+  },
+  {
+    "id": "up_self_cycle_download",
+    "name": "自律迭代",
+    "sourceLine": 26,
+    "type": "equipment",
+    "tier": "up",
+    "copies": 1,
+    "cost": 4,
+    "tags": ["download", "selfUpgrade", "selfDowngrade"],
+    "canDiscardForBlock": true,
+    "base": {
+      "keywords": [],
+      "gain": {
+        "download": 1
+      },
+      "modes": [],
+      "effects": [
+        {
+          "type": "upgradeSelf"
+        }
+      ]
+    },
+    "upgrade": {
+      "mode": "replace",
+      "keywords": [],
+      "gain": {
+        "download": 4
+      },
+      "modes": [],
+      "effects": [
+        {
+          "type": "downgradeSelf"
+        }
+      ]
+    },
+    "text": "获得 1 下载，升级自身。升级后改为获得 4 下载并降级自身。"
+  },
+  {
+    "id": "up_market_discard",
+    "name": "战术列表刷新",
+    "sourceLine": 27,
+    "type": "equipment",
+    "tier": "up",
+    "copies": 1,
+    "cost": 4,
+    "tags": ["download", "market"],
+    "canDiscardForBlock": true,
+    "base": {
+      "keywords": [],
+      "gain": {
+        "download": 2
+      },
+      "modes": [],
+      "effects": [
+        {
+          "type": "discardMarketCard",
+          "amount": 1,
+          "optional": true
+        }
+      ]
+    },
+    "upgrade": {
+      "mode": "replace",
+      "keywords": [],
+      "gain": {
+        "download": 3
+      },
+      "modes": [],
+      "effects": [
+        {
+          "type": "discardMarketCard",
+          "amount": "any",
+          "optional": true
+        }
+      ]
+    },
+    "text": "获得 2 下载，可以弃置 1 张市场牌。升级后获得 3 下载，可以弃置任意数量市场牌。"
+  },
+  {
+    "id": "up_armor_to_download",
+    "name": "装甲换流",
+    "sourceLine": 28,
+    "type": "equipment",
+    "tier": "up",
+    "copies": 1,
+    "cost": 5,
+    "tags": ["download", "armor", "retain"],
+    "canDiscardForBlock": true,
+    "base": {
+      "keywords": [],
+      "gain": {
+        "download": 2
+      },
+      "modes": [],
+      "effects": [
+        {
+          "type": "reduceArmorForGain",
+          "armor": 1,
+          "gain": {
+            "download": 1
+          },
+          "maxTimes": 1,
+          "canOverdrawArmor": true
+        }
+      ]
+    },
+    "upgrade": {
+      "mode": "replace",
+      "keywords": ["retain"],
+      "gain": {
+        "download": 2
+      },
+      "modes": [],
+      "effects": [
+        {
+          "type": "reduceArmorForGain",
+          "armor": 1,
+          "gain": {
+            "download": 1
+          },
+          "maxTimes": "any",
+          "cannotReduceBelowZeroAfterPermanentArmor": true
+        }
+      ]
+    },
+    "text": "获得 2 下载，可以降低 1 防护获得 1 下载。升级后保留，可以任意次数降低防护获得下载。"
+  },
+  {
+    "id": "up_download_draw",
+    "name": "接口抽取",
+    "sourceLine": 29,
+    "type": "equipment",
+    "tier": "up",
+    "copies": 1,
+    "cost": 4,
+    "tags": ["download", "draw"],
+    "canDiscardForBlock": true,
+    "base": {
+      "keywords": [],
+      "gain": {
+        "download": 1,
+        "draw": 1
+      },
+      "modes": [],
+      "effects": []
+    },
+    "upgrade": {
+      "mode": "add",
+      "keywords": [],
+      "gain": {
+        "download": 1
+      },
+      "modes": [],
+      "effects": []
+    },
+    "text": "获得 1 下载，抽 1 张牌。升级后额外获得 1 下载。"
+  },
+  {
+    "id": "up_first_buy_upgrade",
+    "name": "首件改修",
+    "sourceLine": 30,
+    "type": "equipment",
+    "tier": "up",
+    "copies": 1,
+    "cost": 5,
+    "tags": ["download", "buy", "fullPower"],
+    "canDiscardForBlock": true,
+    "base": {
+      "keywords": ["fullPower"],
+      "gain": {
+        "download": 1
+      },
+      "modes": [],
+      "effects": [
+        {
+          "type": "firstBuyThisTurnUpgraded"
+        }
+      ]
+    },
+    "upgrade": {
+      "mode": "add",
+      "keywords": ["removeFullPower"],
+      "gain": {},
+      "modes": [],
+      "effects": [
+        {
+          "type": "firstBuyThisTurnMayGoToDeckTop"
+        }
+      ]
+    },
+    "text": "全力。获得 1 下载，本回合买的第一张牌被升级。升级后移除全力，且第一张购买牌可以放到牌堆顶。"
+  },
+  {
+    "id": "up_upgrade_burst",
+    "name": "适配爆发",
+    "sourceLine": 31,
+    "type": "equipment",
+    "tier": "up",
+    "copies": 1,
+    "cost": 4,
+    "tags": ["upgrade", "selfUpgrade"],
+    "canDiscardForBlock": true,
+    "base": {
+      "keywords": [],
+      "gain": {
+        "upgrade": 1
+      },
+      "modes": [],
+      "effects": [
+        {
+          "type": "upgradeSelf"
+        }
+      ]
+    },
+    "upgrade": {
+      "mode": "replace",
+      "keywords": ["fullPower", "retain"],
+      "gain": {
+        "upgrade": 2
+      },
+      "modes": [],
+      "effects": [
+        {
+          "type": "trashSelf"
+        }
+      ]
+    },
+    "text": "升级 1 张手牌，升级自身。升级后全力、保留，升级 2 张手牌并移除自身。"
+  },
+  {
+    "id": "up_trash_burst",
+    "name": "冗余切除",
+    "sourceLine": 32,
+    "type": "equipment",
+    "tier": "up",
+    "copies": 1,
+    "cost": 4,
+    "tags": ["trash", "defense", "selfUpgrade"],
+    "canDiscardForBlock": true,
+    "base": {
+      "keywords": [],
+      "gain": {
+        "trash": 1,
+        "block": 1
+      },
+      "modes": [],
+      "effects": [
+        {
+          "type": "upgradeSelf"
+        }
+      ]
+    },
+    "upgrade": {
+      "mode": "replace",
+      "keywords": ["fullPower", "retain"],
+      "gain": {
+        "trash": 2
+      },
+      "modes": [],
+      "effects": [
+        {
+          "type": "trashSelf"
+        }
+      ]
+    },
+    "text": "删除 1 张牌，获得 1 防护，升级自身。升级后全力、保留，删除 2 张牌并移除自身。"
+  },
+  {
+    "id": "up_filter_hand",
+    "name": "记忆筛选",
+    "sourceLine": 33,
+    "type": "equipment",
+    "tier": "up",
+    "copies": 1,
+    "cost": 2,
+    "tags": ["discard", "draw", "upload"],
+    "canDiscardForBlock": true,
+    "base": {
+      "keywords": [],
+      "gain": {},
+      "modes": [],
+      "effects": [
+        {
+          "type": "discardAnyCardsThenDraw",
+          "drawPerDiscard": 1
+        }
+      ]
+    },
+    "upgrade": {
+      "mode": "add",
+      "keywords": [],
+      "gain": {
+        "upload": 1
+      },
+      "modes": [],
+      "effects": []
+    },
+    "text": "弃任意张手牌，抽等量牌。升级后额外获得 1 上传。"
+  },
+  {
+    "id": "up_restack_played",
+    "name": "回环调度",
+    "sourceLine": 35,
+    "type": "equipment",
+    "tier": "up",
+    "copies": 1,
+    "cost": 4,
+    "tags": ["draw", "deckTop"],
+    "canDiscardForBlock": true,
+    "base": {
+      "keywords": [],
+      "gain": {
+        "draw": 1
+      },
+      "modes": [],
+      "effects": [
+        {
+          "type": "returnPlayedCardToDeckTopAtEndTurn",
+          "amount": 1
+        }
+      ]
+    },
+    "upgrade": {
+      "mode": "add",
+      "keywords": [],
+      "gain": {
+        "download": 1
+      },
+      "modes": [],
+      "effects": []
+    },
+    "text": "抽 1 张牌。回合结束时，将一张打出牌放回牌堆顶。升级后额外获得 1 下载。"
+  },
+  {
+    "id": "up_draw_two",
+    "name": "并行抽取",
+    "sourceLine": 36,
+    "type": "equipment",
+    "tier": "up",
+    "copies": 1,
+    "cost": 5,
+    "tags": ["draw", "download"],
+    "canDiscardForBlock": true,
+    "base": {
+      "keywords": [],
+      "gain": {
+        "draw": 2
+      },
+      "modes": [],
+      "effects": []
+    },
+    "upgrade": {
+      "mode": "add",
+      "keywords": [],
+      "gain": {
+        "download": 1
+      },
+      "modes": [],
+      "effects": []
+    },
+    "text": "抽 2 张牌。升级后额外获得 1 下载。"
+  },
+  {
+    "id": "up_overdraw_armor",
+    "name": "超频抽取",
+    "sourceLine": 37,
+    "type": "equipment",
+    "tier": "up",
+    "copies": 1,
+    "cost": 6,
+    "tags": ["draw", "armor"],
+    "canDiscardForBlock": true,
+    "base": {
+      "keywords": [],
+      "gain": {
+        "draw": 3
+      },
+      "modes": [],
+      "effects": [
+        {
+          "type": "reduceArmor",
+          "amount": 2
+        }
+      ]
+    },
+    "upgrade": {
+      "mode": "add",
+      "keywords": [],
+      "gain": {},
+      "modes": [],
+      "effects": [
+        {
+          "type": "reduceSelfArmorLoss",
+          "amount": 1
+        }
+      ]
+    },
+    "text": "抽 3 张牌，降低 2 防护。升级后降低防护量减少 1。"
+  },
+  {
+    "id": "up_burst_choice",
+    "name": "战术分歧",
+    "sourceLine": 38,
+    "type": "equipment",
+    "tier": "up",
+    "copies": 1,
+    "cost": 3,
+    "tags": ["draw", "download", "upload", "choice", "fullPower"],
+    "canDiscardForBlock": true,
+    "base": {
+      "keywords": ["fullPower"],
+      "gain": {},
+      "modes": [
+        {
+          "id": "draw",
+          "name": "抽取",
+          "gain": {
+            "draw": 2
+          },
+          "effects": []
+        },
+        {
+          "id": "download",
+          "name": "下载",
+          "gain": {
+            "download": 2
+          },
+          "effects": []
+        }
+      ],
+      "effects": []
+    },
+    "upgrade": {
+      "mode": "replace",
+      "keywords": ["fullPower"],
+      "gain": {
+        "upload": 1
+      },
+      "modes": [
+        {
+          "id": "draw",
+          "name": "抽取",
+          "gain": {
+            "draw": 2
+          },
+          "effects": []
+        },
+        {
+          "id": "upload",
+          "name": "上传",
+          "gain": {
+            "upload": 2
+          },
+          "effects": []
+        }
+      ],
+      "effects": []
+    },
+    "text": "全力。选择抽 2 张牌或获得 2 下载。升级后先获得 1 上传，再选择抽 2 张牌或获得 2 上传。"
+  },
+  {
+    "id": "up_retained_guard",
+    "name": "驻留护幕",
+    "sourceLine": 40,
+    "type": "equipment",
+    "tier": "up",
+    "copies": 1,
+    "cost": 2,
+    "tags": ["defense", "retain"],
+    "canDiscardForBlock": true,
+    "base": {
+      "keywords": ["retain"],
+      "gain": {
+        "block": 2
+      },
+      "modes": [],
+      "effects": []
+    },
+    "upgrade": {
+      "mode": "add",
+      "keywords": [],
+      "gain": {
+        "block": 1
+      },
+      "modes": [],
+      "effects": []
+    },
+    "text": "保留。获得 2 防护。升级后额外获得 1 防护。"
+  },
+  {
+    "id": "up_guard_or_download",
+    "name": "护幕分流",
+    "sourceLine": 41,
+    "type": "equipment",
+    "tier": "up",
+    "copies": 1,
+    "cost": 4,
+    "tags": ["defense", "download", "choice", "retain"],
+    "canDiscardForBlock": true,
+    "base": {
+      "keywords": [],
+      "gain": {},
+      "modes": [
+        {
+          "id": "block",
+          "name": "护幕",
+          "gain": {
+            "block": 2
+          },
+          "effects": []
+        },
+        {
+          "id": "download",
+          "name": "下载",
+          "gain": {
+            "download": 2
+          },
+          "effects": []
+        }
+      ],
+      "effects": []
+    },
+    "upgrade": {
+      "mode": "add",
+      "keywords": ["retain"],
+      "gain": {},
+      "modes": [],
+      "effects": [
+        {
+          "type": "increaseChosenModeGain",
+          "resources": ["block", "download"],
+          "amount": 1
+        }
+      ]
+    },
+    "text": "选择获得 2 防护或 2 下载。升级后保留，且所选项多 1。"
+  },
+  {
+    "id": "up_double_block",
+    "name": "防壁倍化",
+    "sourceLine": 42,
+    "type": "equipment",
+    "tier": "up",
+    "copies": 1,
+    "cost": 5,
+    "tags": ["defense", "fullPower", "retain"],
+    "canDiscardForBlock": true,
+    "base": {
+      "keywords": ["fullPower"],
+      "gain": {
+        "block": 2
+      },
+      "modes": [],
+      "effects": [
+        {
+          "type": "doubleCurrentBlock",
+          "excludePermanentBlock": true,
+          "beforeGain": true
+        }
+      ]
+    },
+    "upgrade": {
+      "mode": "add",
+      "keywords": ["retain"],
+      "gain": {
+        "block": 1
+      },
+      "modes": [],
+      "effects": []
+    },
+    "text": "全力。先翻倍当前非永久防护，再获得 2 防护。升级后额外获得 1 防护且保留。"
+  },
+  {
+    "id": "up_counter_stun_burst",
+    "name": "反制过载",
+    "sourceLine": 43,
+    "type": "equipment",
+    "tier": "up",
+    "copies": 1,
+    "cost": 3,
+    "tags": ["counter", "defense", "stun", "fullPower", "retain"],
+    "canDiscardForBlock": true,
+    "base": {
+      "keywords": ["fullPower"],
+      "gain": {
+        "counter": 2,
+        "block": 1
+      },
+      "modes": [],
+      "effects": [
+        {
+          "type": "gainStatus",
+          "cardId": "status_stun",
+          "amount": 1,
+          "to": "discard"
+        }
+      ]
+    },
+    "upgrade": {
+      "mode": "add",
+      "keywords": ["retain"],
+      "gain": {
+        "block": 1
+      },
+      "modes": [],
+      "effects": [
+        {
+          "type": "spendResourceToPutSelfOnDeckTop",
+          "resource": "download",
+          "amount": 1,
+          "optional": true
+        }
+      ]
+    },
+    "text": "全力。获得 2 反击和 1 防护，获得 1 晕眩。升级后额外获得 1 防护、保留，且可花费 1 下载将本牌放回牌堆顶。"
+  },
+  {
+    "id": "up_counter_protocol",
+    "name": "反制协议",
+    "sourceLine": 44,
+    "type": "equipment",
+    "tier": "up",
+    "copies": 1,
+    "cost": 4,
+    "tags": ["counter", "defense", "selfUpgrade", "selfDowngrade", "choice", "supply"],
+    "canDiscardForBlock": true,
+    "base": {
+      "keywords": ["supply"],
+      "gain": {
+        "counter": 1
+      },
+      "modes": [],
+      "effects": [
+        {
+          "type": "upgradeSelf"
+        }
+      ]
+    },
+    "upgrade": {
+      "mode": "replace",
+      "keywords": [],
+      "gain": {},
+      "modes": [
+        {
+          "id": "guarded_counter",
+          "name": "稳态反制",
+          "gain": {
+            "counter": 1,
+            "block": 1
+          },
+          "effects": []
+        },
+        {
+          "id": "over_counter",
+          "name": "过载反制",
+          "keywords": ["fullPower"],
+          "gain": {
+            "counter": 3
+          },
+          "effects": [
+            {
+              "type": "downgradeSelf"
+            }
+          ]
+        }
+      ],
+      "effects": []
+    },
+    "text": "补给。获得 1 反击，升级自身。升级后选择 1 反击 1 防护，或 3 反击并降级自身、全力。"
+  },
+  {
+    "id": "up_counter_draw",
+    "name": "反制抽取",
+    "sourceLine": 45,
+    "type": "equipment",
+    "tier": "up",
+    "copies": 1,
+    "cost": 5,
+    "tags": ["counter", "draw", "upload"],
+    "canDiscardForBlock": true,
+    "base": {
+      "keywords": [],
+      "gain": {
+        "counter": 1,
+        "draw": 1
+      },
+      "modes": [],
+      "effects": []
+    },
+    "upgrade": {
+      "mode": "add",
+      "keywords": [],
+      "gain": {
+        "upload": 1
+      },
+      "modes": [],
+      "effects": []
+    },
+    "text": "获得 1 反击，抽 1 张牌。升级后额外获得 1 上传。"
+  },
+  {
+    "id": "up_retained_mobility",
+    "name": "驻留滑走",
+    "sourceLine": 46,
+    "type": "equipment",
+    "tier": "up",
+    "copies": 1,
+    "cost": 3,
+    "tags": ["mobility", "retain", "fullPower"],
+    "canDiscardForBlock": true,
+    "base": {
+      "keywords": ["retain"],
+      "gain": {
+        "mobility": 1
+      },
+      "modes": [],
+      "effects": []
+    },
+    "upgrade": {
+      "mode": "add",
+      "keywords": ["fullPower"],
+      "gain": {
+        "mobility": 1,
+        "download": 1
+      },
+      "modes": [],
+      "effects": []
+    },
+    "text": "保留。获得 1 机动。升级后额外全力、1 机动和 1 下载。"
+  },
+  {
+    "id": "up_download_to_mobility",
+    "name": "轨迹改写",
+    "sourceLine": 47,
+    "type": "equipment",
+    "tier": "up",
+    "copies": 1,
+    "cost": 4,
+    "tags": ["mobility", "conversion", "fullPower", "retain"],
+    "canDiscardForBlock": true,
+    "base": {
+      "keywords": ["fullPower"],
+      "gain": {
+        "mobility": 1
+      },
+      "modes": [],
+      "effects": [
+        {
+          "type": "enableResourceConversion",
+          "from": "download",
+          "to": "mobility",
+          "rate": 1,
+          "maxTimes": "any",
+          "duration": "turn"
+        }
+      ]
+    },
+    "upgrade": {
+      "mode": "add",
+      "keywords": ["retain"],
+      "gain": {
+        "block": 1
+      },
+      "modes": [],
+      "effects": []
+    },
+    "text": "全力。获得 1 机动，本回合可以将任意数量下载转化为机动。升级后保留并额外获得 1 防护。"
+  },
+  {
+    "id": "up_balanced_upload",
+    "name": "误差归档",
+    "sourceLine": 48,
+    "type": "equipment",
+    "tier": "up",
+    "copies": 1,
+    "cost": 6,
+    "tags": ["defense", "mobility", "upload"],
+    "canDiscardForBlock": true,
+    "base": {
+      "keywords": [],
+      "gain": {
+        "block": 1,
+        "mobility": 1,
+        "upload": 1
+      },
+      "modes": [],
+      "effects": []
+    },
+    "upgrade": {
+      "mode": "add",
+      "keywords": [],
+      "gain": {
+        "upload": 1
+      },
+      "modes": [],
+      "effects": []
+    },
+    "text": "获得 1 防护、1 机动、1 上传。升级后额外获得 1 上传。"
+  },
+  {
+    "id": "up_tri_mode_retainer",
+    "name": "三态驻留模块",
+    "sourceLine": 49,
+    "type": "equipment",
+    "tier": "up",
+    "copies": 1,
+    "cost": 5,
+    "tags": ["choice", "retain", "defense", "mobility", "counter"],
+    "canDiscardForBlock": true,
+    "base": {
+      "keywords": ["retain"],
+      "gain": {},
+      "modes": [
+        {
+          "id": "block",
+          "name": "护幕",
+          "gain": {
+            "block": 2
+          },
+          "effects": []
+        },
+        {
+          "id": "mobility",
+          "name": "滑走",
+          "gain": {
+            "mobility": 1
+          },
+          "effects": []
+        },
+        {
+          "id": "counter",
+          "name": "反制",
+          "gain": {
+            "counter": 1
+          },
+          "effects": []
+        }
+      ],
+      "effects": []
+    },
+    "upgrade": {
+      "mode": "add",
+      "keywords": [],
+      "gain": {},
+      "modes": [],
+      "effects": [
+        {
+          "type": "increaseChosenModeGain",
+          "resources": ["block", "mobility", "counter"],
+          "amount": 1
+        }
+      ]
+    },
+    "text": "保留。选择获得 2 防护、1 机动或 1 反击。升级后所选项多 1。"
+  },
+  {
+    "id": "up_retained_upload",
+    "name": "残留记录",
+    "sourceLine": 51,
+    "type": "equipment",
+    "tier": "up",
+    "copies": 1,
+    "cost": 2,
+    "tags": ["upload", "retain", "supply", "selfDowngrade"],
+    "canDiscardForBlock": true,
+    "base": {
+      "keywords": ["retain"],
+      "gain": {
+        "upload": 1
+      },
+      "modes": [],
+      "effects": []
+    },
+    "upgrade": {
+      "mode": "replace",
+      "keywords": ["supply"],
+      "gain": {
+        "upload": 4
+      },
+      "modes": [],
+      "effects": [
+        {
+          "type": "downgradeSelf"
+        }
+      ]
+    },
+    "text": "保留。获得 1 上传。升级后改为补给，获得 4 上传并降级自身。"
+  },
+  {
+    "id": "up_download_or_upload",
+    "name": "双向输出回路",
+    "sourceLine": 52,
+    "type": "equipment",
+    "tier": "up",
+    "copies": 1,
+    "cost": 2,
+    "tags": ["download", "upload", "choice", "conversion", "fullPower"],
+    "canDiscardForBlock": true,
+    "base": {
+      "keywords": ["fullPower"],
+      "gain": {},
+      "modes": [
+        {
+          "id": "download",
+          "name": "下载",
+          "gain": {
+            "download": 2
+          },
+          "effects": []
+        },
+        {
+          "id": "upload",
+          "name": "上传",
+          "gain": {
+            "upload": 2
+          },
+          "effects": []
+        }
+      ],
+      "effects": []
+    },
+    "upgrade": {
+      "mode": "replace",
+      "keywords": ["fullPower"],
+      "gain": {
+        "download": 2
+      },
+      "modes": [],
+      "effects": [
+        {
+          "type": "enableResourceConversion",
+          "from": "download",
+          "to": "upload",
+          "rate": 1,
+          "maxTimes": "any",
+          "duration": "turn"
+        }
+      ]
+    },
+    "text": "全力。选择获得 2 下载或 2 上传。升级后获得 2 下载，本回合可将任意数量下载转化为上传。"
+  },
+  {
+    "id": "up_all_out_mix",
+    "name": "全力混合输出",
+    "sourceLine": 53,
+    "type": "equipment",
+    "tier": "up",
+    "copies": 1,
+    "cost": 4,
+    "tags": ["download", "upload", "defense", "fullPower"],
+    "canDiscardForBlock": true,
+    "base": {
+      "keywords": ["fullPower"],
+      "gain": {
+        "download": 1,
+        "upload": 1,
+        "block": 1
+      },
+      "modes": [],
+      "effects": []
+    },
+    "upgrade": {
+      "mode": "add",
+      "keywords": ["removeFullPower"],
+      "gain": {
+        "block": 1
+      },
+      "modes": [],
+      "effects": []
+    },
+    "text": "全力。获得 1 下载、1 上传、1 防护。升级后移除全力并额外获得 1 防护。"
+  },
+  {
+    "id": "up_supply_cache",
+    "name": "补给缓存栈",
+    "sourceLine": 54,
+    "type": "equipment",
+    "tier": "up",
+    "copies": 1,
+    "cost": 5,
+    "tags": ["download", "draw", "supply", "upload"],
+    "canDiscardForBlock": true,
+    "base": {
+      "keywords": ["supply"],
+      "gain": {
+        "download": 1,
+        "draw": 1
+      },
+      "modes": [],
+      "effects": []
+    },
+    "upgrade": {
+      "mode": "add",
+      "keywords": [],
+      "gain": {
+        "upload": 1
+      },
+      "modes": [],
+      "effects": []
+    },
+    "text": "补给。获得 1 下载，抽 1 张牌。升级后额外获得 1 上传。"
+  },
+  {
+    "id": "up_big_all_out_upload",
+    "name": "全域同步",
+    "sourceLine": 55,
+    "type": "equipment",
+    "tier": "up",
+    "copies": 1,
+    "cost": 8,
+    "tags": ["upload", "fullPower", "retain"],
+    "canDiscardForBlock": true,
+    "base": {
+      "keywords": ["fullPower"],
+      "gain": {
+        "upload": 4
+      },
+      "modes": [],
+      "effects": []
+    },
+    "upgrade": {
+      "mode": "add",
+      "keywords": ["retain"],
+      "gain": {
+        "upload": 1
+      },
+      "modes": [],
+      "effects": []
+    },
+    "text": "全力。获得 4 上传。升级后额外获得 1 上传且保留。"
+  },
+  {
+    "id": "up_discard_for_draw",
+    "name": "缓存重排",
+    "sourceLine": 57,
+    "type": "equipment",
+    "tier": "up",
+    "copies": 1,
+    "cost": 3,
+    "tags": ["discard", "draw"],
+    "canDiscardForBlock": true,
+    "base": {
+      "keywords": [],
+      "gain": {},
+      "modes": [],
+      "effects": [
+        {
+          "type": "discardCardsThenDraw",
+          "discard": 1,
+          "draw": 2
+        }
+      ]
+    },
+    "upgrade": {
+      "mode": "replace",
+      "keywords": [],
+      "gain": {
+        "draw": 1
+      },
+      "modes": [],
+      "effects": [
+        {
+          "type": "discardUpToThenDraw",
+          "maxDiscard": 3,
+          "drawPerDiscard": 1
+        }
+      ]
+    },
+    "text": "弃 1 张牌，抽 2 张。升级后先抽 1 张，然后可以弃至多 3 张牌并抽等量牌。"
+  },
+  {
+    "id": "up_stun_draw",
+    "name": "过载抽取",
+    "sourceLine": 58,
+    "type": "equipment",
+    "tier": "up",
+    "copies": 1,
+    "cost": 5,
+    "tags": ["stun", "draw"],
+    "canDiscardForBlock": true,
+    "base": {
+      "keywords": [],
+      "gain": {
+        "draw": 3
+      },
+      "modes": [],
+      "effects": [
+        {
+          "type": "gainStatus",
+          "cardId": "status_stun",
+          "amount": 1,
+          "to": "discard"
+        }
+      ]
+    },
+    "upgrade": {
+      "mode": "replace",
+      "keywords": [],
+      "gain": {
+        "draw": 5
+      },
+      "modes": [],
+      "effects": [
+        {
+          "type": "gainStatus",
+          "cardId": "status_stun",
+          "amount": 3,
+          "to": "discard"
+        }
+      ]
+    },
+    "text": "获得 1 晕眩，抽 3 张。升级后获得 3 晕眩，抽 5 张。"
+  },
+  {
+    "id": "up_all_out_draw",
+    "name": "全力抽取",
+    "sourceLine": 59,
+    "type": "equipment",
+    "tier": "up",
+    "copies": 1,
+    "cost": 5,
+    "tags": ["draw", "fullPower", "defense"],
+    "canDiscardForBlock": true,
+    "base": {
+      "keywords": ["fullPower"],
+      "gain": {
+        "draw": 3
+      },
+      "modes": [],
+      "effects": []
+    },
+    "upgrade": {
+      "mode": "add",
+      "keywords": [],
+      "gain": {
+        "block": 1
+      },
+      "modes": [],
+      "effects": []
+    },
+    "text": "全力。抽 3 张牌。升级后额外获得 1 防护。"
+  },
+  {
+    "id": "up_supply_overdraw",
+    "name": "补给超抽",
+    "sourceLine": 60,
+    "type": "equipment",
+    "tier": "up",
+    "copies": 1,
+    "cost": 4,
+    "tags": ["supply", "draw", "armor"],
+    "canDiscardForBlock": true,
+    "base": {
+      "keywords": ["supply"],
+      "gain": {
+        "draw": 2
+      },
+      "modes": [],
+      "effects": [
+        {
+          "type": "reduceArmor",
+          "amount": 2
+        }
+      ]
+    },
+    "upgrade": {
+      "mode": "add",
+      "keywords": [],
+      "gain": {},
+      "modes": [],
+      "effects": [
+        {
+          "type": "reduceSelfArmorLoss",
+          "amount": 1
+        }
+      ]
+    },
+    "text": "补给。抽 2 张牌，降低 2 防护。升级后降低防护量减少 1。"
+  },
+  {
+    "id": "up_trash_for_market",
+    "name": "拆解购置",
+    "sourceLine": 61,
+    "type": "equipment",
+    "tier": "up",
+    "copies": 1,
+    "cost": 4,
+    "tags": ["trash", "market", "freeBuy"],
+    "canDiscardForBlock": true,
+    "base": {
+      "keywords": [],
+      "gain": {},
+      "modes": [],
+      "effects": [
+        {
+          "type": "trashHandToGainMarketCard",
+          "costBonus": 2,
+          "preserveUpgradeState": true
+        }
+      ]
+    },
+    "upgrade": {
+      "mode": "add",
+      "keywords": [],
+      "gain": {},
+      "modes": [],
+      "effects": [
+        {
+          "type": "modifySelfEffect",
+          "targetType": "trashHandToGainMarketCard",
+          "changes": {
+            "costBonus": 3
+          }
+        }
+      ]
+    },
+    "text": "移除 1 张手牌，免费获得 1 张费用不超过被移除牌费用 +2 的市场牌，不改变升级状态。升级后改为 +3。"
+  },
+  {
+    "id": "up_self_exile_buy",
+    "name": "自毁购置",
+    "sourceLine": 62,
+    "type": "equipment",
+    "tier": "up",
+    "copies": 1,
+    "cost": 4,
+    "tags": ["freeBuy", "selfUpgrade", "trashSelf", "choice"],
+    "canDiscardForBlock": true,
+    "base": {
+      "keywords": [],
+      "gain": {},
+      "modes": [
+        {
+          "id": "free_buy",
+          "name": "免费购置",
+          "gain": {},
+          "effects": [
+            {
+              "type": "trashSelf"
+            },
+            {
+              "type": "freeBuy",
+              "maxCost": 5
+            }
+          ]
+        },
+        {
+          "id": "upgrade_self",
+          "name": "自我适配",
+          "gain": {},
+          "effects": [
+            {
+              "type": "upgradeSelf"
+            }
+          ]
+        }
+      ],
+      "effects": []
+    },
+    "upgrade": {
+      "mode": "replace",
+      "keywords": [],
+      "gain": {},
+      "modes": [],
+      "effects": [
+        {
+          "type": "trashSelf"
+        },
+        {
+          "type": "freeBuy",
+          "maxCost": 7
+        }
+      ]
+    },
+    "text": "选择移除自身并免费买 1 张费用不超过 5 的牌，或升级自身。升级后移除自身并免费买 1 张费用不超过 7 的牌。"
+  },
+  {
+    "id": "up_mobility_download",
+    "name": "折射装填",
+    "sourceLine": 64,
+    "type": "equipment",
+    "tier": "up",
+    "copies": 1,
+    "cost": 4,
+    "tags": ["mobility", "download"],
+    "canDiscardForBlock": true,
+    "base": {
+      "keywords": [],
+      "gain": {
+        "mobility": 1,
+        "download": 1
+      },
+      "modes": [],
+      "effects": []
+    },
+    "upgrade": {
+      "mode": "add",
+      "keywords": [],
+      "gain": {
+        "download": 1
+      },
+      "modes": [],
+      "effects": []
+    },
+    "text": "获得 1 机动和 1 下载。升级后额外获得 1 下载。"
+  },
+  {
+    "id": "up_counter_to_upload",
+    "name": "逆算归档",
+    "sourceLine": 65,
+    "type": "equipment",
+    "tier": "up",
+    "copies": 1,
+    "cost": 7,
+    "tags": ["counter", "upload", "conversion", "fullPower", "retain"],
+    "canDiscardForBlock": true,
+    "base": {
+      "keywords": ["fullPower"],
+      "gain": {
+        "counter": 3
+      },
+      "modes": [],
+      "effects": [
+        {
+          "type": "enableResourceConversion",
+          "from": "counter",
+          "to": "upload",
+          "rate": 1,
+          "maxTimes": "any",
+          "duration": "turn"
+        }
+      ]
+    },
+    "upgrade": {
+      "mode": "add",
+      "keywords": ["retain"],
+      "gain": {
+        "counter": 1
+      },
+      "modes": [],
+      "effects": []
+    },
+    "text": "全力。获得 3 反击，本回合可将任意数量反击转化为上传。升级后额外获得 1 反击且保留。"
+  },
+  {
+    "id": "up_discard_for_block",
+    "name": "装甲拼接",
+    "sourceLine": 66,
+    "type": "equipment",
+    "tier": "up",
+    "copies": 1,
+    "cost": 3,
+    "tags": ["defense", "discard"],
+    "canDiscardForBlock": true,
+    "base": {
+      "keywords": [],
+      "gain": {
+        "block": 2
+      },
+      "modes": [],
+      "effects": [
+        {
+          "type": "discardCardsForGain",
+          "amount": 1,
+          "gain": {
+            "block": 2
+          },
+          "optional": true
+        }
+      ]
+    },
+    "upgrade": {
+      "mode": "replace",
+      "keywords": [],
+      "gain": {
+        "block": 3
+      },
+      "modes": [],
+      "effects": [
+        {
+          "type": "discardCardsForGain",
+          "amount": "any",
+          "gainPerCard": {
+            "block": 2
+          },
+          "optional": true
+        }
+      ]
+    },
+    "text": "获得 2 防护，可以弃 1 张牌获得 2 防护。升级后获得 3 防护，可以弃任意数量牌，每弃 1 张获得 2 防护。"
+  },
+  {
+    "id": "up_no_upload_tactic",
+    "name": "封闭回路",
+    "sourceLine": 67,
+    "type": "equipment",
+    "tier": "up",
+    "copies": 1,
+    "cost": 3,
+    "tags": ["mobility", "counter", "uploadLock", "defense"],
+    "canDiscardForBlock": true,
+    "base": {
+      "keywords": [],
+      "gain": {
+        "mobility": 1,
+        "counter": 1
+      },
+      "modes": [],
+      "effects": [
+        {
+          "type": "lockUploadGain",
+          "scope": "wholeTurn",
+          "resetExistingUploadThisTurn": true
+        }
+      ]
+    },
+    "upgrade": {
+      "mode": "add",
+      "keywords": [],
+      "gain": {
+        "block": 2
+      },
+      "modes": [],
+      "effects": []
+    },
+    "text": "获得 1 机动和 1 反击，本回合不能获得上传，且之前获得的本回合上传归 0。升级后额外获得 2 防护。"
+  },
+  {
+    "id": "up_supply_upload_cycle",
+    "name": "补给回环",
+    "sourceLine": 68,
+    "type": "equipment",
+    "tier": "up",
+    "copies": 1,
+    "cost": 4,
+    "tags": ["supply", "upload", "selfUpgrade"],
+    "canDiscardForBlock": true,
+    "base": {
+      "keywords": ["supply"],
+      "gain": {
+        "upload": 1
+      },
+      "modes": [],
+      "effects": [
+        {
+          "type": "upgradeSelf"
+        }
+      ]
+    },
+    "upgrade": {
+      "mode": "replace",
+      "keywords": ["supply"],
+      "gain": {
+        "upload": 2
+      },
+      "modes": [],
+      "effects": []
+    },
+    "text": "补给。获得 1 上传，升级自身。升级后改为补给，获得 2 上传。"
+  },
+  {
+    "id": "up_huge_upload",
+    "name": "心之证明",
+    "sourceLine": 69,
+    "type": "equipment",
+    "tier": "up",
+    "copies": 1,
+    "cost": 10,
+    "tags": ["upload", "fullPower"],
+    "canDiscardForBlock": true,
+    "base": {
+      "keywords": ["fullPower"],
+      "gain": {
+        "upload": 5
+      },
+      "modes": [],
+      "effects": []
+    },
+    "upgrade": {
+      "mode": "add",
+      "keywords": [],
+      "gain": {
+        "upload": 2
+      },
+      "modes": [],
+      "effects": []
+    },
+    "text": "全力。获得 5 上传。升级后额外获得 2 上传。"
+  },
+  {
+    "id": "up_all_out_download",
+    "name": "破限装填",
+    "sourceLine": 70,
+    "type": "equipment",
+    "tier": "up",
+    "copies": 1,
+    "cost": 4,
+    "tags": ["download", "fullPower"],
+    "canDiscardForBlock": true,
+    "base": {
+      "keywords": ["fullPower"],
+      "gain": {
+        "download": 3
+      },
+      "modes": [],
+      "effects": []
+    },
+    "upgrade": {
+      "mode": "add",
+      "keywords": [],
+      "gain": {
+        "download": 1
+      },
+      "modes": [],
+      "effects": []
+    },
+    "text": "全力。获得 3 下载。升级后额外获得 1 下载。"
+  },
+  {
+    "id": "up_flow_wound_upgrade",
+    "name": "流程：破损学习",
+    "sourceLine": 73,
+    "type": "equipment",
+    "tier": "up",
+    "copies": 1,
+    "cost": 3,
+    "tags": ["flow", "draw", "wound", "selfUpgrade"],
+    "canDiscardForBlock": true,
+    "base": {
+      "keywords": ["flow"],
+      "gain": {
+        "draw": 2
+      },
+      "modes": [],
+      "effects": [
+        {
+          "type": "gainStatus",
+          "cardId": "status_wound",
+          "amount": 1,
+          "to": "discard"
+        },
+        {
+          "type": "upgradeSelf"
+        }
+      ]
+    },
+    "upgrade": {
+      "mode": "replace",
+      "keywords": [],
+      "gain": {
+        "upload": 3
+      },
+      "modes": [],
+      "effects": [
+        {
+          "type": "payStatusForGain",
+          "cardId": "status_stun",
+          "amount": 2,
+          "gain": {
+            "upgrade": 1
+          },
+          "optional": true
+        }
+      ]
+    },
+    "text": "流程。抽 2 张，获得 1 受伤，升级自身。升级后不再是流程，获得 3 上传，可以将 2 晕眩加入弃牌堆来升级 1 张手牌。"
+  },
+  {
+    "id": "up_flow_stun_bleed",
+    "name": "流程：过载渗血",
+    "sourceLine": 74,
+    "type": "equipment",
+    "tier": "up",
+    "copies": 1,
+    "cost": 4,
+    "tags": ["flow", "stun", "bleed", "selfUpgrade"],
+    "canDiscardForBlock": true,
+    "base": {
+      "keywords": ["flow"],
+      "gain": {},
+      "modes": [],
+      "effects": [
+        {
+          "type": "gainStatus",
+          "cardId": "status_stun",
+          "amount": 1,
+          "to": "discard"
+        },
+        {
+          "type": "gainStatus",
+          "cardId": "status_bleed",
+          "amount": 1,
+          "to": "discard"
+        },
+        {
+          "type": "upgradeSelf"
+        }
+      ]
+    },
+    "upgrade": {
+      "mode": "replace",
+      "keywords": [],
+      "gain": {
+        "upload": 1,
+        "download": 1,
+        "draw": 2
+      },
+      "modes": [],
+      "effects": []
+    },
+    "text": "流程。获得 1 晕眩和 1 流血，升级自身。升级后不再是流程，获得 1 上传、1 下载并抽 2 张。"
+  },
+  {
+    "id": "up_decay_supply",
+    "name": "崩坏补给",
+    "sourceLine": 75,
+    "type": "equipment",
+    "tier": "up",
+    "copies": 1,
+    "cost": 4,
+    "tags": ["supply", "download", "upload", "decay"],
+    "canDiscardForBlock": true,
+    "base": {
+      "keywords": ["supply"],
+      "gain": {
+        "download": 3
+      },
+      "modes": [],
+      "effects": [
+        {
+          "type": "addDecay",
+          "amount": 1
+        }
+      ]
+    },
+    "upgrade": {
+      "mode": "replace",
+      "keywords": ["supply"],
+      "gain": {
+        "upload": 4
+      },
+      "modes": [],
+      "effects": [
+        {
+          "type": "addDecay",
+          "amount": 2
+        }
+      ]
+    },
+    "text": "补给。获得 3 下载和 1 衰退。升级后改为补给，获得 4 上传和 2 衰退。"
+  },
+  {
+    "id": "up_skip_attack",
+    "name": "紧急脱离",
+    "sourceLine": 76,
+    "type": "equipment",
+    "tier": "up",
+    "copies": 1,
+    "cost": 5,
+    "tags": ["skipAttack", "wound", "trashSelf", "upload"],
+    "canDiscardForBlock": true,
+    "base": {
+      "keywords": [],
+      "gain": {},
+      "modes": [],
+      "effects": [
+        {
+          "type": "trashSelf"
+        },
+        {
+          "type": "skipThreatAttackThisTurn"
+        },
+        {
+          "type": "gainStatus",
+          "cardId": "status_wound",
+          "amount": 1,
+          "to": "discard"
+        }
+      ]
+    },
+    "upgrade": {
+      "mode": "add",
+      "keywords": [],
+      "gain": {
+        "upload": 3
+      },
+      "modes": [],
+      "effects": []
+    },
+    "text": "移除自身，跳过本回合攻击，获得 1 受伤。升级后额外获得 3 上传。"
+  },
+  {
+    "id": "up_retain_hand",
+    "name": "短期记忆驻留",
+    "sourceLine": 77,
+    "type": "equipment",
+    "tier": "up",
+    "copies": 1,
+    "cost": 3,
+    "tags": ["defense", "retainHand"],
+    "canDiscardForBlock": true,
+    "base": {
+      "keywords": [],
+      "gain": {
+        "block": 2
+      },
+      "modes": [],
+      "effects": [
+        {
+          "type": "retainHandCard",
+          "amount": 1
+        }
+      ]
+    },
+    "upgrade": {
+      "mode": "add",
+      "keywords": [],
+      "gain": {
+        "block": 1
+      },
+      "modes": [],
+      "effects": []
+    },
+    "text": "获得 2 防护，保留 1 张手牌。升级后额外获得 1 防护。"
+  }
+]

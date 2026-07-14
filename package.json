@@ -5,15 +5,17 @@
   "private": true,
   "main": "server/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build:graph": "node scripts/buildGraph.js",
     "build:client": "webpack",
     "start:server": "nodemon",
     "start": "nodemon",
     "dev": "webpack-dev-server",
+    "validate:deckgame": "node scripts/validateDeckgameData.js",
+    "test:deckgame": "node scripts/testDeckgameEngine.js",
     "build": "npm run build:graph && npm run build:client",
     "deploy": "npm run build && npm run start:server",
-    "test": "npm run build:client && npm run start:server"
+    "test": "npm run validate:deckgame && npm run test:deckgame && npm run build:client",
+    "program": "npm run build:client && npm run start:server"
   },
   "keywords": [],
   "author": "",

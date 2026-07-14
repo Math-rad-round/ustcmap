@@ -95,12 +95,20 @@ export default class DeckGameMenu extends React.Component {
     return readLocalSaves(LOCAL_SAVE_SLOTS);
   }
 
+  getLatestLocalSaveItem() {
+    const saves = this.getLocalSaves();
+    const latestSave = getLatestSave(saves.map((item) => item.save));
+    if (!latestSave) return null;
+    return saves.find((item) => item.save && item.save.savedAt === latestSave.savedAt) || null;
+  }
+
   getLatestLocalSave() {
-    return getLatestSave(this.getLocalSaves().map((item) => item.save));
+    const latest = this.getLatestLocalSaveItem();
+    return latest ? latest.save : null;
   }
 
   goLogin = () => {
-    if (typeof window !== 'undefined') window.location.href = '/login';
+    if (typeof window !== 'undefined') window.location.href = '/signin';
   };
 
   refreshCloudSaves = (options = {}) => {
@@ -137,6 +145,22 @@ export default class DeckGameMenu extends React.Component {
       });
   };
 
+  handleLoadGame = (slot) => {
+    if (this.props.onLoadGame) {
+      this.props.onLoadGame(slot);
+      return;
+    }
+    if (typeof window !== 'undefined' && window.alert) window.alert('Load save failed: missing callback');
+  };
+
+  handleLoadCloudGame = (save) => {
+    if (this.props.onLoadCloudGame) {
+      this.props.onLoadCloudGame(save);
+      return;
+    }
+    if (typeof window !== 'undefined' && window.alert) window.alert('Load cloud save failed: missing callback');
+  };
+
   renderSaveItem(slot, save) {
     return (
       <div key={slot} style={styles.saveItem}>
@@ -144,7 +168,7 @@ export default class DeckGameMenu extends React.Component {
           <div style={styles.saveName}>{getSaveTitle(slot, save)}</div>
           <div style={styles.saveMeta}>{getSaveMeta(save)}</div>
         </div>
-        <button type="button" disabled={!save} onClick={() => save && this.props.onLoadGame(slot)} style={save ? styles.smallButton : styles.disabledButton}>
+        <button type="button" disabled={!save} onClick={() => save && this.handleLoadGame(slot)} style={save ? styles.smallButton : styles.disabledButton}>
           读取
         </button>
       </div>
@@ -158,7 +182,7 @@ export default class DeckGameMenu extends React.Component {
           <div style={styles.saveName}>{getSaveTitle(null, save, true)}</div>
           <div style={styles.saveMeta}>{getSaveMeta(save)}</div>
         </div>
-        <button type="button" onClick={() => this.props.onLoadCloudGame(save)} style={styles.smallButton}>读取</button>
+        <button type="button" onClick={() => this.handleLoadCloudGame(save)} style={styles.smallButton}>读取</button>
       </div>
     );
   }
@@ -181,8 +205,7 @@ export default class DeckGameMenu extends React.Component {
                 style={latestLocal ? styles.secondaryButton : styles.disabledButton}
                 disabled={!latestLocal}
                 onClick={() => {
-                  const latest = this.getLocalSaves().filter((item) => item.save === latestLocal)[0];
-                  if (latest) this.props.onLoadGame(latest.slot);
+                  if (latestLocalItem) this.handleLoadGame(latestLocalItem.slot);
                 }}
               >
                 继续本地游戏{latestLocal ? ` · ${formatSaveTime(latestLocal.savedAt)}` : ''}
