@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 1,
+  "defaultDifficulty": "standard",
+  "scoreTarget": 64,
+  "baseArmor": 12,
+  "decayPerArmorLoss": 4,
+  "lifeLimit": 4,
+  "handDraw": 5,
+  "upMarketSize": 3,
+  "defaultDiscardForBlock": 1,
+  "fullPower": {
+    "prevents": ["playCard"],
+    "allows": ["buyCard", "endTurn"],
+    "canBeCanceledBySupply": true
+  },
+  "uploadLock": {
+    "scope": "wholeTurn",
+    "resetExistingUploadThisTurn": true
+  },
+  "upgrade": {
+    "defaultTarget": "hand",
+    "keepOriginalZone": true,
+    "flowCardsRequireOwnEffect": true
+  },
+  "markets": {
+    "basic": {
+      "type": "fixed",
+      "unlimitedCopies": true
+    },
+    "up": {
+      "type": "rotating",
+      "size": 3,
+      "rotate": "endTurn",
+      "discardLeftmost": true
+    }
+  },
+  "difficulties": {
+    "easy": {
+      "id": "easy",
+      "name": "轻松",
+      "description": "前两回合不攻击且不衰减，起始永久防护更高，只使用基础威胁牌。",
+      "overrides": {
+        "baseArmor": 13,
+        "upMarketSize": 4
+      },
+      "skipAttackTurns": [1, 2],
+      "skipDecayTurns": [1, 2],
+      "attackDifficulties": ["easy"]
+    },
+    "standard": {
+      "id": "standard",
+      "name": "标准",
+      "description": "第一回合不攻击且不衰减，展示 4 张进阶装备。",
+      "overrides": {
+        "upMarketSize": 4
+      },
+      "skipAttackTurns": [1],
+      "skipDecayTurns": [1],
+      "attackDifficulties": ["easy", "standard"]
+    },
+    "harsh": {
+      "id": "harsh",
+      "name": "严酷",
+      "description": "沿用当前高压规则：3 张进阶市场，第一回合立刻进入威胁和衰减。",
+      "overrides": {},
+      "skipAttackTurns": [],
+      "skipDecayTurns": [],
+      "attackDifficulties": ["easy", "standard", "harsh"]
+    }
+  }
+}

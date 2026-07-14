@@ -1,0 +1,199 @@
+[
+  {
+    "id": "start_download_seed",
+    "name": "初始接口",
+    "type": "equipment",
+    "tier": "start",
+    "copies": 5,
+    "cost": 0,
+    "tags": ["download"],
+    "canDiscardForBlock": true,
+    "base": {
+      "keywords": [],
+      "gain": {
+        "download": 1
+      },
+      "modes": [],
+      "effects": []
+    },
+    "upgrade": {
+      "mode": "add",
+      "keywords": [],
+      "gain": {
+        "download": 1
+      },
+      "modes": [],
+      "effects": []
+    },
+    "text": "获得 1 下载。升级后额外获得 1 下载。"
+  },
+  {
+    "id": "start_mobile_cache",
+    "name": "折射步",
+    "type": "equipment",
+    "tier": "start",
+    "copies": 1,
+    "cost": 4,
+    "tags": ["download", "mobility"],
+    "canDiscardForBlock": true,
+    "base": {
+      "keywords": [],
+      "gain": {
+        "download": 1,
+        "mobility": 1
+      },
+      "modes": [],
+      "effects": []
+    },
+    "upgrade": {
+      "mode": "add",
+      "keywords": [],
+      "gain": {
+        "block": 1
+      },
+      "modes": [],
+      "effects": []
+    },
+    "text": "获得 1 下载和 1 机动。升级后额外获得 1 防护。"
+  },
+  {
+    "id": "start_guard_cache",
+    "name": "断面防壁",
+    "type": "equipment",
+    "tier": "start",
+    "copies": 1,
+    "cost": 2,
+    "tags": ["download", "defense", "choice"],
+    "canDiscardForBlock": true,
+    "base": {
+      "keywords": [],
+      "gain": {
+        "download": 1,
+        "block": 1
+      },
+      "modes": [],
+      "effects": []
+    },
+    "upgrade": {
+      "mode": "replace",
+      "keywords": [],
+      "gain": {},
+      "modes": [
+        {
+          "id": "cache",
+          "name": "资料截流",
+          "gain": {
+            "download": 2
+          },
+          "effects": []
+        },
+        {
+          "id": "hard_guard",
+          "name": "硬化护层",
+          "gain": {
+            "block": 3
+          },
+          "effects": []
+        }
+      ],
+      "effects": []
+    },
+    "text": "获得 1 下载和 1 防护。升级后改为选择获得 2 下载或 3 防护。"
+  },
+  {
+    "id": "start_retained_guard",
+    "name": "残留护幕",
+    "type": "equipment",
+    "tier": "start",
+    "copies": 1,
+    "cost": 2,
+    "tags": ["defense", "retain"],
+    "canDiscardForBlock": true,
+    "base": {
+      "keywords": [],
+      "gain": {
+        "block": 2
+      },
+      "modes": [],
+      "effects": []
+    },
+    "upgrade": {
+      "mode": "add",
+      "keywords": ["retain"],
+      "gain": {
+        "block": 1
+      },
+      "modes": [],
+      "effects": []
+    },
+    "text": "获得 2 防护。升级后额外获得 1 防护且保留。"
+  },
+  {
+    "id": "start_mobility_node",
+    "name": "轨迹脚本",
+    "type": "equipment",
+    "tier": "start",
+    "copies": 1,
+    "cost": 1,
+    "tags": ["mobility", "retain", "conversion"],
+    "canDiscardForBlock": true,
+    "base": {
+      "keywords": [],
+      "gain": {
+        "mobility": 1
+      },
+      "modes": [],
+      "effects": []
+    },
+    "upgrade": {
+      "mode": "add",
+      "keywords": ["retain"],
+      "gain": {},
+      "modes": [],
+      "effects": [
+        {
+          "type": "convertResource",
+          "from": "download",
+          "to": "mobility",
+          "rate": 1,
+          "maxTimes": 1
+        }
+      ]
+    },
+    "text": "获得 1 机动。升级后保留，并可用 1 下载换 1 机动。"
+  },
+  {
+    "id": "start_counter_node",
+    "name": "逆算脚本",
+    "type": "equipment",
+    "tier": "start",
+    "copies": 1,
+    "cost": 1,
+    "tags": ["counter", "retain", "conversion"],
+    "canDiscardForBlock": true,
+    "base": {
+      "keywords": [],
+      "gain": {
+        "counter": 1
+      },
+      "modes": [],
+      "effects": []
+    },
+    "upgrade": {
+      "mode": "add",
+      "keywords": ["retain"],
+      "gain": {},
+      "modes": [],
+      "effects": [
+        {
+          "type": "convertResource",
+          "from": "download",
+          "to": "counter",
+          "rate": 1,
+          "maxTimes": 1
+        }
+      ]
+    },
+    "text": "获得 1 反击。升级后保留，并可用 1 下载换 1 反击。"
+  }
+]

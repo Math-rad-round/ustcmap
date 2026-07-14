@@ -2,14 +2,15 @@
     position: fixed;
     top: 0px;
     left: 0px;
-    height: 50px;
+    min-height: 50px;
     width: 100vw;
     background-color: var(--primary-color);
-    padding: 0px 100px 0px 100px;
+    padding: 0px 6vw 0px 6vw;
     box-shadow: 2px 2px 2px var(--shadow-color);
-    
     z-index: 1000;
     display: flex;
+    align-items: center;
+    box-sizing: border-box;
 }
 
 .navbar-link,.navbar-title-link{
@@ -25,11 +26,13 @@
 }
 .navbar-link{
     color: #666666;
-    padding: 0px 20px 0px 20px;
+    padding: 0px 14px 0px 14px;
     margin: 0px;
     line-height: 50px;
     display: block;
     height: 100%;
+    cursor: pointer;
+    white-space: nowrap;
 }
 .navbar-link:hover{
     color: #000000;
@@ -44,12 +47,38 @@
     
     height: 100%;
     padding: 0px;
-    margin: auto 80px auto 0px;
+    margin: auto 34px auto 0px;
+    white-space: nowrap;
 }
 
 .navbar-links-container{
     text-align: center;
     vertical-align: middle;
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
+@media(max-width: 760px){
+    .navbar{
+        padding: 0px 12px;
+    }
+
+    .navbar-title{
+        width: 100%;
+        margin: 0px;
+        line-height: 42px;
+    }
+
+    .navbar-links-container{
+        width: 100%;
+        justify-content: flex-start;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+    }
+
+    .navbar-link{
+        line-height: 40px;
+        padding: 0px 12px;
+    }
+}

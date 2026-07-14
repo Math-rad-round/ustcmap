@@ -1,0 +1,537 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DBG Card Icon Preview v2</title>
+  <style>
+    :root {
+      --bg: #eceee9;
+      --ink: #171720;
+      --muted: #667462;
+      --edge: #171720;
+      --effect: #eee4c9;
+      --gain: #171720;
+      --loss: #f01925;
+      --pink: #d970d6;
+      --cyan: #46ddd5;
+      --purple: #6f3dd1;
+      --green: #38d774;
+      --gray: #8a8a8a;
+      --yellow: #f0ea00;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: Arial, "Microsoft YaHei", sans-serif;
+    }
+
+    main {
+      max-width: 1220px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+
+    h1, h2, p { margin: 0; }
+    h1 { font-size: 28px; line-height: 1.2; }
+
+    header p {
+      margin-top: 8px;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+
+    section { margin-top: 18px; }
+
+    .section-title {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .section-title h2 { font-size: 19px; }
+    .section-title span { color: var(--muted); font-size: 13px; font-weight: 700; }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(205px, 1fr));
+      gap: 16px;
+    }
+
+    .spire-card {
+      position: relative;
+      min-height: 326px;
+      padding: 10px;
+      border: 5px solid var(--edge);
+      border-radius: 14px;
+      background: linear-gradient(180deg, #fbf7e9, #e4dec9);
+      box-shadow: 0 4px 0 rgba(0, 0, 0, 0.28);
+    }
+
+    .spire-card.up-preview {
+      box-shadow: 0 0 0 3px var(--yellow), 0 4px 0 rgba(0, 0, 0, 0.28);
+    }
+
+    .title-bar {
+      position: relative;
+      min-height: 38px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 6px 42px 6px 10px;
+      border: 3px solid var(--edge);
+      border-radius: 9px;
+      color: #15151f;
+      font-weight: 900;
+      line-height: 1.1;
+      text-align: center;
+    }
+
+    .tag-none { background: #d9d0bb; }
+    .tag-supply { background: var(--pink); }
+    .tag-full { background: var(--loss); color: #fff; }
+    .tag-retain { background: var(--green); }
+    .tag-flow { background: var(--yellow); }
+
+    .cost {
+      position: absolute;
+      top: -9px;
+      right: -9px;
+      width: 36px;
+      height: 36px;
+      display: grid;
+      place-items: center;
+      border: 3px solid var(--edge);
+      border-radius: 50%;
+      background: #b84cc0;
+      color: #eaffff;
+      font-size: 18px;
+      font-weight: 900;
+      text-shadow: 1px 1px 0 #363044;
+    }
+
+    .up-mark {
+      position: absolute;
+      left: 10px;
+      top: 50px;
+      z-index: 2;
+      padding: 2px 6px;
+      border: 2px solid var(--edge);
+      border-radius: 999px;
+      background: var(--yellow);
+      color: #ba2b8c;
+      font-size: 11px;
+      font-weight: 900;
+    }
+
+    .art-box {
+      height: 118px;
+      margin: 9px 0;
+      border: 3px solid var(--edge);
+      border-radius: 8px;
+      background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.22) 0 18%, transparent 18% 50%, rgba(0, 0, 0, 0.08) 50% 68%, transparent 68%),
+        linear-gradient(180deg, #71ddd5, #8fe288);
+      background-size: 28px 28px, auto;
+      overflow: hidden;
+    }
+
+    .art-box.dark {
+      background: radial-gradient(circle at 35% 30%, rgba(255, 255, 255, 0.18), transparent 27%), linear-gradient(180deg, #17182a, #6939d5 60%, #42d2c9);
+    }
+
+    .art-box.red {
+      background: radial-gradient(circle at 70% 25%, rgba(255, 255, 255, 0.22), transparent 25%), linear-gradient(180deg, #f01925, #d970d6 35%, #46ddd5 70%, #6f3dd1);
+    }
+
+    .effect-box {
+      min-height: 112px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 10px;
+      border: 3px solid var(--edge);
+      border-radius: 8px;
+      background: var(--effect);
+      text-align: center;
+    }
+
+    .effect-line {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+      min-height: 34px;
+      margin-bottom: 8px;
+    }
+
+    .effect-line:last-child { margin-bottom: 0; }
+
+    .logic {
+      display: inline-flex;
+      min-width: 28px;
+      height: 22px;
+      align-items: center;
+      justify-content: center;
+      padding: 0 5px;
+      border: 2px solid var(--edge);
+      border-radius: 6px;
+      background: #fff6d1;
+      color: #1f1d2a;
+      font-size: 11px;
+      font-weight: 900;
+    }
+
+    .convert-symbol {
+      width: 27px;
+      height: 18px;
+      display: inline-block;
+      color: #1f1d2a;
+      vertical-align: middle;
+    }
+
+    .convert-symbol.multi {
+      width: 34px;
+    }
+
+    .icon-tile .convert-symbol {
+      width: 48px;
+      height: 30px;
+    }
+
+    .icon-tile .convert-symbol.multi {
+      width: 58px;
+    }
+
+    .feature-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 5px;
+      margin-top: 8px;
+      padding-top: 8px;
+      border-top: 2px solid rgba(23, 23, 32, 0.18);
+    }
+
+    .feature {
+      min-width: 32px;
+      padding: 0 4px;
+      color: #171720;
+      font-size: 15px;
+      font-weight: 900;
+      line-height: 1.2;
+    }
+
+    .feature.supply { color: var(--pink); }
+    .feature.full { color: var(--loss); }
+    .feature.retain { color: #075928; }
+    .feature.flow { color: #654a00; }
+
+    .icon-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(138px, 1fr));
+      gap: 12px;
+    }
+
+    .icon-tile {
+      min-height: 120px;
+      display: grid;
+      justify-items: center;
+      align-content: center;
+      gap: 8px;
+      padding: 12px;
+      border: 3px solid var(--edge);
+      border-radius: 10px;
+      background: #f8f7ef;
+      text-align: center;
+    }
+
+    .icon-tile strong { font-size: 14px; }
+    .icon-tile span { color: var(--muted); font-size: 11px; font-weight: 800; }
+
+    .pixel {
+      width: 30px;
+      height: 30px;
+      display: inline-block;
+      color: var(--gain);
+      vertical-align: middle;
+    }
+
+    .pixel.big { width: 48px; height: 48px; }
+    .gain { color: var(--gain); }
+    .loss { color: var(--loss); filter: drop-shadow(1px 1px 0 #772336); }
+
+    .px-fill {
+      fill: currentColor;
+      shape-rendering: crispEdges;
+    }
+
+    .px-white {
+      fill: #fff;
+      shape-rendering: crispEdges;
+    }
+
+    .px-ring {
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 3;
+      shape-rendering: crispEdges;
+    }
+
+    .count {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+      font-weight: 900;
+    }
+
+    .count b {
+      color: #1f1d2a;
+      font-size: 14px;
+      line-height: 1;
+    }
+
+    .note {
+      padding: 12px;
+      border: 3px solid var(--edge);
+      border-radius: 10px;
+      background: #fffaf0;
+      color: #373445;
+      font-size: 14px;
+      line-height: 1.6;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>DBG 卡牌布局与效果图标预览</h1>
+      <p>新版规则：获得效果全部黑色，失去/弃置/删除/降低全部红色。tag 只影响名字栏颜色；效果框底部只渲染“保留、全力、补给、流程”四种特性文字。</p>
+    </header>
+
+    <svg width="0" height="0" aria-hidden="true" focusable="false">
+      <defs>
+        <symbol id="i-download" viewBox="0 0 32 32">
+          <path class="px-fill" d="M5 3h18l4 4v22H5zM9 6v8h13V8h-3v4h-7V6zm2 13v6h8v-6z"></path>
+          <path class="px-white" d="M20 19h5v4h4l-7 7-7-7h4z"></path>
+          <path class="px-fill" d="M21 20h3v4h3l-5 5-5-5h4z"></path>
+        </symbol>
+        <symbol id="i-upload" viewBox="0 0 32 32">
+          <path class="px-fill" d="M10 19H8c-4 0-6-2-6-5 0-3 2-5 5-5 1-4 4-6 8-6 5 0 8 3 9 8 4 0 6 2 6 5s-2 5-6 5h-3v-4h4c1 0 2-1 2-2s-1-2-3-2h-3l-1-3c-1-3-3-4-6-4s-5 2-5 5v2H8c-2 0-3 1-3 2s1 2 3 2h2zM14 30V17h-4l6-7 6 7h-4v13z"></path>
+        </symbol>
+        <symbol id="i-block" viewBox="0 0 32 32">
+          <path class="px-fill" d="M16 3l11 4v8c0 7-4 12-11 15C9 27 5 22 5 15V7zM9 10v5c0 5 2 8 7 11 5-3 7-6 7-11v-5l-7-3z"></path>
+        </symbol>
+        <symbol id="i-mobility" viewBox="0 0 32 32">
+          <path class="px-fill" d="M4 8h9v3H4zm4 5h9v3H8zm4 5h8v3h-8zm8-11h5v8l4 3v5h-7l-4-4v-7h2zm1 18h8v4H13c-4 0-6-2-6-5h10z"></path>
+        </symbol>
+        <symbol id="i-counter" viewBox="0 0 32 32">
+          <path class="px-fill" d="M16 2l7 7-5 13h-4L9 9zM8 21h16v4H8zM14 24h4v6h-4zM11 29h10v3H11z"></path>
+        </symbol>
+        <symbol id="i-draw" viewBox="0 0 32 32">
+          <path class="px-fill" d="M7 5h18v24H7zM10 9v16h12V9zM14 12h4v4h4v4h-4v4h-4v-4h-4v-4h4z"></path>
+        </symbol>
+        <symbol id="i-discard" viewBox="0 0 32 32">
+          <path class="px-fill" d="M7 5h18v24H7zM10 9v16h12V9zM14 11h4v8h4l-6 6-6-6h4z"></path>
+        </symbol>
+        <symbol id="i-trash" viewBox="0 0 32 32">
+          <path class="px-fill" d="M8 9h16v3H8zM12 4h8v4h-8zm-1 9h11l-2 15h-7zm3 3v9h2v-9zm4 0v9h2v-9z"></path>
+        </symbol>
+        <symbol id="i-trash-self" viewBox="0 0 32 32">
+          <circle class="px-ring" cx="16" cy="16" r="14"></circle>
+          <path class="px-fill" d="M8 9h16v3H8zM12 4h8v4h-8zm-1 9h11l-2 15h-7zm3 3v9h2v-9zm4 0v9h2v-9z"></path>
+        </symbol>
+        <symbol id="i-upgrade" viewBox="0 0 32 32">
+          <path class="px-fill" d="M16 3l4 8 9 1-7 6 2 9-8-5-8 5 2-9-7-6 9-1zm-2 11v8h4v-8h4l-6-6-6 6z"></path>
+        </symbol>
+        <symbol id="i-upgrade-self" viewBox="0 0 32 32">
+          <circle class="px-ring" cx="16" cy="16" r="14"></circle>
+          <path class="px-fill" d="M16 3l4 8 9 1-7 6 2 9-8-5-8 5 2-9-7-6 9-1zm-2 11v8h4v-8h4l-6-6-6 6z"></path>
+        </symbol>
+        <symbol id="i-stun" viewBox="0 0 32 32">
+          <path class="px-fill" d="M4 4h24v4H4zM4 4h4v24H4zM24 4h4v24h-4zM4 24h24v4H4zM10 10h12v4H14v4h8v4H10v-4h4v-4h-4zM18 14h4v4h-4z"></path>
+        </symbol>
+        <symbol id="i-wound" viewBox="0 0 32 32">
+          <path class="px-fill" d="M16 28L6 18C1 13 4 5 10 5c3 0 5 2 6 4 1-2 3-4 6-4 6 0 9 8 4 13zM17 9l-5 7 6 3-4 7 7-8-6-3z"></path>
+        </symbol>
+        <symbol id="i-decay" viewBox="0 0 32 32">
+          <path class="px-fill" d="M16 4a12 12 0 1 0 11 7h-4a8 8 0 1 1-7-4zM22 2l8 8h-6v6h-4V6h2zM11 13l3 3-3 3-2-2 1-1-1-1zm10 0l2 2-1 1 1 1-2 2-3-3z"></path>
+        </symbol>
+        <symbol id="i-free" viewBox="0 0 32 32">
+          <path class="px-fill" d="M8 10h16l3 18H5zM12 10c0-5 2-7 4-7s4 2 4 7h-3c0-2 0-4-1-4s-1 2-1 4zm2 5h4v4h4v4h-4v4h-4v-4h-4v-4h4z"></path>
+        </symbol>
+        <symbol id="i-convert" viewBox="0 0 32 20">
+          <path class="px-fill" d="M7 4h5v2h4v2h4v2h4v2h-4v2h-4v2h-4v2H7z"></path>
+        </symbol>
+        <symbol id="i-convert-repeat" viewBox="0 0 40 20">
+          <path class="px-fill" d="M4 4h4v2h3v2h3v2h3v2h-3v2h-3v2H8v2H4zM17 4h4v2h3v2h3v2h3v2h-3v2h-3v2h-3v2h-4z"></path>
+        </symbol>
+      </defs>
+    </svg>
+
+    <section>
+      <div class="section-title">
+        <h2>牌面预览</h2>
+        <span>所有字/符号居中；非特性 tag 不渲染文字</span>
+      </div>
+      <div class="card-grid">
+        <article class="spire-card">
+          <div class="title-bar tag-none">强制载入 <span class="cost">3</span></div>
+          <div class="art-box"></div>
+          <div class="effect-box">
+            <div class="effect-line">
+              <svg class="pixel gain"><use href="#i-download"></use></svg>
+              <svg class="pixel gain"><use href="#i-download"></use></svg>
+              <svg class="pixel gain"><use href="#i-download"></use></svg>
+            </div>
+            <div class="effect-line"><svg class="pixel gain"><use href="#i-stun"></use></svg></div>
+          </div>
+        </article>
+
+        <article class="spire-card">
+          <div class="title-bar tag-none">装甲拼接 <span class="cost">3</span></div>
+          <div class="art-box dark"></div>
+          <div class="effect-box">
+            <div class="effect-line">
+              <svg class="pixel gain"><use href="#i-block"></use></svg>
+              <svg class="pixel gain"><use href="#i-block"></use></svg>
+            </div>
+            <div class="effect-line">
+              <svg class="pixel loss"><use href="#i-discard"></use></svg>
+              <svg class="convert-symbol" aria-label="转换"><use href="#i-convert"></use></svg>
+              <svg class="pixel gain"><use href="#i-block"></use></svg>
+              <svg class="pixel gain"><use href="#i-block"></use></svg>
+            </div>
+          </div>
+        </article>
+
+        <article class="spire-card">
+          <div class="title-bar tag-full">战术分歧 <span class="cost">3</span></div>
+          <div class="art-box"></div>
+          <div class="effect-box">
+            <div class="effect-line">
+              <svg class="pixel gain"><use href="#i-draw"></use></svg>
+              <svg class="pixel gain"><use href="#i-draw"></use></svg>
+              <span class="logic">OR</span>
+              <svg class="pixel gain"><use href="#i-download"></use></svg>
+              <svg class="pixel gain"><use href="#i-download"></use></svg>
+            </div>
+            <div class="feature-row"><span class="feature full">全力</span></div>
+          </div>
+        </article>
+
+        <article class="spire-card up-preview">
+          <div class="title-bar tag-full">心之证明+ <span class="cost">10</span></div>
+          <div class="up-mark">UP VIEW</div>
+          <div class="art-box red"></div>
+          <div class="effect-box">
+            <div class="effect-line">
+              <span class="count"><svg class="pixel gain"><use href="#i-upload"></use></svg><b>×7</b></span>
+            </div>
+            <div class="feature-row"><span class="feature full">全力</span></div>
+          </div>
+        </article>
+
+        <article class="spire-card">
+          <div class="title-bar tag-none">拆解购置 <span class="cost">4</span></div>
+          <div class="art-box dark"></div>
+          <div class="effect-box">
+            <div class="effect-line">
+              <svg class="pixel loss"><use href="#i-trash"></use></svg>
+              <svg class="convert-symbol" aria-label="转换"><use href="#i-convert"></use></svg>
+              <svg class="pixel gain"><use href="#i-free"></use></svg>
+              <span class="logic">+2</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="spire-card">
+          <div class="title-bar tag-flow">流程：破损学习 <span class="cost">3</span></div>
+          <div class="art-box"></div>
+          <div class="effect-box">
+            <div class="effect-line">
+              <svg class="pixel gain"><use href="#i-draw"></use></svg>
+              <svg class="pixel gain"><use href="#i-draw"></use></svg>
+              <svg class="pixel gain"><use href="#i-wound"></use></svg>
+            </div>
+            <div class="effect-line"><svg class="pixel gain"><use href="#i-upgrade-self"></use></svg></div>
+            <div class="feature-row"><span class="feature flow">流程</span></div>
+          </div>
+        </article>
+
+        <article class="spire-card">
+          <div class="title-bar tag-retain">驻留护幕 <span class="cost">2</span></div>
+          <div class="art-box dark"></div>
+          <div class="effect-box">
+            <div class="effect-line">
+              <svg class="pixel gain"><use href="#i-block"></use></svg>
+              <svg class="pixel gain"><use href="#i-block"></use></svg>
+            </div>
+            <div class="feature-row"><span class="feature retain">保留</span></div>
+          </div>
+        </article>
+
+        <article class="spire-card">
+          <div class="title-bar tag-supply">补给抽取 <span class="cost">2</span></div>
+          <div class="art-box"></div>
+          <div class="effect-box">
+            <div class="effect-line">
+              <svg class="pixel gain"><use href="#i-draw"></use></svg>
+            </div>
+            <div class="feature-row"><span class="feature supply">补给</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title">
+        <h2>效果图标字典</h2>
+        <span>黑色示例代表获得；红色示例代表失去</span>
+      </div>
+      <div class="icon-grid">
+        <div class="icon-tile"><svg class="pixel big gain"><use href="#i-download"></use></svg><strong>下载</strong><span>右下角向下箭头</span></div>
+        <div class="icon-tile"><svg class="pixel big gain"><use href="#i-upload"></use></svg><strong>上传</strong><span>上箭头指向云</span></div>
+        <div class="icon-tile"><svg class="pixel big gain"><use href="#i-block"></use></svg><strong>防护</strong><span>盾牌</span></div>
+        <div class="icon-tile"><svg class="pixel big gain"><use href="#i-mobility"></use></svg><strong>机动</strong><span>靴子和速度线</span></div>
+        <div class="icon-tile"><svg class="pixel big gain"><use href="#i-counter"></use></svg><strong>反击</strong><span>一把剑</span></div>
+        <div class="icon-tile"><svg class="pixel big gain"><use href="#i-draw"></use></svg><strong>抽牌</strong><span>牌上方加号</span></div>
+        <div class="icon-tile"><svg class="pixel big loss"><use href="#i-discard"></use></svg><strong>弃牌</strong><span>牌中间下箭头</span></div>
+        <div class="icon-tile"><svg class="pixel big loss"><use href="#i-trash-self"></use></svg><strong>删除自身</strong><span>本牌移除</span></div>
+        <div class="icon-tile"><svg class="pixel big loss"><use href="#i-trash"></use></svg><strong>删除目标</strong><span>选择一张牌删除</span></div>
+        <div class="icon-tile"><svg class="pixel big gain"><use href="#i-upgrade-self"></use></svg><strong>升级自身</strong><span>本牌升级</span></div>
+        <div class="icon-tile"><svg class="pixel big gain"><use href="#i-upgrade"></use></svg><strong>升级目标</strong><span>选择一张牌升级</span></div>
+        <div class="icon-tile"><svg class="pixel big gain"><use href="#i-stun"></use></svg><strong>晕眩</strong><span>获得时黑色</span></div>
+        <div class="icon-tile"><svg class="pixel big gain"><use href="#i-wound"></use></svg><strong>受伤</strong><span>获得时黑色</span></div>
+        <div class="icon-tile"><svg class="pixel big loss"><use href="#i-decay"></use></svg><strong>失去/衰减</strong><span>失去类红色</span></div>
+        <div class="icon-tile"><svg class="convert-symbol"><use href="#i-convert"></use></svg><strong>单次转换</strong><span>压扁播放符号</span></div>
+        <div class="icon-tile"><svg class="convert-symbol multi"><use href="#i-convert-repeat"></use></svg><strong>多次转换</strong><span>快进符号</span></div>
+        <div class="icon-tile"><strong class="feature retain">保留</strong><span>绿色文字</span></div>
+        <div class="icon-tile"><strong class="feature full">全力</strong><span>红色文字</span></div>
+        <div class="icon-tile"><strong class="feature supply">补给</strong><span>粉色文字</span></div>
+        <div class="icon-tile"><strong class="feature flow">流程</strong><span>黄色文字</span></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title">
+        <h2>约定草案</h2>
+        <span>用于之后接入正式 UI</span>
+      </div>
+      <div class="note">
+        颜色只表达动作方向：获得为黑色，失去/弃置/删除/降低为红色。顶部标题栏只接受补给、全力、保留、流程四种特性底色，其他 tag 不参与上色；底部只显示这四个特性中文字。效果转换用播放符号，可多次转换用快进符号。
+      </div>
+    </section>
+  </main>
+</body>
+</html>

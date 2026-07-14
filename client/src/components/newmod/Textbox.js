@@ -20,7 +20,7 @@ class Textbox extends Component{
     let height=this.props.height+'px';
     return (
       <div >
-          <div class="five2"
+          <div className="five2"
         style={{ bottom: bottom, left: left, width: width, height: height}} onClick={()=>this.usepass()}>
           {this.props.contain}</div>
       </div>

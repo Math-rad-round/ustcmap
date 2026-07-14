@@ -1,0 +1,431 @@
+[
+  {
+    "id": "test_calculus",
+    "name": "数学分析期末",
+    "content": "考察数学理论基础。每张理论符号提供3分，并在考试开始时获得1温习值。",
+    "drawnum": 5,
+    "scorescaling": 1,
+    "start": [
+      {
+        "effectType": "addReview",
+        "input": 1
+      }
+    ],
+    "effect": [
+      {
+        "effectType": "addScore",
+        "input": "theory",
+        "multi": 3
+      }
+    ]
+  },
+  {
+    "id": "test_physics",
+    "name": "大学物理统考",
+    "content": "考察物理理论与实验能力。每张理论符号提供2分，每张实践符号提供2分。",
+    "drawnum": 5,
+    "scorescaling": 1,
+    "effect": [
+      {
+        "effectType": "addScore",
+        "input": "theory",
+        "multi": 2
+      },
+      {
+        "effectType": "addScore",
+        "input": "practice",
+        "multi": 2
+      }
+    ]
+  },
+  {
+    "id": "test_programming",
+    "name": "程序设计机试",
+    "content": "考察计算机编程与工程实践能力。每张实践符号提供3分，并在考试开始时获得1温习值。",
+    "drawnum": 5,
+    "scorescaling": 1,
+    "start": [
+      {
+        "effectType": "addReview",
+        "input": 1
+      }
+    ],
+    "effect": [
+      {
+        "effectType": "addScore",
+        "input": "practice",
+        "multi": 3
+      }
+    ]
+  },
+  {
+    "id": "test_english",
+    "name": "大学英语测评",
+    "content": "考察语言交流与表达能力。每张社会符号提供3分；如果社会符号至少3个，额外获得4分。",
+    "drawnum": 5,
+    "scorescaling": 1,
+    "effect": [
+      {
+        "effectType": "addScore",
+        "input": "social",
+        "multi": 3
+      },
+      {
+        "effectType": "compare",
+        "input1": "social",
+        "input2": 3,
+        "type": "ge",
+        "output": "social_ge_3"
+      },
+      {
+        "effectType": "addScore",
+        "input": "social_ge_3",
+        "multi": 4
+      }
+    ]
+  },
+  {
+    "id": "test_lab",
+    "name": "大物实验验收",
+    "content": "完成实验操作并提交实验成果。获得2温习值；每张实践符号提供1分，每点项目推进提供1分，每个完成项目提供2分。",
+    "drawnum": 5,
+    "scorescaling": 1,
+    "start": [
+      {
+        "effectType": "addReview",
+        "input": 2
+      }
+    ],
+    "effect": [
+      {
+        "effectType": "addScore",
+        "input": "practice",
+        "multi": 1
+      },
+      {
+        "effectType": "addScore",
+        "input": "progress",
+        "multi": 1
+      },
+      {
+        "effectType": "addScore",
+        "input": "completepro",
+        "multi": 2
+      }
+    ]
+  },
+  {
+    "id": "test_basic",
+    "name": "大基础综合考",
+    "content": "考察基础综合掌握情况。抽牌更多，获得3温习值；每张理论或实践符号提供1分。",
+    "drawnum": 7,
+    "scorescaling": 1.5,
+    "start": [
+      {
+        "effectType": "addReview",
+        "input": 3
+      }
+    ],
+    "effect": [
+      {
+        "effectType": "addScore",
+        "input": "theory",
+        "multi": 1
+      },
+      {
+        "effectType": "addScore",
+        "input": "practice",
+        "multi": 1
+      }
+    ]
+  },
+  {
+    "id": "test_course_design",
+    "name": "课程设计答辩",
+    "content": "展示课程设计成果。每张实践符号提供2分，每张理论符号提供1分，每个项目提供3分，每个完成项目提供2分。",
+    "drawnum": 5,
+    "scorescaling": 1,
+    "effect": [
+      {
+        "effectType": "addScore",
+        "input": "practice",
+        "multi": 2
+      },
+      {
+        "effectType": "addScore",
+        "input": "theory",
+        "multi": 1
+      },
+      {
+        "effectType": "addScore",
+        "input": "project",
+        "multi": 3
+      },
+      {
+        "effectType": "addScore",
+        "input": "completepro",
+        "multi": 2
+      }
+    ]
+  },
+  {
+    "id": "test_innovation",
+    "name": "大创能力考核",
+    "content": "评价发现问题和解决问题的能力。每张理论或实践符号提供1分，每点项目推进提供1分，每个成果提供5分。",
+    "drawnum": 5,
+    "scorescaling": 1,
+    "effect": [
+      {
+        "effectType": "addScore",
+        "input": "theory",
+        "multi": 1
+      },
+      {
+        "effectType": "addScore",
+        "input": "practice",
+        "multi": 1
+      },
+      {
+        "effectType": "addScore",
+        "input": "progress",
+        "multi": 1
+      },
+      {
+        "effectType": "addScore",
+        "input": "permanent",
+        "multi": 5
+      }
+    ]
+  },
+  {
+    "id": "test_easy",
+    "name": "通识课随堂测",
+    "content": "通识课随堂测。每张理论符号提供2分，成就点奖励较低。",
+    "drawnum": 5,
+    "scorescaling": 0.5,
+    "achievementMode": "easy",
+    "effect": [
+      {
+        "effectType": "addScore",
+        "input": "theory",
+        "multi": 2
+      }
+    ]
+  },
+  {
+    "id": "test_comprehensive",
+    "name": "综合素质评价",
+    "content": "大学阶段综合能力评估。获得1温习值，取理论、实践、社会中最低的符号数量，每个提供8分。",
+    "drawnum": 5,
+    "scorescaling": 1.5,
+    "start": [
+      {
+        "effectType": "addReview",
+        "input": 1
+      }
+    ],
+    "effect": [
+      {
+        "effectType": "getLowest",
+        "target": "symbol",
+        "output": "lowest"
+      },
+      {
+        "effectType": "addScore",
+        "input": "lowest",
+        "multi": 8
+      }
+    ]
+  },
+  {
+    "id": "test_competition",
+    "name": "竞赛队选拔",
+    "content": "学院组织优秀学生选拔。每张实践符号提供2分，本次考试的成果效果翻倍。",
+    "drawnum": 5,
+    "scorescaling": 1,
+    "effect": [
+      {
+        "effectType": "addScore",
+        "input": "practice",
+        "multi": 2
+      },
+      {
+        "effectType": "doublePermanentEffects"
+      }
+    ]
+  },
+  {
+    "id": "test_final",
+    "name": "期末突击战",
+    "content": "临近期末的综合检查。随机决定一种符号，每个该符号提供2分；每点温习值提供3分。",
+    "drawnum": 3,
+    "scorescaling": 0.5,
+    "achievementMode": "easy",
+    "start": [
+      {
+        "effectType": "randomExamSymbol"
+      }
+    ],
+    "effect": [
+      {
+        "effectType": "addScore",
+        "input": "randomSymbol",
+        "multi": 2
+      },
+      {
+        "effectType": "addScore",
+        "input": "review",
+        "multi": 3
+      }
+    ]
+  },
+  {
+    "id": "test_graduation",
+    "name": "毕业能力总评",
+    "content": "检查学生是否达到综合能力要求。每张理论、实践、社会符号提供1分，每个成果提供3分。",
+    "drawnum": 6,
+    "scorescaling": 1.5,
+    "effect": [
+      {
+        "effectType": "addScore",
+        "input": "theory",
+        "multi": 1
+      },
+      {
+        "effectType": "addScore",
+        "input": "practice",
+        "multi": 1
+      },
+      {
+        "effectType": "addScore",
+        "input": "social",
+        "multi": 1
+      },
+      {
+        "effectType": "addScore",
+        "input": "permanent",
+        "multi": 3
+      }
+    ]
+  },
+  {
+    "id": "test_math_competition",
+    "name": "数学竞赛选拔",
+    "content": "难度较高的理论考试。每张理论符号提供5分，成就点奖励较高。",
+    "drawnum": 5,
+    "scorescaling": 1.5,
+    "achievementMode": "hard",
+    "effect": [
+      {
+        "effectType": "addScore",
+        "input": "theory",
+        "multi": 5
+      }
+    ]
+  },
+  {
+    "id": "test_public_expression",
+    "name": "公共表达展示",
+    "content": "考察表达、组织与论证能力。每张社会符号提供1分，每张理论符号提供1分。",
+    "drawnum": 6,
+    "scorescaling": 1,
+    "effect": [
+      {
+        "effectType": "addScore",
+        "input": "social",
+        "multi": 1
+      },
+      {
+        "effectType": "addScore",
+        "input": "theory",
+        "multi": 1
+      }
+    ]
+  },
+  {
+    "id": "test_campus_influence",
+    "name": "校园影响力评估",
+    "content": "难度较高的社会向评估。每张社会符号提供2分，每个成果提供4分；如果及格且社会符号至少4个，额外获得2成就点。",
+    "drawnum": 5,
+    "scorescaling": 1.5,
+    "achievementMode": "hard",
+    "effect": [
+      {
+        "effectType": "addScore",
+        "input": "social",
+        "multi": 2
+      },
+      {
+        "effectType": "addScore",
+        "input": "permanent",
+        "multi": 4
+      }
+    ],
+    "result": [
+      {
+        "effectType": "compare",
+        "input1": "social",
+        "input2": 4,
+        "type": "ge",
+        "output": "social_ge_4"
+      },
+      {
+        "effectType": "addAchievementIf",
+        "conditionAll": [
+          "passed",
+          "social_ge_4"
+        ],
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "id": "test_self_learning",
+    "name": "自学能力挑战",
+    "content": "只能依靠课程本身表现。考试开始时理论、实践、社会临时各+3，并获得3温习值。",
+    "drawnum": 5,
+    "scorescaling": 1,
+    "start": [
+      {
+        "effectType": "addSymbol",
+        "input": "theory",
+        "amount": 3
+      },
+      {
+        "effectType": "addSymbol",
+        "input": "practice",
+        "amount": 3
+      },
+      {
+        "effectType": "addSymbol",
+        "input": "social",
+        "amount": 3
+      },
+      {
+        "effectType": "addReview",
+        "input": 3
+      }
+    ],
+    "effect": []
+  },
+  {
+    "id": "test_internship_practice",
+    "name": "企业实践考核",
+    "content": "较简单的实践机会。每个项目提供3分，每张事件手牌提供2分，成就点奖励较低。",
+    "drawnum": 4,
+    "scorescaling": 0.5,
+    "achievementMode": "easy",
+    "effect": [
+      {
+        "effectType": "addScore",
+        "input": "project",
+        "multi": 3
+      },
+      {
+        "effectType": "addScore",
+        "input": "eventHand",
+        "multi": 2
+      }
+    ]
+  }
+]

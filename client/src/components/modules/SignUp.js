@@ -45,7 +45,7 @@ class SignUp extends Component{
     
     post("/api/usercreate", {
       name: this.state.username,
-      intro: "",
+      intro: "新USTCer，正在探索地图",
       password: CryptoJS.MD5(this.state.password).toString(),
       projects: [],
       links: [],

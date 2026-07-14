@@ -1,6 +1,11 @@
 client/dist/main.js
+client/src/components/new/100/
+public/newgame/100
+public/newgame/100deal
+public/newgame/100_deal
 node_modules/
 .DS_Store
-server/upload
 报告.*
-
+.env
+saveenv.txt
+test.py

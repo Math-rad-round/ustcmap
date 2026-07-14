@@ -1,0 +1,186 @@
+{
+  "courses": [
+    {
+      "id": "math",
+      "name": "少院数学预修",
+      "content": "无效果",
+      "symbols": {
+        "Theory": 2
+      },
+      "effects": []
+    },
+    {
+      "id": "physics",
+      "name": "力学预修",
+      "content": "如果 Theory 是最多（单人模式为学期+1）的，获得 4 分。",
+      "symbols": {
+        "Theory": 1
+      },
+      "effects": [
+        {
+          "effectType": "getHighest",
+          "target": "theory",
+          "output": "TheoryHighest"
+        },
+        {
+          "effectType": "compare",
+          "input1": "TheoryHighest",
+          "input2": "Theory",
+          "type": "lt",
+          "output": "physicsIsTheoryHighest"
+        },
+        {
+          "effectType": "addScore",
+          "input": "physicsIsTheoryHighest",
+          "multi": 4
+        }
+      ]
+    },
+    {
+      "id": "chemistry",
+      "name": "化学原理预修",
+      "content": "固定获得 2 分。",
+      "symbols": {
+        "Theory": 1
+      },
+      "effects": [
+        {
+          "effectType": "addScore",
+          "input": "const1",
+          "multi": 2
+        }
+      ]
+    },
+    {
+      "id": "practice",
+      "name": "习题课传统",
+      "content": "无效果",
+      "symbols": {
+        "Practice": 2
+      },
+      "effects": []
+    },
+    {
+      "id": "experiment",
+      "name": "基础实验预备",
+      "content": "每个 Practice 额外获得 1 分。",
+      "symbols": {
+        "Practice": 1
+      },
+      "effects": [
+        {
+          "effectType": "addScore",
+          "input": "practice",
+          "multi": 1
+        }
+      ]
+    },
+    {
+      "id": "computer",
+      "name": "瀚海电脑入门",
+      "content": "前两学期获得 4 分。",
+      "symbols": {
+        "Practice": 1
+      },
+      "effects": [
+        {
+          "effectType": "match",
+          "input": "semester",
+          "list": [
+            1,
+            2
+          ],
+          "output": "computerEarlySemester"
+        },
+        {
+          "effectType": "addScore",
+          "input": "computerEarlySemester",
+          "multi": 4
+        }
+      ]
+    },
+    {
+      "id": "classmates",
+      "name": "同窗互助",
+      "content": "无效果",
+      "symbols": {
+        "Social": 2
+      },
+      "effects": []
+    },
+    {
+      "id": "sports",
+      "name": "阳光长跑",
+      "content": "若总 Social ≥ 4，则获得 4 分。",
+      "symbols": {
+        "Social": 1
+      },
+      "effects": [
+        {
+          "effectType": "compare",
+          "input1": "social",
+          "input2": 4,
+          "type": "ge",
+          "output": "sportsSocialAtLeast4"
+        },
+        {
+          "effectType": "addScore",
+          "input": "sportsSocialAtLeast4",
+          "multi": 4
+        }
+      ]
+    },
+    {
+      "id": "hobby",
+      "name": "瀚海兴趣小组",
+      "content": "在第 1/3/5/7 学期获得 4 分。",
+      "symbols": {
+        "Social": 1
+      },
+      "effects": [
+        {
+          "effectType": "match",
+          "input": "semester",
+          "list": [
+            1,
+            3,
+            5,
+            7
+          ],
+          "output": "hobbySpecialSemester"
+        },
+        {
+          "effectType": "addScore",
+          "input": "hobbySpecialSemester",
+          "multi": 4
+        }
+      ]
+    },
+    {
+      "id": "extracurricular",
+      "name": "第二课堂",
+      "content": "获得 1 个成就点。",
+      "symbols": {},
+      "effects": [
+        {
+          "effectType": "addAchievement",
+          "input": "const1",
+          "multi": 1
+        }
+      ]
+    },
+    {
+      "id": "extratask",
+      "name": "课外科研小任务",
+      "content": "推进一个项目。",
+      "symbols": {},
+      "effects": [
+        {
+          "effectType": "addProjectProgress",
+          "input": "const1",
+          "multi": 1
+        }
+      ]
+    }
+  ]
+}

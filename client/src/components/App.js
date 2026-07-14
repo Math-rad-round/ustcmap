@@ -1,15 +1,16 @@
 import React, { Component } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import PropTypes from "prop-types";
-
 import PathParamsHOC from "./PathParamsHOC.js";
 import Root from "./pages/Root.js";
 import VRroute from "./pano/VRroute.js";
-
+import VRguideWrapper from "./pano/VRguideWrapper.js";
 import VRgame from "./pano/VRgame.js";
 import AppPage from "./pages/AppPage.js";
 import Profile from "./pages/Profile.js";
 import Search from "./pages/Search.js";
+import Home from "./pages/Home.js";
+//import DBGGame from "../../../archive/dbgpart/Game.js";
 import NewProjectPage from "./pages/NewProjectPage.js";
 import SignInPage from "./pages/SignInPage.js";
 import SignUpPage from "./pages/SignUpPage.js";
@@ -17,15 +18,23 @@ import AppSettings from "./pages/AppSettings.js";
 import ProfileSettingsPage from "./pages/ProfileSettingsPage.js";
 import NotFound from "./pages/NotFound.js";
 import Map from "./newpage/Map.js";
+import Room from "./unipage/Room.js";
 import Path from "./newpage/Path.js";
+import Addguess from "./unipage/Addguess.js";
+import Guess from "./unipage/guess.js";
+import Testapi from "./pano/testapi.js";
 import { post } from "../utilities.js";
 import Busmap from "./newpage/Busmap.js";
 import Footer from "./modules/Footer.js";
 import NavBar from "./modules/NavBar.js";
-
+import Panvr from "./unipage/Panvr.js";
+import PosPage from "./pos/PosPage.js";
 import "../utilities.css";
 import "./App.css";
-
+import Savepos from "./pos/testpage.js";
+import DeckGame from "./new/deckgame/DeckGame.js";
+import DBGGame from "./new/dbg/DBGGame.js";
+import Game100Gateway from "./new/Game100Gateway.js";
 class App extends Component{
   constructor(props){
     super(props);
@@ -98,16 +107,29 @@ class App extends Component{
                                        />}
                               errorElement={<NotFound />}
               >
-                <Route path="/" element={<Search />} />
+                <Route path="/" element={<Home userId={this.state.whoami._id} />} />
                 <Route path="/app/:appId/path" element={<PathParamsHOC component={Path}/>} />
                 <Route path="/map" element={<Map />} />
                 <Route path="/map/bus" element={<Busmap />} />
+                <Route path="/room/:place" element={<PathParamsHOC component={Room}/>}/>
+                <Route path="/guide/:start/:end" element={<PathParamsHOC component={VRguideWrapper}/>}/>
+                <Route path="/vr/:pos" element={<PathParamsHOC component={Panvr}/>}/>
+                <Route path="/game/:pos" element={<PathParamsHOC component={Panvr}/>} />
                 <Route path="/app/:appId/settings" element={<PathParamsHOC component={AppSettings} />} />
                 <Route path="/app/:appId" element={<PathParamsHOC component={AppPage} />} />
                 <Route path="/user/:userId" element={<PathParamsHOC component={Profile} />} />
                 <Route path="/user/:userId/settings" element={<PathParamsHOC component={ProfileSettingsPage} />} />
                 <Route path="/search/" element={<Search />} />
+                {/* <Route path="/dbggame" element={<DBGGame />} /> */}
                 <Route path="/new/" element={<NewProjectPage />} />
+                <Route path="/addguess/" element={<Addguess />} />
+                <Route path="/guess" element={<Guess />} />
+                <Route path="/ustcgame" element={<DeckGame />} />
+                <Route path="/dbg" element={<DBGGame />} />
+                <Route path="/game100" element={<Game100Gateway />} />
+                <Route path="/savepos" element={<Savepos />} />
+                <Route path="/getpos" element={<PosPage />} />
+                <Route path="/testapi" element={<Testapi />} />
                 <Route path="/signin/" element={<SignInPage updateWhoami={this.updateWhoami.bind(this)} />} />
                 <Route path="/signup/" element={<SignUpPage />} />
                 <Route path="/vr" element={<VRroute />} />

@@ -1,0 +1,25 @@
+.rowclick{
+  margin-bottom: 13px;
+}
+.clickimg {
+  width: 88px;
+  height: 88px;
+  cursor: pointer;
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.2s ease;
+}
+.clickimg:hover {
+  transform: scale(1.06);
+}
+.clickimgs {
+  width: 38px;
+  height: 38px;
+  cursor: pointer;
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.2s ease;
+}
+.clickimgs:hover {
+  transform: scale(1.05);
+}

@@ -84,6 +84,30 @@ class ProfileSideBar extends Component{
   	];
     return (
       <div className="profile-sidebar">
+        <div className="profile-stats">
+          <div className="stat-item">
+            <span className="stat-label">图寻平均成绩</span>
+            <span className="stat-value">
+              {this.props.times ? 
+                (this.props.alldev / this.props.times).toFixed(1) +"米": 
+                "尚未进行图寻"}
+            </span>
+          </div>
+          <div className="stat-item">
+            <span className="stat-label">图寻次数</span>
+            <span className="stat-value">
+              {this.props.times || "尚未进行图寻"}
+            </span>
+          </div>
+          <div className="stat-item">
+            <span className="stat-label">学习时间</span>
+            <span className="stat-value">
+              {this.props.studytime ? 
+                `${(this.props.studytime/60).toFixed(2)}分钟` : 
+                "尚未自习过"}
+            </span>
+          </div>
+        </div>
         <SideBar title="About:" elements={about_elements} />
         <SideBar title="Links:" elements={links_elements} />
       </div>

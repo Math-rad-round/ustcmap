@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { createBrowserHistory } from "history";
 import { Link } from "react-router-dom";
 
 import "./NavBar.css";
@@ -13,24 +12,27 @@ class NavBar extends Component{
     window.localStorage.removeItem("token");
     window.location.reload();
   }
-
+  getNode = () => {
+    const nodes = ["7", "8", "9", "11", "13"];
+    return nodes[Math.floor(Math.random() * nodes.length)];
+  };
   render(){
+    const accountPath = this.props._id ? "/user/"+this.props._id : "/signin";
+    const accountText = this.props._id ? "Profile" : "LogIn";
     return (
       <nav className="navbar">
         <div className="navbar-title">
           <Link className="navbar-title-link" to="/">ustc-school-map</Link>
         </div>
         <div className="navbar-links-container">
-
           <Link className="navbar-link" to="/">Home</Link>
-          <Link className="navbar-link" to="/vr">VR</Link>
-          <Link className="navbar-link" to="/game">Game</Link>
-          <Link className="navbar-link" to="/map">Map</Link>
-          <Link className="navbar-link" to={this.props._id ? "/user/"+this.props._id : "/signin"} state={{from: this.props.whereAmI}}>Profile</Link>
-          <Link className="navbar-link" to="/search">Catalog</Link>
-          <Link className="navbar-link" to="/new">New</Link>
-          <Link className="navbar-link" to="/signin" state={{from: this.props.whereAmI}}>LogIn</Link>
-          <Link className="navbar-link" to="/signup" state={{from: this.props.whereAmI}}>SignUp</Link>
+          <Link className="navbar-link" to="/vr/pano">VR Map</Link>
+          <Link className="navbar-link" to="/getpos">Nav</Link>
+          <Link className="navbar-link" to="/game/game">Game</Link>
+          <Link className="navbar-link" to="/ustcgame">DeckGame</Link>
+          <Link className="navbar-link" to="/dbg">DBG</Link>
+          <Link className="navbar-link" to="/search">Search</Link>
+          <Link className="navbar-link" to={accountPath} state={{from: this.props.whereAmI}}>{accountText}</Link>
           <p className="navbar-link" onClick={this.handleLogout.bind(this)}>Logout</p>
         </div>
       </nav>

@@ -1,0 +1,503 @@
+{
+  "courses": [
+    {
+      "id": "advancedMath",
+      "name": "数学分析A1",
+      "content": "固定获得5分。",
+      "symbols": {
+        "Theory": 2
+      },
+      "effects": [
+        {
+          "effectType": "addScore",
+          "input": "const1",
+          "multi": 5
+        }
+      ]
+    },
+    {
+      "id": "linearAlgebra",
+      "name": "线性代数A",
+      "content": "每个 Theory 符号额外获得1分。",
+      "symbols": {
+        "Theory": 2
+      },
+      "effects": [
+        {
+          "effectType": "addScore",
+          "input": "theory",
+          "multi": 1
+        }
+      ]
+    },
+    {
+      "id": "probability",
+      "name": "概率论与数理统计",
+      "content": "每个 Social 符号额外获得1分。",
+      "symbols": {
+        "Theory": 1
+      },
+      "effects": [
+        {
+          "effectType": "addScore",
+          "input": "social",
+          "multi": 1
+        }
+      ]
+    },
+    {
+      "id": "universityPhysics",
+      "name": "力学与热学",
+      "content": "每个 Practice 符号额外获得1分。",
+      "symbols": {
+        "Theory": 2
+      },
+      "effects": [
+        {
+          "effectType": "addScore",
+          "input": "practice",
+          "multi": 1
+        }
+      ]
+    },
+    {
+      "id": "engineeringDrawing",
+      "name": "工程图学",
+      "content": "固定获得3分。",
+      "symbols": {
+        "Theory": 1,
+        "Practice": 1
+      },
+      "effects": [
+        {
+          "effectType": "addScore",
+          "input": "const1",
+          "multi": 3
+        }
+      ]
+    },
+    {
+      "id": "digitalCircuit",
+      "name": "数字逻辑电路",
+      "content": "固定获得4分。",
+      "symbols": {
+        "Practice": 2
+      },
+      "effects": [
+        {
+          "effectType": "addScore",
+          "input": "const1",
+          "multi": 4
+        }
+      ]
+    },
+    {
+      "id": "cProgramming",
+      "name": "C语言程序设计",
+      "content": "每个 Theory 符号额外获得1分。",
+      "symbols": {
+        "Theory": 1,
+        "Practice": 1
+      },
+      "effects": [
+        {
+          "effectType": "addScore",
+          "input": "theory",
+          "multi": 1
+        }
+      ]
+    },
+    {
+      "id": "dataStructure",
+      "name": "数据结构",
+      "content": "每个 Practice 符号额外获得1分。",
+      "symbols": {
+        "Practice": 2
+      },
+      "effects": [
+        {
+          "effectType": "addScore",
+          "input": "practice",
+          "multi": 1
+        }
+      ]
+    },
+    {
+      "id": "programmingLab",
+      "name": "程序设计实践",
+      "content": "无其他效果。",
+      "symbols": {
+        "Practice": 3
+      },
+      "effects": []
+    },
+    {
+      "id": "electronicPractice",
+      "name": "电子工艺实习",
+      "content": "固定获得1分，并获得1点项目进度。",
+      "symbols": {
+        "Practice": 1,
+        "Social": 1
+      },
+      "effects": [
+        {
+          "effectType": "addScore",
+          "input": "const1",
+          "multi": 1
+        },
+        {
+          "effectType": "addProjectProgress",
+          "input": "const1",
+          "multi": 1
+        }
+      ]
+    },
+    {
+      "id": "innovationLab",
+      "name": "大学生创新实验",
+      "content": "获得1点项目进度。",
+      "symbols": {
+        "Practice": 2
+      },
+      "effects": [
+        {
+          "effectType": "addProjectProgress",
+          "input": "const1",
+          "multi": 1
+        }
+      ]
+    },
+    {
+      "id": "englishListening",
+      "name": "英语听说实践",
+      "content": "固定获得3分。",
+      "symbols": {
+        "Social": 3
+      },
+      "effects": [
+        {
+          "effectType": "addScore",
+          "input": "const1",
+          "multi": 3
+        }
+      ]
+    },
+    {
+      "id": "collegeEnglish",
+      "name": "大学英语读写",
+      "content": "固定获得5分。",
+      "symbols": {
+        "Theory": 1,
+        "Social": 1
+      },
+      "effects": [
+        {
+          "effectType": "addScore",
+          "input": "const1",
+          "multi": 5
+        }
+      ]
+    },
+    {
+      "id": "speech",
+      "name": "公共表达与辩论",
+      "content": "每个 Social 符号额外获得1分。",
+      "symbols": {
+        "Social": 1
+      },
+      "effects": [
+        {
+          "effectType": "addScore",
+          "input": "social",
+          "multi": 1
+        }
+      ]
+    },
+    {
+      "id": "mentalHealth",
+      "name": "心理健康与成长",
+      "content": "抽取1张事件卡。",
+      "symbols": {
+        "Social": 2
+      },
+      "effects": [
+        {
+          "effectType": "drawEvent",
+          "num": 1
+        }
+      ]
+    },
+    {
+      "id": "volunteer",
+      "name": "志愿服务与劳动",
+      "content": "推进一个项目，并获得3分。",
+      "symbols": {
+        "Social": 1
+      },
+      "effects": [
+        {
+          "effectType": "addProjectProgress",
+          "input": "const1",
+          "multi": 1
+        },
+        {
+          "effectType": "addScore",
+          "input": "const1",
+          "multi": 3
+        }
+      ]
+    },
+    {
+      "id": "classActivity",
+      "name": "班团活动",
+      "content": "获得1成就点。",
+      "symbols": {
+        "Social": 1
+      },
+      "effects": [
+        {
+          "effectType": "addAchievement",
+          "input": "const1",
+          "multi": 1
+        }
+      ]
+    },
+    {
+      "id": "socialPractice",
+      "name": "社会实践调研",
+      "content": "抽取1张事件卡。",
+      "symbols": {
+        "Practice": 1,
+        "Social": 1
+      },
+      "effects": [
+        {
+          "effectType": "drawEvent",
+          "num": 1
+        }
+      ]
+    },
+    {
+      "id": "innovativeThinking",
+      "name": "创新思维训练",
+      "content": "每个项目推进额外获得1分。",
+      "symbols": {
+        "Theory": 1,
+        "Social": 1
+      },
+      "effects": [
+        {
+          "effectType": "addScore",
+          "input": "progress",
+          "multi": 1
+        }
+      ]
+    },
+    {
+      "id": "courseDesign",
+      "name": "课程设计实践",
+      "content": "每个项目推进额外获得1分。",
+      "symbols": {
+        "Theory": 1,
+        "Practice": 1
+      },
+      "effects": [
+        {
+          "effectType": "addScore",
+          "input": "progress",
+          "multi": 1
+        }
+      ]
+    },
+    {
+      "id": "researchIntroduction",
+      "name": "学科前沿导论",
+      "content": "获得2点项目推进。",
+      "symbols": {
+        "Theory": 1
+      },
+      "effects": [
+        {
+          "effectType": "addProjectProgress",
+          "input": "const1",
+          "multi": 2
+        }
+      ]
+    },
+    {
+      "id": "labReport",
+      "name": "实验报告写作",
+      "content": "获得2温习点与3分。",
+      "symbols": {
+        "Practice": 1
+      },
+      "effects": [
+        {
+          "effectType": "addReview",
+          "input": "const1",
+          "multi": 2
+        },
+        {
+          "effectType": "addScore",
+          "input": "const1",
+          "multi": 3
+        }
+      ]
+    },
+    {
+      "id": "topicDiscussion",
+      "name": "课题组讨论",
+      "content": "获得1点项目推进。",
+      "symbols": {
+        "Theory": 1,
+        "Social": 1
+      },
+      "effects": [
+        {
+          "effectType": "addProjectProgress",
+          "input": "const1",
+          "multi": 1
+        }
+      ]
+    },
+    {
+      "id": "libraryStudy",
+      "name": "图书馆深潜",
+      "content": "获得4温习点。",
+      "symbols": {
+        "Theory": 1
+      },
+      "effects": [
+        {
+          "effectType": "addReview",
+          "input": "const1",
+          "multi": 4
+        }
+      ]
+    },
+    {
+      "id": "selfTraining",
+      "name": "自主训练",
+      "content": "获得2温习点。",
+      "symbols": {
+        "Practice": 2
+      },
+      "effects": [
+        {
+          "effectType": "addReview",
+          "input": "const1",
+          "multi": 2
+        }
+      ]
+    },
+    {
+      "id": "midtermReview",
+      "name": "期中复盘",
+      "content": "固定获得9分。",
+      "symbols": {},
+      "effects": [
+        {
+          "effectType": "addScore",
+          "input": "const1",
+          "multi": 9
+        }
+      ]
+    },
+    {
+      "id": "mockExam",
+      "name": "模拟考试周",
+      "content": "获得3分，每个温习点额外获得2分。",
+      "symbols": {},
+      "effects": [
+        {
+          "effectType": "addScore",
+          "input": "const1",
+          "multi": 3
+        },
+        {
+          "effectType": "addScore",
+          "input": "review",
+          "multi": 2
+        }
+      ]
+    },
+    {
+      "id": "professionalIntroduction",
+      "name": "专业导论",
+      "content": "固定获得2分。",
+      "symbols": {
+        "Theory": 1,
+        "Practice": 1,
+        "Social": 1
+      },
+      "effects": [
+        {
+          "effectType": "addScore",
+          "input": "const1",
+          "multi": 2
+        }
+      ]
+    },
+    {
+      "id": "industryPractice",
+      "name": "企业项目实训",
+      "content": "获得1点项目推进。",
+      "symbols": {
+        "Practice": 1,
+        "Social": 1
+      },
+      "effects": [
+        {
+          "effectType": "addProjectProgress",
+          "input": "const1",
+          "multi": 1
+        }
+      ]
+    },
+    {
+      "id": "academicLecture",
+      "name": "前沿学术讲座",
+      "content": "抽取1张事件卡。",
+      "symbols": {
+        "Theory": 1
+      },
+      "effects": [
+        {
+          "effectType": "drawEvent",
+          "num": 1
+        }
+      ]
+    },
+    {
+      "id": "studentClub",
+      "name": "社团协作实践",
+      "content": "推进一个项目。",
+      "symbols": {
+        "Social": 2
+      },
+      "effects": [
+        {
+          "effectType": "addProjectProgress",
+          "input": "const1",
+          "multi": 1
+        }
+      ]
+    },
+    {
+      "id": "laborEducation",
+      "name": "劳动教育实践",
+      "content": "固定获得3分。",
+      "symbols": {
+        "Practice": 1,
+        "Social": 1
+      },
+      "effects": [
+        {
+          "effectType": "addScore",
+          "input": "const1",
+          "multi": 3
+        }
+      ]
+    }
+  ]
+}

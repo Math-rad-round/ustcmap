@@ -1,0 +1,160 @@
+{
+  "scoreTarget": 60,
+  "doomLimit": 30,
+  "starter": [
+    {
+      "id": "starter_response",
+      "name": "预案草稿",
+      "type": "response",
+      "count": 4,
+      "cost": 0,
+      "energy": 1,
+      "content": "提供 1 行动力。"
+    },
+    {
+      "id": "starter_research",
+      "name": "资料检索",
+      "type": "research",
+      "count": 4,
+      "cost": 0,
+      "insight": 1,
+      "content": "提供 1 研究点。"
+    },
+    {
+      "id": "starter_network",
+      "name": "同伴互助",
+      "type": "network",
+      "count": 2,
+      "cost": 0,
+      "energy": 1,
+      "insight": 1,
+      "content": "提供 1 行动力和 1 研究点。"
+    }
+  ],
+  "market": [
+    {
+      "id": "quick_patch",
+      "name": "快速补丁",
+      "type": "response",
+      "count": 2,
+      "cost": 3,
+      "energy": 2,
+      "draw": 1,
+      "content": "行动力 +2，抽 1 张。"
+    },
+    {
+      "id": "grant_application",
+      "name": "经费申请",
+      "type": "research",
+      "count": 2,
+      "cost": 4,
+      "insight": 3,
+      "score": 1,
+      "content": "研究点 +3，分数 +1。"
+    },
+    {
+      "id": "lab_network",
+      "name": "实验室联络",
+      "type": "network",
+      "count": 2,
+      "cost": 4,
+      "energy": 1,
+      "insight": 2,
+      "shield": 1,
+      "content": "行动力 +1，研究点 +2，防护 +1。"
+    },
+    {
+      "id": "night_sprint",
+      "name": "通宵冲刺",
+      "type": "response",
+      "count": 2,
+      "cost": 5,
+      "energy": 3,
+      "score": 2,
+      "content": "行动力 +3，分数 +2。"
+    },
+    {
+      "id": "strategic_review",
+      "name": "战略复盘",
+      "type": "research",
+      "count": 2,
+      "cost": 5,
+      "insight": 1,
+      "draw": 2,
+      "content": "研究点 +1，抽 2 张。"
+    },
+    {
+      "id": "mentor_support",
+      "name": "导师支援",
+      "type": "network",
+      "count": 2,
+      "cost": 6,
+      "energy": 2,
+      "insight": 2,
+      "doomRelief": 1,
+      "content": "行动力 +2，研究点 +2，毁灭值 -1。"
+    },
+    {
+      "id": "automation_script",
+      "name": "自动化脚本",
+      "type": "tool",
+      "count": 2,
+      "cost": 6,
+      "energy": 1,
+      "insight": 3,
+      "draw": 1,
+      "content": "行动力 +1，研究点 +3，抽 1 张。"
+    },
+    {
+      "id": "public_demo",
+      "name": "公开展示",
+      "type": "score",
+      "count": 2,
+      "cost": 5,
+      "score": 5,
+      "content": "分数 +5。"
+    },
+    {
+      "id": "field_team",
+      "name": "现场小队",
+      "type": "response",
+      "count": 2,
+      "cost": 7,
+      "energy": 4,
+      "shield": 2,
+      "content": "行动力 +4，防护 +2。"
+    },
+    {
+      "id": "paper_breakthrough",
+      "name": "论文突破",
+      "type": "score",
+      "count": 2,
+      "cost": 8,
+      "insight": 2,
+      "score": 7,
+      "draw": 1,
+      "content": "研究点 +2，分数 +7，抽 1 张。"
+    },
+    {
+      "id": "emergency_protocol",
+      "name": "应急预案",
+      "type": "response",
+      "count": 2,
+      "cost": 7,
+      "energy": 5,
+      "doomRelief": 2,
+      "content": "行动力 +5，毁灭值 -2。"
+    },
+    {
+      "id": "grand_project",
+      "name": "大型项目",
+      "type": "score",
+      "count": 2,
+      "cost": 9,
+      "energy": 2,
+      "insight": 2,
+      "score": 10,
+      "content": "行动力 +2，研究点 +2，分数 +10。"
+    }
+  ]
+}

@@ -247,22 +247,22 @@ class NewProject extends Component{
   render(){
     const name = (
         <div className="new-app-name">
-          <h2>路线名</h2>
+          <h2>主题名</h2>
           <input type="text" placeholder="your app name"
                  value={this.state.name} onChange={this.handleNameChange.bind(this)}
                  className="new-app-name-input new-post-input-input"
           />
         </div>
     );
-    const name2 = (
-      <div className="new-app-name">
-        <h2>内置路线名</h2>
-        <input type="text" placeholder="内部搜索名称"
-               value={this.state.realname} onChange={this.handlerealNameChange.bind(this)}
-               className="new-app-name-input new-post-input-input"
-        />
-      </div>
-  );
+  //   const name2 = (
+  //     <div className="new-app-name">
+  //       <h2>内置路线名</h2>
+  //       <input type="text" placeholder="内部搜索名称"
+  //              value={this.state.realname} onChange={this.handlerealNameChange.bind(this)}
+  //              className="new-app-name-input new-post-input-input"
+  //       />
+  //     </div>
+  // );
   
     const logo = (
         <div className="new-app-logo">
@@ -317,7 +317,7 @@ class NewProject extends Component{
     
     const describe = (
         <div className="new-app-description">
-          <h2>路线描述</h2>
+          <h2>主题描述</h2>
           <p>支持 markdown</p>
           <textarea type="text" placeholder="describe your app"
                     value={this.state.description} onChange={this.handleDescriptionChange.bind(this)}
@@ -412,17 +412,16 @@ class NewProject extends Component{
              
              {this.props.appId ? (
                <h1 className="page-title">
-                 {"管理路线 "+this.state.name}
+                 {"管理主题 "+this.state.name}
                </h1>
              ) : (
                <h1 className="page-title">
-                 {"创建新路线"}
+                 {"创建新主题"}
                </h1>
              )}
            
              <div className="settings">
                {this.props.appId ? null : name}
-               {this.props.appId ? null : name2}
                {this.props.appId ? (
                  <>
                  </>
@@ -430,11 +429,11 @@ class NewProject extends Component{
              
                {describe}
                
-               {this.props.appId ? (
+               {/* {this.props.appId ? (
                  <>
                    {selections}
                  </>
-               ) : null}
+               ) : null} */}
                <div className="new-app-submit">
                  <button type="submit" value="Submit"
                          className="new-post-input-button new-app-submit-button"
@@ -450,10 +449,6 @@ class NewProject extends Component{
        
        
       </Consumer>
-      
-      <Load content="添加路径图" type={0} appId={this.props.appId}/>
-      <Load content="添加描述图" type={1} appId={this.props.appId}/>
-      <Delphoto content="删除路径图" appId={this.props.appId}/>
       </div>
     );
   }

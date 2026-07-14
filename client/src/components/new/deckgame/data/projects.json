@@ -1,0 +1,463 @@
+[
+  {
+    "id": "project_robotmaster",
+    "name": "RoboGame机器人队",
+    "type": "practice",
+    "content": "RoboGame机器人队设计竞赛",
+    "options": [
+      {
+        "name": "技术突破",
+        "require": 3,
+        "type": "milestone",
+        "content": "获得一次实践选课",
+        "effects": [
+          {
+            "effectType": "sReward",
+            "lessontype": "practice",
+            "shownum": 3,
+            "selectnum": 1
+          }
+        ]
+      },
+      {
+        "name": "我们是冠军！",
+        "require": 10,
+        "type": "remove",
+        "content": "获得成果：实践积累（考试+1实践）以及12成就点",
+        "effects": [
+          {
+            "effectType": "givePermanent",
+            "name": "permanent_practice_accumulation"
+          },
+          {
+            "effectType": "addAchievement",
+            "input": 12
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "project_icpc",
+    "name": "ICPC集训队",
+    "type": "practice",
+    "content": "大学生程序设计校赛",
+    "options": [
+      {
+        "name": "保证银牌",
+        "require": 4,
+        "type": "milestone",
+        "content": "获得一次实践选课和3成就点",
+        "effects": [
+          {
+            "effectType": "sReward",
+            "lessontype": "practice",
+            "shownum": 3,
+            "selectnum": 1
+          },
+          {
+            "effectType": "addAchievement",
+            "input": 3
+          }
+        ]
+      },
+      {
+        "name": "备战金牌",
+        "require": 9,
+        "type": "remove",
+        "content": "获得实践积累（考试+1实践）、一次实践选课和4成就点",
+        "effects": [
+          {
+            "effectType": "givePermanent",
+            "name": "permanent_practice_accumulation"
+          },
+          {
+            "effectType": "sReward",
+            "lessontype": "practice",
+            "shownum": 3,
+            "selectnum": 1
+          },
+          {
+            "effectType": "addAchievement",
+            "input": 4
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "project_group",
+    "name": "百团文化节",
+    "type": "connect",
+    "content": "组织校园文化节活动",
+    "options": [
+      {
+        "name": "寻求机会",
+        "require": 4,
+        "type": "remove",
+        "content": "获得一次社会选课并抽3张事件牌",
+        "effects": [
+          {
+            "effectType": "sReward",
+            "lessontype": "social",
+            "shownum": 3,
+            "selectnum": 1
+          },
+          {
+            "effectType": "drawEvent",
+            "num": 3
+          }
+        ]
+      },
+      {
+        "name": "与同学联系",
+        "require": 5,
+        "type": "remove",
+        "content": "获得成果：高级社会经验（考试+2社会）",
+        "effects": [
+          {
+            "effectType": "givePermanent",
+            "name": "permanent_advanced_social_experience"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "project_research",
+    "name": "本研科研训练",
+    "type": "research",
+    "content": "参与导师本研科研训练",
+    "options": [
+      {
+        "name": "阶段汇报",
+        "require": 3,
+        "type": "milestone",
+        "content": "获得一次理论选课和2温习值",
+        "effects": [
+          {
+            "effectType": "sReward",
+            "lessontype": "theory",
+            "shownum": 3,
+            "selectnum": 1
+          },
+          {
+            "effectType": "addReview",
+            "input": 2
+          }
+        ]
+      },
+      {
+        "name": "发表论文",
+        "require": 9,
+        "type": "remove",
+        "content": "获得成果：科研论文（考试+2理论）以及5成就点",
+        "effects": [
+          {
+            "effectType": "givePermanent",
+            "name": "permanent_research_paper"
+          },
+          {
+            "effectType": "addAchievement",
+            "input": 5
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "project_graduation",
+    "name": "本科毕业设计",
+    "type": "research",
+    "content": "完成本科本科毕业设计",
+    "options": [
+      {
+        "name": "中期检查",
+        "require": 5,
+        "type": "milestone",
+        "content": "获得一次理论选课和一次实践选课",
+        "effects": [
+          {
+            "effectType": "sReward",
+            "lessontype": "theory",
+            "shownum": 3,
+            "selectnum": 1
+          },
+          {
+            "effectType": "sReward",
+            "lessontype": "practice",
+            "shownum": 3,
+            "selectnum": 1
+          }
+        ]
+      },
+      {
+        "name": "优秀本科毕业设计",
+        "require": 10,
+        "type": "remove",
+        "content": "获得成果：优秀本科毕业设计（考试+2成就点）以及7成就点",
+        "effects": [
+          {
+            "effectType": "givePermanent",
+            "name": "permanent_outstanding_graduation_project"
+          },
+          {
+            "effectType": "addAchievement",
+            "input": 7
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "project_teach",
+    "name": "兼职家教",
+    "type": "none",
+    "content": "利用课余时间担任家教",
+    "options": [
+      {
+        "name": "提款",
+        "require": 1,
+        "type": "consume",
+        "content": "消耗全部推进，获得等量温习值和成就点",
+        "effects": [
+          {
+            "effectType": "addReview",
+            "input": "local_progress"
+          },
+          {
+            "effectType": "addAchievement",
+            "input": "local_progress"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "project_company",
+    "name": "高新区企业课题",
+    "type": "practice",
+    "content": "参与企业合作开发",
+    "options": [
+      {
+        "name": "阶段验收",
+        "require": 2,
+        "type": "consume",
+        "content": "获得一次实践选课",
+        "effects": [
+          {
+            "effectType": "sReward",
+            "lessontype": "practice",
+            "shownum": 3,
+            "selectnum": 1
+          }
+        ]
+      },
+      {
+        "name": "成功交付",
+        "require": 6,
+        "type": "remove",
+        "content": "获得成果：企业经历（考试+2推进）和2成就点",
+        "effects": [
+          {
+            "effectType": "givePermanent",
+            "name": "permanent_company_experience"
+          },
+          {
+            "effectType": "addAchievement",
+            "input": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "project_startup",
+    "name": "大创创业项目",
+    "type": "all",
+    "content": "完成大学生大创创业项目",
+    "options": [
+      {
+        "name": "获得投资",
+        "require": 4,
+        "type": "consume",
+        "content": "获得一次任意课程选课并抽2张事件牌",
+        "effects": [
+          {
+            "effectType": "sReward",
+            "shownum": 3,
+            "selectnum": 1
+          },
+          {
+            "effectType": "drawEvent",
+            "num": 2
+          }
+        ]
+      },
+      {
+        "name": "项目成功",
+        "require": 8,
+        "type": "remove",
+        "content": "获得成果：创新成果（考试+1理论+1实践）以及8成就点",
+        "effects": [
+          {
+            "effectType": "givePermanent",
+            "name": "permanent_innovation_achievement"
+          },
+          {
+            "effectType": "addAchievement",
+            "input": 8
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "project_subject",
+    "name": "课题组小课题",
+    "type": "research",
+    "content": "承担课题组小课题研究",
+    "options": [
+      {
+        "name": "完成实验",
+        "require": 2,
+        "type": "consume",
+        "content": "获得2温习值并抽1张事件牌",
+        "effects": [
+          {
+            "effectType": "addReview",
+            "input": 2
+          },
+          {
+            "effectType": "drawEvent",
+            "num": 1
+          }
+        ]
+      },
+      {
+        "name": "完成结题",
+        "require": 8,
+        "type": "remove",
+        "content": "获得成果：科研成果（考试+1理论+1实践）以及7成就点",
+        "effects": [
+          {
+            "effectType": "givePermanent",
+            "name": "permanent_research_achievement"
+          },
+          {
+            "effectType": "addAchievement",
+            "input": 7
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "project_student_union",
+    "name": "学生组织工作",
+    "type": "connect",
+    "content": "参与学生组织工作",
+    "options": [
+      {
+        "name": "组织活动",
+        "require": 3,
+        "type": "consume",
+        "content": "获得3成就点",
+        "effects": [
+          {
+            "effectType": "addAchievement",
+            "input": 3
+          }
+        ]
+      },
+      {
+        "name": "优秀学生干部",
+        "require": 8,
+        "type": "remove",
+        "content": "获得成果：组织经验（考试+1社会+1理论）以及7成就点",
+        "effects": [
+          {
+            "effectType": "givePermanent",
+            "name": "permanent_organization_experience"
+          },
+          {
+            "effectType": "addAchievement",
+            "input": 7
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "project_internship",
+    "name": "企业实习",
+    "type": "practice",
+    "content": "完成企业实习",
+    "options": [
+      {
+        "name": "获得Offer",
+        "require": 7,
+        "type": "remove",
+        "content": "获得成果：企业Offer（考试+1社会+1实践）以及7成就点",
+        "effects": [
+          {
+            "effectType": "givePermanent",
+            "name": "permanent_company_offer"
+          },
+          {
+            "effectType": "addAchievement",
+            "input": 7
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "project_exchange",
+    "name": "海外交流学习",
+    "type": "all",
+    "content": "参与海外交流学习项目",
+    "options": [
+      {
+        "name": "完成交换",
+        "require": 8,
+        "type": "remove",
+        "content": "获得成果：国际视野（考试+1理论+1社会）以及6成就点",
+        "effects": [
+          {
+            "effectType": "givePermanent",
+            "name": "permanent_global_vision"
+          },
+          {
+            "effectType": "addAchievement",
+            "input": 6
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "project_scholarship",
+    "name": "国奖冲刺",
+    "type": "research",
+    "content": "争取国奖冲刺",
+    "options": [
+      {
+        "name": "成功获得",
+        "require": 9,
+        "type": "remove",
+        "content": "获得成果：国奖冲刺（考试+6分）以及11成就点",
+        "effects": [
+          {
+            "effectType": "givePermanent",
+            "name": "permanent_national_scholarship"
+          },
+          {
+            "effectType": "addAchievement",
+            "input": 11
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -63,12 +63,14 @@ class SearchBlock extends Component{
         />
         <TagsSelection handle_selection={this.handleTagSelection.bind(this)}
                        selected_tag={this.state.selectedTag}
-                       tags_name={this.state.tags} tags_title="Tags"
-        />
-        <TagsSelection handle_selection={this.handlePlatformSelection.bind(this)}
-                       selected_tag={this.state.selectedPlatform}
-                       tags_name={TMP_PLATFORMS} tags_title="Platforms"
-        />
+                       tags_name={[{'name':"改为搜索用户"}]} tags_title="Tags"
+         />
+         {
+              // <TagsSelection handle_selection={this.handlePlatformSelection.bind(this)}
+              //                selected_tag={this.state.selectedPlatform}
+              //                tags_name={TMP_PLATFORMS} tags_title="Platforms"
+              // />
+          }
       </div>
     );
   }

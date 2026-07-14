@@ -53,8 +53,8 @@ router.post("/userCreate", (req, res) => {
         });
         const token = checker.signID(newuser._id);
         newuser.save().then((user) => {
-          fs.copyFileSync(path.join(__dirname, "upload", "defaultuserlogo.jpeg"),
-                          path.join(__dirname, "upload", "userlogo", String(user._id)));
+        //   fs.copyFileSync(path.join(__dirname, "upload", "defaultuserlogo.jpeg"),
+        //                   path.join(__dirname, "upload", "userlogo", String(user._id)));
           res.send({user,token});
         });
     });
